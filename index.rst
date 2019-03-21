@@ -14,7 +14,6 @@ Getting Started
    
    getting_started.rst
 
-
 Indices and tables
 ==================
 

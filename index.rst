@@ -6,10 +6,13 @@
 Welcome to Hestia Control Panel's documentation!
 ================================================
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+Getting Started
+=====================
 
+.. toctree::
+   :maxdepth: 4
+   
+   getting_started.rst
 
 
 Indices and tables

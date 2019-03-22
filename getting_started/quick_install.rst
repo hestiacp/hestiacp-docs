@@ -5,7 +5,11 @@ Quick Install
 To perform a quick unattended installation, run the install script with the following flags:
 
 **-f**: force
+
 **-y no**: disable interactive mode
+
 **-e email@domain.tld**: admin email address
+
 **-p p4ssw0rd**: admin password
+
 **-s hostname.domain.tld**: system hostname

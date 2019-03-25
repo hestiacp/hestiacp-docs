@@ -12,7 +12,7 @@ You will see the entire list of options available
 
 **-w, --phpfpm**            Install PHP-FPM       *[yes|no]*  default: no
 
-**-o, --multiphp**          Install Multi-PHP     *[yes|no]*  default: no
+**-o, --multiphp** (not recommended for prod)          Install Multi-PHP     *[yes|no]*  default: no
 
 **-v, --vsftpd**            Install Vsftpd        *[yes|no]*  default: yes
 

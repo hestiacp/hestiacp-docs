@@ -2,34 +2,58 @@
 All available options of install script
 *************
 To get all installation options run the following command
-** bash hst-install.sh -h **
+**bash hst-install.sh -h**
 
 You will see the entire list of options available
 
-**-a, --apache**            Install Apache        [yes|no]  default: yes
-**-n, --nginx**             Install Nginx         [yes|no]  default: yes
-**-w, --phpfpm**            Install PHP-FPM       [yes|no]  default: no
-**-o, --multiphp**          Install Multi-PHP     [yes|no]  default: no
-**-v, --vsftpd**            Install Vsftpd        [yes|no]  default: yes
-**-j, --proftpd**           Install ProFTPD       [yes|no]  default: no
-**-k, --named**             Install Bind          [yes|no]  default: yes
-**-m, --mysql**             Install MariaDB       [yes|no]  default: yes
-**-g, --postgresql**        Install PostgreSQL    [yes|no]  default: no
-**-x, --exim**              Install Exim          [yes|no]  default: yes
-**-z, --dovecot**           Install Dovecot       [yes|no]  default: yes
-**-c, --clamav**            Install ClamAV        [yes|no]  default: yes
-**-t, --spamassassin**      Install SpamAssassin  [yes|no]  default: yes
-**-i, --iptables**          Install Iptables      [yes|no]  default: yes
-**-b, --fail2ban**          Install Fail2ban      [yes|no]  default: yes
-**-q, --quota**             Filesystem Quota      [yes|no]  default: no
-**-d, --api**               Activate API          [yes|no]  default: yes
-**-r, --port**             Change Backend Port             default: 8083
+**-a, --apache**            Install Apache        *[yes|no]*  default: yes
+
+**-n, --nginx**             Install Nginx         *[yes|no]*  default: yes
+
+**-w, --phpfpm**            Install PHP-FPM       *[yes|no]*  default: no
+
+**-o, --multiphp**          Install Multi-PHP     *[yes|no]*  default: no
+
+**-v, --vsftpd**            Install Vsftpd        *[yes|no]*  default: yes
+
+**-j, --proftpd**           Install ProFTPD       *[yes|no]*  default: no
+
+**-k, --named**             Install Bind          *[yes|no]*  default: yes
+
+**-m, --mysql**             Install MariaDB       *[yes|no]*  default: yes
+
+**-g, --postgresql**        Install PostgreSQL    *[yes|no]*  default: no
+
+**-x, --exim**              Install Exim          *[yes|no]*  default: yes
+
+**-z, --dovecot**           Install Dovecot       *[yes|no]*  default: yes
+
+**-c, --clamav**            Install ClamAV        *[yes|no]*  default: yes
+
+**-t, --spamassassin**      Install SpamAssassin  *[yes|no]*  default: yes
+
+**-i, --iptables**          Install Iptables      *[yes|no]*  default: yes
+
+**-b, --fail2ban**          Install Fail2ban      *[yes|no]*  default: yes
+
+**-q, --quota**             Filesystem Quota      *[yes|no]*  default: no
+
+**-d, --api**               Activate API          *[yes|no]*  default: yes
+
+**-r, --port**             Change Backend Port              default: 8083
+
 **-l, --lang**              Default language                default: en
+
 **-y, --interactive**       Interactive install   [yes|no]  default: yes
+
 **-s, --hostname**          Set hostname
+
 **-e, --email**             Set admin email
+
 **-p, --password**          Set admin password
+
 **-f, --force**             Force installation
+
 **-h, --help**              Print this help
 
-**Example of usage:** `bash hst-install.sh -n yes -w yes -t no -c no -x yes -z yes -b yes -i yes -m yes -l de -s youdomain.tld -e yourmail@mail.com -p yourpasswordhere -a no -k no -o no`
+**Example of usage:** ``bash hst-install.sh -n yes -w yes -t no -c no -x yes -z yes -b yes -i yes -m yes -l de -s youdomain.tld -e yourmail@mail.com -p yourpasswordhere -a no -k no -o no``

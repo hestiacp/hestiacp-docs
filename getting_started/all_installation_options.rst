@@ -61,10 +61,10 @@ You will see the entire list of options available
 Then Hestia will install following software
 on your system:
    
-   - Nginx Web Server
-   - PHP-FPM Application Server
-   - Exim Mail Server
-   - Dovecot POP3/IMAP Server
-   - MariaDB Database Server
-   - Vsftpd FTP Server
-   - Iptables Firewall + Fail2Ban
+- Nginx Web Server
+- PHP-FPM Application Server
+- Exim Mail Server
+- Dovecot POP3/IMAP Server
+- MariaDB Database Server
+- Vsftpd FTP Server
+- Iptables Firewall + Fail2Ban

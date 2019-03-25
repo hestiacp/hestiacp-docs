@@ -57,3 +57,14 @@ You will see the entire list of options available
 **-h, --help**              Print this help
 
 **Example of usage:** ``bash hst-install.sh -n yes -w yes -t no -c no -x yes -z yes -b yes -i yes -m yes -l de -s youdomain.tld -e yourmail@mail.com -p yourpasswordhere -a no -k no -o no``
+
+Then Hestia will install following software
+on your system:
+   
+   - Nginx Web Server
+   - PHP-FPM Application Server
+   - Exim Mail Server
+   - Dovecot POP3/IMAP Server
+   - MariaDB Database Server
+   - Vsftpd FTP Server
+   - Iptables Firewall + Fail2Ban

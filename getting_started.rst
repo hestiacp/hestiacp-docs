@@ -12,3 +12,4 @@ Welcome!
   :glob:
 
   getting_started/quick_install.rst
+  getting_started/all_installation_options.rst

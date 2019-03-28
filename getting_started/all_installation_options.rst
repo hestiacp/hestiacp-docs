@@ -1,6 +1,6 @@
-*************
+***************************************
 All available options of install script
-*************
+***************************************
 To get all installation options run the following command
 **bash hst-install.sh -h**
 

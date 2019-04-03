@@ -15,4 +15,15 @@ change RoundCube URL in Hestia with argument given
 
 **OPTIONS**
 
-    new_url    
+    new_url
+   
+**v-delete-user-2fa USER**
+
+delete 2FA authentication for user specified in argument
+
+**OPTIONS**
+
+    username
+    
+    
+    

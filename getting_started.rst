@@ -13,4 +13,4 @@ Welcome!
 
   getting_started/quick_install.rst
   getting_started/all_installation_options.rst
-  cli_commands/panel_configuration_commands.rst
+  

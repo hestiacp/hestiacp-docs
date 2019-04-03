@@ -13,3 +13,4 @@ Getting Started
    :maxdepth: 4
    
    getting_started.rst
+   cli_commands.rst

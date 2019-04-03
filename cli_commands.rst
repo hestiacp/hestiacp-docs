@@ -1,3 +1,5 @@
+Hestia CLI core scripts documentation
+=====================================
 
 .. toctree::
   :maxdepth: 3

@@ -25,5 +25,26 @@ delete 2FA authentication for user specified in argument
 
     username
     
+**v-check-user-2fa USER TOKEN**
+
+check 2FA token for user specified in argument
+
+**OPTIONS**
+
+    username token
+    
+**v-add-user-2fa USER**
+
+add 2FA authentication for user specified in argument
+
+**OPTIONS**
+
+    username
+    
+    
+    
+    
+    
+    
     
     

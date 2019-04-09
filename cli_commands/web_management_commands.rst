@@ -51,6 +51,17 @@ Certificate file domain.tld.crt and its key domain.tld.key are mandatory.
 Certificate authority domain.tld.ca file is optional. 
 
 
+**v-update-web-domain-ssl**
+
+The function updates the SSL certificate for a domain. 
+
+Parameter ssl_dir is a path to directory where 2 or 3 ssl files can be found. Certificate file domain.tld.crt and its key domain.tld.key are mandatory. Certificate authority domain.tld.ca file is optional. 
+
+**OPTIONS**
+
+    user domain ssl_dir [restart]
+
+
 If home directory parameter (ssl_home) is not set, https domain uses public_shtml as separate documentroot directory.
 
 
@@ -66,10 +77,12 @@ deleting letsencrypt ssl cetificate for web domain
     
 **v-change-web-domain-ip**
 
-The script changes IP address of web domain to specified argument
+The script changes IP address of web domain to specified in argument
 
 
 **OPTIONS**
 
     user domain ip [restart]
+    
+
     

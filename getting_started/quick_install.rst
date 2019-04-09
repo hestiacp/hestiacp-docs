@@ -1,3 +1,15 @@
+**********************************
+Getting Hestia installation script
+**********************************
+
+Log in to your server as root, either directly or via SSH:
+
+*ssh root@your.server*
+
+Download the installation script:
+
+*wget https://raw.githubusercontent.com/hestiacp/hestiacp/master/install/hst-install.sh*
+
 *************
 Quick Install
 *************

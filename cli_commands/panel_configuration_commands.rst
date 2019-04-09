@@ -44,6 +44,16 @@ add 2FA authentication for user specified in argument
 
     username
     
+**v-change-sys-language LANGUAGE**
+
+change locale of *login page only* to given language
+
+**OPTIONS**
+
+    language code (e.g. en, de, ru)
+    
+    
+    
     
     
     

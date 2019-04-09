@@ -10,6 +10,7 @@ Restart web server
 **OPTIONS**
 
     None
+    
 
 **v-list-web-domain-accesslog**
 
@@ -22,10 +23,12 @@ Shows web domain access log
 
     user domain [access] [format]
     
+    
    
 **v-add-web-domain-httpauth**
 
 Set up basic HTTP AUTH password protection for web domain
+
 
 
 **OPTIONS**
@@ -37,9 +40,11 @@ Set up basic HTTP AUTH password protection for web domain
 
 Adding ssl support for web domain.
 
+
 **OPTIONS**
 
     user domain ssl_dir [ssl_home] [restart]
+    
 
 
 The function turns on SSL support for a domain. 
@@ -53,8 +58,8 @@ Certificate authority *domain.tld.ca* file is optional.
 If home directory parameter (ssl_home) is not set, https domain uses public_shtml as separate documentroot directory.
 
 
-
 **v-update-web-domain-ssl**
+
 
 **OPTIONS**
 

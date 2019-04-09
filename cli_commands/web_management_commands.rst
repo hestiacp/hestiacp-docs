@@ -45,8 +45,6 @@ Adding ssl support for web domain.
 
     user domain ssl_dir [ssl_home] [restart]
     
-
-
 The function turns on SSL support for a domain. 
 
 Parameter *ssl_dir* is a path to directory where 2 or 3 ssl files can be found. 
@@ -73,7 +71,6 @@ Parameter *ssl_dir* is a path to directory where 2 or 3 ssl files can be found.
 Certificate file *domain.tld.crt* and its key *domain.tld.key* are mandatory. 
 
 Certificate authority *domain.tld.ca* file is optional. 
-
 
 
 **v-delete-web-domain-ssl USER DOMAIN**

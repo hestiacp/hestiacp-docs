@@ -44,18 +44,22 @@ Adding ssl support for web domain.
 
 The function turns on SSL support for a domain. 
 
-Parameter ssl_dir is a path to directory where 2 or 3 ssl files can be found. 
+Parameter *ssl_dir* is a path to directory where 2 or 3 ssl files can be found. 
 
-Certificate file domain.tld.crt and its key domain.tld.key are mandatory. 
+Certificate file *domain.tld.crt* and its key *domain.tld.key* are mandatory. 
 
-Certificate authority domain.tld.ca file is optional. 
+Certificate authority *domain.tld.ca* file is optional. 
 
 
 **v-update-web-domain-ssl**
 
 The function updates the SSL certificate for a domain. 
 
-Parameter ssl_dir is a path to directory where 2 or 3 ssl files can be found. Certificate file domain.tld.crt and its key domain.tld.key are mandatory. Certificate authority domain.tld.ca file is optional. 
+Parameter *ssl_dir* is a path to directory where 2 or 3 ssl files can be found. 
+
+Certificate file *domain.tld.crt* and its key *domain.tld.key* are mandatory. 
+
+Certificate authority *domain.tld.ca* file is optional. 
 
 **OPTIONS**
 

@@ -48,7 +48,10 @@ Parameter *ssl_dir* is a path to directory where 2 or 3 ssl files can be found.
 
 Certificate file *domain.tld.crt* and its key *domain.tld.key* are mandatory. 
 
-Certificate authority *domain.tld.ca* file is optional. 
+Certificate authority *domain.tld.ca* file is optional.
+
+If home directory parameter (ssl_home) is not set, https domain uses public_shtml as separate documentroot directory.
+
 
 
 **v-update-web-domain-ssl**
@@ -66,7 +69,6 @@ Certificate file *domain.tld.crt* and its key *domain.tld.key* are mandatory.
 
 Certificate authority *domain.tld.ca* file is optional. 
 
-If home directory parameter (ssl_home) is not set, https domain uses public_shtml as separate documentroot directory.
 
 
 **v-delete-web-domain-ssl USER DOMAIN**

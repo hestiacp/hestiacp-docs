@@ -6,3 +6,4 @@ Hestia CLI core scripts documentation
   :glob:
   
   cli_commands/panel_configuration_commands.rst
+  cli_commands/web_management_commands.rst

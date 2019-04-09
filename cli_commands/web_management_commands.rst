@@ -35,7 +35,7 @@ Set up basic HTTP AUTH password protection for web domain
     
 **v-add-web-domain-ssl**
 
-Adding ssl for domain.
+Adding ssl support for web domain.
 
 **OPTIONS**
 
@@ -56,7 +56,7 @@ If home directory parameter (ssl_home) is not set, https domain uses public_shtm
 
 **v-delete-web-domain-ssl USER DOMAIN**
 
-deleting letsencrypt ssl cetificate for domain
+deleting letsencrypt ssl cetificate for web domain
 
 
 **OPTIONS**

@@ -71,7 +71,7 @@ If home directory parameter (ssl_home) is not set, https domain uses public_shtm
 
 **v-delete-web-domain-ssl USER DOMAIN**
 
-deleting letsencrypt ssl cetificate for web domain
+deleting letsencrypt ssl certificate for web domain
 
 
 **OPTIONS**

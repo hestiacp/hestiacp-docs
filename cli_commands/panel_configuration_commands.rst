@@ -52,6 +52,18 @@ change locale of *login page only* to given language
 
     language code (e.g. en, de, ru)
     
+**v-update-sys-ip**
+
+updates system IP when running under hypervizor.
+
+The function scans configured ip in the system and register them with Hestia internal database. 
+
+This call is intended for use on vps servers, where ip is set by hypervizor (e.g. OpenVZ)
+
+**OPTIONS**
+
+    [user] [ip status]
+    
     
     
     

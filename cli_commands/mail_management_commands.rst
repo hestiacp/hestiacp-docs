@@ -77,7 +77,7 @@ Script adds *fwd-only* flag
 
     user domain account
     
- **v-add-mail-domain-catchall**
+**v-add-mail-domain-catchall**
 
 The function enables catchall account for incoming emails.
 

@@ -70,7 +70,7 @@ The function of obtaining domain dkim public key for proper setup in DNS records
     
 **v-add-mail-account-fwd-only**
 
-Script adds _fwd-only_ flag
+Script adds *fwd-only* flag
 
 
 **OPTIONS**

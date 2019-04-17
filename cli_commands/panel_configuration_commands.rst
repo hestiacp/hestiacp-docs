@@ -1,5 +1,5 @@
 ****************************
-Panel Configuration Commands
+Panel configuration commands
 ****************************
 
 **v-change-sys-pma PMA**

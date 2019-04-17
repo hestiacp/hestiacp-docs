@@ -76,3 +76,11 @@ Script adds *fwd-only* flag
 **OPTIONS**
 
     user domain account
+    
+ **v-add-mail-domain-catchall**
+
+The function enables catchall account for incoming emails.
+
+**OPTIONS**
+
+    user domain email

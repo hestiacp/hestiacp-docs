@@ -92,3 +92,11 @@ The script changes IP address of web domain to specified in argument
     
 
     
+**v-check-letsencrypt-domain**
+
+The function check and validates domain using standard LetsEncrypt functionality
+
+
+**OPTIONS**
+
+    user domain

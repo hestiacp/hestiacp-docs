@@ -64,6 +64,17 @@ This call is intended for use on vps servers, where ip is set by hypervizor (e.g
 
     [user] [ip status]
     
+
+**v-change-user-name**
+
+change user full name
+
+The function allow to change user's first and last name 
+
+
+**OPTIONS**
+
+    [user] [fname] [lname]
     
     
     

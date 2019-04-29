@@ -34,4 +34,20 @@ The function adds web/dns/mail domain to a server.
     
     user domain [ip] restart
     
+**v-suspend-domain**
+
+The function suspends web/dns/mail domain.
+
+**OPTIONS**
+    
+    user domain
+    
+**v-delete-domain**
+
+The function deletes web/dns/mail domain.
+
+**OPTIONS**
+    
+    user domain
+    
     

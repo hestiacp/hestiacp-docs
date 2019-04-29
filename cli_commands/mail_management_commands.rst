@@ -84,3 +84,12 @@ The function enables catchall account for incoming emails.
 **OPTIONS**
 
     user domain email
+    
+
+**v-change-mail-account-password**
+
+This function changes email account password.
+
+**OPTIONS**
+
+    user domain account password

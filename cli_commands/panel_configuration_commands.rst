@@ -2,85 +2,229 @@
 Panel configuration commands
 ****************************
 
-**v-change-sys-pma PMA**
+## v-add-user-2fa
 
-change phpMyAdmin URL in Hestia with argument given
+**Parameters**: User
 
-**OPTIONS**
-
-    new_url
-    
-**v-change-sys-webmail WEBMAIL**
+**Example usage**:
 
 
+## v-check-user-2fa
 
-change RoundCube URL in Hestia with argument given
+**Parameters**: User Token
 
-**OPTIONS**
-
-    new_url
-   
-**v-delete-user-2fa USER**
-
-delete 2FA authentication for user specified in argument
-
-**OPTIONS**
-
-    username
-    
-**v-check-user-2fa USER TOKEN**
-
-check 2FA token for user specified in argument
-
-**OPTIONS**
-
-    username token
-    
-**v-add-user-2fa USER**
-
-add 2FA authentication for user specified in argument
-
-**OPTIONS**
-
-    username
-    
-**v-change-sys-language LANGUAGE**
-
-change locale of *login page only* to given language
-
-**OPTIONS**
-
-    language code (e.g. en, de, ru)
-    
-**v-update-sys-ip**
-
-updates system IP when running under hypervizor.
-
-The function scans configured ip in the system and register them with Hestia internal database. 
-
-This call is intended for use on vps servers, where ip is set by hypervizor (e.g. OpenVZ)
-
-**OPTIONS**
-
-    [user] [ip status]
-    
-
-**v-change-user-name**
-
-change user full name
-
-The function allow to change user's first and last name 
+**Example usage**:
 
 
-**OPTIONS**
 
-    [user] [fname] [lname]
-    
-    
-    
-    
-    
-    
-    
-    
-    
+## v-delete-user-2fa
+
+**Parameters**: User
+
+**Example usage**:
+
+
+
+## v-change-sys-config-value
+
+**Parameters**: Key Value
+
+**Example usage**:
+
+
+
+## v-change-sys-hestia-ssl
+
+**Parameters**: Ssl_dir [RESTART]
+
+**Example usage**:
+
+
+
+## v-change-sys-hostname
+
+**Parameters**: Hostname
+
+**Example usage**:
+
+
+
+## v-change-sys-ip-name
+
+**Parameters**: Ip Ip_name
+
+**Example usage**:
+
+
+
+## v-change-sys-ip-nat
+
+**Parameters**: Ip Nat_ip [RESTART]
+
+**Example usage**:
+
+
+
+## v-change-sys-ip-owner
+
+**Parameters**: Ip User
+
+**Example usage**:
+
+
+
+## v-change-sys-ip-status
+
+**Parameters**: Ip Ip_status
+
+**Example usage**:
+
+
+
+## v-change-sys-language
+
+**Parameters**: Language
+
+**Example usage**:
+
+
+
+## v-change-sys-pma
+
+**Parameters**: Pma
+
+**Example usage**:
+
+
+
+## v-change-sys-port
+
+**Parameters**: Port
+
+**Example usage**:
+
+
+
+## v-change-sys-service-config
+
+**Parameters**: Config Service [RESTART]
+
+**Example usage**:
+
+
+
+## v-change-sys-timezone
+
+**Parameters**: Timezone
+
+**Example usage**:
+
+
+
+## v-change-sys-webmail
+
+**Parameters**: Webmail
+
+**Example usage**:
+
+
+
+## v-change-user-contact
+
+**Parameters**: User Email
+
+**Example usage**:
+
+
+
+## v-change-user-language
+
+**Parameters**: User Language
+
+**Example usage**:
+
+
+
+## v-change-user-name
+
+**Parameters**: User Fname Lname
+
+**Example usage**:
+
+
+
+## v-change-user-ns
+
+**Parameters**: User Ns1 Ns2 [NS3] [NS4] [NS5] [NS6] [NS7] [NS8]
+
+**Example usage**:
+
+
+
+## v-change-user-package
+
+**Parameters**: User Package [FORCE]
+
+**Example usage**:
+
+
+
+## v-change-user-password
+
+**Parameters**: User Password
+
+**Example usage**:
+
+
+
+## v-change-user-shell
+
+**Parameters**: User Shell
+
+**Example usage**:
+
+
+
+## v-change-user-template
+
+**Parameters**: User Type Template
+
+**Example usage**:
+
+## v-change-web-domain-backend-tpl
+
+**Parameters**: User Domain Template [RESTART]
+
+**Example usage**:
+
+
+
+## v-change-web-domain-ftp-password
+
+**Parameters**: User Domain Ftp_user Ftp_password
+
+**Example usage**:
+
+
+
+## v-change-web-domain-ftp-path
+
+**Parameters**: User Domain Ftp_user Ftp_path
+
+**Example usage**:
+
+
+
+## v-change-web-domain-httpauth
+
+**Parameters**: User Domain Auth_user Auth_password [RESTART]
+
+**Example usage**:
+
+
+
+## v-change-web-domain-ip
+
+**Parameters**: User Domain Ip [RESTART]
+
+**Example usage**:

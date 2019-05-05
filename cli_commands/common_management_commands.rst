@@ -6,8 +6,6 @@ Common management commands
 v-add-backup-host
 *****************
 
-*****************
-
 **Parameters**: Type Host Username Password [PATH] [PORT]
 
 **Example usage**:

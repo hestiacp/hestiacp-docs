@@ -2,229 +2,254 @@
 Panel configuration commands
 ****************************
 
-## v-add-user-2fa
+**************
+v-add-user-2fa
+**************
 
 **Parameters**: User
 
 **Example usage**:
 
-
-## v-check-user-2fa
+****************
+v-check-user-2fa
+****************
 
 **Parameters**: User Token
 
 **Example usage**:
 
-
-
-## v-delete-user-2fa
+*****************
+v-delete-user-2fa
+*****************
 
 **Parameters**: User
 
 **Example usage**:
 
 
-
-## v-change-sys-config-value
+*************************
+v-change-sys-config-value
+*************************
 
 **Parameters**: Key Value
 
 **Example usage**:
 
 
-
-## v-change-sys-hestia-ssl
+***********************
+v-change-sys-hestia-ssl
+***********************
 
 **Parameters**: Ssl_dir [RESTART]
 
 **Example usage**:
 
 
-
-## v-change-sys-hostname
+*********************
+v-change-sys-hostname
+*********************
 
 **Parameters**: Hostname
 
 **Example usage**:
 
 
-
-## v-change-sys-ip-name
+********************
+v-change-sys-ip-name
+********************
 
 **Parameters**: Ip Ip_name
 
 **Example usage**:
 
 
-
-## v-change-sys-ip-nat
+*******************
+v-change-sys-ip-nat
+*******************
 
 **Parameters**: Ip Nat_ip [RESTART]
 
 **Example usage**:
 
 
-
-## v-change-sys-ip-owner
+*********************
+v-change-sys-ip-owner
+*********************
 
 **Parameters**: Ip User
 
 **Example usage**:
 
-
-
-## v-change-sys-ip-status
+**********************
+v-change-sys-ip-status
+**********************
 
 **Parameters**: Ip Ip_status
 
 **Example usage**:
 
 
-
-## v-change-sys-language
+*********************
+v-change-sys-language
+*********************
 
 **Parameters**: Language
 
 **Example usage**:
 
 
-
-## v-change-sys-pma
+*****************
+v-change-sys-pma
+*****************
 
 **Parameters**: Pma
 
 **Example usage**:
 
 
-
-## v-change-sys-port
+*****************
+v-change-sys-port
+*****************
 
 **Parameters**: Port
 
 **Example usage**:
 
 
-
-## v-change-sys-service-config
+***************************
+v-change-sys-service-config
+***************************
 
 **Parameters**: Config Service [RESTART]
 
 **Example usage**:
 
 
-
-## v-change-sys-timezone
+*********************
+v-change-sys-timezone
+*********************
 
 **Parameters**: Timezone
 
 **Example usage**:
 
 
-
-## v-change-sys-webmail
-
+********************
+v-change-sys-webmail
+********************
 **Parameters**: Webmail
 
 **Example usage**:
 
 
-
-## v-change-user-contact
+**********************
+v-change-user-contact
+**********************
 
 **Parameters**: User Email
 
 **Example usage**:
 
-
-
-## v-change-user-language
+**********************
+v-change-user-language
+**********************
 
 **Parameters**: User Language
 
 **Example usage**:
 
 
-
-## v-change-user-name
+******************
+v-change-user-name
+******************
 
 **Parameters**: User Fname Lname
 
 **Example usage**:
 
 
-
-## v-change-user-ns
+*****************
+v-change-user-ns
+*****************
 
 **Parameters**: User Ns1 Ns2 [NS3] [NS4] [NS5] [NS6] [NS7] [NS8]
 
 **Example usage**:
 
 
-
-## v-change-user-package
+**********************
+v-change-user-package
+**********************
 
 **Parameters**: User Package [FORCE]
 
 **Example usage**:
 
 
-
-## v-change-user-password
+***********************
+v-change-user-password
+***********************
 
 **Parameters**: User Password
 
 **Example usage**:
 
 
-
-## v-change-user-shell
-
+*********************
+v-change-user-shell
+*********************
 **Parameters**: User Shell
 
 **Example usage**:
 
 
-
-## v-change-user-template
+************************
+v-change-user-template
+************************
 
 **Parameters**: User Type Template
 
 **Example usage**:
 
-## v-change-web-domain-backend-tpl
+*********************************
+v-change-web-domain-backend-tpl
+*********************************
 
 **Parameters**: User Domain Template [RESTART]
 
 **Example usage**:
 
 
-
-## v-change-web-domain-ftp-password
+*********************************
+v-change-web-domain-ftp-password
+*********************************
 
 **Parameters**: User Domain Ftp_user Ftp_password
 
 **Example usage**:
 
 
-
-## v-change-web-domain-ftp-path
+****************************
+v-change-web-domain-ftp-path
+****************************
 
 **Parameters**: User Domain Ftp_user Ftp_path
 
 **Example usage**:
 
 
-
-## v-change-web-domain-httpauth
+****************************
+v-change-web-domain-httpauth
+****************************
 
 **Parameters**: User Domain Auth_user Auth_password [RESTART]
 
 **Example usage**:
 
 
-
-## v-change-web-domain-ip
-
+**********************
+v-change-web-domain-ip
+**********************
 **Parameters**: User Domain Ip [RESTART]
 
 **Example usage**:

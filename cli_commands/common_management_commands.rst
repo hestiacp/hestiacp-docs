@@ -24,6 +24,10 @@ v-add-cron-job
 v-add-cron-letsencrypt-job
 *****************
 
+**Parameters**: None
+
+**Example usage**:
+
 
 *****************
 v-add-cron-reports

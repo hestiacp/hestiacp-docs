@@ -325,3 +325,96 @@ v-add-sys-sftp-jail
 **Parameters**: None
 
 **Example usage**:
+
+****************************************
+v-check-fs-permission
+****************************************
+
+**Parameters**: User File
+
+**Example usage**:
+
+****************************************
+v-check-user-hash
+****************************************
+**Parameters**: User Hash
+
+**Example usage**:
+
+****************************************
+v-check-user-password
+****************************************
+
+**Parameters**: User Password
+
+****************************************
+v-copy-fs-directory
+****************************************
+
+**Parameters**: User Src_directory Dst_directory
+
+****************************************
+v-copy-fs-file
+****************************************
+
+**Parameters**: User Src_file Dst_file
+
+****************************************
+v-delete-backup-host
+****************************************
+
+**Parameters**: Type [HOST]
+
+****************************************
+v-delete-cron-hestia-autoupdate
+****************************************
+
+**Parameters**: None
+
+****************************************
+v-delete-cron-job
+****************************************
+
+**Parameters**: User Job
+
+**Example usage**:
+
+****************************************
+v-delete-cron-reports
+****************************************
+
+**Parameters**: User
+
+**Example usage**:
+
+****************************************
+v-delete-cron-restart-job
+****************************************
+
+**Parameters**: None
+
+**Example usage**:
+
+****************************************
+v-delete-database
+****************************************
+
+**Parameters**: User Database
+
+**Example usage**:
+
+****************************************
+v-delete-database-host
+****************************************
+
+**Parameters**: Type Host
+
+**Example usage**:
+
+****************************************
+v-delete-databases
+****************************************
+
+**Parameters**: User
+
+**Example usage**:

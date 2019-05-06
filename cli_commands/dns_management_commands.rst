@@ -87,5 +87,3 @@ The function unsuspends all user's DNS domains.
 **OPTIONS**
 
   user [restart]
-  
-    

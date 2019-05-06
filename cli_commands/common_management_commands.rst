@@ -18,9 +18,9 @@ v-add-cron-job
 
 **Example usage**:
 
-*****************
+**************************
 v-add-cron-letsencrypt-job
-*****************
+**************************
 
 **Parameters**: None
 
@@ -35,9 +35,9 @@ v-add-cron-reports
 
 **Example usage**:
 
-*****************
+**********************
 v-add-cron-restart-job
-*****************
+**********************
 
 **Parameters**: None
 
@@ -51,9 +51,9 @@ v-add-database
 
 **Example usage**:
 
-*****************
+********************
 v-add-database-host
-*****************
+********************
 
 **Parameters**: Type Host Dbuser Dbpass [MAX_DB] [CHARSETS] [TPL]
 
@@ -67,25 +67,25 @@ v-add-domain
 
 **Example usage**:
 
-*****************
+******************
 v-add-firewall-ban
-*****************
+******************
 
 **Parameters**: Ip Chain
 
 **Example usage**:
 
-*****************
+********************
 v-add-firewall-chain
-*****************
+********************
 
 **Parameters**: Chain [PORT] [PROTOCOL]
 
 **Example usage**:
 
-*****************
+*******************
 v-add-firewall-rule
-*****************
+*******************
 
 **Parameters**: Action Ip Port [PROTOCOL] [COMMENT] [RULE]
 
@@ -122,9 +122,9 @@ v-add-user
 **Parameters**: User Password Email [PACKAGE] [FNAME] [LNAME]
 **Example usage**:
 
-*****************
+********************
 v-add-user-sftp-jail
-*****************
+********************
 
 **Parameters**: User
 
@@ -138,33 +138,33 @@ v-list-user
 
 **Example usage**:
 
-*****************
+*******************
 v-list-user-backup
-*****************
+*******************
 
 **Parameters**: User Backup [FORMAT]
 
 **Example usage**:
 
-*****************
+*****************************
 v-list-user-backup-exclusions
-*****************
+*****************************
 
 **Parameters**: User [FORMAT]
 
 **Example usage**:
 
-*****************
+********************
 v-list-user-backups
-*****************
+********************
 
 **Parameters**: User [FORMAT]
 
 **Example usage**:
 
-*****************
+**********************
 v-list-user-favourites
-*****************
+**********************
 
 **Parameters**: User [FORMAT]
 
@@ -186,9 +186,9 @@ v-list-user-log
 
 **Example usage**:
 
-*****************
+*************************
 v-list-user-notifications
-*****************
+*************************
 
 **Parameters**: User [FORMAT]
 
@@ -207,9 +207,9 @@ v-list-user-package
 
 **Example usage**:
 
-*****************
+********************
 v-list-user-packages
-*****************
+********************
 
 **Parameters**:None
 
@@ -239,41 +239,41 @@ v-change-cron-job
 
 **Example usage**:
 
-*****************
+*******************************
 v-change-database-host-password
-*****************
+*******************************
 
 **Parameters**: Type Host Dbuser Dbpass
 
 **Example usage**:
 
-*****************
+***********************
 v-change-database-owner
-*****************
+***********************
 
 **Parameters**: Database User
 
 **Example usage**:
 
-*****************
+**************************
 v-change-database-password
-*****************
+**************************
 
 **Parameters**: User Database Dbpass
 
 **Example usage**:
 
-*****************
+**********************
 v-change-database-user
-*****************
+**********************
 
 **Parameters**: User Database Dbuser [DBPASS]
 
 **Example usage**:
 
-*****************
+*********************
 v-change-domain-owner
-*****************
+*********************
 
 **Parameters**: Domain User
 
@@ -287,9 +287,9 @@ v-change-firewall-rule
 
 **Example usage**:
 
-*****************
+***************************
 v-change-fs-file-permission
-*****************
+***************************
 
 **Parameters**: User File Permissions
 
@@ -318,9 +318,9 @@ v-add-sys-quota
 **Example usage**:
 
 
-*****************
+*******************
 v-add-sys-sftp-jail
-*****************
+*******************
 
 **Parameters**: None
 

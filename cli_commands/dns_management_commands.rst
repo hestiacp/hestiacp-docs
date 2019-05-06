@@ -2,88 +2,156 @@
 DNS subsystem management commands
 ####################################
 
-**v-change-user-ns**
- 
-This function changes nameservers for specific user
-        
-**OPTIONS**
+****************************************
+v-add-dns-domain
+****************************************
 
-    user ns1 ns2 [ns3] [ns4] [ns5] [ns6] [ns7] [ns8]
-    
-    
-  
-**v-change-dns-record**
+**Parameters**: User Domain Ip [NS1] [NS2] [NS3] [..] [NS8] [RESTART]
 
+**Example usage**:
 
-The function indented for changing  specified DNS record.
+****************************************
+v-add-dns-on-web-alias
+****************************************
 
+**Parameters**: User Alias Ip [RESTART]
 
-**OPTIONS**
+**Example usage**:
 
-  user domain id [priority] [restart]
-      
+****************************************
+v-add-dns-record
+****************************************
 
-**v-list-dns-records**
+**Parameters**: User Domain Record Type Value [PRIORITY] [ID] [RESTART]
 
+**Example usage**:
 
-The function intended for getting and DNS domains records.
+**Parameters**: User Domain [DKIM_SIZE]
 
+****************************************
+v-add-remote-dns-domain
+****************************************
 
-**OPTIONS**
+**Parameters**: User Domain [FLUSH]
 
-  user domain [format] 
-  
-  
-**v-insert-dns-records**
+**Example usage**:
 
-The function copies dns record to the domain configuration
+****************************************
+v-add-remote-dns-host
+****************************************
 
+**Parameters**: Host Port User Password [TYPE] [DNS_USER]
 
-**OPTIONS**
+**Example usage**:
 
-  user domain data_file [restart]
-  
-  
-**v-suspend-remote-dns-host**
+****************************************
+v-add-remote-dns-record
+****************************************
 
+**Parameters**: User Domain Id
 
-The function suspends  specified DNS server.
+**Example usage**:
 
+****************************************
+v-add-remote-dns-domain
+****************************************
 
-**OPTIONS**
+**Parameters**: User Domain [FLUSH]
 
-  host
-  
-**v-get-dns-domain-value**
+**Example usage**:
 
+****************************************
+v-add-remote-dns-host
+****************************************
 
-The function for getting a certain DNS domain parameter.
+**Parameters**: Host Port User Password [TYPE] [DNS_USER]
 
+**Example usage**:
 
-**OPTIONS**
+****************************************
+v-add-remote-dns-record
+****************************************
 
- user domain key
- 
-   
-**v-suspend-dns-domain**
+**Parameters**: User Domain Id
 
+**Example usage**:
 
-The function suspends certain domain of user specified.
+****************************************
+v-change-dns-domain-exp
+****************************************
 
+**Parameters**: User Domain Exp
 
-**OPTIONS**
+**Example usage**:
 
-  user domain [restart]
-  
- 
- 
-   
-**v-unsuspend-dns-domains**
+****************************************
+v-change-dns-domain-ip
+****************************************
 
+**Parameters**: User Domain Ip
 
-The function unsuspends all user's DNS domains.
+**Example usage**:
 
+****************************************
+v-change-dns-domain-soa
+****************************************
 
-**OPTIONS**
+**Parameters**: User Domain Soa
 
-  user [restart]
+**Example usage**:
+
+****************************************
+v-change-dns-domain-tpl
+****************************************
+
+**Parameters**: User Domain Template [RESTART]
+
+**Example usage**:
+
+****************************************
+v-change-dns-domain-ttl
+****************************************
+
+**Parameters**: User Domain Ttl
+
+**Example usage**:
+
+****************************************
+v-change-dns-record
+****************************************
+
+**Parameters**: User Domain Id Value [PRIORITY] [RESTART]
+
+**Example usage**:
+
+****************************************
+v-change-dns-record-id
+****************************************
+
+**Parameters**: User Domain Id Newid [RESTART]
+
+**Example usage**:
+
+****************************************
+v-change-remote-dns-domain-exp
+****************************************
+
+**Parameters**: User Domain
+
+**Example usage**:
+
+****************************************
+v-change-remote-dns-domain-soa
+****************************************
+
+**Parameters**: User Domain
+
+**Example usage**:
+
+****************************************
+v-change-remote-dns-domain-ttl
+****************************************
+
+**Parameters**: User Domain
+
+**Example usage**:

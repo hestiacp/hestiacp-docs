@@ -418,3 +418,86 @@ v-delete-databases
 **Parameters**: User
 
 **Example usage**:
+
+****************************************
+v-list-remote-dns-hosts
+****************************************
+
+**Example usage**:
+
+**Parameters**:None
+
+****************************************
+v-list-sys-clamd-config
+****************************************
+
+**Example usage**:
+
+**Parameters**:None
+
+****************************************
+v-list-sys-config
+****************************************
+
+**Example usage**:
+
+**Parameters**:None
+
+****************************************
+v-list-sys-cpu-status
+****************************************
+
+**Example usage**:
+
+**Parameters**:None
+
+
+****************************************
+v-list-sys-disk-status
+****************************************
+
+
+**Parameters**:None
+
+**Example usage**:
+
+
+****************************************
+v-list-sys-hestia-autoupdate
+****************************************
+**Parameters**:None
+
+
+
+**Example usage**:
+
+
+****************************************
+**Parameters**:None
+
+v-list-sys-hestia-ssl
+****************************************
+
+
+**Example usage**:
+
+**Parameters**:None
+
+
+****************************************
+v-list-sys-hestia-updates
+****************************************
+
+
+**Parameters**:None
+
+**Example usage**:
+
+****************************************
+v-list-sys-info
+****************************************
+
+**Parameters**:None
+
+
+**Example usage**:

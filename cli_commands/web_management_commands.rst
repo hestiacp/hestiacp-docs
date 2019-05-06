@@ -2,101 +2,45 @@
 Web domains management commands
 *******************************
 
-**v-restart-web**
+*********************************
+v-change-web-domain-backend-tpl
+*********************************
 
-Restart web server
+**Parameters**: User Domain Template [RESTART]
 
-
-**OPTIONS**
-
-    None
-    
-
-**v-list-web-domain-accesslog**
+**Example usage**:
 
 
+*********************************
+v-change-web-domain-ftp-password
+*********************************
 
-Shows web domain access log
+**Parameters**: User Domain Ftp_user Ftp_password
 
-
-**OPTIONS**
-
-    user domain [access] [format]
-    
-    
-   
-**v-add-web-domain-httpauth**
-
-Set up basic HTTP AUTH password protection for web domain
+**Example usage**:
 
 
+****************************
+v-change-web-domain-ftp-path
+****************************
 
-**OPTIONS**
+**Parameters**: User Domain Ftp_user Ftp_path
 
-    user domain auth_user auth_password [restart]
-    
-    
-**v-add-web-domain-ssl**
-
-Adding ssl support for web domain.
-
-The function turns on SSL support for a domain. 
-
-Parameter *ssl_dir* is a path to directory where 2 or 3 ssl files can be found. 
-
-Certificate file *domain.tld.crt* and its key *domain.tld.key* are mandatory. 
-
-Certificate authority *domain.tld.ca* file is optional.
-
-If home directory parameter ( *ssl_home* ) is not set, https domain uses public_shtml as separate document root directory.
-
-**OPTIONS**
-
-    user domain ssl_dir [ssl_home] [restart]
+**Example usage**:
 
 
-**v-update-web-domain-ssl**
+****************************
+v-change-web-domain-httpauth
+****************************
+
+**Parameters**: User Domain Auth_user Auth_password [RESTART]
+
+**Example usage**:
 
 
-The function updates the SSL certificate for a domain. 
+**********************
+v-change-web-domain-ip
+**********************
+**Parameters**: User Domain Ip [RESTART]
 
-Parameter *ssl_dir* is a path to directory where 2 or 3 ssl files can be found. 
-
-Certificate file *domain.tld.crt* and its key *domain.tld.key* are mandatory. 
-
-Certificate authority *domain.tld.ca* file is optional. 
-
-**OPTIONS**
-
-    user domain ssl_dir [restart]
-
-
-**v-delete-web-domain-ssl USER DOMAIN**
-
-deleting letsencrypt ssl certificate for web domain
-
-
-**OPTIONS**
-
-    username domain
-    
-    
-**v-change-web-domain-ip**
-
-The script changes IP address of web domain to specified in argument
-
-
-**OPTIONS**
-
-    user domain ip [restart]
-    
-
-    
-**v-check-letsencrypt-domain**
-
-The function check and validates domain using standard LetsEncrypt functionality
-
-
-**OPTIONS**
-
-    user domain
+**Example usage**:

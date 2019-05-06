@@ -202,7 +202,6 @@ v-change-user-shell
 
 **Example usage**:
 
-
 ************************
 v-change-user-template
 ************************

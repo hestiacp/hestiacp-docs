@@ -27,9 +27,9 @@ v-add-cron-letsencrypt-job
 **Example usage**:
 
 
-*****************
+*******************
 v-add-cron-reports
-*****************
+*******************
 
 **Parameters**: User
 
@@ -99,9 +99,9 @@ v-add-fs-archive
 
 **Example usage**
 
-*****************
+*******************
 v-add-fs-directory
-*****************
+*******************
 
 **Parameters**: User Directory
 
@@ -279,9 +279,9 @@ v-change-domain-owner
 
 **Example usage**:
 
-*****************
+**********************
 v-change-firewall-rule
-*****************
+**********************
 
 **Parameters**: Rule Action Ip  Port [PROTOCOL] [COMMENT]
 
@@ -295,9 +295,9 @@ v-change-fs-file-permission
 
 **Example usage**:
 
-*****************
+*******************
 v-add-sys-firewall
-*****************
+*******************
 
 **Parameters**:None
 

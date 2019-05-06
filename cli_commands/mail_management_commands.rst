@@ -3,93 +3,107 @@
 Mail subsystem management commands
 ***********************************
 
-**v-rebuild-mail-domains**
- 
-The function rebuilds EXIM configuration files for all mail domains.
+****************************************
+v-add-mail-account
+****************************************
+
+**Parameters**: User Domain Account Password [QUOTA]
+
+**Example usage**:
+
+****************************************
+v-add-mail-account-alias
+****************************************
+
+**Parameters**: User Domain Account Alias
+
+**Example usage**:
+
+****************************************
+v-add-mail-account-autoreply
+****************************************
+
+**Parameters**: User Domain Account Message
+
+**Example usage**:
+
+****************************************
+v-add-mail-account-forward
+****************************************
+
+**Parameters**: User Domain Account Forward
+
+**Example usage**:
+
+****************************************
+v-add-mail-account-fwd-only
+****************************************
+
+**Parameters**: User Domain Account
+
+**Example usage**:
+
+****************************************
+v-add-mail-domain
+****************************************
+
+**Parameters**: User Domain [ANTISPAM] [ANTIVIRUS] [DKIM] [DKIM_SIZE]
+
+**Example usage**:
+
+****************************************
+v-add-mail-domain-antispam
+****************************************
+
+**Parameters**: User Domain
+
+**Example usage**:
+
+****************************************
+v-add-mail-domain-antivirus
+****************************************
+
+**Parameters**: User Domain
+
+**Example usage**:
 
 
+****************************************
+v-add-mail-domain-catchall
+****************************************
 
-**OPTIONS**
+**Parameters**: User Domain Email
 
-    user
-    
+**Example usage**:
 
-**v-add-mail-domain**
+****************************************
+v-add-mail-domain-dkim
+****************************************
 
+**Parameters**: User Domain [DKIM_SIZE]
 
+**Example usage**:
 
-This function adds mail domain
+****************************************
+v-change-mail-account-password
+****************************************
 
+**Parameters**: User Domain Account Password
 
-**OPTIONS**
+**Example usage**:
 
-  user domain [antispam] [antivirus] [dkim] [dkim_size]
-    
-    
-   
-**v-add-mail-account**
+****************************************
+v-change-mail-account-quota
+****************************************
 
-The function add new email account for specified domain.
+**Parameters**: User Domain Account Quota
 
+**Example usage**:
 
+****************************************
+v-change-mail-domain-catchall
+****************************************
 
-**OPTIONS**
+**Parameters**: User Domain Email
 
-     user domain account password [quota]
-    
-    
-**v-change-mail-account-quota**
-
-Script change mail disk quota for the account given
-
-**OPTIONS**
-
-    user domain account quota
-
-
-**v-get-mail-account-value**
-
-
-The function intended to get specific mail account parametr. 
-
-
-**OPTIONS**
-
-    user domain account key
-
-
-**v-list-mail-domain-dkim-dns**
-
-The function of obtaining domain dkim public key for proper setup in DNS records.
-
-
-**OPTIONS**
-
-    user domain [format]
-    
-    
-**v-add-mail-account-fwd-only**
-
-Script adds *fwd-only* flag
-
-
-**OPTIONS**
-
-    user domain account
-    
-**v-add-mail-domain-catchall**
-
-The function enables catchall account for incoming emails.
-
-**OPTIONS**
-
-    user domain email
-    
-
-**v-change-mail-account-password**
-
-This function changes email account password.
-
-**OPTIONS**
-
-    user domain account password
+**Example usage**:

@@ -582,4 +582,3 @@ v-search-fs-object
 **Parameters**: User Object [PATH]
 
 **Example usage**:
-

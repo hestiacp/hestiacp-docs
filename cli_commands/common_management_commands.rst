@@ -468,13 +468,10 @@ v-list-sys-hestia-autoupdate
 **Parameters**:None
 
 
-
 **Example usage**:
 
 
 ****************************************
-**Parameters**:None
-
 v-list-sys-hestia-ssl
 ****************************************
 

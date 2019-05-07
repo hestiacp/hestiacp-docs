@@ -374,3 +374,11 @@ v-update-dns-templates
 **Parameters**:None
 
 **Example usage**:
+
+****************************************
+v-list-dns-domain
+****************************************
+
+**Parameters**: User Domain [FORMAT]
+
+**Example usage**:

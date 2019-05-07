@@ -501,3 +501,85 @@ v-list-sys-info
 
 
 **Example usage**:
+
+****************************************
+v-delete-fs-directory
+****************************************
+
+**Parameters**: User Directory
+
+**Example usage**:
+
+
+****************************************
+v-delete-fs-file
+****************************************
+
+**Parameters**: User File
+
+**Example usage**:
+
+****************************************
+v-extract-fs-archive
+****************************************
+
+**Parameters**: User Archive Directory
+
+**Example usage**:
+
+****************************************
+v-get-fs-file-type
+****************************************
+
+**Parameters**: User File
+
+**Example usage**:
+
+****************************************
+v-list-fs-directory
+****************************************
+
+**Parameters**: User [PATH]
+
+**Example usage**:
+
+****************************************
+v-move-fs-directory
+****************************************
+
+**Parameters**: User Src_directory Dst_directory
+
+**Example usage**:
+
+****************************************
+v-move-fs-file
+****************************************
+
+**Parameters**: User Src_file Dst_file
+
+**Example usage**:
+
+****************************************
+v-open-fs-config
+****************************************
+
+**Parameters**: Config
+
+**Example usage**:
+
+****************************************
+v-open-fs-file
+****************************************
+
+**Parameters**: User File
+
+**Example usage**:
+
+****************************************
+v-search-fs-object
+****************************************
+
+**Parameters**: User Object [PATH]
+
+**Example usage**:
+

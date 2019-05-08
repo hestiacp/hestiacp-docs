@@ -229,7 +229,7 @@ v-delete-firewall-ban
 
 **Parameters**: Ip Chain
 
-**Example usage**: `v-delete-firewall-ban 198.11.130.250`
+**Example usage**: `v-delete-firewall-ban 198.11.130.250 MAIL`
 
 
 ****************************************

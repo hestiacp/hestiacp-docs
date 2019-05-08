@@ -238,7 +238,7 @@ v-delete-firewall-chain
 
 **Parameters**: Chain
 
-**Example usage**:
+**Example usage**: `v-delete-firewall-chain WEB`
 
 ****************************************
 v-delete-firewall-rule

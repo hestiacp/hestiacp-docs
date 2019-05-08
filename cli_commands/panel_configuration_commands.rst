@@ -8,7 +8,7 @@ v-add-user-2fa
 
 **Parameters**: User
 
-**Example usage**:
+**Example usage**: `v-add-user-2fa admin`
 
 ****************
 v-check-user-2fa
@@ -16,7 +16,7 @@ v-check-user-2fa
 
 **Parameters**: User Token
 
-**Example usage**:
+**Example usage**: `v-check-user-2fa admin 493690`
 
 *****************
 v-delete-user-2fa
@@ -33,7 +33,7 @@ v-change-sys-config-value
 
 **Parameters**: Key Value
 
-**Example usage**:
+**Example usage**: `v-change-sys-config-value VERSION 1.0`
 
 
 ***********************
@@ -42,7 +42,7 @@ v-change-sys-hestia-ssl
 
 **Parameters**: Ssl_dir [RESTART]
 
-**Example usage**:
+**Example usage**: `v-change-hestia-ssl /home/new/dir/path yes`
 
 
 *********************
@@ -51,7 +51,7 @@ v-change-sys-hostname
 
 **Parameters**: Hostname
 
-**Example usage**:
+**Example usage**: `v-change-sys-hostname mydomain.tld`
 
 
 ********************
@@ -60,7 +60,7 @@ v-change-sys-ip-name
 
 **Parameters**: Ip Ip_name
 
-**Example usage**:
+**Example usage**: `v-change-sys-ip-name 80.122.52.70 acme.com`
 
 
 *******************
@@ -69,7 +69,7 @@ v-change-sys-ip-nat
 
 **Parameters**: Ip Nat_ip [RESTART]
 
-**Example usage**:
+**Example usage**: `185.209.50.140 10.110.104.205`
 
 
 *********************
@@ -78,7 +78,7 @@ v-change-sys-ip-owner
 
 **Parameters**: Ip User
 
-**Example usage**:
+**Example usage**: `91.198.136.14 admin`
 
 **********************
 v-change-sys-ip-status
@@ -86,7 +86,7 @@ v-change-sys-ip-status
 
 **Parameters**: Ip Ip_status
 
-**Example usage**:
+**Example usage**: `91.198.136.14 yourstatus`
 
 
 *********************
@@ -95,7 +95,7 @@ v-change-sys-language
 
 **Parameters**: Language
 
-**Example usage**:
+**Example usage**: `v-change-sys-language ru`
 
 
 *****************
@@ -104,7 +104,7 @@ v-change-sys-pma
 
 **Parameters**: Pma
 
-**Example usage**:
+**Example usage**:  `v-change-sys-pma trickyurlhere`
 
 
 *****************
@@ -113,7 +113,7 @@ v-change-sys-port
 
 **Parameters**: Port
 
-**Example usage**:
+**Example usage**: `v-change-sys-port 5678`
 
 
 ***************************

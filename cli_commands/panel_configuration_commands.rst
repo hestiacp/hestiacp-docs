@@ -24,7 +24,7 @@ v-delete-user-2fa
 
 **Parameters**: User
 
-**Example usage**:
+**Example usage**: `v-delete-user-2fa admin`
 
 
 *************************

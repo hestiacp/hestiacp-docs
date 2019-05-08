@@ -221,7 +221,7 @@ v-delete-domain
 
 **Parameters**: User Domain
 
-**Example usage**:
+**Example usage**: `v-delete-domain admin domain.tld`
 
 ****************************************
 v-delete-firewall-ban
@@ -229,7 +229,7 @@ v-delete-firewall-ban
 
 **Parameters**: Ip Chain
 
-**Example usage**:
+**Example usage**: `v-delete-firewall-ban 198.11.130.250`
 
 
 ****************************************

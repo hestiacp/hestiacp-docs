@@ -40,7 +40,7 @@ v-change-sys-config-value
 v-change-sys-hestia-ssl
 ***********************
 
-**Parameters**: Ssl_dir [RESTART]
+**Parameters**: ssl_dir [RESTART]
 
 **Example usage**: `v-change-hestia-ssl /home/new/dir/path yes`
 
@@ -122,7 +122,11 @@ v-change-sys-service-config
 
 **Parameters**: Config Service [RESTART]
 
-**Example usage**:
+**Example usage**: `v-change-sys-service-config /home/admin/dovecot.conf dovecot yes`
+
+The function for changing service confguration located at the default system path with the new one. 
+
+New configuration should be specified in the first argument. Used for internal purposes most often.
 
 
 *********************
@@ -131,7 +135,7 @@ v-change-sys-timezone
 
 **Parameters**: Timezone
 
-**Example usage**:
+**Example usage**: `v-change-sys-timezone Europe/Berlin`
 
 
 ********************
@@ -139,7 +143,7 @@ v-change-sys-webmail
 ********************
 **Parameters**: Webmail
 
-**Example usage**:
+**Example usage**: `v-change-sys-webmail YourtrickyURLhere`
 
 
 **********************
@@ -148,7 +152,7 @@ v-change-user-contact
 
 **Parameters**: User Email
 
-**Example usage**:
+**Example usage**: `v-change-user-contact admin admin@yahoo.com`
 
 **********************
 v-change-user-language
@@ -156,7 +160,7 @@ v-change-user-language
 
 **Parameters**: User Language
 
-**Example usage**:
+**Example usage**: `v-change-user-language admin en`
 
 
 ******************
@@ -165,7 +169,7 @@ v-change-user-name
 
 **Parameters**: User Fname Lname
 
-**Example usage**:
+**Example usage**: `v-change-user-name admin John Smith`
 
 
 *****************
@@ -174,7 +178,7 @@ v-change-user-ns
 
 **Parameters**: User Ns1 Ns2 [NS3] [NS4] [NS5] [NS6] [NS7] [NS8]
 
-**Example usage**:
+**Example usage**: `v-change-user-ns ns1.domain.tld ns2.domain.tld`
 
 
 **********************
@@ -183,7 +187,7 @@ v-change-user-package
 
 **Parameters**: User Package [FORCE]
 
-**Example usage**:
+**Example usage**: `v-change-user-package admin yourpackage`
 
 
 ***********************
@@ -192,7 +196,7 @@ v-change-user-password
 
 **Parameters**: User Password
 
-**Example usage**:
+**Example usage**: `v-change-user-password admin NewPassword123`
 
 
 *********************
@@ -200,7 +204,7 @@ v-change-user-shell
 *********************
 **Parameters**: User Shell
 
-**Example usage**:
+**Example usage**: `v-change-user-shell admin nologin`
 
 ************************
 v-change-user-template
@@ -208,13 +212,7 @@ v-change-user-template
 
 **Parameters**: User Type Template
 
-**Example usage**:
-
-****************************************
-v-check-api-key
-****************************************
-
-**Example usage**:
+**Example usage**: `v-change-user-template admin WEB wordpress`
 
 
 ****************************************

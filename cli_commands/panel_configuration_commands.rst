@@ -247,7 +247,7 @@ v-delete-firewall-rule
 
 **Parameters**: Rule
 
-**Example usage**:
+**Example usage**: `v-delete-firewall-rule  SSH_BLOCK`
 
 
 ****************************************
@@ -257,15 +257,16 @@ v-delete-letsencrypt-domain
 
 **Parameters**: User Domain [RESTART]
 
-**Example usage**:
+**Example usage**: `v-delete-letsencrypt-domain admin acme.com yes`
 
 
 ****************************************
 v-delete-sys-firewall
 ****************************************
 
+**Parameters**:None
 
-**Example usage**:
+**Example usage**: `v-delete-sys-firewall`
 
 
 ****************************************
@@ -274,20 +275,22 @@ v-delete-sys-ip
 
 **Parameters**: Ip
 
-**Example usage**:
+**Example usage**: `v-delete-sys-ip 212.42.76.210`
 
 
 ****************************************
 v-delete-sys-quota
 ****************************************
 
-**Example usage**:
+**Parameters**:None
+
+**Example usage**:`v-delete-sys-quota`
 
 
 ****************************************
 v-delete-sys-sftp-jail
 ****************************************
-
+**Parameters**:None
 **Example usage**:
 
 
@@ -295,7 +298,7 @@ v-delete-sys-sftp-jail
 v-delete-user
 ****************************************
 
-**Example usage**:
+**Example usage**: `v-delete-user whistler`
 
 **Parameters**: User
 
@@ -305,7 +308,7 @@ v-delete-user-backup
 
 **Parameters**: User Backup
 
-**Example usage**:
+**Example usage**: `v-delete-user-backup admin.2012-12-21_00-10-00.tar`
 
 ****************************************
 v-delete-user-backup-exclusions
@@ -313,7 +316,7 @@ v-delete-user-backup-exclusions
 
 **Parameters**: User [SYSTEM]
 
-**Example usage**:
+**Example usage**: `v-delete-user-backup-exclusions admin`
 
 
 ****************************************
@@ -322,7 +325,7 @@ v-delete-user-favourites
 
 **Parameters**: User System Object
 
-**Example usage**:
+**Example usage**: `v-delete-user-favourites admin WEB yourdomain.tld`
 
 ****************************************
 v-delete-user-ips
@@ -330,7 +333,7 @@ v-delete-user-ips
 
 **Parameters**: User
 
-**Example usage**:
+**Example usage**: `v-delete-user-ips admin`
 
 ****************************************
 v-delete-user-notification
@@ -338,7 +341,7 @@ v-delete-user-notification
 
 **Parameters**: User Notification
 
-**Example usage**:
+**Example usage**: `admin "Hello, admin!"`
 
 
 ****************************************
@@ -347,7 +350,7 @@ v-delete-user-package
 
 **Parameters**: Package
 
-**Example usage**:
+**Example usage**: `v-delete-user-package admin palegreen`
 
 ****************************************
 v-delete-user-sftp-jail
@@ -356,14 +359,14 @@ v-delete-user-sftp-jail
 
 **Parameters**: User
 
-**Example usage**:
+**Example usage**: `v-delete-user-sftp-jail whistler`
 
 ****************************************
 v-generate-api-key
 ****************************************
 **Parameters**:None
 
-**Example usage**:
+**Example usage**: `v-generate-api-key`
 
 
 ****************************************
@@ -373,7 +376,7 @@ v-generate-password-hash
 **Parameters**: Hash-Method Salt Password
 
 
-**Example usage**:
+**Example usage**: `v-generate-password-hash sha-512  rAnDom_string yourPassWord`
 
 ****************************************
 v-generate-ssl-cert
@@ -381,19 +384,23 @@ v-generate-ssl-cert
 
 **Parameters**: Domain Email Country State City Org Unit [ALIASES] [FORMAT]
 
-**Example usage**:
+**Example usage**: `v-generate-ssl-cert example.com mail@yahoo.com USA California Monterey ACME.COM IT`
 
 ****************************************
 v-get-sys-timezone
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-get-sys-timezone`
 
 ****************************************
 v-get-sys-timezones
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**:`v-get-sys-timezones`
 
 
 ****************************************
@@ -402,7 +409,7 @@ v-get-user-salt
 
 **Parameters**: User [IP] [SALT]
 
-**Example usage**:
+**Example usage**: `v-get-user-salt admin`
 
 ****************************************
 v-get-user-value
@@ -410,7 +417,7 @@ v-get-user-value
 
 **Parameters**: User Key
 
-**Example usage**:
+**Example usage**: `v-get-user-value admin FNAME`
 
 
 ****************************************

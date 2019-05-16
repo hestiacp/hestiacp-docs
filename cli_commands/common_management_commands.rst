@@ -120,6 +120,7 @@ v-add-user
 *****************
 
 **Parameters**: User Password Email [PACKAGE] [FNAME] [LNAME]
+
 **Example usage**:
 
 ********************
@@ -301,6 +302,8 @@ v-add-sys-firewall
 
 **Parameters**:None
 
+**Example usage**:
+
 *****************
 v-add-sys-ip
 *****************
@@ -347,6 +350,8 @@ v-check-user-password
 
 **Parameters**: User Password
 
+**Example usage**:
+
 ****************************************
 v-copy-fs-directory
 ****************************************
@@ -359,17 +364,23 @@ v-copy-fs-file
 
 **Parameters**: User Src_file Dst_file
 
+**Example usage**:
+
 ****************************************
 v-delete-backup-host
 ****************************************
 
 **Parameters**: Type [HOST]
 
+**Example usage**:
+
 ****************************************
 v-delete-cron-hestia-autoupdate
 ****************************************
 
 **Parameters**: None
+
+**Example usage**:
 
 ****************************************
 v-delete-cron-job
@@ -465,6 +476,7 @@ v-list-sys-disk-status
 ****************************************
 v-list-sys-hestia-autoupdate
 ****************************************
+
 **Parameters**:None
 
 
@@ -475,16 +487,14 @@ v-list-sys-hestia-autoupdate
 v-list-sys-hestia-ssl
 ****************************************
 
+**Parameters**:None
 
 **Example usage**:
-
-**Parameters**:None
 
 
 ****************************************
 v-list-sys-hestia-updates
 ****************************************
-
 
 **Parameters**:None
 

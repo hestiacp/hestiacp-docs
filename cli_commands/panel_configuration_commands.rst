@@ -428,7 +428,7 @@ v-list-backup-host
 
 **Parameters**: Type [FORMAT]
 
-**Example usage**:
+**Example usage**: `v-list-backup-host `
 
 ****************************************
 v-list-cron-job
@@ -436,7 +436,7 @@ v-list-cron-job
 
 **Parameters**: User Job [FORMAT]
 
-**Example usage**:
+**Example usage**: `v-list-cron-job admin 7`
 
 ****************************************
 v-list-cron-jobs
@@ -444,7 +444,7 @@ v-list-cron-jobs
 
 **Parameters**: User [FORMAT]
 
-**Example usage**:
+**Example usage**: `v-list-cron-jobs admin`
 
 ****************************************
 v-list-database
@@ -452,7 +452,7 @@ v-list-database
 
 **Parameters**: User Database [FORMAT]
 
-**Example usage**:
+**Example usage**: `v-list-database  wp_db`
 
 ****************************************
 v-list-database-host
@@ -460,17 +460,21 @@ v-list-database-host
 
 **Parameters**: Type Host [FORMAT]
 
-**Example usage**:
+**Example usage**: `v-list-database-host mysql localhost`
 
 ****************************************
 v-list-database-hosts
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-list-database-hosts`
 
 ****************************************
 v-list-database-types
 ****************************************
+
+**Parameters**: None
 
 **Example usage**:
 
@@ -488,6 +492,7 @@ v-list-databases
 v-list-firewall-ban
 ****************************************
 
+**Parameters**:
 
 **Example usage**:
 

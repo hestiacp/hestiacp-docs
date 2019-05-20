@@ -428,7 +428,7 @@ v-list-backup-host
 
 **Parameters**: Type [FORMAT]
 
-**Example usage**: `v-list-backup-host `
+**Example usage**: `v-list-backup-host local`
 
 ****************************************
 v-list-cron-job
@@ -476,7 +476,7 @@ v-list-database-types
 
 **Parameters**: None
 
-**Example usage**:
+**Example usage**: `v-list-database-types`
 
 
 ****************************************
@@ -485,16 +485,16 @@ v-list-databases
 
 **Parameters**: User [FORMAT]
 
-**Example usage**:
+**Example usage**: `v-list-databases`
 
 
 ****************************************
 v-list-firewall-ban
 ****************************************
 
-**Parameters**:
+**Parameters**: None
 
-**Example usage**:
+**Example usage**: `v-list-firewall-ban`
 
 ****************************************
 v-list-firewall-rule
@@ -502,7 +502,7 @@ v-list-firewall-rule
 
 **Parameters**: Rule [FORMAT]
 
-**Example usage**:
+**Example usage**: `v-list-firewall-rule 2`
 
 
 ****************************************
@@ -511,7 +511,7 @@ v-list-letsencrypt-user
 
 **Parameters**: User [FORMAT]
 
-**Example usage**:
+**Example usage**: `v-list-letsencrypt-user admin`
 
 ****************************************
 v-list-sys-ip
@@ -519,93 +519,116 @@ v-list-sys-ip
 
 **Parameters**: Ip [FORMAT]
 
-**Example usage**:
+**Example usage**: `v-list-sys-ip 116.203.78.202`
 
 ****************************************
 v-list-sys-ips
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-list-sys-ips`
 
 ****************************************
 v-list-sys-languages
 ****************************************
 
-**Example usage**:
+**Parameters** None
+
+**Example usage**: `v-list-sys-languages`
 
 
 ****************************************
 v-list-sys-memory-status
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-list-sys-memory-status`
 
 ****************************************
 v-list-sys-mysql-config
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**:`v-list-mysql-config`
 
 ****************************************
 v-list-sys-nginx-config
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-list-sys-nginx-config`
 
 ****************************************
 v-list-sys-pgsql-config
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-list-pgsql-config`
 
 ****************************************
 v-list-sys-php-config
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-list-sys-php-config`
 
 ****************************************
 v-list-sys-proftpd-config
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-list-sys-proftpd-config`
 
 ****************************************
 v-list-sys-rrd
 ****************************************
 
-**Example usage**:
+
+**Note**: Intended for internal usage
+
+**Example usage**: `v-list-sys-rrd`
 
 
 ****************************************
 v-list-sys-spamd-config
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-list-sys-spamd-config`
 
 
 ****************************************
 v-list-sys-users
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-list-sys-users`
 
 ****************************************
 v-list-user-stats
 ****************************************
 
-
 **Parameters**: User [FORMAT]
 
 
-**Example usage**:
+**Example usage**: `v-list-users-stats admin`
 
 ****************************************
 v-list-users
 ****************************************
 
+**Parameters**: None
 
-**Example usage**:
+**Example usage**: `v-list-users`
 
 
 ****************************************
@@ -616,7 +639,7 @@ v-rebuild-cron-jobs
 **Parameters**: User [RESTART]
 
 
-**Example usage**:
+**Example usage**: `v-rebuild-cron-jobs admin yes`
 
 ****************************************
 v-rebuild-databases
@@ -624,14 +647,14 @@ v-rebuild-databases
 
 **Parameters**: User
 
-**Example usage**:
+**Example usage**: `v-rebuild-databases admin`
 
 
 ****************************************
 v-rebuild-user
 ****************************************
 
-**Example usage**:
+**Example usage**: `v-rebuild-user admin yes`
 
 **Parameters**: User [RESTART]
 
@@ -640,19 +663,25 @@ v-rebuild-user
 v-restart-cron
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-restart-cron`
 
 ****************************************
 v-restart-ftp
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-restart-ftp`
 
 ****************************************
 v-restart-proxy
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-restart-proxy`
 
 ****************************************
 v-restart-service
@@ -660,7 +689,7 @@ v-restart-service
 
 **Parameters**: Service
 
-**Example usage**:
+**Example usage**: `v-restart-service`
 
 ****************************************
 v-restart-system
@@ -668,7 +697,7 @@ v-restart-system
 
 **Parameters**: Restart
 
-**Example usage**:
+**Example usage**: `v-restart-system yes`
 
 
 ****************************************
@@ -677,7 +706,7 @@ v-restore-user
 
 **Parameters**: User Backup [WEB] [DNS] [MAIL] [DB] [CRON] [UDIR] [NOTIFY]
 
-**Example usage**:
+**Example usage**: `v-restore-user admin 2019-04-22_01-00-00.tar`
 
 ****************************************
 v-schedule-letsencrypt-domain
@@ -685,16 +714,16 @@ v-schedule-letsencrypt-domain
 
 **Parameters**: User Domain [ALIASES]
 
-**Example usage**:
+**Example usage**: `v-schedule-letsencrypt-domain admin example.com www.example.com`
 
 
 ****************************************
 v-schedule-user-backup
 ****************************************
 
-**Example usage**:
-
 **Parameters**: User
+
+**Example usage**: `v-schedule-user-backup admin`
 
 ****************************************
 v-schedule-user-restore
@@ -702,7 +731,7 @@ v-schedule-user-restore
 
 **Parameters**: User Backup [WEB] [DNS] [MAIL] [DB] [CRON] [UDIR]
 
-**Example usage**:
+**Example usage**: `v-schedule-user-restore 2019-04-22_01-00-00.tar`
 
 ****************************************
 v-search-domain-owner
@@ -710,7 +739,7 @@ v-search-domain-owner
 
 **Parameters**: Domain [TYPE]
 
-**Example usage**:
+**Example usage**: `v-search-domain-owner acme.com`
 
 
 ****************************************
@@ -719,7 +748,7 @@ v-search-object
 
 **Parameters**: Object [FORMAT]
 
-**Example usage**:
+**Example usage**: `v-search-object example.com json`
 
 ****************************************
 v-search-user-object
@@ -727,7 +756,7 @@ v-search-user-object
 
 **Parameters**: User Object [FORMAT]
 
-**Example usage**:
+**Example usage**: `v-search-user-object admin example.com json`
 
 ****************************************
 v-start-service
@@ -735,9 +764,13 @@ v-start-service
 
 **Parameters**: Service
 
+**Example usage**: `v-start-service mysql`
+
 ****************************************
 v-stop-firewall
 ****************************************
+
+**Parameters**: None
 
 **Example usage**:
 
@@ -747,7 +780,7 @@ v-stop-service
 
 **Parameters**: Service
 
-**Example usage**:
+**Example usage**: `v-stop-service apache2`
 
 ****************************************
 v-suspend-cron-job

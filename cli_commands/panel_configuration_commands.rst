@@ -788,16 +788,16 @@ v-suspend-cron-job
 
 **Parameters**: User Job [RESTART]
 
-**Example usage**:
+**Example usage**: `v-suspend-cron-job admin 5 yes`
 
 
 ****************************************
 v-suspend-cron-jobs
 ****************************************
 
-**Example usage**:
-
 **Parameters**: User
+
+**Example usage**:`v-suspend-cron-jobs admin`
 
 ****************************************
 v-suspend-database
@@ -805,7 +805,7 @@ v-suspend-database
 
 **Parameters**: User Database
 
-**Example usage**:
+**Example usage**: `v-suspend-database admin admin_wordpress_db`
 
 ****************************************
 v-suspend-database-host
@@ -813,7 +813,7 @@ v-suspend-database-host
 
 **Parameters**: Type Host
 
-**Example usage**:
+**Example usage**: `v-suspend-database-host mysql localhost`
 
 
 ****************************************
@@ -822,23 +822,15 @@ v-suspend-databases
 
 **Parameters**: User
 
-**Example usage**:
-
-
-**Parameters**: User Domain Id [RESTART]
-
-**Example usage**:
+**Example usage**: `v-suspend-databases admin`
 
 ****************************************
 v-suspend-domain
 ****************************************
 
-**Example usage**:
-
-
 **Parameters**: User Domain
 
-**Example usage**:
+**Example usage**: `v-suspend-domain admin example.com`
 
 ****************************************
 v-suspend-firewall-rule
@@ -846,7 +838,7 @@ v-suspend-firewall-rule
 
 **Parameters**: Rule
 
-**Example usage**:
+**Example usage**: `v-suspend-firewall-rule 7`
 
 
 ****************************************
@@ -855,7 +847,7 @@ v-suspend-user
 
 **Parameters**: User [RESTART]
 
-**Example usage**:
+**Example usage**: `v-suspend-user alice yes`
 
 
 ****************************************
@@ -864,13 +856,15 @@ v-unsuspend-cron-job
 
 **Parameters**: User Job [RESTART]
 
+**Example usage**: `v-unsuspend-cron-job admin 7 yes`
+
 ****************************************
 v-unsuspend-cron-jobs
 ****************************************
 
 **Parameters**: User [RESTART]
 
-**Example usage**:
+**Example usage**: `v-unsuspend-cron-jobs admin no`
 
 ****************************************
 v-unsuspend-database
@@ -878,7 +872,7 @@ v-unsuspend-database
 
 **Parameters**: User Database
 
-**Example usage**:
+**Example usage**: `v-unsuspend-database admin mydb`
 
 ****************************************
 v-unsuspend-database-host
@@ -886,7 +880,7 @@ v-unsuspend-database-host
 
 **Parameters**: Type Host
 
-**Example usage**:
+**Example usage**: `v-unsuspend-database-host mysql localhost`
 
 ****************************************
 v-unsuspend-databases
@@ -903,7 +897,7 @@ v-unsuspend-domain
 
 **Parameters**: User Domain
 
-**Example usage**:
+**Example usage**: `v-unsuspend-domain admin acme.com`
 
 
 ****************************************
@@ -912,7 +906,7 @@ v-unsuspend-firewall-rule
 
 **Parameters**: Rule
 
-**Example usage**:
+**Example usage**: `v-unsuspend-firewall-rule 7`
 
 ****************************************
 v-unsuspend-user
@@ -920,7 +914,7 @@ v-unsuspend-user
 
 **Parameters**: User
 
-**Example usage**:
+**Example usage**: `v-unsuspend-user bob`
 
 ****************************************
 v-update-database-disk
@@ -928,7 +922,7 @@ v-update-database-disk
 
 **Parameters**: User Database
 
-**Example usage**:
+**Example usage**: `v-update-database-disk admin wp_db`
 
 ****************************************
 v-update-databases-disk
@@ -936,29 +930,32 @@ v-update-databases-disk
 
 **Parameters**: User
 
-**Example usage**:
+**Example usage**: `v-update-databases-disk admin`
 
 
 ****************************************
 v-update-firewall
 ****************************************
 
-**Example usage**:
+**Parameters**:None
+
+**Example usage**: `v-update-firewall`
 
 ****************************************
 v-update-host-certificate
 ****************************************
 
-
 **Parameters**: [USER] [HOSTNAME]
 
-**Example usage**:
+**Example usage**: `v-update-host-certificate admin example.com`
 
 ****************************************
 v-update-letsencrypt-ssl
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-update-letsencrypt-ssl`
 
 ****************************************
 v-update-sys-hestia
@@ -966,27 +963,34 @@ v-update-sys-hestia
 
 **Parameters**: Package
 
-**Example usage**:
+**Example usage**: `v-update-sys-hestia exim4`
 
 ****************************************
 v-update-sys-hestia-all
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-update-sys-hestia-all`
 
 ****************************************
 v-update-sys-ip
 ****************************************
 
-**Example usage**:
+**Description**: The function scans configured ip 
+in the system and register them with Hestia 
+internal database. 
+
+**Example usage**: `Intended for internal usage`
 
 
 ****************************************
 v-update-sys-ip-counters
 ****************************************
 
+**Parameters**: None
 
-**Example usage**:
+**Example usage**: `v-update-sys-ip-counters`
 
 ****************************************
 v-update-sys-queue
@@ -1001,89 +1005,109 @@ v-update-sys-queue
 v-update-sys-rrd
 ****************************************
 
+**Parameters**: None
 
-**Example usage**:
+**Example usage**: `v-update-sys-rrd`
 
 
 ****************************************
 v-update-sys-rrd-apache2
 ****************************************
 
+**Parameters**: None
 
-**Example usage**:
+**Example usage**: `v-update-sys-rrd-apache2`
 
 
 ****************************************
 v-update-sys-rrd-ftp
 ****************************************
 
+**Parameters**: None
 
-**Example usage**:
+**Example usage**: `v-update-sys-rrd-ftp`
 
 
 ****************************************
 v-update-sys-rrd-httpd
 ****************************************
 
+**Parameters**: None
 
-**Example usage**:
+**Example usage**: `v-update-sys-rrd-httpd`
 
 
 ****************************************
 v-update-sys-rrd-la
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-update-sys-rrd-la`
 
 
 ****************************************
 v-update-sys-rrd-mail
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-update-sys-rrd-mail`
 
 
 ****************************************
 v-update-sys-rrd-mem
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-update-sys-rrd-mem`
 
 
 ****************************************
 v-update-sys-rrd-mysql
 ****************************************
 
+**Parameters**: None
 
-**Example usage**:
+
+**Example usage**: `v-update-sys-rrd-mysql`
 
 
 ****************************************
 v-update-sys-rrd-net
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-update-sys-rrd-net`
 
 
 ****************************************
 v-update-sys-rrd-nginx
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-update-sys-rrd-nginx`
 
 
 ****************************************
 v-update-sys-rrd-pgsql
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-update-sys-rrd-pgsql`
 
 
 ****************************************
 v-update-sys-rrd-ssh
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-update-sys-rrd-ssh`
 
 
 ****************************************
@@ -1092,13 +1116,15 @@ v-update-user-backup-exclusions
 
 **Parameters**: User File
 
-**Example usage**:
+**Example usage**: `v-update-user-backup-exclusions admin .bash_history`
 
 ****************************************
 v-update-user-counters
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-update-user-counters`
 
 
 ****************************************
@@ -1107,7 +1133,7 @@ v-update-user-disk
 
 **Parameters**: User
 
-**Example usage**:
+**Example usage**: `v-update-user-disk admin`
 
 ****************************************
 v-update-user-package
@@ -1115,7 +1141,7 @@ v-update-user-package
 
 **Parameters**: Package
 
-**Example usage**:
+**Example usage**: `v-update-user-package default`
 
 
 ****************************************
@@ -1124,10 +1150,12 @@ v-update-user-quota
 
 **Parameters**: User
 
-**Example usage**:
+**Example usage**: `v-update-user-quota alice`
 
 ****************************************
 v-update-user-stats
 ****************************************
 
-**Example usage**:
+**Parameters**: None
+
+**Example usage**: `v-update-user-stats`

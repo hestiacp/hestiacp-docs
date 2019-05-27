@@ -8,7 +8,7 @@ v-add-backup-host
 
 **Parameters**: Type Host Username Password [PATH] [PORT]
 
-**Example usage**:
+**Example usage**: `v-add-backup-host sftp backup.acme.com admin p4$$w@Rd`
 
 *****************
 v-add-cron-job
@@ -16,7 +16,7 @@ v-add-cron-job
 
 **Parameters**: User Min Hour Day Month Wday Command [JOB] [RESTART]
 
-**Example usage**:
+**Example usage**: `v-add-cronjob admin * * * * * sudo /usr/local/hestia/bin/v-backup-users`
 
 **************************
 v-add-cron-letsencrypt-job
@@ -24,7 +24,7 @@ v-add-cron-letsencrypt-job
 
 **Parameters**: None
 
-**Example usage**:
+**Example usage**: `v-add-letsencrypt-job`
 
 
 *******************
@@ -33,7 +33,7 @@ v-add-cron-reports
 
 **Parameters**: User
 
-**Example usage**:
+**Example usage**: `v-add-cron-reports admin`
 
 **********************
 v-add-cron-restart-job
@@ -41,7 +41,7 @@ v-add-cron-restart-job
 
 **Parameters**: None
 
-**Example usage**:
+**Example usage**: `v-add-cron-restart-job`
 
 *****************
 v-add-database
@@ -49,7 +49,7 @@ v-add-database
 
 **Parameters**: User Database Dbuser Dbpass [TYPE] [HOST] [CHARSET]
 
-**Example usage**:
+**Example usage**: `v-add-database admin wordpress_db matt qwerty123`
 
 ********************
 v-add-database-host
@@ -57,7 +57,7 @@ v-add-database-host
 
 **Parameters**: Type Host Dbuser Dbpass [MAX_DB] [CHARSETS] [TPL]
 
-**Example usage**:
+**Example usage**: `v-add-database-host mysql localhost alice p@$$wOrd`
 
 *****************
 v-add-domain
@@ -65,7 +65,7 @@ v-add-domain
 
 **Parameters**: User Domain [IP] [RESTART]
 
-**Example usage**:
+**Example usage**: `v-add-domain admin example.com`
 
 ******************
 v-add-firewall-ban
@@ -73,7 +73,7 @@ v-add-firewall-ban
 
 **Parameters**: Ip Chain
 
-**Example usage**:
+**Example usage**: `v-add-firewall-ban 37.120.129.20 MAIL`
 
 ********************
 v-add-firewall-chain
@@ -81,7 +81,7 @@ v-add-firewall-chain
 
 **Parameters**: Chain [PORT] [PROTOCOL]
 
-**Example usage**:
+**Example usage**: `v-add-firewall-chain CRM 5678 TCP`
 
 *******************
 v-add-firewall-rule
@@ -89,7 +89,7 @@ v-add-firewall-rule
 
 **Parameters**: Action Ip Port [PROTOCOL] [COMMENT] [RULE]
 
-**Example usage**:
+**Example usage**: `v-add-firewall-rule DROP 185.137.111.77 25`
 
 *****************
 v-add-fs-archive
@@ -97,7 +97,7 @@ v-add-fs-archive
 
 **Parameters**: User Archive File [FILE_2] [FILE_3] [FILE ...]
 
-**Example usage**
+**Example usage** `v-add-fs-archive archive.tar  readme.txt`
 
 *******************
 v-add-fs-directory
@@ -105,7 +105,7 @@ v-add-fs-directory
 
 **Parameters**: User Directory
 
-**Example usage**:
+**Example usage**: `v-add-fs-directory admin mybar`
 
 *****************
 v-add-fs-file
@@ -113,7 +113,7 @@ v-add-fs-file
 
 **Parameters**: User File
 
-**Example usage**:
+**Example usage**: `v-add-fs-file admin readme.md`
 
 *****************
 v-add-user
@@ -121,7 +121,7 @@ v-add-user
 
 **Parameters**: User Password Email [PACKAGE] [FNAME] [LNAME]
 
-**Example usage**:
+**Example usage**: `v-add-user admin2 P4$$w@rD bgates@aol.com`
 
 ********************
 v-add-user-sftp-jail
@@ -129,7 +129,7 @@ v-add-user-sftp-jail
 
 **Parameters**: User
 
-**Example usage**:
+**Example usage**:`v-add-user-sftp-jail admin`
 
 *****************
 v-list-user
@@ -137,7 +137,7 @@ v-list-user
 
 **Parameters**: User [FORMAT]
 
-**Example usage**:
+**Example usage**: `v-list-user admin`
 
 *******************
 v-list-user-backup
@@ -145,7 +145,7 @@ v-list-user-backup
 
 **Parameters**: User Backup [FORMAT]
 
-**Example usage**:
+**Example usage**: `v-list-user-backups  admin admin.2019-05-19_03-31-30.tar`
 
 *****************************
 v-list-user-backup-exclusions
@@ -153,7 +153,7 @@ v-list-user-backup-exclusions
 
 **Parameters**: User [FORMAT]
 
-**Example usage**:
+**Example usage**: `v-list-user-backup-exclusions admin`
 
 ********************
 v-list-user-backups
@@ -161,7 +161,7 @@ v-list-user-backups
 
 **Parameters**: User [FORMAT]
 
-**Example usage**:
+**Example usage**: `v-list-user-backups admin`
 
 **********************
 v-list-user-favourites
@@ -169,7 +169,7 @@ v-list-user-favourites
 
 **Parameters**: User [FORMAT]
 
-**Example usage**:
+**Example usage**: `v-list-user-favourites admin`
 
 *****************
 v-list-user-ips
@@ -177,7 +177,7 @@ v-list-user-ips
 
 **Parameters**: User [FORMAT]
 
-**Example usage**:
+**Example usage**: `v-list-user-ips admin`
 
 *****************
 v-list-user-log 
@@ -185,7 +185,7 @@ v-list-user-log
 
 **Parameters**: User [FORMAT]
 
-**Example usage**:
+**Example usage**: `v-list-user-log admin`
 
 *************************
 v-list-user-notifications
@@ -193,7 +193,7 @@ v-list-user-notifications
 
 **Parameters**: User [FORMAT]
 
-**Example usage**:
+**Example usage**: `v-list-user-notifications admin`
 
 *****************
 v-list-user-ns
@@ -201,12 +201,13 @@ v-list-user-ns
 
 **Parameters**: User [FORMAT]
 
-**Example usage**:
+**Example usage**: `v-list-user-ns admin`
 
 v-list-user-package
+
 **Parameters**: Package [FORMAT]
 
-**Example usage**:
+**Example usage**: `v-list-user-package`
 
 ********************
 v-list-user-packages
@@ -214,7 +215,7 @@ v-list-user-packages
 
 **Parameters**:None
 
-**Example usage**:
+**Example usage**: `v-list-user-packages`
 
 *****************
 v-backup-user

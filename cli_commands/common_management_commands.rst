@@ -203,7 +203,9 @@ v-list-user-ns
 
 **Example usage**: `v-list-user-ns admin`
 
+***********************
 v-list-user-package
+***********************
 
 **Parameters**: Package [FORMAT]
 

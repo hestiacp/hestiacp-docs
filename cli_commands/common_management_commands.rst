@@ -363,7 +363,7 @@ v-copy-fs-directory
 
 **Parameters**: User Src_directory Dst_directory
 
-**Example usage**: `v-copy-fs-directory alice /home/alice/dir1 /home/bob/dir2
+**Example usage**: `v-copy-fs-directory alice /home/alice/dir1 /home/bob/dir2`
 
 ****************************************
 v-copy-fs-file

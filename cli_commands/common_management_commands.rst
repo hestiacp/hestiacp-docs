@@ -225,7 +225,7 @@ v-backup-user
 
 **Parameters**: User [NOTIFY]
 
-**Example usage**:
+**Example usage**: `v-backup-user admin yes`
 
 *****************
 v-backup-users
@@ -233,7 +233,7 @@ v-backup-users
 
 **Parameters**: None
 
-**Example usage**:
+**Example usage**: `v-backup-users`
 
 *****************
 v-change-cron-job
@@ -241,7 +241,7 @@ v-change-cron-job
 
 **Parameters**: User Job Min Hour Day Month Wday Command
 
-**Example usage**:
+**Example usage**: `v-change-cron-job admin 7 * * * * * * /usr/bin/uptime`
 
 *******************************
 v-change-database-host-password
@@ -249,7 +249,7 @@ v-change-database-host-password
 
 **Parameters**: Type Host Dbuser Dbpass
 
-**Example usage**:
+**Example usage**: `v-change-database-host-password mysql localhost wp_user pA$$w@rD`
 
 ***********************
 v-change-database-owner
@@ -257,7 +257,7 @@ v-change-database-owner
 
 **Parameters**: Database User
 
-**Example usage**:
+**Example usage**: `v-change-database-owner mydb alice`
 
 **************************
 v-change-database-password
@@ -265,7 +265,7 @@ v-change-database-password
 
 **Parameters**: User Database Dbpass
 
-**Example usage**:
+**Example usage**: `v-change-database-password admin wp_db neW_pAssWorD`
 
 **********************
 v-change-database-user
@@ -273,7 +273,7 @@ v-change-database-user
 
 **Parameters**: User Database Dbuser [DBPASS]
 
-**Example usage**:
+**Example usage**: `v-change-database-user admin my_db joe_user`
 
 *********************
 v-change-domain-owner
@@ -281,7 +281,7 @@ v-change-domain-owner
 
 **Parameters**: Domain User
 
-**Example usage**:
+**Example usage**: `v-change-domain-owner www.example.com bob`
 
 **********************
 v-change-firewall-rule
@@ -289,7 +289,7 @@ v-change-firewall-rule
 
 **Parameters**: Rule Action Ip  Port [PROTOCOL] [COMMENT]
 
-**Example usage**:
+**Example usage**: `v-change-firewall-rule 3 ACCEPT 5.188.123.17 443`
 
 ***************************
 v-change-fs-file-permission
@@ -297,7 +297,7 @@ v-change-fs-file-permission
 
 **Parameters**: User File Permissions
 
-**Example usage**:
+**Example usage**: `v-change-fs-file-permission admin readme.txt 0777`
 
 *******************
 v-add-sys-firewall
@@ -305,7 +305,7 @@ v-add-sys-firewall
 
 **Parameters**:None
 
-**Example usage**:
+**Example usage**: `v-add-sys-firewall`
 
 *****************
 v-add-sys-ip
@@ -313,7 +313,7 @@ v-add-sys-ip
 
 **Parameters**: Ip Netmask [INTERFACE] [USER] [STATUS] [NAME] [NATED_IP]
 
-**Example usage**:
+**Example usage**: `v-add-sys-ip 216.239.32.21 255.255.255.0`
 
 *****************
 v-add-sys-quota
@@ -321,7 +321,7 @@ v-add-sys-quota
 
 **Parameters**: None
 
-**Example usage**:
+**Example usage**: `v-add-sys-quota`
 
 
 *******************
@@ -330,7 +330,7 @@ v-add-sys-sftp-jail
 
 **Parameters**: None
 
-**Example usage**:
+**Example usage**: `v-add-sys-sftp-jail`
 
 ****************************************
 v-check-fs-permission
@@ -338,14 +338,16 @@ v-check-fs-permission
 
 **Parameters**: User File
 
-**Example usage**:
+**Example usage**: `v-check-fs-permission admin readme.txt`
 
 ****************************************
 v-check-user-hash
 ****************************************
 **Parameters**: User Hash
 
-**Example usage**:
+**Example usage**: `v-check-user-hash admin CN5JY6SMEyNGnyCuvmK5z4r7gtHAC4mRZ...`
+
+**Note**: The second argument of function is long hash string, it's string of user's password. 
 
 ****************************************
 v-check-user-password
@@ -353,7 +355,7 @@ v-check-user-password
 
 **Parameters**: User Password
 
-**Example usage**:
+**Example usage**: `v-check-user-password admin qwerty1234`
 
 ****************************************
 v-copy-fs-directory
@@ -361,13 +363,15 @@ v-copy-fs-directory
 
 **Parameters**: User Src_directory Dst_directory
 
+**Example usage**: `v-copy-fs-directory alice /home/alice/dir1 /home/bob/dir2
+
 ****************************************
 v-copy-fs-file
 ****************************************
 
 **Parameters**: User Src_file Dst_file
 
-**Example usage**:
+**Example usage**: `v-copy-fs-file admin readme.txt readme_new.txt`
 
 ****************************************
 v-delete-backup-host
@@ -375,7 +379,7 @@ v-delete-backup-host
 
 **Parameters**: Type [HOST]
 
-**Example usage**:
+**Example usage**: `v-delete-backup-host sftp`
 
 ****************************************
 v-delete-cron-hestia-autoupdate
@@ -383,7 +387,7 @@ v-delete-cron-hestia-autoupdate
 
 **Parameters**: None
 
-**Example usage**:
+**Example usage**: `v-delete-cron-hestia-autoupdate`
 
 ****************************************
 v-delete-cron-job
@@ -391,7 +395,7 @@ v-delete-cron-job
 
 **Parameters**: User Job
 
-**Example usage**:
+**Example usage**: `v-delete-cron-job admin 9`
 
 ****************************************
 v-delete-cron-reports
@@ -399,7 +403,7 @@ v-delete-cron-reports
 
 **Parameters**: User
 
-**Example usage**:
+**Example usage**: `v-delete-cron-reports admin`
 
 ****************************************
 v-delete-cron-restart-job
@@ -407,7 +411,7 @@ v-delete-cron-restart-job
 
 **Parameters**: None
 
-**Example usage**:
+**Example usage**: `v-delete-cron-restart-job`
 
 ****************************************
 v-delete-database
@@ -415,7 +419,7 @@ v-delete-database
 
 **Parameters**: User Database
 
-**Example usage**:
+**Example usage**: `v-delete-database admin wp_db`
 
 ****************************************
 v-delete-database-host
@@ -423,7 +427,7 @@ v-delete-database-host
 
 **Parameters**: Type Host
 
-**Example usage**:
+**Example usage**: `v-delete-database-host pgsql localhost`
 
 ****************************************
 v-delete-databases
@@ -431,39 +435,39 @@ v-delete-databases
 
 **Parameters**: User
 
-**Example usage**:
+**Example usage**: `v-delete-databases admin`
 
 ****************************************
 v-list-remote-dns-hosts
 ****************************************
 
-**Example usage**:
-
 **Parameters**:None
+
+**Example usage**: `v-list-remote-dns-hosts`
 
 ****************************************
 v-list-sys-clamd-config
 ****************************************
 
-**Example usage**:
-
 **Parameters**:None
+
+**Example usage**: `v-list-sys-clamdconfig`
 
 ****************************************
 v-list-sys-config
 ****************************************
 
-**Example usage**:
-
 **Parameters**:None
+
+**Example usage**: `v-list-sys-config`
 
 ****************************************
 v-list-sys-cpu-status
 ****************************************
 
-**Example usage**:
-
 **Parameters**:None
+
+**Example usage**: `v-list-sys-cpu-status`
 
 
 ****************************************
@@ -473,7 +477,7 @@ v-list-sys-disk-status
 
 **Parameters**:None
 
-**Example usage**:
+**Example usage**: `v-list-sys-disk-status`
 
 
 ****************************************
@@ -483,7 +487,7 @@ v-list-sys-hestia-autoupdate
 **Parameters**:None
 
 
-**Example usage**:
+**Example usage**: `v-list-hestia-autoupdate`
 
 
 ****************************************
@@ -492,7 +496,7 @@ v-list-sys-hestia-ssl
 
 **Parameters**:None
 
-**Example usage**:
+**Example usage**: `v-list-sys-hestia-ssl`
 
 
 ****************************************
@@ -501,7 +505,7 @@ v-list-sys-hestia-updates
 
 **Parameters**:None
 
-**Example usage**:
+**Example usage**: `v-list-sys-hestia-updates`
 
 ****************************************
 v-list-sys-info
@@ -510,7 +514,7 @@ v-list-sys-info
 **Parameters**:None
 
 
-**Example usage**:
+**Example usage**: `v-list-sys-info`
 
 ****************************************
 v-delete-fs-directory
@@ -518,7 +522,7 @@ v-delete-fs-directory
 
 **Parameters**: User Directory
 
-**Example usage**:
+**Example usage**: `v-delete-fs-directory admin report1`
 
 
 ****************************************
@@ -527,7 +531,7 @@ v-delete-fs-file
 
 **Parameters**: User File
 
-**Example usage**:
+**Example usage**: `v-delete-fs-file admin readme.txt`
 
 ****************************************
 v-extract-fs-archive
@@ -535,7 +539,7 @@ v-extract-fs-archive
 
 **Parameters**: User Archive Directory
 
-**Example usage**:
+**Example usage**: `v-extract-fs-archive admin latest.tar.gz /home/admin`
 
 ****************************************
 v-get-fs-file-type
@@ -543,7 +547,7 @@ v-get-fs-file-type
 
 **Parameters**: User File
 
-**Example usage**:
+**Example usage**: `v-get-fs-file-type admin index.html`
 
 ****************************************
 v-list-fs-directory
@@ -551,7 +555,7 @@ v-list-fs-directory
 
 **Parameters**: User [PATH]
 
-**Example usage**:
+**Example usage**: `v-list-fs-directory /home/admin/web`
 
 ****************************************
 v-move-fs-directory
@@ -559,7 +563,7 @@ v-move-fs-directory
 
 **Parameters**: User Src_directory Dst_directory
 
-**Example usage**:
+**Example usage**: `v-move-fs-directory admin /home/admin/web /home/user02/`
 
 ****************************************
 v-move-fs-file
@@ -567,7 +571,7 @@ v-move-fs-file
 
 **Parameters**: User Src_file Dst_file
 
-**Example usage**:
+**Example usage**: `v-move-fs-file admin readme.txt new_readme.txt`
 
 ****************************************
 v-open-fs-config
@@ -575,7 +579,7 @@ v-open-fs-config
 
 **Parameters**: Config
 
-**Example usage**:
+**Example usage**: `v-open-fs-config /etc/mysql/my.cnf`
 
 ****************************************
 v-open-fs-file
@@ -583,7 +587,7 @@ v-open-fs-file
 
 **Parameters**: User File
 
-**Example usage**:
+**Example usage**: `v-open-fs-file admin README.md`
 
 ****************************************
 v-search-fs-object
@@ -591,4 +595,4 @@ v-search-fs-object
 
 **Parameters**: User Object [PATH]
 
-**Example usage**:
+**Example usage**: `v-search-fs-object admin hello.txt`

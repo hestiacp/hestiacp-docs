@@ -26,8 +26,6 @@ v-add-dns-record
 
 **Example usage**:
 
-**Parameters**: User Domain [DKIM_SIZE]
-
 ****************************************
 v-add-remote-dns-domain
 ****************************************

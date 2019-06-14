@@ -113,7 +113,7 @@ v-change-dns-record
 
 **Parameters**: User Domain Id Value [PRIORITY] [RESTART]
 
-**Example usage**: `v-change-dns-record admin domain.ua 42 192.18.22.43 `
+**Example usage**: `v-change-dns-record admin domain.ua 42 192.18.22.43`
 
 ****************************************
 v-change-dns-record-id

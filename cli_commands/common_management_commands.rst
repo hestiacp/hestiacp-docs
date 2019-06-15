@@ -97,7 +97,7 @@ v-add-fs-archive
 
 **Parameters**: User Archive File [FILE_2] [FILE_3] [FILE ...]
 
-**Example usage** `v-add-fs-archive archive.tar  readme.txt`
+**Example usage** `v-add-fs-archive admin archive.tar  readme.txt`
 
 *******************
 v-add-fs-directory

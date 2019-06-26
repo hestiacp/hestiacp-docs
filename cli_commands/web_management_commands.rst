@@ -474,3 +474,11 @@ v-update-web-templates
 **Parameters**: None
 
 **Example usage**: `v-update-web-templates`
+
+****************************************
+v-change-web-domain-hsts 
+****************************************
+
+**Parameters**:  User Domain
+
+**Example usage**: `v-change-web-domain-hsts admin example.com`

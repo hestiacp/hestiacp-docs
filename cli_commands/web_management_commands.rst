@@ -479,6 +479,6 @@ v-update-web-templates
 v-change-web-domain-hsts 
 ****************************************
 
-**Parameters**:  User Domain
+**Parameters**:  User Domain On/Off
 
-**Example usage**: `v-change-web-domain-hsts admin example.com`
+**Example usage**: `v-change-web-domain-hsts admin example.com on`

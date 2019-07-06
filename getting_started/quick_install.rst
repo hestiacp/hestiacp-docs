@@ -8,7 +8,7 @@ Log in to your server as root, either directly or via SSH:
 
 Download the installation script:
 
-*wget https://raw.githubusercontent.com/hestiacp/hestiacp/master/install/hst-install.sh*
+*wget https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh*
 
 *************
 Quick Install

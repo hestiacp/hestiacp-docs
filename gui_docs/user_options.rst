@@ -36,7 +36,7 @@ How to add user
 
 #. Click **Add user** button
 
-#. Fill all fields needed on the second page
+#. Fill out all registration data fields on the second page as shown below
 
 #. Click **Save** button
 

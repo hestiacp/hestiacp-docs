@@ -25,4 +25,33 @@ How to enable 2FA user's authentification
     :align: center
     :height: 377px
     :alt: screenshot #1
+    
+*****************************************
+How to add user
+*****************************************
+
+#. Login into the Control Panel as **admin** user
+
+#. Click on the **Users** tab 
+
+#. Click **Add user** button
+
+#. Fill all fields needed on the second page
+
+#. Click **Save** button
+
+.. image:: ../images/img03_adding_user.png
+    :width: 911px
+    :align: center
+    :height: 449px
+    :alt: adding user
+    
+.. image:: ../images/img04_adding_user.png
+    :width: 899px
+    :align: center
+    :height: 435px
+    :alt: adding user
+    
+    
+
 

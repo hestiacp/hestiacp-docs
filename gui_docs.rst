@@ -8,4 +8,5 @@ HestiaCP GUI user's manual
   
   gui_docs/user_options.rst
   gui_docs/webdomains.rst
+  gui_docs/best_practices.rst
   

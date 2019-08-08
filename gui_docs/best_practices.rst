@@ -12,7 +12,7 @@ How to create unprivileged user for regular tasks
 
 #. Click **Add User** button
 
-#. Fill out all user's details needed.
+#. Fill out all user's details needed
 
 #. Click **Save** button
 
@@ -22,4 +22,4 @@ How to create unprivileged user for regular tasks
 
 #. You are logged in as regular user now. Make all tasks you want securely under unprivileged account.
 
-.. youtube:: FY4l7qQeKHk
+.. youtube:: https://www.youtube.com/watch?v=FY4l7qQeKHk

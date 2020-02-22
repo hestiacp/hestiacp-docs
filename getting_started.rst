@@ -13,4 +13,5 @@ Welcome!
 
   getting_started/quick_install.rst
   getting_started/all_installation_options.rst
+  getting_started/release_notes.rst
   

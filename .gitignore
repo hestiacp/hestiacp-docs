@@ -1,0 +1,5 @@
+_build
+.vscode
+.DS_Store
+.env
+.vs

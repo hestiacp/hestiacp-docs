@@ -1,3 +1,7 @@
+.. toctree::
+  :maxdepth: 3
+  :glob:
+  
 **********************
 HestiaCP main features
 **********************
@@ -20,10 +24,6 @@ HestiaCP main features
 - Let's Encrypt support for web and email domains
 - 2 Factor authentication
 
-.. toctree::
-  :maxdepth: 3
-  :glob:
-  
   release_notes/0.9.8.28.rst
   release_notes/1.0.0.rst
   release_notes/1.0.1.rst

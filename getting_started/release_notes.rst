@@ -1,17 +1,18 @@
-*****************
+**********************
 HestiaCP main features
-*****************
+**********************
 
 - Support for SFTP chroot jails
 - MultiIP support for web/mail/dns
 - MultiPHP support for 
 
-  - php5.6
-  - php7.0
-  - php7.1
+  - php5.6 (`EOL <https://www.php.net/supported-versions.php>`__)
+  - php7.0 (`EOL <https://www.php.net/supported-versions.php>`__)
+  - php7.1 (`EOL <https://www.php.net/supported-versions.php>`__)
   - php7.2
   - php7.3
   - php7.4
+
 
 - Per-domain SSL certificates for inbound and outbound mail services
   (exim4, dovecot, webmail)
@@ -26,7 +27,7 @@ Release notes for HestiaCP v1.1.0
 Release date: Feb 24 2020
 
 ~700 commits since v1.0.6
-`github <https://github.com/hestiacp/hestiacp/compare/1.0.6...master>`_
+`github <https://github.com/hestiacp/hestiacp/compare/1.0.6...master>`__
 
 Second largest Release to date
 
@@ -49,7 +50,8 @@ Second largest Release to date
   where unnecesarry
 
 
-**New MultiPHP system**
+New MultiPHP system
+*******************
 
 Changes to the installer script
 
@@ -96,7 +98,8 @@ Hestiacp running 1.0.6
 
 
 
-**Breaking changes**:
+Breaking changes:
+****************
 
 "/backup" folder cannot be a symlink anymore (security), use bind mount instead
 
@@ -112,7 +115,7 @@ Release notes for HestiaCP v1.0.6
 Release date: Sep 26 2019
 
 7 Commits since v1.0.5
-`github <https://github.com/hestiacp/hestiacp/compare/1.0.5...1.0.6>`_
+`github <https://github.com/hestiacp/hestiacp/compare/1.0.5...1.0.6>`__
 
 - Hotfix support for HTTP/2 Let's Encrypt Server
 
@@ -123,7 +126,7 @@ Release notes for HestiaCP v1.0.5
 Release date: Aug 9 2019
 
 19 Commits since v1.0.4
-`github <https://github.com/hestiacp/hestiacp/compare/1.0.4...1.0.5>`_
+`github <https://github.com/hestiacp/hestiacp/compare/1.0.4...1.0.5>`__
 
 - Secutity improvements
 
@@ -134,7 +137,7 @@ Release notes for HestiaCP v1.0.4
 Release date: Jul 10 2019
 
 14 Commits since v1.0.4
-`github <https://github.com/hestiacp/hestiacp/compare/1.0.3...1.0.4>`_
+`github <https://github.com/hestiacp/hestiacp/compare/1.0.3...1.0.4>`__
 
 
 *********************************
@@ -144,7 +147,7 @@ Release notes for HestiaCP v1.0.3
 Release date: Jul 9 2019
 
 137 Commits since v1.0.1
-`github <https://github.com/hestiacp/hestiacp/compare/1.0.1...1.0.3>`_
+`github <https://github.com/hestiacp/hestiacp/compare/1.0.1...1.0.3>`__
 
 
 *********************************
@@ -154,7 +157,7 @@ Release notes for HestiaCP v1.0.1
 Release date: Jun 25 2019
 
 124 Commits since v1.00.0-190618
-`github <https://github.com/hestiacp/hestiacp/compare/1.00.0-190618...1.0.1>`_
+`github <https://github.com/hestiacp/hestiacp/compare/1.00.0-190618...1.0.1>`__
 
 
 *****************************************
@@ -164,7 +167,7 @@ Release notes for HestiaCP v1.00.0-190618
 Release date: Jun 18 2019
 
 826 Commits since v0.9.8.28
-`github <https://github.com/hestiacp/hestiacp/compare/0.9.8-28...1.00.0-190618>`_
+`github <https://github.com/hestiacp/hestiacp/compare/0.9.8-28...1.00.0-190618>`__
 
 Features:
 

@@ -77,7 +77,7 @@ Hestiacp running 1.0.6
 
 
 Breaking changes:
-****************
+******************
 
 "/backup" folder cannot be a symlink anymore (security), use bind mount instead
 

@@ -1,0 +1,10 @@
+*********************************
+Release notes for HestiaCP v1.0.6
+*********************************
+
+Release date: Sep 26 2019
+
+7 Commits since v1.0.5
+`github <https://github.com/hestiacp/hestiacp/compare/1.0.5...1.0.6>`__
+
+- Hotfix support for HTTP/2 Let's Encrypt Server

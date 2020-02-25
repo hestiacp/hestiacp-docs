@@ -1,0 +1,8 @@
+*********************************
+Release notes for HestiaCP v1.0.1
+*********************************
+
+Release date: Jun 25 2019
+
+124 Commits since v1.00.0-190618
+`github <https://github.com/hestiacp/hestiacp/compare/1.00.0-190618...1.0.1>`__

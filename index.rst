@@ -15,3 +15,4 @@ Getting Started
    getting_started.rst
    cli_commands.rst
    gui_docs.rst
+   release_notes.rst

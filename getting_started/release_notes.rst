@@ -27,7 +27,6 @@ HestiaCP main features
   release_notes/0.9.8.28.rst
   release_notes/1.0.0.rst
   release_notes/1.0.1.rst
-  release_notes/1.0.2.rst
   release_notes/1.0.3.rst
   release_notes/1.0.4.rst
   release_notes/1.0.5.rst

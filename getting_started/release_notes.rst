@@ -1,10 +1,6 @@
-.. toctree::
-  :maxdepth: 3
-  :glob:
-  
-**********************
+######################
 HestiaCP main features
-**********************
+######################
 
 - Support for SFTP chroot jails
 - MultiIP support for web/mail/dns
@@ -24,6 +20,10 @@ HestiaCP main features
 - Let's Encrypt support for web and email domains
 - 2 Factor authentication
 
+.. toctree::
+  :maxdepth: 3
+  :glob:
+  
   release_notes/0.9.8.28.rst
   release_notes/1.0.0.rst
   release_notes/1.0.1.rst
@@ -34,7 +34,6 @@ HestiaCP main features
   release_notes/1.0.6.rst
   release_notes/1.1.0.rst
   
-
 
 
 

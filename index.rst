@@ -13,5 +13,6 @@ Getting Started
    :maxdepth: 4
    
    getting_started.rst
+   release_notes.rst
    cli_commands.rst
    gui_docs.rst

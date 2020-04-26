@@ -33,7 +33,7 @@ New MultiPHP system
 
 Changes to the installer script
 
-``--fpm yes`` will install only the default php version, curently php7.3
+``--phpfpm yes`` will install only the default php version, curently php7.3
   - Additional php versions can be installed when required from web interface
     
     (/edit/server/ 'Web Server' section)

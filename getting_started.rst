@@ -1,12 +1,6 @@
 Getting Started
 ==================
 
-Welcome! 
-
-.. note::
-
-  Current documentation is subject of change. Hestia is under active development now.
-
 .. toctree::
   :maxdepth: 3
   :glob:

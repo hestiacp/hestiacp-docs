@@ -6,8 +6,8 @@
 Welcome to Hestia Control Panel's documentation!
 ================================================
 
-Getting Started
-=====================
+.. note::
+  Current documentation is subject of change. Hestia is under active development now.
 
 .. toctree::
    :maxdepth: 2

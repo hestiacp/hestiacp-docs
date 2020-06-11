@@ -13,7 +13,6 @@ HestiaCP main features
   - php7.3
   - php7.4
 
-
 - Per-domain SSL certificates for inbound and outbound mail services
   (exim4, dovecot, webmail)
 - Per-domain SSL certificates for web domains
@@ -24,11 +23,12 @@ HestiaCP main features
   :maxdepth: 3
   :glob:
   
-  release_notes/0.9.8.28.rst
-  release_notes/1.0.0.rst
-  release_notes/1.0.1.rst
-  release_notes/1.0.3.rst
-  release_notes/1.0.4.rst
-  release_notes/1.0.5.rst
-  release_notes/1.0.6.rst
+  release_notes/1.1.1.rst
   release_notes/1.1.0.rst
+  release_notes/1.0.6.rst
+  release_notes/1.0.5.rst
+  release_notes/1.0.4.rst
+  release_notes/1.0.3.rst
+  release_notes/1.0.1.rst
+  release_notes/1.0.0.rst
+  release_notes/0.9.8.28.rst

@@ -10,7 +10,7 @@ Getting Started
 =====================
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
    
    getting_started.rst
    release_notes.rst

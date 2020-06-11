@@ -1,5 +1,5 @@
 #####################################
-HestiaCP GUI user's manual
+GUI user's manual
 #####################################
 
 .. toctree::

@@ -1,5 +1,5 @@
 #######################################
-HestiaCP CLI core scripts documentation
+CLI Core Scripts
 #######################################
 
 .. toctree::

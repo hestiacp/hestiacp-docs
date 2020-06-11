@@ -1,5 +1,5 @@
 **********************
-HestiaCP main features
+Main Features
 **********************
 
 - Support for SFTP chroot jails
@@ -20,7 +20,7 @@ HestiaCP main features
 - 2 Factor authentication
 
 .. toctree::
-  :maxdepth: 3
+  :maxdepth: 1
   :glob:
   
   release_notes/1.1.1.rst

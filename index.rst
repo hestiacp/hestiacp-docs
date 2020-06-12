@@ -15,4 +15,5 @@ Welcome to Hestia Control Panel's documentation!
    getting_started.rst
    release_notes.rst
    cli_commands.rst
+   admin_docs.rst
    gui_docs.rst

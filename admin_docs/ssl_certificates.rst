@@ -35,8 +35,8 @@ Common errors are that are
 
 ================    ==================================================================================
 Error               Message
-rateLimited         | The Rate limit of the maximum requests have been passed.
-                      Please check https://crt.sh for how active certificates you have.
+rateLimited         The Rate limit of the maximum requests have been passed.
+                        Please check https://crt.sh for how active certificates you have.
 ================    ==================================================================================      
  
      
@@ -54,9 +54,9 @@ Yes you can!
 
 And enjoy
 
-************************************************
-Can I request a Cloudflare SSL Certificate as 
-************************************************
+****************************************************************
+Can I use a  Cloudflare Origin SSL Certificate with Cloudflare
+****************************************************************
 
 Yes you can!
 

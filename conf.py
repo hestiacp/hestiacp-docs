@@ -20,7 +20,7 @@
 # -- Project information -----------------------------------------------------
 
 project = u'Hestia Control Panel'
-copyright = u'2019, Hestia Control Panel'
+copyright = u'2020, Hestia Control Panel'
 author = u'Hestia Control Panel'
 
 # The short X.Y version

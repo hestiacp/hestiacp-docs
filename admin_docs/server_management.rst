@@ -3,18 +3,6 @@ Server management
 ###############################
 
 ************************************************
-How to setup Let's Encrypt for the control panel
-************************************************
-
-Make sure the hostname of the server is pointed to the ip adress
-
-Then run the following command
-
-.. code-block:: bash
-
-    v-add-letsencrypt-host
-
-************************************************
 How to setup a DNS Cluster
 ************************************************
 

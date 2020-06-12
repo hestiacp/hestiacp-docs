@@ -3,12 +3,12 @@ User management
 ###############################
 
 ************************************************
-How to restore a user?
+How to move a user to a new server?
 ************************************************
 
-The current restore function should accept both VestaCP and HestiaCP generated backups
+The current restore function accept both VestaCP and HestiaCP generated backups
 
-#. Make user backup on the old server. In this example we will use admin as the reference.
+#. Make a user backup on the old server. In this example we will use username as the reference.
 
 .. code-block:: bash
 
@@ -18,7 +18,7 @@ The current restore function should accept both VestaCP and HestiaCP generated b
 
 .. code-block:: bash
 
-    scp /home/backup/username.2020.01.01-00-00.tar new-server:/home/backup/
+    scp /home/backup/username.2020.01.01-00-00.tar root@hostname.com:/backup/
 
 #. Restore backup on the new server
 
@@ -34,3 +34,14 @@ Use
 
    v-restore-user newusername username.2020.01.01-00-00.tar
    
+User accounts that don not exist will be created.
+   
+************************************************
+What kind of backups are able to be restored 
+************************************************
+
+Currently HestiaCP only support the backup of:
+
+#. HestiaCP
+#. VestaCP
+

@@ -68,7 +68,7 @@ Every time you will rebuild the user or domain the config files of the domain wi
 
 The templates can be found in the /data/templates/ directory in the install folder 
 
-.. list-table:: Templates locations
+.. list-table:: Template locations
    :widths: 25 75
    :header-rows: 1
    
@@ -92,11 +92,87 @@ When editing it is the best practice to copy the template before editing. As the
     cp original.tpl new.tpl
     cp original.stpl new.stpl
     cp original.sh new.sh
-    
+
+.. note::
+    Modifying any default templates can cause issues in the future as there are commonly overwritten during updates.    
     
 When you are done modifying enable the template with the selected domain from the control panel. 
 
 After modifying existing template you need to rebuild user configuration. This can be done using v-rebuild-user command or bulk operation in the web interface (drop down list on a "User" page). 
+
+-------------------
+Available variables
+-------------------
+
+.. list-table:: Variables
+   :widths: 20 30 50 
+   :header-rows: 1
+   
+   * - Name
+     - Example
+     - Description  
+   * - %ip%
+     - 123.123.123.123
+     - IP Address of Server
+   * - %proxy_port%
+     - 80
+     - Port of Proxy
+   * - %proxy_port_ssl%
+     - 443
+     - Port of Proxy (SSL)
+   * - %web_port%
+     - 80 or 8080
+     - Port of Webserver
+   * - %web_port_ssl%
+     - 443 or 8443
+     - Port of Webserver (SSL)   
+   * - %web_port_ssl%
+     - 443 or 8443
+     - Port of Webserver (SSL)   
+   * - %domain%
+     - domain.tld
+     - Domain
+   * - %domain_idn%
+     - domain.tld
+     - Domain (Internationalised)   
+   * - %alias_idn%
+     - alias.domain.tld
+     - Alias Domain (Internationalised)   
+   * - %docroot%
+     - /home/username/web/public_html/
+     - Document root of domain      
+   * - %sdocroot%
+     - /home/username/web/spublic_html/
+     - Private root of domain 
+   * - %ssl_pem%
+     - /usr/local/hestia/data/user/username/ssl
+     - Location of SSL Certificate    
+   * - %ssl_key%
+     - /usr/local/hestia/data/user/username/ssl
+     - Location of SSL Key   
+   * - %web_system%
+     - Nginx / Apache
+     - Software used as Webserver
+   * - %home%
+     - /home
+     - Default home directory
+   * - %user%
+     - username
+     - Username of user
+   * - %user%
+     - username
+     - Username of user
+   * - %backend_lsnr%
+     - proxy:fcgi://127.0.0.1:9000
+     - Your default FPM Server
+   * - %proxy_extentions%
+     - List of extensions
+     - All extension that should be handled by the proxy server  
+  
+
+     
+%sdocroot% can also be set to %docroot% with settings
+     
 
 ************************************************
 How do DNS templates work?
@@ -116,7 +192,7 @@ DNS templates can be found in
      
 Variables that can be used are
 
-.. list-table:: Templates locations
+.. list-table:: Available variables
    :widths: 25 25 50
    :header-rows: 1
    
@@ -131,7 +207,7 @@ Variables that can be used are
      - Name server 2
    * - %ip%
      - 123.123.123.123
-     - Ip adress of the server or Dedicated ip
+     - Ip address of the server or Dedicated ip
    * - %domain%
      - domain.tld
      - Domain of the user
@@ -143,6 +219,18 @@ Variables that can be used are
      - Time of creation
    
 Templates can support up to 8 name servers with with %nsx% x could be up to maximum of 8
+
+*********************************************************
+Where can I find more information about the config files
+*********************************************************
+
+A good starting point for every software check the creator
+
+* For Nginx `NGINX Docs <https://nginx.org/en/docs/>`_
+* For Apache2 `Apache Docs <http://httpd.apache.org/docs/2.4/>`_
+* For PHP FPM `PHP Docs <https://www.php.net/manual/en/install.fpm.configuration.php>`_
+
+You could also try `our Forum <https://forum.hestiacp.com>`_
 
 ************************************************
 Can I use HestiaCP behind Cloudflare CDN?

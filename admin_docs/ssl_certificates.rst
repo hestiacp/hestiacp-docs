@@ -1,5 +1,5 @@
 ##################################
-SSL Certifcates and Let's Encrypt
+SSL Certificates and Let's Encrypt
 ##################################
 
 
@@ -40,11 +40,11 @@ rateLimited         The Rate limit of the maximum requests have been passed.
 ================    ==================================================================================      
  
      
-************************************************
-Can I request a SSL Certificate with LE?
-************************************************
+**************************************************
+Can I request a SSL Certificate with Lets Encrypt
+**************************************************
 
-Yes you can!
+Yes, you are able to enable Lets Encrypt even with Cloudflare how ever it need some special steps
 
 #. Disable Cloudflare proxy of you domain.
 #. Wait Approx 5 min due to caches by several name servers
@@ -52,13 +52,11 @@ Yes you can!
 #. Enable proxy
 #. Switch over to Full (strict) (Go to SSL/TLS Tab)
 
-And enjoy
+Updating should be no issue anymore. And updates are not effected anymore
 
 ****************************************************************
 Can I use a  Cloudflare Origin SSL Certificate with Cloudflare
 ****************************************************************
-
-Yes you can!
 
 #. Please follow the following steps https://support.cloudflare.com/hc/en-us/articles/115000479507
 #. When you complete Step 1.

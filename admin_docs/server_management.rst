@@ -58,7 +58,7 @@ Mysql maybe replaced by the PostgreSQL
 
 
 ************************************************
-How do templates work?
+How do Web templates work?
 ************************************************
 
 .. warning::
@@ -84,8 +84,6 @@ The templates can be found in the /data/templates/ directory in the install fold
      - /usr/local/hestia/data/templates/web/apache2/php-fpm/
    * - PHP-FPM
      - /usr/local/hestia/data/templates/web/php-fpm/
-   * - DNS
-     - /usr/local/hestia/data/templates/dns
      
 When editing it is the best practice to copy the template before editing. As the default templates will reset after update of HestiaCP
 
@@ -100,7 +98,51 @@ When you are done modifying enable the template with the selected domain from th
 
 After modifying existing template you need to rebuild user configuration. This can be done using v-rebuild-user command or bulk operation in the web interface (drop down list on a "User" page). 
 
+************************************************
+How do DNS templates work?
+************************************************
 
+DNS templates can be found in 
+
+.. list-table:: Templates locations
+   :widths: 25 75
+   :header-rows: 1
+   
+   * - Service
+     - Location
+   * - DNS
+     - /usr/local/hestia/data/templates/dns/
+     
+     
+Variables that can be used are
+
+.. list-table:: Templates locations
+   :widths: 25 25 50
+   :header-rows: 1
+   
+   * - Name
+     - Example
+     - Description
+   * - %ns1%
+     - ns1.nameserver.tld
+     - Name server 1
+   * - %ns2%
+     - ns2.nameserver.tld
+     - Name server 2
+   * - %ip%
+     - 123.123.123.123
+     - Ip adress of the server or Dedicated ip
+   * - %domain%
+     - domain.tld
+     - Domain of the user
+   * - %time%
+     - 12:00:00
+     - Time of creation
+   * - %date%
+     - 01-01-2020
+     - Time of creation
+   
+Templates can support up to 8 name servers with with %nsx% x could be up to maximum of 8
 
 ************************************************
 Can I use HestiaCP behind Cloudflare CDN?
@@ -124,6 +166,3 @@ Why I can't use :samp:`http://my.ip.adress/phpmyadmin/`
 For security reason we have decided to disable this option
 
 Please use :samp:`http://mydomain.com/phpmyadmin/`
-
-
-

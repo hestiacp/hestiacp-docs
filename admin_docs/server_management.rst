@@ -142,7 +142,7 @@ Available variables
      - /home/username/web/public_html/
      - Document root of domain      
    * - %sdocroot%
-     - /home/username/web/spublic_html/
+     - /home/username/web/public_shtml/
      - Private root of domain 
    * - %ssl_pem%
      - /usr/local/hestia/data/user/username/ssl

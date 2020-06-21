@@ -232,6 +232,24 @@ A good starting point for every software check the creator
 
 You could also try `our Forum <https://forum.hestiacp.com>`_
 
+***************************************************************
+IPTables How can I allow/deny an IP to all ports
+***************************************************************
+
+By default after each restart Hestia will clear the current iptables
+
+To allow an IP to all ports (Or block)
+
+Use the following command
+
+.. code-block:: bash
+
+    v-add-firewall-rule ACTION IP PORT [PROTOCOL] [COMMENT] [RULE]
+    
+    v-add-firewall-rule 'accept' '123.123.123.123' '0' # Port 0 matches all ports
+    
+Also via interface it is possible just enter 0 as port number
+
 ************************************************
 Can I use HestiaCP behind Cloudflare CDN?
 ************************************************

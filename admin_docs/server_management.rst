@@ -233,6 +233,25 @@ A good starting point for every software check the creator
 You could also try `our Forum <https://forum.hestiacp.com>`_
 
 ***************************************************************
+How to install additional PHP packages / Modules 
+***************************************************************
+
+.. code-block:: bash
+
+    apt-get install php-package-name
+
+
+For example 
+
+.. code-block:: bash
+
+    apt-get install php-memcached php-redis 
+    
+Will install php-memcached and php-redis including the required additional packages for PHP.
+
+Incase you use PHP-FPM you don't have to do anything. 
+
+***************************************************************
 IPTables How can I allow/deny an IP to all ports
 ***************************************************************
 

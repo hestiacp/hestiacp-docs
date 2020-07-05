@@ -13,7 +13,7 @@ Welcome to Hestia Control Panel's documentation!
    :maxdepth: 2
    
    getting_started.rst
-   release_notes.rst
-   cli_commands.rst
    admin_docs.rst
+   cli_commands.rst
    gui_docs.rst
+   release_notes.rst

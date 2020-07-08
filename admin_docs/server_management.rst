@@ -291,3 +291,22 @@ Why I can't use :samp:`http://my.ip.adress/phpmyadmin/`
 For security reason we have decided to disable this option
 
 Please use :samp:`http://mydomain.com/phpmyadmin/`
+
+***************************************************************
+How can I enable / Disable the filemanager
+***************************************************************
+
+By an new install the filemanager will be enabled by default
+
+For updates please run the following command
+
+.. code-block:: bash
+
+    v-add-sys-filemanager
+    
+To disable the file manager please run 
+
+.. code-block:: bash
+
+    v-delete-sys-filemanager
+    

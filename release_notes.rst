@@ -23,6 +23,7 @@ Main Features
   :maxdepth: 1
   :glob:
   
+  release_notes/1.2.0.rst
   release_notes/1.1.1.rst
   release_notes/1.1.0.rst
   release_notes/1.0.6.rst

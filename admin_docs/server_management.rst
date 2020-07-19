@@ -74,11 +74,11 @@ The templates can be found in the /data/templates/ directory in the install fold
    
    * - Service
      - Location
-   * - Nginx
+   * - Nginx (Proxy)
      - /usr/local/hestia/data/templates/web/nginx/
    * - Nginx - PHP FPM
      - /usr/local/hestia/data/templates/web/nginx/php-fpm/
-   * - Apache2
+   * - Apache2 (Legacy / mod-php )
      - /usr/local/hestia/data/templates/web/apache2/
    * - Apache2 - PHP FPM
      - /usr/local/hestia/data/templates/web/apache2/php-fpm/

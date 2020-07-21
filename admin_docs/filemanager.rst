@@ -35,7 +35,8 @@ Long answer:
 Refer to the install script ./install/hst-install-debian.sh for all the changes made to /etc/ssh/sshd_config. For Debian, the changes can be summarized as follows:
 
 .. code-block:: bash
-# HestiaCP Changes to the default /etc/ssh/sshd_config in Debian 10 Buster 
+    
+    # HestiaCP Changes to the default /etc/ssh/sshd_config in Debian 10 Buster 
 
     # Forced default yes
     PasswordAuthentication yes

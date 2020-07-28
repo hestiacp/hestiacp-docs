@@ -169,10 +169,36 @@ Available variables
      - List of extensions
      - All extension that should be handled by the proxy server  
   
-
-     
+       
 %sdocroot% can also be set to %docroot% with settings
      
+************************************************
+How can I change settings for a specific domain
+************************************************
+
+With the switch to PHP-FPM there are currently 2 different ways.
+
+1# Using user.ini in the directory
+2# Via PHP-FPM pool config 
+
+Config templates for the PHP pool can be found in
+
+.. list-table:: Template locations
+   :widths: 25 75
+   :header-rows: 1
+   
+   * - Service
+     - Location
+   * - PHP-FPM
+     - /usr/local/hestia/data/templates/web/php-fpm/
+
+Due to the fact we use multi PHP we need to recognise the PHP version to be used. There for we follow the following naming.
+
+.. code-block:: bash
+
+    YOURNAME-PHP-X_Y.tpl
+    
+There X_Y is your PHP version
 
 ************************************************
 How do DNS templates work?

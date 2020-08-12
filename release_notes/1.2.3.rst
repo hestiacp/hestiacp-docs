@@ -1,0 +1,17 @@
+***************************************************
+Release notes for HestiaCP v1.2.3
+***************************************************
+
+Release date: August 11 2020
+
+########
+Features
+########
+
+- No new features have been introduced in this release.
+
+########
+Bugfixes
+########
+
+- Fixes an issue where non-ASCII characters were rejected in the password field.

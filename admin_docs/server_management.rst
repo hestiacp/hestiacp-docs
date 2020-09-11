@@ -335,4 +335,27 @@ To disable the file manager please run
 .. code-block:: bash
 
     v-delete-sys-filemanager
+
+***************************************************************
+How to remove unused ethernet ports from RRD
+***************************************************************
+
+.. code-block:: bash
+
+    nano /usr/local/hestia/conf/hestia.conf
+    
+Add the following line:
+
+.. code-block:: bash
+
+    RRD_IFACE_EXCLUDE='lo'
+    
+Add a other network port as comma separated list
+
+.. code-block:: bash
+
+    /usr/local/hestia/web/rrd/net/*
+    systemctl restart hestia
+    
+
     

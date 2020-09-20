@@ -354,7 +354,7 @@ Add a other network port as comma separated list
 
 .. code-block:: bash
 
-    /usr/local/hestia/web/rrd/net/*
+    rm /usr/local/hestia/web/rrd/net/*
     systemctl restart hestia
     
 

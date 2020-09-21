@@ -1,8 +1,8 @@
 ***************************************************
-Release notes for HestiaCP v1.2.3
+Release notes for HestiaCP v1.2.4
 ***************************************************
 
-Release date: August 21 2020
+Release date: September 21 2020
 
 ########
 Features

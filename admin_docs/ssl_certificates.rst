@@ -13,7 +13,7 @@ If not done use the command
 
 .. code-block:: bash
 
-     v-change-sys-hostname myhostname.com
+     v-change-sys-hostname host.domain.tld
      
 Then run the following command
 

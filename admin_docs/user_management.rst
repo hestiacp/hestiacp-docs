@@ -18,7 +18,7 @@ The current restore function accept both VestaCP and HestiaCP generated backups
 
 .. code-block:: bash
 
-    scp /home/backup/username.2020.01.01-00-00.tar root@hostname.com:/backup/
+    scp /home/backup/username.2020.01.01-00-00.tar root@host.domain.tld:/backup/
 
 #. Restore backup on the new server
 

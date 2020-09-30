@@ -316,7 +316,7 @@ Why I can't use :samp:`http://my.ip.adress/phpmyadmin/`
 
 For security reason we have decided to disable this option
 
-Please use :samp:`http://mydomain.com/phpmyadmin/`
+Please use :samp:`https://host.domain.tld/phpmyadmin/`
 
 ***************************************************************
 How can I enable / Disable the filemanager

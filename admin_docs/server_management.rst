@@ -17,6 +17,18 @@ If you are looking for the options to minimize DNS-related downtime or the way t
 
 Password and host name should be replaced with relevant data of course.
 
+Alternatively you can run on the slave server the following command
+
+.. code-block:: bash
+
+    v-generate-api-key 
+
+This will generate an API key. Replace the username "admin" with the generated key. This will keep the ability to change the admin password without issues in the future.
+   
+.. code-block:: bash   
+
+    v-add-remote-dns-host slave.yourhost.com 8083 api_key
+
 This way you can set up master->slave or master-master-master cluster. There is no limitation on how to chain dns servers.
 
 ************************************************

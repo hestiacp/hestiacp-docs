@@ -1,0 +1,86 @@
+*********************************
+Release notes for HestiaCP v1.1.0
+*********************************
+
+Release date: Mar 11 2020
+
+~700 commits since v1.0.6
+`github <https://github.com/hestiacp/hestiacp/compare/1.0.6...master>`__
+
+Second largest Release to date
+
+* Theme support for whitelabeling and also added a official 'Flat' theme
+* Added demo / read-only mode
+* Support for Debian 10 (Buster)
+* Redesigned Multiphp functionality
+* One click WebApp Installer for:
+
+  #. Wordpress
+  #. Prestashop
+  #. Opencart
+  #. Laravel
+  #. Symfony
+
+* MultiIP support for webmail and exim email server
+  (use the same IP as the webdomain)
+* Fixed a huge number of reported issues and hidden bugs.
+* Improved security. Better Input validation, drop root privileges
+  where unnecesarry
+
+
+New MultiPHP system
+*******************
+
+Changes to the installer script
+
+``--phpfpm yes`` will install only the default php version, curently php7.3
+  - Additional php versions can be installed when required from web interface
+    
+    (/edit/server/ 'Web Server' section)
+
+  - Both Nginx and Apache web server are supported
+
+
+``--multiphp yes`` will install all supported php versions
+  - Both Nginx and Apache web server are supported
+
+  - Nginx web templates are now supported
+
+
+**Upgrades**
+
+Hestiacp running 1.0.6 
+
+- Nginx + php-fpm
+
+  No special steps will be taken during the upgrade, MultiPHP will be available
+  and additional php version can be enabled from the web interface.
+  (/edit/server/ 'Web Server' section)
+
+
+- Apache + (old)multiphp, Nginx + (old)multiphp, Nginx + Apache + (old)multiphp
+  
+  During the upgrade the following script will detect the php version used for
+  each web domain and set the backend template accordingly
+  ``$HESTIA/install/upgrade/manual/migrate_multiphp.sh``
+
+
+- Apache, Nginx + Apache
+
+  Multiphp will not be enabled automaticaly since internal mod_php module
+  will be disabled and might cause isues with some apps when switching
+  to php-fpm backend.
+
+  To enable multiphp run the migration script:
+  ``$HESTIA/install/upgrade/manual/migrate_apache.sh``
+
+
+
+Breaking changes:
+******************
+
+"/backup" folder cannot be a symlink anymore (security), use bind mount instead
+
+.. code-block:: bash
+
+  mount --bind /backup /mnt/large-partition

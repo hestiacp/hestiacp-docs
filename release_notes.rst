@@ -23,17 +23,10 @@ Main Features
   :maxdepth: 1
   :glob:
   
+  release_notes/1.3.0.rst
   release_notes/1.2.4.rst 
   release_notes/1.2.3.rst
   release_notes/1.2.2.rst  
   release_notes/1.2.1.rst
   release_notes/1.2.0.rst
-  release_notes/1.1.1.rst
-  release_notes/1.1.0.rst
-  release_notes/1.0.6.rst
-  release_notes/1.0.5.rst
-  release_notes/1.0.4.rst
-  release_notes/1.0.3.rst
-  release_notes/1.0.1.rst
-  release_notes/1.0.0.rst
-  release_notes/0.9.8.28.rst
+  release_notes/archive

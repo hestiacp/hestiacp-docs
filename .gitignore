@@ -3,3 +3,4 @@ _build
 .DS_Store
 .env
 .vs
+.nova

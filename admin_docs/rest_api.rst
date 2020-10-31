@@ -358,9 +358,9 @@ Check Username and Password
 
     // Check result
     if($answer == 0) {
-        echo "User account has been successfuly deleted\n";
+        echo "OK: User can login\n";
     } else {
-        echo "Query returned error code: " .$answer. "\n";
+        echo "Error: Username or password is incorrect\n";
     }
 
 

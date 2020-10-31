@@ -424,7 +424,7 @@ Return Codes
       - Connection failed. Host is unreachable
    *  - 16
       - E_FTP
-      - FTP serveris not responding
+      - FTP server is not responding
    *  - 17
       - E_DB
       - Database server is not responding

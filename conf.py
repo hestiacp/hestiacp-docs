@@ -41,6 +41,7 @@ release = u''
 extensions = [
     'sphinx.ext.githubpages',
     'sphinxcontrib.youtube',
+    'sphinx_tabs.tabs',
 ]
 
 # Add any paths that contain templates here, relative to this directory.

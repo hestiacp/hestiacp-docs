@@ -10,311 +10,362 @@ This reference provides php code samples demonstrating how you can seamlessly in
 ************************************************
 Create User Account
 ************************************************
+.. tabs::
+    .. code-tab:: php
 
-.. code-block:: php
+        <?php
 
-    <?php
+        // Server credentials
+        $hst_hostname = 'server.hestiacp.com';
+        $hst_port = '8083';
+        $hst_username = 'admin';
+        $hst_password = 'p4ssw0rd';
+        $hst_returncode = 'yes';
+        $hst_command = 'v-add-user';
 
-    // Server credentials
-    $hst_hostname = 'server.hestiacp.com';
-    $hst_username = 'admin';
-    $hst_password = 'p4ssw0rd';
-    $hst_returncode = 'yes';
-    $hst_command = 'v-add-user';
+        // New Account
+        $username = 'demo';
+        $password = 'd3m0p4ssw0rd';
+        $email = 'demo@gmail.com';
+        $package = 'default';
+        $first_name = 'Rust';
+        $last_name = 'Cohle';
 
-    // New Account
-    $username = 'demo';
-    $password = 'd3m0p4ssw0rd';
-    $email = 'demo@gmail.com';
-    $package = 'default';
-    $fist_name = 'Rust';
-    $last_name = 'Cohle';
+        // Prepare POST query
+        $postvars = array(
+            'user' => $hst_username,
+            'password' => $hst_password,
+            'returncode' => $hst_returncode,
+            'cmd' => $hst_command,
+            'arg1' => $username,
+            'arg2' => $password,
+            'arg3' => $email,
+            'arg4' => $package,
+            'arg5' => $first_name,
+            'arg6' => $last_name
+        );
+        $postdata = http_build_query($postvars);
 
-    // Prepare POST query
-    $postvars = array(
-        'user' => $hst_username,
-        'password' => $hst_password,
-        'returncode' => $hst_returncode,
-        'cmd' => $hst_command,
-        'arg1' => $username,
-        'arg2' => $password,
-        'arg3' => $email,
-        'arg4' => $package,
-        'arg5' => $fist_name,
-        'arg6' => $last_name
-    );
-    $postdata = http_build_query($postvars);
+        // Send POST query via cURL
+        $postdata = http_build_query($postvars);
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, 'https://' . $hst_hostname . ': ' . $hst_port . '/api/');
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER,true);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
+        $answer = curl_exec($curl);
 
-    // Send POST query via cURL
-    $postdata = http_build_query($postvars);
-    $curl = curl_init();
-    curl_setopt($curl, CURLOPT_URL, 'https://' . $hst_hostname . ': ' . $hst_port . '/api/');
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER,true);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-    curl_setopt($curl, CURLOPT_POST, true);
-    curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
-    $answer = curl_exec($curl);
+        // Check result
+        if($answer == 0) {
+            echo "User account has been successfuly created\n";
+        } else {
+            echo "Query returned error code: " .$answer. "\n";
+        }
+    .. code-tab:: js
+    
+        //NodeJS Script
+        //You must have the axios module installed
+        const axios = require('axios')
+        const querystring = require('querystring');
 
-    // Check result
-    if($answer == 0) {
-        echo "User account has been successfuly created\n";
-    } else {
-        echo "Query returned error code: " .$answer. "\n";
-    }
+        //Admin Credentials
+        const hst_hostname = 'server.hestiacp.com'
+        const hst_port = 8083
+        const hst_username = 'admin'
+        const hst_password = 'p4ssw0rd'
+        const hst_returncode = 'yes'
+        const hst_command = 'v-add-user'
 
+        //New account details
+        const username = 'demo';
+        const password = 'd3m0p4ssw0rd';
+        const email = 'demo@gmail.com';
+        const package = 'default';
+        const first_name = 'Rust';
+        const last_name = 'Cohle';
+
+        const data_json = {
+        'user': hst_username,
+        'password': hst_password,
+        'returncode': hst_returncode,
+        'cmd': hst_command,
+        'arg1': username,
+        'arg2': password,
+        'arg3': email,
+        'arg4': package,
+        'arg5': first_name,
+        'arg6': last_name
+        }
+
+        const data = querystring.stringify(data_json)
+
+        axios.post('https://'+hst_hostname+':'+hst_port+'/api/', data)
+        .then(function (response) {
+            console.log(response.data);
+            console.log("0 means successful")
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 
 ************************************************
 Add Web/DNS/Mail Domain
 ************************************************
+.. tabs::
+    .. code-tab:: php
 
-.. code-block:: php
+        <?php
 
-    <?php
+        // Server credentials
+        $hst_hostname = 'server.hestiacp.com';
+        $hst_port = '8083';
+        $hst_username = 'admin';
+        $hst_password = 'p4ssw0rd';
+        $hst_returncode = 'yes';
+        $hst_command = 'v-add-domain';
 
-    // Server credentials
-    $hst_hostname = 'server.hestiacp.com';
-    $hst_username = 'admin';
-    $hst_password = 'p4ssw0rd';
-    $hst_returncode = 'yes';
-    $hst_command = 'v-add-domain';
+        // New Account
+        $username = 'demo';
+        $domain = 'demo.hestiacp.com';
 
-    // New Account
-    $username = 'demo';
-    $domain = 'demo.hestiacp.com';
+        // Prepare POST query
+        $postvars = array(
+            'user' => $hst_username,
+            'password' => $hst_password,
+            'returncode' => $hst_returncode,
+            'cmd' => $hst_command,
+            'arg1' => $username,
+            'arg2' => $domain
+        );
+        $postdata = http_build_query($postvars);
 
-    // Prepare POST query
-    $postvars = array(
-        'user' => $hst_username,
-        'password' => $hst_password,
-        'returncode' => $hst_returncode,
-        'cmd' => $hst_command,
-        'arg1' => $username,
-        'arg2' => $domain
-    );
-    $postdata = http_build_query($postvars);
+        // Send POST query via cURL
+        $postdata = http_build_query($postvars);
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, 'https://' . $hst_hostname . ': ' . $hst_port . '/api/');
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER,true);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
+        $answer = curl_exec($curl);
 
-    // Send POST query via cURL
-    $postdata = http_build_query($postvars);
-    $curl = curl_init();
-    curl_setopt($curl, CURLOPT_URL, 'https://' . $hst_hostname . ': ' . $hst_port . '/api/');
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER,true);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-    curl_setopt($curl, CURLOPT_POST, true);
-    curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
-    $answer = curl_exec($curl);
-
-    // Check result
-    if($answer == 0) {
-        echo "Domain has been successfuly created\n";
-    } else {
-        echo "Query returned error code: " .$answer. "\n";
-    }
+        // Check result
+        if($answer == 0) {
+            echo "Domain has been successfuly created\n";
+        } else {
+            echo "Query returned error code: " .$answer. "\n";
+        }
 
 
 ************************************************
 Create Database
 ************************************************
+.. tabs::
+    .. code-tab:: php
 
-.. code-block:: php
+        <?php
 
-    <?php
+        // Server credentials
+        $hst_hostname = 'server.hestiacp.com';
+        $hst_port = '8083';
+        $hst_username = 'admin';
+        $hst_password = 'p4ssw0rd';
+        $hst_returncode = 'yes';
+        $hst_command = 'v-add-database';
 
-    // Server credentials
-    $hst_hostname = 'server.hestiacp.com';
-    $hst_username = 'admin';
-    $hst_password = 'p4ssw0rd';
-    $hst_returncode = 'yes';
-    $hst_command = 'v-add-database';
+        // New Database
+        $username = 'demo';
+        $db_name = 'wordpress';
+        $db_user = 'wordpress';
+        $db_pass = 'wpbl0gp4s';
 
-    // New Database
-    $username = 'demo';
-    $db_name = 'wordpress';
-    $db_user = 'wordpress';
-    $db_pass = 'wpbl0gp4s';
+        // Prepare POST query
+        $postvars = array(
+            'user' => $hst_username,
+            'password' => $hst_password,
+            'returncode' => $hst_returncode,
+            'cmd' => $hst_command,
+            'arg1' => $username,
+            'arg2' => $db_name,
+            'arg3' => $db_user,
+            'arg4' => $db_pass
+        );
+        $postdata = http_build_query($postvars);
 
-    // Prepare POST query
-    $postvars = array(
-        'user' => $hst_username,
-        'password' => $hst_password,
-        'returncode' => $hst_returncode,
-        'cmd' => $hst_command,
-        'arg1' => $username,
-        'arg2' => $db_name,
-        'arg3' => $db_user,
-        'arg4' => $db_pass
-    );
-    $postdata = http_build_query($postvars);
+        // Send POST query via cURL
+        $postdata = http_build_query($postvars);
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, 'https://' . $hst_hostname . ': ' . $hst_port . '/api/');
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER,true);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
+        $answer = curl_exec($curl);
 
-    // Send POST query via cURL
-    $postdata = http_build_query($postvars);
-    $curl = curl_init();
-    curl_setopt($curl, CURLOPT_URL, 'https://' . $hst_hostname . ': ' . $hst_port . '/api/');
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER,true);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-    curl_setopt($curl, CURLOPT_POST, true);
-    curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
-    $answer = curl_exec($curl);
-
-    // Check result
-    if($answer == 0) {
-        echo "Database has been successfuly created\n";
-    } else {
-        echo "Query returned error code: " .$answer. "\n";
-    }
+        // Check result
+        if($answer == 0) {
+            echo "Database has been successfuly created\n";
+        } else {
+            echo "Query returned error code: " .$answer. "\n";
+        }
 
 
 ************************************************
 List Web Domains
 ************************************************
+.. tabs::
+    .. code-tab:: php
 
-.. code-block:: php
+        <?php
 
-    <?php
+        // Server credentials
+        $hst_hostname = 'server.hestiacp.com';
+        $hst_port = '8083';
+        $hst_username = 'admin';
+        $hst_password = 'p4ssw0rd';
+        $hst_command = 'v-list-web-domain';
 
-    // Server credentials
-    $hst_hostname = 'server.hestiacp.com';
-    $hst_username = 'admin';
-    $hst_password = 'p4ssw0rd';
-    $hst_command = 'v-list-web-domain';
+        // Account
+        $username = 'demo';
+        $domain = 'demo.hestiacp.com';
+        $format = 'json';
 
-    // Account
-    $username = 'demo';
-    $domain = 'demo.hestiacp.com';
-    $format = 'json';
+        // Prepare POST query
+        $postvars = array(
+            'user' => $hst_username,
+            'password' => $hst_password,
+            'returncode' => $hst_returncode,
+            'cmd' => $hst_command,
+            'arg1' => $username,
+            'arg2' => $domain,
+            'ar32' => $format
+        );
+        $postdata = http_build_query($postvars);
 
-    // Prepare POST query
-    $postvars = array(
-        'user' => $hst_username,
-        'password' => $hst_password,
-        'returncode' => $hst_returncode,
-        'cmd' => $hst_command,
-        'arg1' => $username,
-        'arg2' => $domain,
-        'ar32' => $format
-    );
-    $postdata = http_build_query($postvars);
+        // Send POST query via cURL
+        $postdata = http_build_query($postvars);
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, 'https://' . $hst_hostname . ': ' . $hst_port . '/api/');
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER,true);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
+        $answer = curl_exec($curl);
 
-    // Send POST query via cURL
-    $postdata = http_build_query($postvars);
-    $curl = curl_init();
-    curl_setopt($curl, CURLOPT_URL, 'https://' . $hst_hostname . ': ' . $hst_port . '/api/');
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER,true);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-    curl_setopt($curl, CURLOPT_POST, true);
-    curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
-    $answer = curl_exec($curl);
+        // Parse JSON output
+        $data = json_decode($answer, true);
 
-    // Parse JSON output
-    $data = json_decode($answer, true);
-
-    // Print result
-    print_r($data);
+        // Print result
+        print_r($data);
 
 
 ************************************************
 Delete User Account
 ************************************************
+.. tabs::
+    .. code-tab:: php
 
-.. code-block:: php
+        <?php
 
-    <?php
+        // Server credentials
+        $hst_hostname = 'server.hestiacp.com';
+        $hst_port = '8083';
+        $hst_username = 'admin';
+        $hst_password = 'p4ssw0rd';
+        $hst_returncode = 'yes';
+        $hst_command = 'v-delete-user';
 
-    // Server credentials
-    $hst_hostname = 'server.hestiacp.com';
-    $hst_username = 'admin';
-    $hst_password = 'p4ssw0rd';
-    $hst_returncode = 'yes';
-    $hst_command = 'v-delete-user';
+        // Account
+        $username = 'demo';
 
-    // Account
-    $username = 'demo';
+        // Prepare POST query
+        $postvars = array(
+            'user' => $hst_username,
+            'password' => $hst_password,
+            'returncode' => $hst_returncode,
+            'cmd' => $hst_command,
+            'arg1' => $username
+        );
+        $postdata = http_build_query($postvars);
 
-    // Prepare POST query
-    $postvars = array(
-        'user' => $hst_username,
-        'password' => $hst_password,
-        'returncode' => $hst_returncode,
-        'cmd' => $hst_command,
-        'arg1' => $username
-    );
-    $postdata = http_build_query($postvars);
+        // Send POST query via cURL
+        $postdata = http_build_query($postvars);
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, 'https://' . $hst_hostname . ': ' . $hst_port . '/api/');
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER,true);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
+        $answer = curl_exec($curl);
 
-    // Send POST query via cURL
-    $postdata = http_build_query($postvars);
-    $curl = curl_init();
-    curl_setopt($curl, CURLOPT_URL, 'https://' . $hst_hostname . ': ' . $hst_port . '/api/');
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER,true);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-    curl_setopt($curl, CURLOPT_POST, true);
-    curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
-    $answer = curl_exec($curl);
+        // Parse JSON output
+        $data = json_decode($answer, true);
 
-    // Parse JSON output
-    $data = json_decode($answer, true);
-
-    // Check result
-    if($answer == 0) {
-        echo "User account has been successfuly deleted\n";
-    } else {
-        echo "Query returned error code: " .$answer. "\n";
-    }
+        // Check result
+        if($answer == 0) {
+            echo "User account has been successfuly deleted\n";
+        } else {
+            echo "Query returned error code: " .$answer. "\n";
+        }
 
 
 ************************************************
 Check Username and Password
 ************************************************
+.. tabs::
+    .. code-tab:: php
 
-.. code-block:: php
+        <?php
 
-    <?php
+        // Server credentials
+        $hst_hostname = 'server.hestiacp.com';
+        $hst_port = '8083';
+        $hst_username = 'admin';
+        $hst_password = 'p4ssw0rd';
+        $hst_returncode = 'yes';
+        $hst_command = 'v-check-user-password';
 
-    // Server credentials
-    $hst_hostname = 'server.hestiacp.com';
-    $hst_username = 'admin';
-    $hst_password = 'p4ssw0rd';
-    $hst_returncode = 'yes';
-    $hst_command = 'v-check-user-password';
+        // Account
+        $username = 'demo';
+        $password = 'demopassword';
 
-    // Account
-    $username = 'demo';
-    $password = 'demopassword';
+        // Prepare POST query
+        $postvars = array(
+            'user' => $hst_username,
+            'password' => $hst_password,
+            'returncode' => $hst_returncode,
+            'cmd' => $hst_command,
+            'arg1' => $username,
+            'arg2' => $password
+        );
+        $postdata = http_build_query($postvars);
 
-    // Prepare POST query
-    $postvars = array(
-        'user' => $hst_username,
-        'password' => $hst_password,
-        'returncode' => $hst_returncode,
-        'cmd' => $hst_command,
-        'arg1' => $username,
-        'arg2' => $password
-    );
-    $postdata = http_build_query($postvars);
+        // Send POST query via cURL
+        $postdata = http_build_query($postvars);
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, 'https://' . $hst_hostname . ': ' . $hst_port . '/api/');
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER,true);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
+        $answer = curl_exec($curl);
 
-    // Send POST query via cURL
-    $postdata = http_build_query($postvars);
-    $curl = curl_init();
-    curl_setopt($curl, CURLOPT_URL, 'https://' . $hst_hostname . ': ' . $hst_port . '/api/');
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER,true);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-    curl_setopt($curl, CURLOPT_POST, true);
-    curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
-    $answer = curl_exec($curl);
+        // Parse JSON output
+        $data = json_decode($answer, true);
 
-    // Parse JSON output
-    $data = json_decode($answer, true);
-
-    // Check result
-    if($answer == 0) {
-        echo "OK: User can login\n";
-    } else {
-        echo "Error: Username or password is incorrect\n";
-    }
+        // Check result
+        if($answer == 0) {
+            echo "OK: User can login\n";
+        } else {
+            echo "Error: Username or password is incorrect\n";
+        }
 
 
 ************************************************

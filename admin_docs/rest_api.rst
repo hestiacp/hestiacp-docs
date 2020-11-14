@@ -473,50 +473,47 @@ Check Username and Password
     .. code-tab:: php
 
         <?php
-
-        // Server credentials
-        $hst_hostname = 'server.hestiacp.com';
-        $hst_port = '8083';
-        $hst_username = 'admin';
-        $hst_password = 'p4ssw0rd';
-        $hst_returncode = 'yes';
-        $hst_command = 'v-check-user-password';
-
-        // Account
-        $username = 'demo';
-        $password = 'demopassword';
-
-        // Prepare POST query
+        $hostname = 'server.yourdomain.tld';
+        $port = '8083';
+        $hstadmin = 'admin';
+        $hstadminpw = 'AdMin_pWd';
+    
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+    
         $postvars = array(
-            'user' => $hst_username,
-            'password' => $hst_password,
-            'returncode' => $hst_returncode,
-            'cmd' => $hst_command,
+            'user' => $hstadmin,
+            'password' => $hstadminpw,
+            'returncode' => 'no',
+            'cmd' => 'v-check-user-password',
             'arg1' => $username,
-            'arg2' => $password
-        );
+            'arg2' => $password,
+            );
         $postdata = http_build_query($postvars);
-
+    
         // Send POST query via cURL
         $postdata = http_build_query($postvars);
         $curl = curl_init();
-        curl_setopt($curl, CURLOPT_URL, 'https://' . $hst_hostname . ': ' . $hst_port . '/api/');
+        curl_setopt($curl, CURLOPT_HEADER, false);
+        curl_setopt($curl, CURLOPT_URL, 'https://' . $hostname . ':' . $port . '/api/');
         curl_setopt($curl, CURLOPT_RETURNTRANSFER,true);
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
         curl_setopt($curl, CURLOPT_POST, true);
         curl_setopt($curl, CURLOPT_POSTFIELDS, $postdata);
         $answer = curl_exec($curl);
-
-        // Parse JSON output
-        $data = json_decode($answer, true);
-
+    
+        //var_dump($answer);
         // Check result
-        if($answer == 0) {
+        
+        if($answer == 'OK') {
             echo "OK: User can login\n";
         } else {
             echo "Error: Username or password is incorrect\n";
         }
+    
+    
+        ?>
     .. code-tab:: js
     
         //NodeJS Script

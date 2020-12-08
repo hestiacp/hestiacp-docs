@@ -406,6 +406,7 @@ List Web Domains
         // Server credentials
         $hst_hostname = 'server.hestiacp.com';
         $hst_port = '8083';
+        $hst_returncode = 'yes';
         $hst_username = 'admin';
         $hst_password = 'p4ssw0rd';
         $hst_command = 'v-list-web-domain';
@@ -423,7 +424,7 @@ List Web Domains
             'cmd' => $hst_command,
             'arg1' => $username,
             'arg2' => $domain,
-            'ar32' => $format
+            'arg3' => $format
         );
         $postdata = http_build_query($postvars);
 
@@ -453,6 +454,7 @@ List Web Domains
         //Admin Credentials
         const hst_hostname = 'server.hestiacp.com'
         const hst_port = 8083
+        const hst_returncode = 'yes'
         const hst_username = 'admin'
         const hst_password = 'p4ssw0rd'
         const hst_command = 'v-list-web-domain'

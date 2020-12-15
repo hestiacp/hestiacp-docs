@@ -1,0 +1,21 @@
+*********************************
+Release notes for HestiaCP v1.3.2
+*********************************
+
+Release date: Dec 15 2020
+
+
+########
+Features
+########
+
+- Added PHP v8.0 support for multiphp environment.
+
+########
+Bugfixes
+########
+
+- Improved session token handling in login as function, thanks to Vulnerability Laboratory - [Evolution Security GmbH]™.
+- Fixed an where fpm pool config was not deleted when changing backend template.
+- Improved bats testing with multiphp (5.6-8.0) tests.
+- Fixed an issue where full webmail path was loaded as default value.

@@ -9,9 +9,10 @@ Main Features
   - php5.6 (`EOL <https://www.php.net/supported-versions.php>`__)
   - php7.0 (`EOL <https://www.php.net/supported-versions.php>`__)
   - php7.1 (`EOL <https://www.php.net/supported-versions.php>`__)
-  - php7.2
+  - php7.2 (`EOL <https://www.php.net/supported-versions.php>`__)
   - php7.3
   - php7.4
+  - php8.0
 
 - Per-domain SSL certificates for inbound and outbound mail services
   (exim4, dovecot, webmail)

@@ -1213,7 +1213,7 @@ v-add-web-php
 
 .. code-block:: bash
    
-  v-add-web-php 7.4
+  v-add-web-php 8.0
    
 
 The function checks and delete a fpm php version if not used by any domain.

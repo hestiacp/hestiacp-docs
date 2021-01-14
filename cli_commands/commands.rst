@@ -6162,7 +6162,7 @@ v-restore-user
   v-restore-user admin 2019-04-22_01-00-00.tar
    
 
-The function for restoring user from backup.
+The function for restoring user from backup. To be able to restore the backup, the archive needs to be placed in /backup.
 
 
 *******************************************************************

@@ -1,0 +1,18 @@
+*********************************
+Release notes for HestiaCP v1.3.3
+*********************************
+
+Release date: Feb 15 2021
+
+
+########
+Features
+########
+
+Security release only. No new features has been added
+
+########
+Bugfixes
+########
+
+- Improve permisison handling

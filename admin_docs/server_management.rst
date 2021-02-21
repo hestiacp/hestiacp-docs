@@ -135,12 +135,9 @@ Available variables
    * - %web_port%
      - 80 or 8080
      - Port of Webserver
-   * - %web_port_ssl%
+   * - %web_ssl_port%
      - 443 or 8443
-     - Port of Webserver (SSL)   
-   * - %web_port_ssl%
-     - 443 or 8443
-     - Port of Webserver (SSL)   
+     - Port of Webserver (SSL)    
    * - %domain%
      - domain.tld
      - Domain

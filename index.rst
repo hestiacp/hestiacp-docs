@@ -18,4 +18,4 @@ Welcome to Hestia Control Panel's documentation!
    cli_commands.rst
    gui_docs.rst
    customize_hestia.rst
-   
+   development/index.rst

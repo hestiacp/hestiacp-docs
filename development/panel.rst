@@ -13,8 +13,10 @@ Recommended:
 
 - Exisiting previous Hestia installation (this will ensure everything is already installed)
 
+########
 Compiling
----------
+########
+
 Go into the ``src`` folder and run of these commands
 
 .. tabs:: 

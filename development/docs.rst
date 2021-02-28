@@ -35,7 +35,7 @@ Building
 
 .. tabs:: 
 
-    .. code-tab:: bash PHP
+    .. code-tab:: bash Compile
 
         make html
         

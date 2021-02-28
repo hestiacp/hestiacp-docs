@@ -1,31 +1,64 @@
 Developing/Contributing to Hestia Control Panel
 ================================================
-.. note::
-  This documentation has been community-written.
 
-Folllow the currrent `guidelines <https://github.com/hestiacp/hestiacp/blob/main/CONTRIBUTING.md>`_
+Follow the current `guidelines <https://github.com/hestiacp/hestiacp/blob/main/CONTRIBUTING.md>`_
 
-########
+#####################
 Checklist
-########
+#####################
 
 Recommended:
 
-- Exisiting previous Hestia installation (this will ensure everything is already installed)
+- Existing previous Hestia installation (this will ensure everything is already installed)
 
-########
+####################
 Compiling
-########
+####################
 
-Go into the ``src`` folder and run of these commands
+Go into the ``src`` folder and run of these commands.
+
+.. note::
+  For building hestia-nginx / hestia-php packages at least 2 GB memory is required! 
 
 .. tabs:: 
 
-    .. code-tab:: c
-        Compile and install
+    .. code-tab:: bash Compile and install
 
         ./hst_autocompile.sh --hestia --install '~localsrc'
-    .. code-tab:: c 
-        Compile but don't install
+        
+        Compile Hestia + Hestia PHP / Hestia NGNIX and install
+        
+        ./hst_autocompile.sh --all --install '~localsrc'
+        
+    .. code-tab:: bash Compile but don't install
 
         ./hst_autocompile.sh --hestia --noinstall --keepbuild '~localsrc'
+        
+        Compile Hestia + Hestia PHP / Hestia NGNIX and install
+        
+        ./hst_autocompile.sh --all --noinstall --keepbuild '~localsrc'
+
+
+##############################
+Install Hestia from packages
+##############################
+
+.. code-block:: bash
+    
+    # Compile packages
+    ./hst_autocompile.sh --all --noinstall --keepbuild '~localsrc'
+    
+    cd /install
+    
+    bash hst-install-{os}.sh --with-debs /tmp/hestiacp-src/deb/ 
+    
+Any option can be appended to the installer command. 
+
+##############################
+Update HestiaCP from Github
+##############################
+
+.. code-block:: bash
+    
+    v-update-sys-hestia-git username branch install
+    

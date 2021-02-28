@@ -1,12 +1,9 @@
 Developing/Contributing to Hestia Documentation
 ================================================
-.. note::
-  This documentation has been community-written.
 
-
-########
+###############
 Checklist
-########
+###############
 
 Python 2 (not recommended because of EOL)
 -----------------------------------------
@@ -32,21 +29,20 @@ Install the following pip modules:
 
 
 
-########
+#############
 Building
-########
+#############
 
 .. tabs:: 
 
-    .. code-tab:: c
-        Compile
+    .. code-tab:: bash PHP
 
         make html
-    .. code-tab:: c 
-        Alternative (Python 2)
+        
+    .. code-tab:: bash Alternative (Python 2)
 
         python -m sphinx -b html . _build/html
-    .. code-tab:: c 
-        Alternative (Python 3)
+        
+    .. code-tab:: bash  Alternative (Python 3)
 
         python3 -m sphinx -b html . _build/html

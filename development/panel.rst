@@ -62,3 +62,34 @@ Update HestiaCP from Github
     
     v-update-sys-hestia-git username branch install
     
+#############################
+Automated testing
+#############################
+
+For automated testing we currently use Bats (Bash Automated Testing System)
+
+Install
+--------
+
+.. code-block:: bash
+
+    # Clone Hestia repo with testing submodules
+    git clone --recurse-submodules https://github.com/hestiacp/hestiacp
+    # Or on existing local repo with up to date master branch
+    git submodule update --init --recursive
+    
+    # Install Bats 
+    test/test_helper/bats-core/install.sh /usr/local
+    
+Run
+------------------
+
+.. warning::
+    
+    Do not run any testing script on an live server. It might cause issues or downtime!
+
+.. code-block:: bash
+
+    # Run Hestia tests
+    test/test.bats
+    

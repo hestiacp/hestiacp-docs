@@ -1,3 +1,56 @@
+#############################
+Backups / Restore
+#############################
+
+************************************************
+What kind of backups are able to be restored 
+************************************************
+
+Currently HestiaCP only support the backup of:
+
+#. HestiaCP
+#. VestaCP
+
+************************************************
+How to increase the number of backups
+************************************************
+
+************************************************
+What is the difference between zstd and gzip
+************************************************
+
+************************************************
+What is the optimal compression ratio
+************************************************
+
+************************************************
+What kind of protocols are currently supported
+************************************************
+
+Currently suported backup protocols are:
+
+- FTP
+- SFTP
+- Backblaze / B2 Protocol
+
+************************************************
+How to setup a (S)FTP Backup server
+************************************************
+
+Login on a server as root and run following command
+
+.. code-block:: bash
+
+    v-add-backup-ftp-host remote.ftp-host.ltd backup-user p4ssw0rd [/path-backups/] [port]
+
+For SFTP
+
+.. code-block:: bash
+
+    v-add-backup-sftp-host remote.ftp-host.ltd backup-user p4ssw0rd [/path-backups/] [port]
+    
+Arguments between brackets [] may be omitted
+
 ***************************************************************
 How to change default backup folder
 ***************************************************************

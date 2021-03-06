@@ -32,24 +32,6 @@ This will generate an API key. Replace the username "admin" with the generated k
 This way you can set up master->slave or master-master-master cluster. There is no limitation on how to chain dns servers.
 
 ************************************************
-How to setup a (S)FTP Backup server
-************************************************
-
-Login on a server as root and run following command
-
-.. code-block:: bash
-
-    v-add-backup-ftp-host remote.ftp-host.ltd backup-user p4ssw0rd [/path-backups/] [port]
-
-For SFTP
-
-.. code-block:: bash
-
-    v-add-backup-sftp-host remote.ftp-host.ltd backup-user p4ssw0rd [/path-backups/] [port]
-    
-Arguments between brackets [] may be omitted
-
-************************************************
 How to setup a remote database server
 ************************************************
 

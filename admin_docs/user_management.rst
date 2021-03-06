@@ -35,13 +35,4 @@ Use
    v-restore-user newusername username.2020.01.01-00-00.tar
    
 User accounts that don not exist will be created.
-   
-************************************************
-What kind of backups are able to be restored 
-************************************************
-
-Currently HestiaCP only support the backup of:
-
-#. HestiaCP
-#. VestaCP
 

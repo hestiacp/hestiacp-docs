@@ -15,19 +15,27 @@ Currently HestiaCP only support the backup of:
 How to increase the number of backups
 ************************************************
 
+As admin user go to "Users" -> "Packages" -> Edit the package of the user and increase the number of backups
+
 ************************************************
 What is the difference between zstd and gzip
 ************************************************
+
+ZSTD have been developed by Facebook as a replacement. During testing we a significant speed increase and lower disk space usage against gzip. 
+
+For more information see https://github.com/facebook/zstd
 
 ************************************************
 What is the optimal compression ratio
 ************************************************
 
+Higher the number how better the compression ratio. During the testing we discoverd that "ZSTD" level 3 compares agains level 9 for disk space how ever much faster. ZSTD level 11 took the same time but an smaller small size. Level higher then 19 should never be used as zstd becomes terrible slow.
+
 ************************************************
 What kind of protocols are currently supported
 ************************************************
 
-Currently suported backup protocols are:
+Currently supported backup protocols are:
 
 - FTP
 - SFTP

@@ -1,0 +1,21 @@
+*********************************
+Release notes for HestiaCP v1.3.3
+*********************************
+
+Release date: Feb 15 2021
+
+
+########
+Features
+########
+
+Security release only. No new features has been added
+
+########
+Bugfixes
+########
+
+- Fixed xss vulnerability in v-add-sys-ip and user history log (thanks @numanturle)
+- Fixed remote execution possibility when deleting ssh key (thanks @numanturle)
+- Fixed Arbitrary File Write in api (thanks @numanturle)
+- Updated phpMyAdmin to v5.1.0

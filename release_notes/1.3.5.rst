@@ -1,0 +1,18 @@
+*********************************
+Release notes for HestiaCP v1.3.5
+*********************************
+
+Release date: Feb 15 2021
+
+
+########
+Features
+########
+
+
+########
+Bugfixes
+########
+
+- Updated APT repository key for PHP from packages.sury.org (https://forum.hestiacp.com/t/apt-upgrade-failed-gpg-error-packages-sury-org)
+- Updated phpMyAdmin to v5.1.0.

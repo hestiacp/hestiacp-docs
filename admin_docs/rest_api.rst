@@ -44,7 +44,6 @@ Create User Account
             'arg5' => $first_name,
             'arg6' => $last_name
         );
-        $postdata = http_build_query($postvars);
 
         // Send POST query via cURL
         $postdata = http_build_query($postvars);
@@ -150,7 +149,6 @@ To create the api key run the following command first
             'arg4' => $package,
             'arg5' => $name,
         );
-        $postdata = http_build_query($postvars);
     
         // Send POST query via cURL
         $postdata = http_build_query($postvars);
@@ -241,7 +239,6 @@ Add Web/DNS/Mail Domain
             'arg1' => $username,
             'arg2' => $domain
         );
-        $postdata = http_build_query($postvars);
 
         // Send POST query via cURL
         $postdata = http_build_query($postvars);
@@ -333,7 +330,6 @@ Create Database
             'arg3' => $db_user,
             'arg4' => $db_pass
         );
-        $postdata = http_build_query($postvars);
 
         // Send POST query via cURL
         $postdata = http_build_query($postvars);
@@ -426,7 +422,6 @@ List Web Domains
             'arg2' => $domain,
             'arg3' => $format
         );
-        $postdata = http_build_query($postvars);
 
         // Send POST query via cURL
         $postdata = http_build_query($postvars);
@@ -512,7 +507,6 @@ Delete User Account
             'cmd' => $hst_command,
             'arg1' => $username
         );
-        $postdata = http_build_query($postvars);
 
         // Send POST query via cURL
         $postdata = http_build_query($postvars);
@@ -593,7 +587,6 @@ Check Username and Password
             'arg1' => $username,
             'arg2' => $password,
             );
-        $postdata = http_build_query($postvars);
     
         // Send POST query via cURL
         $postdata = http_build_query($postvars);

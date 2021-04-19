@@ -9,6 +9,7 @@ Python 2 (not recommended because of EOL)
 -----------------------------------------
 Install the following pip modules:
 
+- sphinx
 - sphinx-tabs
 - sphinx_rtd_theme
 - sphinxcontrib.youtube
@@ -17,6 +18,7 @@ Python 3
 ---------
 Install the following pip modules:
 
+- sphinx
 - sphinx-tabs
 - sphinx_rtd_theme
 - sphinxcontrib.yt

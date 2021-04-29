@@ -2,7 +2,7 @@ Customizing Hestia
 ==================
 
 ******************************
-Can I customize HestiaCP
+Can I customise HestiaCP
 ******************************
 Currently we only support changing the layout via CSS. Changes to the HTML file are currently no supported as they break during update procedures. 
 
@@ -10,13 +10,7 @@ Currently we only support changing the layout via CSS. Changes to the HTML file 
 How can I add a new theme
 *************************
 
-Create a new file 
-
-.. code-block:: bash
-    
-    touch /root/mycss.css
-    
-Make your changes to CSS file. 
+Create a new theme in /usr/local/hestia/web/css/theme/custom/my_theme.css
 
 .. code-block:: bash
     
@@ -28,15 +22,9 @@ Make your changes to CSS file.
         }
 
 
-Run the following command 
-
-.. code-block:: bash
-    
-    v-add-sys-theme mycss local
-    Please enter the full path to the CSS file to import: /root/mycss.css
     
 *************************************
-How can I customize a default theme
+How can I customise a default theme
 *************************************
 
 Changes to the default supplied themes are always over written during updates. How ever via the v-add-sys-theme you can create a new theme.

@@ -27,9 +27,10 @@ v-add-backup-host
 .. code-block:: bash
    
   v-add-backup-host sftp backup.acme.com admin p4$$w@Rd
+ v-add-backup-host b2 bucketName keyID applicationKey
    
 
-This function adds a backup host
+Add a new remote backup location. Currently SFTP, FTP and Backblaze are supported
 
 
 *******************************************************************
@@ -155,6 +156,26 @@ The function add new database server to the server pool. It supports local and r
 
 
 *******************************************************************
+v-add-database-temp-user
+*******************************************************************
+
+**add temp database user**
+
+**Label**:   `database`  `hestia` 
+
+**Options**: `USER` `DATABASE` `[TYPE]` `[HOST]` `[TTL]` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-add-database-temp-user wordress wordpress_db mysql
+   
+
+The function creates an temporary database user mysql_sso_db_XXXXXXXX and a random password The user has an limited validity and only granted access to the specific database Returns json to be read SSO Script
+
+
+*******************************************************************
 v-add-dns-domain
 *******************************************************************
 
@@ -232,6 +253,26 @@ v-add-domain
    
 
 The function adds web/dns/mail domain to a server.
+
+
+*******************************************************************
+v-add-fastcgi-cache
+*******************************************************************
+
+**Enable FastCGI cache for nginx**
+
+**Label**:   `hestia`  `web` 
+
+**Options**: `USER` `DOMAIN` `[DURATION]` `[DEBUG]` `[RESTART]` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-add-fastcgi-cache user domain.tld 30m
+   
+
+The function enables FastCGI cache for nginx Acceptable values for duration is time in seconds (10s) minutes (10m) or days (10d) Add "yes" as last parameter to append debug information to response headers
 
 
 *******************************************************************
@@ -629,6 +670,26 @@ The function adds DKIM signature to outgoing domain emails.
 
 
 *******************************************************************
+v-add-mail-domain-smtp-relay
+*******************************************************************
+
+**Add mail domain smtp relay support**
+
+**Label**:   `mail` 
+
+**Options**: `USER` `DOMAIN` `HOST` `USERNAME` `PASSWORD` `[PORT]` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-add-mail-domain-smtp-relay user domain.tld srv.smtprelay.tld uname123 pass12345
+   
+
+This function adds mail domain smtp relay support.
+
+
+*******************************************************************
 v-add-mail-domain-ssl
 *******************************************************************
 
@@ -640,6 +701,28 @@ v-add-mail-domain-ssl
 
 
 The function turns on SSL support for a mail domain. Parameter ssl_dir is a path to a directory where 2 or 3 ssl files can be found. Certificate file mail.domain.tld.crt and its key mail.domain.tld.key are mandatory. Certificate authority mail.domain.tld.ca file is optional.
+
+
+*******************************************************************
+v-add-mail-domain-webmail
+*******************************************************************
+
+**add webmail support for a domain**
+
+**Label**:   `hestia` 
+
+**Options**: `USER` `DOMAIN` `[WEBMAIL]` `[RESTART]` `[QUIET]` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-add-sys-webmail user domain.com
+ example: v-add-sys-webmail user domain.com rainloop
+ example: v-add-sys-webmail user domain.com roundcube
+   
+
+this function enables webmail client for a mail domain.
 
 
 *******************************************************************
@@ -743,7 +826,7 @@ v-add-sys-ip
 
 **Label**:  
 
-**Options**: `IP` `NETMASK` `[INTERFACE]` `[USER]` `[IP_STATUS]` `[IP_NAME]` `[NAT_IP]` 
+**Options**: `IP` `NETMASK` `[INTERFACE]` `[USER]` `[IP_STATUS]` `[IP_NAME]` `[NAT_IP]` `[HELO]` 
 
 **Examples**:
 
@@ -753,6 +836,20 @@ v-add-sys-ip
    
 
 The function adds ip address into a system. It also creates rc scripts. You can specify ip name which will be used as root domain for temporary aliases. For example, if you set a1.myhosting.com as name, each new domain created on this ip will automatically receive alias $domain.a1.myhosting.com. Of course you must have wildcard record `*`.a1.myhosting.com pointed to ip. This feature is very handy when customer wants to test domain before dns migration.
+
+
+*******************************************************************
+v-add-sys-pma-sso
+*******************************************************************
+
+**enables support for single sign on PHPmyAdmin**
+
+**Label**:  
+
+**Options**: `[MODE]` 
+
+
+Enables support for SSO to PHPmyAdmin
 
 
 *******************************************************************
@@ -767,6 +864,34 @@ v-add-sys-quota
 
 
 The script enables filesystem quota on /home partition Some kernels do require additional packages to be installed first
+
+
+*******************************************************************
+v-add-sys-rainloop
+*******************************************************************
+
+**Install Rainloop in HestiaCP**
+
+**Label**:   `hestia` 
+
+**Options**: `[MODE]` 
+
+
+The function installs Rainloop
+
+
+*******************************************************************
+v-add-sys-roundcube
+*******************************************************************
+
+**Install RoundCube for Nginx/Apache2**
+
+**Label**:   `hestia` 
+
+**Options**: `[MODE]` 
+
+
+The function installs Round Cube
 
 
 *******************************************************************
@@ -790,43 +915,23 @@ The script enables sftp jailed environment
 
 
 *******************************************************************
-v-add-sys-theme
+v-add-sys-smtp-relay
 *******************************************************************
 
-**install theme from local source or GitHub.**
+**add system wide smtp relay support**
 
 **Label**:   `hestia` 
 
-**Options**: `THEME` `[MODE]` `[ACTIVE]` 
+**Options**: `HOST` `USERNAME` `PASSWORD` `[PORT]` 
 
 **Examples**:
 
 .. code-block:: bash
    
-  v-add-sys-theme myTheme local
+  v-add-sys-smtp-relay srv.smtprelay.tld uname123 pass12345
    
 
-The function for installing a custom theme or downloading one from the HestiaCP theme repository. For more info see https://docs.hestiacp.com/customize_hestia.html
-
-
-*******************************************************************
-v-add-sys-webmail
-*******************************************************************
-
-**add webmail support for a domain**
-
-**Label**:   `hestia` 
-
-**Options**: `USER` `DOMAIN` `[RESTART]` `[QUIET]` 
-
-**Examples**:
-
-.. code-block:: bash
-   
-  v-add-sys-webmail user domain.com
-   
-
-this function adds support for webmail services to a mail domain.
+this function adds system wide smtp relay support.
 
 
 *******************************************************************
@@ -837,7 +942,7 @@ v-add-user
 
 **Label**:  
 
-**Options**: `USER` `PASSWORD` `EMAIL` `[PACKAGE]` `[NAME]` 
+**Options**: `USER` `PASSWORD` `EMAIL` `[PACKAGE]` `[NAME]` `[LASTNAME]` 
 
 **Examples**:
 
@@ -972,6 +1077,26 @@ Function check if $user/.ssh/authorized_keys exists and create it. After that it
 
 
 *******************************************************************
+v-add-user-wp-cli
+*******************************************************************
+
+**add wp-cli for a user**
+
+**Label**:   `hestia` 
+
+**Options**: `USER` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-add-user-wp-cli user
+   
+
+The function adds support for wp-cli to the user account
+
+
+*******************************************************************
 v-add-web-domain
 *******************************************************************
 
@@ -1009,6 +1134,26 @@ v-add-web-domain-alias
    
 
 The call is intended for adding aliases to a domain (it is also called "domain parking"). The function supports wildcards `*`.domain.tpl.
+
+
+*******************************************************************
+v-add-web-domain-allow-users
+*******************************************************************
+
+**Allow other users create subdomains**
+
+**Label**:   `hestia`  `web` 
+
+**Options**: `USER` `DOMAIN` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-add-web-domain-allow-users admin admin.com
+   
+
+Bypass the rule check for Enforce subdomain ownership for a specific domain. Enforce subdomain ownership setting in /edit/server/ set to no will always overwrite this behaviour eg: admin adds admin.com user can create user.admin.com
 
 
 *******************************************************************
@@ -1092,6 +1237,31 @@ The function enables proxy support for a domain. This can significantly improve 
 
 
 *******************************************************************
+v-add-web-domain-redirect
+*******************************************************************
+
+**Adding force redirect to domain**
+
+**Label**:   `hestia`  `web` 
+
+**Options**: `USER` `DOMAIN` `REDIRECT` `HTTPCODE` `[RESTART]` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-add-web-domain-redirect user domain.tld domain.tld 
+ example: v-add-web-domain-redirect user domain.tld www.domain.tld 
+ example: v-add-web-domain-redirect user domain.tld shop.domain.tld  
+ example: v-add-web-domain-redirect user domain.tld different-domain.com
+ example: v-add-web-domain-redirect user domain.tld shop.different-domain.com
+ example: v-add-web-domain-redirect user domain.tld different-domain.com 302
+   
+
+Function creates a forced redirect to a domain
+
+
+*******************************************************************
 v-add-web-domain-ssl
 *******************************************************************
 
@@ -1163,7 +1333,7 @@ Up on creating an web domain set the SSL Force values due to the delay of LE due
 v-add-web-domain-stats
 *******************************************************************
 
-**add log analyzer to generate domain statitics**
+**add log analyzer to generate domain statistics**
 
 **Label**:   `web` 
 
@@ -1682,6 +1852,33 @@ The function synchronize dns domain with the remote server.
 
 
 *******************************************************************
+v-change-sys-api
+*******************************************************************
+
+**Enable / Disable API access**
+
+**Label**:   `hestia` 
+
+**Options**: `STATUS` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-change-sys-api enable
+ # Enable API
+   
+
+.. code-block:: bash
+   
+  v-change-sys-api disable
+ # Disable API
+   
+
+Enabled / Disable API
+
+
+*******************************************************************
 v-change-sys-config-value
 *******************************************************************
 
@@ -1716,13 +1913,13 @@ v-change-sys-db-alias
 .. code-block:: bash
    
   v-change-sys-db-alias pma phpmyadmin
-  # Sets phpMyAdmin alias to phpmyadmin
+ # Sets phpMyAdmin alias to phpmyadmin
    
 
 .. code-block:: bash
    
   v-change-sys-db-alias pga phppgadmin
-  # Sets phpPgAdmin alias to phppgadmin
+ # Sets phpPgAdmin alias to phppgadmin
    
 
 This function changes the database editor url in apache2 or nginx configuration.
@@ -1780,6 +1977,20 @@ v-change-sys-hostname
    
 
 The function for changing system hostname.
+
+
+*******************************************************************
+v-change-sys-ip-helo
+*******************************************************************
+
+**change ip HELO/SMTP Banner**
+
+**Label**:  
+
+**Options**: `IP` `HELO` 
+
+
+The function for changing HELO/SMTP Banner associated with ip.
 
 
 *******************************************************************
@@ -1937,20 +2148,6 @@ The function for changing service confguration.
 
 
 *******************************************************************
-v-change-sys-theme
-*******************************************************************
-
-**update web templates**
-
-**Label**:   `hestia` 
-
-**Options**: `THEME` 
-
-
-The function for changing the currently active system theme.
-
-
-*******************************************************************
 v-change-sys-timezone
 *******************************************************************
 
@@ -1988,6 +2185,26 @@ v-change-sys-webmail
    
 
 This function changes the webmail url in apache2 or nginx configuration.
+
+
+*******************************************************************
+v-change-user-config-value
+*******************************************************************
+
+**changes user configuration value**
+
+**Label**:   `hestia` 
+
+**Options**: `USER` `KEY` `VALUE` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-change-user-config-value admin ROLE admin
+   
+
+Changes key/value for specified user.
 
 
 *******************************************************************
@@ -2185,6 +2402,26 @@ The function changes system shell of a user. Shell gives ability to use ssh.
 
 
 *******************************************************************
+v-change-user-sort-order
+*******************************************************************
+
+**updates user role**
+
+**Label**:   `hestia` 
+
+**Options**: `USER` `SORT_ORDER` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-change-user-sort-order user date
+   
+
+Changes web UI display sort order for specified user.
+
+
+*******************************************************************
 v-change-user-template
 *******************************************************************
 
@@ -2202,6 +2439,26 @@ v-change-user-template
    
 
 The function changes default user web template.
+
+
+*******************************************************************
+v-change-user-theme
+*******************************************************************
+
+**updates user role**
+
+**Label**:   `hestia` 
+
+**Options**: `USER` `ROLE` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-change-user-theme user theme
+   
+
+Changes web UI display theme for specified user.
 
 
 *******************************************************************
@@ -2259,15 +2516,15 @@ v-change-web-domain-docroot
 .. code-block:: bash
    
   v-change-web-domain-docroot admin domain.tld otherdomain.tld
-  # add custom docroot
-  # points domain.tld to otherdomain.tld's document root.
+ # add custom docroot
+ # points domain.tld to otherdomain.tld's document root.
    
 
 .. code-block:: bash
    
   v-change-web-domain-docroot admin test.local default
-  # remove custom docroot
-  # returns document root to default value for domain.
+ # remove custom docroot
+ # returns document root to default value for domain.
    
 
 This call changes the document root of a chosen web domain to another available domain under the user context.
@@ -2427,10 +2684,11 @@ v-change-web-domain-sslhome
 
 .. code-block:: bash
    
-  v-change-web-domain-sslhome admin acme.com /home/admin/acme.com/public_shtml
+  v-change-web-domain-sslhome admin acme.com single
+ example: v-change-web-domain-sslhome admin acme.com same
    
 
-The function changes SSL home directory.
+The function changes SSL home directory. Single will seperate the both public_html / public_shtml. Same will always point to public_shtml
 
 
 *******************************************************************
@@ -2762,6 +3020,26 @@ The function for deleting the database host from hestia configuration. It will b
 
 
 *******************************************************************
+v-delete-database-temp-user
+*******************************************************************
+
+**deletes temp database user**
+
+**Label**:   `database`  `hestia` 
+
+**Options**: `USER` `DBUSER` `[TYPE]` `[HOST]` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-add-database-temp-user wordress hestia_sso_user mysql
+   
+
+Revokes "temp user" access to a database and removes the user To be used in combination with v-add-database-temp-user
+
+
+*******************************************************************
 v-delete-databases
 *******************************************************************
 
@@ -2899,6 +3177,26 @@ v-delete-domain
    
 
 The function deletes web/dns/mail domain.
+
+
+*******************************************************************
+v-delete-fastcgi-cache
+*******************************************************************
+
+**Disable FastCGI cache for nginx**
+
+**Label**:   `hestia`  `web` 
+
+**Options**: `USER` `DOMAIN` `[RESTART]` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-delete-fastcgi-cache user domain.tld
+   
+
+The function disables FastCGI cache for nginx
 
 
 *******************************************************************
@@ -3242,6 +3540,26 @@ The function delete DKIM domain pem.
 
 
 *******************************************************************
+v-delete-mail-domain-smtp-relay
+*******************************************************************
+
+**Remove mail domain smtp relay support**
+
+**Label**:   `hestia` 
+
+**Options**: `USER` `DOMAIN` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-delete-mail-domain-smtp-relay user domain.tld
+   
+
+This function removes mail domain smtp relay support.
+
+
+*******************************************************************
 v-delete-mail-domain-ssl
 *******************************************************************
 
@@ -3259,6 +3577,26 @@ v-delete-mail-domain-ssl
    
 
 The function delete ssl certificates.
+
+
+*******************************************************************
+v-delete-mail-domain-webmail
+*******************************************************************
+
+**delete webmail support for a domain**
+
+**Label**:   `hestia` 
+
+**Options**: `USER` `DOMAIN` `[RESTART]` `[QUIET]` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-delete-mail-domain-webmail user demo.com
+   
+
+this function removes support for webmail from a specified mail domain.
 
 
 *******************************************************************
@@ -3404,6 +3742,34 @@ The function for deleting a system ip. It does not allow to delete first ip on i
 
 
 *******************************************************************
+v-delete-sys-mail-queue
+*******************************************************************
+
+**delete exim mail queue**
+
+**Label**:   `hestia` 
+
+**Options**: – 
+
+
+This function checks for messages stuck in the exim mail queue and prompts the user to clear the queue if desired.
+
+
+*******************************************************************
+v-delete-sys-pma-sso
+*******************************************************************
+
+**disables support for single sign on PHPMYADMIN**
+
+**Label**:   `hestia` 
+
+**Options**: `[MODE]` 
+
+
+Disables support for SSO to PHPmyAdmin
+
+
+*******************************************************************
 v-delete-sys-quota
 *******************************************************************
 
@@ -3432,43 +3798,17 @@ The script disables sftp jailed environment
 
 
 *******************************************************************
-v-delete-sys-theme
+v-delete-sys-smtp-relay
 *******************************************************************
 
-**removes a theme from the custom theme library**
+**disable system wide smtp relay support**
 
 **Label**:   `hestia` 
 
-**Options**: `THEME` 
-
-**Examples**:
-
-.. code-block:: bash
-   
-  v-delete-sys-theme dark
-   
-
-The function removes a theme from the custom theme library. Please note "default" theme can't be deleted due to dependencies for other themes
+**Options**: `` 
 
 
-*******************************************************************
-v-delete-sys-webmail
-*******************************************************************
-
-**delete webmail support for a domain**
-
-**Label**:   `hestia` 
-
-**Options**: `USER` `DOMAIN` `[RESTART]` `[QUIET]` 
-
-**Examples**:
-
-.. code-block:: bash
-   
-  v-delete-sys-webmail user demo.com
-   
-
-this function removes support for webmail from a specified mail domain.
+this function disables system wide smtp relay support.
 
 
 *******************************************************************
@@ -3512,6 +3852,20 @@ The function deletes 2fa token of a user.
 
 
 *******************************************************************
+v-delete-user-auth-log
+*******************************************************************
+
+**Delete auth log file for user**
+
+**Label**:  
+
+**Options**: 
+
+
+The function for deleting a users auth log file
+
+
+*******************************************************************
 v-delete-user-backup
 *******************************************************************
 
@@ -3525,7 +3879,7 @@ v-delete-user-backup
 
 .. code-block:: bash
    
-  v-delete-user-backup admin.2012-12-21_00-10-00.tar
+  v-delete-user-backup admin admin.2012-12-21_00-10-00.tar
    
 
 The function deletes user backup.
@@ -3628,7 +3982,7 @@ v-delete-user-package
   v-delete-user-package admin palegreen
    
 
-The function for deleting user package. It does not allow to delete package if it is in use.
+The function for deleting user package.
 
 
 *******************************************************************
@@ -3672,6 +4026,27 @@ Delete user ssh key from authorized_keys
 
 
 *******************************************************************
+v-delete-user-stats
+*******************************************************************
+
+**delete user usage statistics**
+
+**Label**:   `panel` 
+
+**Options**: `USER` `DOMAIN` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-delete-user-stats user
+ example: v-delete-user-stats admin overall
+   
+
+The function deletes user statistics data.
+
+
+*******************************************************************
 v-delete-web-domain
 *******************************************************************
 
@@ -3709,6 +4084,26 @@ v-delete-web-domain-alias
    
 
 The function of deleting the alias domain (parked domain). By this call default www aliase can be removed as well.
+
+
+*******************************************************************
+v-delete-web-domain-allow-users
+*******************************************************************
+
+**disables other users create subdomains**
+
+**Label**:   `hestia`  `web` 
+
+**Options**: `USER` `DOMAIN` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-delete-web-domain-allow-users admin admin.com
+   
+
+Enable the rule check for Enforce subdomain ownership for a specific domain. Enforce subdomain ownership setting in /edit/server/ set to no will always overwrite this behaviour eg: admin adds admin.com user can create user.admin.com
 
 
 *******************************************************************
@@ -3789,6 +4184,26 @@ v-delete-web-domain-proxy
    
 
 The function of deleting the virtualhost proxy configuration.
+
+
+*******************************************************************
+v-delete-web-domain-redirect
+*******************************************************************
+
+**Delete force redirect to domain**
+
+**Label**:   `hestia`  `web` 
+
+**Options**: `USER` `DOMAIN` `[RESTART]` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-add-web-domain-redirect user domain.tld
+   
+
+Function delete a forced redirect to a domain
 
 
 *******************************************************************
@@ -3875,7 +4290,7 @@ The function of deleting site's system of statistics. Its type is automatically 
 v-delete-web-domain-stats-user
 *******************************************************************
 
-**disable webdomain stats  authentication support**
+**disable web domain stats authentication support**
 
 **Label**:   `web` 
 
@@ -3983,6 +4398,19 @@ v-generate-api-key
 
 
 The function creates a key file in $HESTIA/data/keys/
+
+
+*******************************************************************
+v-generate-debug-report
+*******************************************************************
+
+
+**Label**:  
+
+**Options**: 
+
+
+Includes shellcheck source=/usr/local/hestia/conf/hestia.conf
 
 
 *******************************************************************
@@ -5272,6 +5700,20 @@ The function lists web server status
 
 
 *******************************************************************
+v-list-sys-webmail
+*******************************************************************
+
+**listing available webmail clients**
+
+**Label**:   `hestia`  `mail` 
+
+**Options**: `[FORMAT]` 
+
+
+List available webmail clients
+
+
+*******************************************************************
 v-list-user
 *******************************************************************
 
@@ -5289,6 +5731,20 @@ v-list-user
    
 
 The function to obtain user parameters.
+
+
+*******************************************************************
+v-list-user-auth-log
+*******************************************************************
+
+**list user log**
+
+**Label**:  
+
+**Options**: `USER` `[FORMAT]` 
+
+
+The function of obtaining the list of 10 last users commands.
 
 
 *******************************************************************
@@ -5672,6 +6128,48 @@ The function for obtaining the list of proxy templates available to a user.
 
 
 *******************************************************************
+v-log-action
+*******************************************************************
+
+**adds action event to user or system log**
+
+**Label**:  
+
+**Options**: `LOG_TYPE` `USER` 
+
+
+Event Levels: info, warning, error
+
+
+*******************************************************************
+v-log-user-login
+*******************************************************************
+
+**add user login**
+
+**Label**:  
+
+**Options**: `USER` `IP` `STATUS` `[FINGERPRINT]` 
+
+
+Argument definition
+
+
+*******************************************************************
+v-log-user-logout
+*******************************************************************
+
+**Log User logout event**
+
+**Label**:  
+
+**Options**: `USER` `FINGERPRINT` 
+
+
+Argument definition
+
+
+*******************************************************************
 v-move-fs-directory
 *******************************************************************
 
@@ -5749,6 +6247,26 @@ v-open-fs-file
    
 
 The function opens/reads files on the file system
+
+
+*******************************************************************
+v-purge-nginx-cache
+*******************************************************************
+
+**Purge nginx cache**
+
+**Label**:   `hestia`  `web` 
+
+**Options**: `USER` `DOMAINÅ` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-purge-nginx-cache user domain.tld
+   
+
+The function purges nginx cache.
 
 
 *******************************************************************
@@ -5936,7 +6454,7 @@ v-rebuild-users
 **Options**: `[RESTART]` 
 
 
-The function all users on the system.
+The function rebuilds user configuration for all users.
 
 
 *******************************************************************
@@ -5988,7 +6506,7 @@ The function for changing the currently active system theme.
 
 
 *******************************************************************
-v-rename-package
+v-rename-user-package
 *******************************************************************
 
 **change package name**
@@ -6005,6 +6523,20 @@ v-rename-package
    
 
 The function changes the name of an existing package.
+
+
+*******************************************************************
+v-repair-sys-config
+*******************************************************************
+
+**Restore system configuration**
+
+**Label**:  
+
+**Options**: `[SYSTEM]` 
+
+
+The function repairs or restores the system configuration file.
 
 
 *******************************************************************
@@ -6146,6 +6678,86 @@ The function reloads backend server configuration.
 
 
 *******************************************************************
+v-restore-cron-job
+*******************************************************************
+
+**restore single cron job**
+
+**Label**:   `panel` 
+
+**Options**: `USER` `BACKUP` `DOMAIN` `[NOTIFY]` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-restore-cron-job USER BACKUP CRON [NOTIFY]
+   
+
+The function allows the user to restore a single cron job from a backup archive.
+
+
+*******************************************************************
+v-restore-database
+*******************************************************************
+
+**restore single database**
+
+**Label**:   `panel` 
+
+**Options**: `USER` `BACKUP` `DOMAIN` `[NOTIFY]` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-restore-web-domain USER BACKUP DATABASE [NOTIFY]
+   
+
+The function allows the user to restore a single database from a backup archive.
+
+
+*******************************************************************
+v-restore-dns-domain
+*******************************************************************
+
+**restore single dns domain**
+
+**Label**:   `panel` 
+
+**Options**: `USER` `BACKUP` `DOMAIN` `[NOTIFY]` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-restore-web-domain USER BACKUP DOMAIN [NOTIFY]
+   
+
+The function allows the user to restore a single DNS domain from a backup archive.
+
+
+*******************************************************************
+v-restore-mail-domain
+*******************************************************************
+
+**restore single mail domain**
+
+**Label**:   `panel` 
+
+**Options**: `USER` `BACKUP` `DOMAIN` `[NOTIFY]` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-restore-web-domain USER BACKUP DOMAIN [NOTIFY]
+   
+
+The function allows the user to restore a single mail domain from a backup archive.
+
+
+*******************************************************************
 v-restore-user
 *******************************************************************
 
@@ -6163,6 +6775,46 @@ v-restore-user
    
 
 The function for restoring user from backup. To be able to restore the backup, the archive needs to be placed in /backup.
+
+
+*******************************************************************
+v-restore-web-domain
+*******************************************************************
+
+**restore single web domain**
+
+**Label**:   `panel` 
+
+**Options**: `USER` `BACKUP` `DOMAIN` `[NOTIFY]` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-restore-web-domain USER BACKUP DOMAIN [NOTIFY]
+   
+
+The function allows the user to restore a single web domain from a backup archive.
+
+
+*******************************************************************
+v-revoke-api-key
+*******************************************************************
+
+**revokes api key**
+
+**Label**:   `panel` 
+
+**Options**: `[HASH]` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-revoke-api-key mykey
+   
+
+The function removes a key from in $HESTIA/data/keys/
 
 
 *******************************************************************
@@ -7318,6 +7970,27 @@ The function for obtaining updated webmail templates from Hestia package.
 
 
 *******************************************************************
+v-update-sys-defaults
+*******************************************************************
+
+**update default key database**
+
+**Label**:  
+
+**Options**: `[SYSTEM]` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-update-sys-defaults
+ example: v-update-sys-defaults user
+   
+
+The function updates the known key/value pair database
+
+
+*******************************************************************
 v-update-sys-hestia
 *******************************************************************
 
@@ -7366,12 +8039,12 @@ v-update-sys-hestia-git
 .. code-block:: bash
    
   v-update-sys-hestia-git hestiacp staging/beta install all
-  # Will download from the hestiacp repository
-  # Pulls code from staging/beta branch
-  # install: installs package immediately
-  # install-auto: installs package and schedules automatic updates from Git
-  # 'all': (optional) - compiles nginx and php alongside panel.
-  #                     this option takes a long time, only use when needed
+ # Will download from the hestiacp repository
+ # Pulls code from staging/beta branch
+ # install: installs package immediately
+ # install-auto: installs package and schedules automatic updates from Git
+ # 'all': (optional) - compiles nginx and php alongside panel.
+ #                     this option takes a long time, only use when needed
    
 
 Downloads and compiles/installs packages from GitHub repositories
@@ -7392,7 +8065,7 @@ v-update-sys-ip
 .. code-block:: bash
    
   v-update-sys-ip
-  # Intended for internal usage
+ # Intended for internal usage
    
 
 The function scans configured ip in the system and register them with hestia internal database. This call is intended for use on vps servers, where ip is set by hypervizor.

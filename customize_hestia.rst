@@ -1,4 +1,4 @@
-Customizing Hestia
+Customising Hestia
 ==================
 
 ******************************
@@ -20,8 +20,7 @@ Create a new theme in /usr/local/hestia/web/css/theme/custom/my_theme.css
         background: rgb(231, 102, 194) !important;
         background: radial-gradient(circle, rgba(231, 102, 197, 1), rgba(174, 43, 177, 1)) !important;
         }
-
-
+        
     
 *************************************
 How can I customise a default theme
@@ -37,9 +36,8 @@ When we want to change the dark theme
     
 Apply your changes and follow the instructions above 
 
-
 ******************************
 Can I change any html template
 ******************************
 
-Changes to any html will be reset during upgrades this also applies for installing 3rd party software that changes the html pages.
+Changes to any html will be reverted during upgrades this also applies for installing 3rd party software that changes the html pages.

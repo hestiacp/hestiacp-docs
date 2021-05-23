@@ -1,11 +1,6 @@
 ##################################
-REST API
+Examples
 ##################################
-
-The Hestia WEB API is available to perform core functions of the Control Panel. We use it internaly to synchronyze DNS clusters, to integrate WHMC billing system and to reset mail account passwords in Roundcube. The API can be used as well to create new user accounts, domains, databases or even to build an alternative web interface.
-
-This reference provides php code samples demonstrating how you can seamlessly integrate API into your application or script. However you can use other languages to commmunicate with API.
-
 
 ************************************************
 Create User Account
@@ -648,78 +643,3 @@ Check Username and Password
             .catch(function (error) {
                 console.log(error);
             });
-
-************************************************
-Return Codes
-************************************************
-
-.. list-table::
-   :header-rows: 1
-
-   *  - VALUE
-      - NAME
-      - COMMENT
-   *  - 0
-      - OK
-      - Command has been successfuly performed
-   *  - 1
-      - E_ARGS
-      - Not enough arguments provided
-   *  - 2
-      - E_INVALID
-      - Object or atgument is not valid
-   *  - 3
-      - E_NOTEXIST
-      - Object doesn't exist
-   *  - 4
-      - E_EXISTS
-      - Object already exists
-   *  - 5
-      - E_SUSPENDED
-      - Object already exists
-   *  - 6
-      - E_UNSUSPENDED
-      - Object is already unsuspended
-   *  - 7
-      - E_INUSE
-      - Object can't be deleted because it is used by another object
-   *  - 8
-      - E_LIMIT
-      - Object cannot be created because of hosting package limits
-   *  - 9
-      - E_PASSWORD
-      - Wrong password
-   *  - 10
-      - E_FORBIDEN
-      - Object cannot be accessed by this user
-   *  - 11
-      - E_DISABLED
-      - Subsystem is disabled
-   *  - 12
-      - E_PARSING
-      - Configuration is broken
-   *  - 13
-      - E_DISK
-      - Not enough disk space to complete the action
-   *  - 14
-      - E_LA
-      - Server is to busy to complete the action
-   *  - 15
-      - E_CONNECT
-      - Connection failed. Host is unreachable
-   *  - 16
-      - E_FTP
-      - FTP server is not responding
-   *  - 17
-      - E_DB
-      - Database server is not responding
-   *  - 18
-      - E_RRD
-      - RRDtool failed to update the database
-   *  - 19
-      - E_UPDATE
-      - Update operation failed
-   *  - 20
-      - E_RESTART
-      - Service restart failed
-

@@ -60,5 +60,31 @@ Add a other network port as comma separated list
     rm /usr/local/hestia/web/rrd/net/*
     systemctl restart hestia
     
+***************************************************************
+What does the policy "Enforce subdomain ownership" mean
+***************************************************************
 
+In Hestia 1.3.5 and Vesta it was possible for "User Bob" to create an subdomain (bob.alice.com) of alice.com even the User Alice is a different user.  This could cause "Security" issues and therefor we have decided to add a policy to disable / enable this behaviour. By default the policy is enabled. 
+
+To turn the the policy off for only one domain. For example that has been used for "testing"
+
+.. code-block:: bash
+
+    # to enable 
+    v-add-web-domain-allow-users user domain.com
+    # to disable 
+    v-add-web-domain-allow-users user domain.com
     
+***************************************************************
+Can I restrict access to the "Admin" account
+***************************************************************
+
+In 1.3 we have added the function in Hestia to give an other user Administrator  access for 1.4 we have decided to give system administrators the options to limit access to the main "system administrator" account to improve security. 
+
+***************************************************************
+Can users change php vesion or templates
+***************************************************************
+
+As per 1.4 User are able to change templates. How ever since 1.4 their is an policy in "Settings" to disable it. 
+
+

@@ -68,5 +68,21 @@ And use the data supplied above. When not needed feel free to remove this file.
 Can I use Cloudflare Proxy is email
 *****************************************
 
-No Cloudflare with Proxy enabled does not work with email. If you use email hosted on you server make sure proxy for both: A and the MX record for mail.domain.com is switched off. Otherwise you are not able to use receive email.
+No Cloudflare with Proxy enabled does not work with email. If you use email hosted on you server make sure proxy for the A record is switched of mail.domain.com is switched off. Otherwise you are not able to use receive email.
+The following settings are suggested if you want to use Hestia as your mail server:
+
+.. image:: ../images/mail/mail.png
+    :width: 600px
+    :align: center
+    :height: 321px
+    :alt: DNS records
+
+A record with name "mail" with content your server ip
+A record with name "webmail" with the content of your server ip
+MX record with name "mail" with content mail.domain.com
+TXT record with name "@" with the content "v=spf1 a mx ip4:your ip; ~all"
+TXT record with name "_domainkey" with content "t=y; o=~;"
+TXT record with name "mail._domainkey" with content "DKIM key"
+
+The DKIM key can be found via: "Mail" -> When hovering the domain go to DNS records you will see an page with the required info
 

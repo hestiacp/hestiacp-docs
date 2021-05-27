@@ -81,10 +81,4 @@ Can I restrict access to the "Admin" account
 
 In 1.3 we have added the function in Hestia to give an other user Administrator  access for 1.4 we have decided to give system administrators the options to limit access to the main "system administrator" account to improve security. 
 
-***************************************************************
-Can users change php vesion or templates
-***************************************************************
-
-As per 1.4 User are able to change templates. How ever since 1.4 their is an policy in "Settings" to disable it. 
-
 

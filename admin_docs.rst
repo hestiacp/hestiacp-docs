@@ -3,12 +3,14 @@ Admin Documentation
 #######################################
 
 .. toctree::
-  :maxdepth: 3
+  :maxdepth: 2
   :glob:
   
-  admin_docs/server_management.rst
+  admin_docs/web.rst
+  admin_docs/dns.rst
+  admin_docs/mail.rst
+  admin_docs/database.rst
+  admin_docs/cron.rst
   admin_docs/backups.rst
-  admin_docs/ssl_certificates.rst
-  admin_docs/user_management.rst
-  admin_docs/filemanager.rst
-  admin_docs/rest_api.rst
+  admin_docs/settings.rst
+  admin_docs/api.rst 

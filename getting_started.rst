@@ -29,7 +29,6 @@ You will see the entire list of options available
 .. code-block:: bash
 
     -a, --apache          Install Apache        [yes|no]  default: yes
-    -n, --nginx           Install Nginx         [yes|no]  default: yes
     -w, --phpfpm          Install PHP-FPM       [yes|no]  default: yes
     -o, --multiphp        Install Multi-PHP     [yes|no]  default: no
     -v, --vsftpd          Install Vsftpd        [yes|no]  default: yes
@@ -54,7 +53,7 @@ You will see the entire list of options available
     -f, --force           Force installation
     -h, --help            Print this help
 
-**Example of usage:** *bash hst-install.sh -n yes -w yes -t no -c no -x yes -z yes -b yes -i yes -m yes -l de  \\                -s youdomain.tld -e yourmail@mail.com -p yourpasswordhere -a no -k no -o no*
+**Example of usage:** *bash hst-install.sh -w yes -t no -c no -x yes -z yes -b yes -i yes -m yes -l de  \\                -s youdomain.tld -e yourmail@mail.com -p yourpasswordhere -a no -k no -o no*
 
 Then Hestia will install following software
 on your system:

@@ -1,0 +1,11 @@
+*********************************
+Release notes for HestiaCP v1.4.1
+*********************************
+
+Release date: May 26 2021
+
+########
+Bugfixes
+########
+
+- Fixed bug with 2FA enabled logins

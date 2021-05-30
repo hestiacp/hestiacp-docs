@@ -101,7 +101,7 @@ Bugfixes
 - Fixed an issue where www could be created and after delete webmail doesn't work anymore #1746
 - Standardize headers for upgrade scripts
 - Improved how we handle custom themes
-- Refactored HMTL / PHP code WebUI
+- Refactored HTML / PHP code WebUI
 - Updated ClamAV configuration
 - Fixed issue where file manger key got the wrong permissions
 - Update version Laveral @mariojgt

@@ -2341,7 +2341,7 @@ v-change-user-php-cli
 
 .. code-block:: bash
    
-  v-change-user-php-cli user php7.4
+  v-change-user-php-cli user 7.4
    
 
 add line to .bash_aliases to set default php command line version when multi-php is enabled.

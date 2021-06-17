@@ -28,6 +28,7 @@ Release Notes
   :maxdepth: 1
   :glob:
   
+  release_notes/1.4.3.rst
   release_notes/1.4.2.rst
   release_notes/1.4.1.rst  
   release_notes/1.4.0.rst

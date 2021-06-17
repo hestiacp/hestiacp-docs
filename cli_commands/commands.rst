@@ -791,6 +791,26 @@ The function synchronize dns domain with the remote server.
 
 
 *******************************************************************
+v-add-sys-api-ip
+*******************************************************************
+
+**add ip adresss to allowed ip list api**
+
+**Label**:   `hestia` 
+
+**Options**: `IP` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-add-sys-api-ip 1.1.1.1
+   
+
+
+
+
+*******************************************************************
 v-add-sys-filemanager
 *******************************************************************
 
@@ -988,7 +1008,7 @@ v-add-user-composer
 
 .. code-block:: bash
    
-  v-add-user-composer user
+  v-add-user-composer user [version]
    
 
 The function adds support for composer (php dependency manager) Homepage: https://getcomposer.org/
@@ -1104,7 +1124,7 @@ v-add-web-domain
 
 **Label**:   `web` 
 
-**Options**: `USER` `DOMAIN` `[IP]` `[ALIASES]` `[PROXY_EXTENSIONS]` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `[IP]` `[RESTART]` `[ALIASES]` `[PROXY_EXTENSIONS]` 
 
 **Examples**:
 
@@ -2341,7 +2361,7 @@ v-change-user-php-cli
 
 .. code-block:: bash
    
-  v-change-user-php-cli user php7.4
+  v-change-user-php-cli user 7.4
    
 
 add line to .bash_aliases to set default php command line version when multi-php is enabled.
@@ -3691,6 +3711,26 @@ v-delete-remote-dns-record
    
 
 The function synchronize dns with the remote server.
+
+
+*******************************************************************
+v-delete-sys-api-ip
+*******************************************************************
+
+**delete ip adresss from allowed ip list api**
+
+**Label**:   `hestia` 
+
+**Options**: `IP` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-delete-sys-api-ip 1.1.1.1
+   
+
+
 
 
 *******************************************************************
@@ -6513,7 +6553,7 @@ v-rename-user-package
 
 **Label**:   `hestia` 
 
-**Options**: `OLD_NAME` `NEW_NAME` 
+**Options**: `OLD_NAME` `NEW_NAME` `[MODE]` 
 
 **Examples**:
 

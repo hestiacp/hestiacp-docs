@@ -1,5 +1,5 @@
 *********************************
-Release notes for HestiaCP v1.4.2
+Release notes for HestiaCP v1.4.3
 *********************************
 
 Release date: June 17 2021

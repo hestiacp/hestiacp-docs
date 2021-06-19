@@ -73,7 +73,7 @@ To turn the the policy off for only one domain. For example that has been used f
     # to enable 
     v-add-web-domain-allow-users user domain.com
     # to disable 
-    v-add-web-domain-allow-users user domain.com
+    v-delete-web-domain-allow-users user domain.com
     
 ***************************************************************
 Can I restrict access to the "Admin" account

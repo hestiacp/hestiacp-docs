@@ -119,3 +119,43 @@ For a permanent fix  you should add a record to fstab, so this folder would load
     /path/to/new/backup/folder /backup none defaults,bind 0 0
     
 3. Save the file.
+
+***************************************************************
+How to untar the  domain_data.tar.zst in windows using zstd.exe
+***************************************************************
+
+1. you'll have to download the zstd.exe for windows, found in:
+`https://github.com/facebook/zstd/releases/` depending on your version of windows:
+
+.. code-block:: bash
+
+    zstd-v*-*.*-win32.zip
+    
+    zstd-v*-*.*-win64.zip
+
+2. decompress the program that you've downloaded (the zstd zip file)
+
+3. to decompress the backup, use the following command:
+
+.. code-block:: bash
+
+    {dir_to_zstd}\zstd.exe -o {dir_to_file}\{file}.tar.zst
+
+Example:
+
+.. code-block:: bash 
+
+    c:\Users\{user}\Downloads\zstd-v1.4.4-win64\zstd.exe -d c:\Users\{user}\Downloads\admin.2021-06-27_05-48-23\web\{domain}\domain_data.tar.zst
+
+output:
+
+.. code-block:: bash
+
+    c:\Users\{user}\Downloads\admin.2021-06-27_05-48-23\web\{domain}\domain_data.tar.zst: 61440 bytes
+
+3. the use your favorite program to untar the resulting tar, and you are done.
+
+In this case, the tar was outputted to 
+
+ .. code-block:: bash   
+    c:\Users\{user}\Downloads\admin.2021-06-27_05-48-23\web\{domain}\domain_data.tar

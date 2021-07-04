@@ -41,7 +41,7 @@ Features
 - Discourage websites to be created under "admin" account and redirect users to create new users.
 - Added support for redirecting to www / non www domains (or custom) #427 / #1638.
 - Allow users to see failed login attempts on there account.
-- Introduced support for ARM based systems. Currently the packages are not available via ATP!
+- Introduced support for ARM based systems. Currently the packages are not available via APT!
 - Force reboot of system after install
 
 ########

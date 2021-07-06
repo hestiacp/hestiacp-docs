@@ -5,7 +5,12 @@ Archive
 .. toctree::
   :maxdepth: 1
   :glob:
-  
+
+  archive/1.2.4.rst
+  archive/1.2.3.rst
+  archive/1.2.2.rst
+  archive/1.2.1.rst
+  archive/1.2.0.rst
   archive/1.1.1.rst
   archive/1.1.0.rst
   archive/1.0.6.rst

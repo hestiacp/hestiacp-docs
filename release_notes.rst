@@ -4,7 +4,7 @@ Main Features
 
 - Support for SFTP chroot jails
 - MultiIP support for web/mail/dns
-- MultiPHP support for 
+- MultiPHP support for
 
   - php5.6 (`EOL <https://www.php.net/supported-versions.php>`__)
   - php7.0 (`EOL <https://www.php.net/supported-versions.php>`__)
@@ -27,20 +27,17 @@ Release Notes
 .. toctree::
   :maxdepth: 1
   :glob:
-  
+
+  release_notes/1.4.5.rst
+  release_notes/1.4.4.rst
   release_notes/1.4.3.rst
   release_notes/1.4.2.rst
-  release_notes/1.4.1.rst  
+  release_notes/1.4.1.rst
   release_notes/1.4.0.rst
-  release_notes/1.3.5.rst  
+  release_notes/1.3.5.rst
   release_notes/1.3.4.rst
   release_notes/1.3.3.rst
   release_notes/1.3.2.rst
   release_notes/1.3.1.rst
   release_notes/1.3.0.rst
-  release_notes/1.2.4.rst 
-  release_notes/1.2.3.rst
-  release_notes/1.2.2.rst  
-  release_notes/1.2.1.rst
-  release_notes/1.2.0.rst
   release_notes/archive

@@ -45,4 +45,6 @@ Or
 
 .. code-block:: bash   
 
-v-add-remote-dns-host slave.yourhost.com 8083 api_key '' useraccount
+    v-add-remote-dns-host slave.yourhost.com 8083 api_key '' useraccount
+    
+    

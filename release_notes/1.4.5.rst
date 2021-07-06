@@ -1,0 +1,12 @@
+*********************************
+Release notes for HestiaCP v1.4.5
+*********************************
+
+Release date: June 30 2021
+
+########
+Bugfixes
+########
+
+- Revert #1943 and rework it to fix possible errors occuring on v-rebuild-cron-jobs.
+- Fixed #1956 to prevent reset of defined webmail client.

@@ -85,13 +85,19 @@ Login on a server as root and run following command
 
 .. code-block:: bash
 
-    v-add-backup-ftp-host remote.ftp-host.ltd backup-user p4ssw0rd [/path-backups/] [port]
+    v-add-backup-host ftp remote.ftp-host.ltd backup-user p4ssw0rd [/path-backups/] [port]
 
 For SFTP
 
 .. code-block:: bash
 
-    v-add-backup-sftp-host remote.ftp-host.ltd backup-user p4ssw0rd [/path-backups/] [port]
+    v-add-backup-host sftp remote.ftp-host.ltd backup-user p4ssw0rd [/path-backups/] [port]
+    
+For Backblaze / B2
+
+.. code-block:: bash
+
+    v-add-backup-host b2 bucketName keyID applicationKey
     
 Arguments between brackets [] may be omitted
 

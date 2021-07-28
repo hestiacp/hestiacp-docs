@@ -93,7 +93,7 @@ For SFTP
 
     v-add-backup-host sftp remote.ftp-host.ltd backup-user p4ssw0rd [/path-backups/] [port]
     
-For Blackblaze
+For Backblaze / B2
 
 .. code-block:: bash
 

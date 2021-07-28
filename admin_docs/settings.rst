@@ -9,6 +9,11 @@ Server setting / Config
   settings/filemanager.rst
   settings/firewall.rst
 
+*********************************************************
+I am not able to login 
+*********************************************************
+
+For installing dependencies we use Composer. As are currently not able to run it under hestia-php version. We install it via /usr/bin/php. Make sure proc_open is allowed in the main php version. In the future we look in methods to allow install via composer via hestia-php.
 
 *********************************************************
 Where can I find more information about the config files
@@ -21,7 +26,6 @@ A good starting point for every software check the creator
 * For PHP FPM `PHP Docs <https://www.php.net/manual/en/install.fpm.configuration.php>`_
 
 You could also try `our Forum <https://forum.hestiacp.com>`_
-
 
 
 ************************************************

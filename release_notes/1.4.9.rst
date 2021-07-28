@@ -1,0 +1,14 @@
+*********************************
+Release notes for HestiaCP v1.4.9
+*********************************
+
+Release date: Juli 27 2021
+
+
+#########
+Bugfixes
+#########
+
+- Fixed bug in /etc/dovecot/conf.d/10-ssl.conf for new installs
+- Fixed bug with notifications
+- Fixed translation string @myrevery

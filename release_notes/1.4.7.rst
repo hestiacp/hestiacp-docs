@@ -1,0 +1,12 @@
+*********************************
+Release notes for HestiaCP v1.4.7
+*********************************
+
+Release date: Juli 15 2021
+
+#########
+Bugfixes
+#########
+
+- Fixed #1984 phppgadmin not working on apache2 systems
+- Fixed #1985 Restart service not working

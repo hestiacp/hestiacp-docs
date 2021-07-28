@@ -859,6 +859,20 @@ The function adds ip address into a system. It also creates rc scripts. You can 
 
 
 *******************************************************************
+v-add-sys-phpmailer
+*******************************************************************
+
+**add PHPMailer functionality to Hestia Control Panel**
+
+**Label**:   `hestia` 
+
+**Options**: `[MODE]` 
+
+
+The function installs PHPMailer for Server sided email communication
+
+
+*******************************************************************
 v-add-sys-pma-sso
 *******************************************************************
 
@@ -932,6 +946,26 @@ v-add-sys-sftp-jail
    
 
 The script enables sftp jailed environment
+
+
+*******************************************************************
+v-add-sys-smtp
+*******************************************************************
+
+**Add SMTP Account for logging, notification and internal mail**
+
+**Label**:  
+
+**Options**: `DOMAIN` `PORT` `SMTP_SECURITY` `USERNAME` `PASSWORD` `EMAIL` 
+
+**Examples**:
+
+.. code-block:: bash
+   
+  v-add-sys-smtp example.com 587 STARTTLS test@domain.com securepassword test@example.com
+   
+
+This function allows configuring a SMTP account for the server to use for logging, notification and warn emails etc.
 
 
 *******************************************************************
@@ -3835,6 +3869,20 @@ v-delete-sys-sftp-jail
 
 
 The script disables sftp jailed environment
+
+
+*******************************************************************
+v-delete-sys-smtp
+*******************************************************************
+
+**Remove SMTP Account for logging, notification and internal mail**
+
+**Label**:  
+
+**Options**: – 
+
+
+This function allows configuring a SMTP account for the server to use for logging, notification and warn emails etc.
 
 
 *******************************************************************

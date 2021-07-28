@@ -97,6 +97,12 @@ If you follow https://acme-v02.api.letsencrypt.org/acme/chall-v3/12520447717/scD
 
 You will get more info what went wrong.
 
+**************************************************
+Any other tips for Debugging Lets Encrypt
+**************************************************
+
+Try to use https://letsdebug.net and enter your domain name. Select HTTP-01 and press "Run test"
+After the test it will show an error or success message.
 
 **************************************************
 Can I request a SSL Certificate with Lets Encrypt

@@ -1,0 +1,28 @@
+*********************************
+Release notes for HestiaCP v1.4.8
+*********************************
+
+Release date: Juli 27 2021
+
+#########
+Features
+#########
+
+- Add support for automated testing for HestiaCP code with @drone
+- Add support for SMTP server for internal email #1988 @Myself5 / #1165
+
+#########
+Bugfixes
+#########
+
+- Updated jQuery and jQuery UI to the latest version due to a vulnerability in jQuery. @dependabot
+- Resolve issue with double ENFORCE_SUBDOMAIN_OWNERSHIP keys in hestia.conf
+- Resolve issue with create new user during install in some cases #2000
+- Fixed an issue with Quick Install apps named Test123 (@PsychotherapistSam)
+- Fix an issue with dovecot 2.3 ssl config (#1432)
+- Load $HESTIA path during upgrade script (#1698)
+- Remove TLS 1.1 from Proftpd config (#950)
+- Don't remove postfix when Exim is not installed (#1995)
+- Fix a bug in no-php Nginx FPM template (##2007)
+- Update German translations
+- Fixed a few minor error in Mail DMS records (#2005)

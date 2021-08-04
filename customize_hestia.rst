@@ -41,3 +41,9 @@ Can I change any html template
 ******************************
 
 Changes to any html will be reverted during upgrades this also applies for installing 3rd party software that changes the html pages.
+
+****************************************
+How can I change domain not found page
+****************************************
+
+nano /var/www/html/index.html

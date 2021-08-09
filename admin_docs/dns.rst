@@ -8,7 +8,9 @@ How to setup a DNS Cluster
 
 If you are looking for the options to minimize DNS-related downtime or the way to manage dns across all server you have, you might consider to set up dns cluster.
 
-**NOTE**: Ensure that your master server's IP is whitelisted in *Configure Server* -> *Security* -> *Allowed IP addresses for API*, otherwise you will get an error when adding the slave server to the cluster.
+..note 
+
+    Ensure that your master server's IP is whitelisted in *Configure Server* -> *Security* -> *Allowed IP addresses for API*, otherwise you will get an error when adding the slave server to the cluster.
 
 #. Create user **dns-cluster** on a server which will be used as dns slave
 #. Run following command on a master

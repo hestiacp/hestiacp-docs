@@ -41,3 +41,47 @@ Can I change any html template
 ******************************
 
 Changes to any html will be reverted during upgrades this also applies for installing 3rd party software that changes the html pages.
+
+****************************************
+How can I change domain not found page
+****************************************
+
+The domain not fond page can be found in /var/www/html/index.html to edit it use: 
+
+.. code-block:: bash
+    
+    nano /var/www/html/index.html
+
+
+*****************************************************
+How can I change the default page 
+*****************************************************
+
+The default index.html when a page has been created is location in /usr/local/hestia/data/templates/web/skel/public_html
+
+Currently after each update the templates are overwritten by the Hestia update. To prevent this issue we have introduced the information to create post/pre install hooks
+
+*****************************************************
+Can I run certain command before and after update?
+***************************************************** 
+
+With the release of Hestia 1.4.6  we have added to use pre / post install hooks. Examples for the usage are for example: 
+- Disable and enable demo mode before and after an update. 
+- Restore default skeleton 
+
+To enable this feature create a file in /etc/hestiacp/hooks/pre_install.sh and or /etc/hestiacp/hooks/post_install.sh
+
+For example to disable demo mode on pre install of a update: 
+
+.. code-block:: bash
+
+    #!/bin/bash
+    sed -i "s|^DEMO_MODE=.*'|DEMO_MODE='no'|g" $HESTIA/conf/hestia.conf
+    
+After that chmod +x /etc/hestiacp/hooks/pre_install.sh 
+
+For post install actions use the same example. Except replace /etc/hestiacp/hooks/pre_install.sh with /etc/hestiacp/hooks/post_install.sh
+
+.. note 
+
+    If you use custom error documents you still have to rebuild all websites again! 

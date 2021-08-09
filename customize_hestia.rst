@@ -82,6 +82,6 @@ After that chmod +x /etc/hestiacp/hooks/pre_install.sh
 
 For post install actions use the same example. Except replace /etc/hestiacp/hooks/pre_install.sh with /etc/hestiacp/hooks/post_install.sh
 
-.. note 
+.. note:: 
 
     If you use custom error documents you still have to rebuild all websites again! 

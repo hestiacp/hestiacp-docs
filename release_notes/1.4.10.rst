@@ -1,0 +1,22 @@
+*********************************
+Release notes for HestiaCP v1.4.10
+*********************************
+
+Release date: August 12 2021
+
+#########
+Features
+#########
+
+Added v-delete-firewall-ban ip all #2031
+Include config tests for nginx/apache2 templates
+
+
+#########
+Bugfixes
+#########
+
+Fixed UI issues after upgrade jQuery + jQuery UI to last version (#2021 and #2032) + forum
+Fixed security issues in caching templates of Nginx when used as Reverse Proxy
+Fixed an issue with deleting multiple mail accounts (#2047)
+Fixed an issue with phpmailer + non latin characters (#2050) thanks @Faymir

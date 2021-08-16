@@ -45,10 +45,19 @@ Install Hestia from packages
 
 .. code-block:: bash
     
+    # Replace with https://github.com/username/hestiacp.git if you want to test a test branch hosted that you created your self
+    git clone https://github.com/hestiacp/hestiacp.git
+    cd ./hestiacp/
+    
+    # Replace main with the branch you want to test
+    git checkout main 
+    
+    cd ./src/
+    
     # Compile packages
     ./hst_autocompile.sh --all --noinstall --keepbuild '~localsrc'
     
-    cd /install
+    cd ../install
     
     bash hst-install-{os}.sh --with-debs /tmp/hestiacp-src/deb/ 
     

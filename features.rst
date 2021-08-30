@@ -18,4 +18,20 @@ Main Features
   (exim4, dovecot, webmail)
 - Per-domain SSL certificates for web domains
 - Let's Encrypt support for web and email domains
-- 2 Factor authentication
+- 2 Factor authentication login for admin panel
+- SSH keys for login via SFTP and SSH
+- Latest version for PHPmyAdmin and Roundcube and Rainloop
+- SMTP relay setup for Exim 
+- Back up to FTP, SFTP and Blackblaze
+- 1 Click Install APPS
+    
+    - Wordpress
+    - Docuwiki 
+    - Drupal
+    - Grav
+    - Larael
+    - MediaWiki
+    - NextCloud
+    - Opencart
+    - Prestashop
+    - Symphony

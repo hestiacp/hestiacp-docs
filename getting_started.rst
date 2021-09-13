@@ -14,7 +14,7 @@ Log in to your server as root, either directly or via SSH to install HestiaCP wi
 .. code-block:: bash
 
     ssh root@your.server
-    wget https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh
+    wget https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh && chmod +x hst-install.sh
     bash hst-install.sh
 
 
@@ -64,4 +64,4 @@ on your system:
 - Dovecot POP3/IMAP Server
 - MariaDB Database Server
 - Vsftpd FTP Server
-- Iptables Firewall + Fail2Ban
+- IPtables Firewall + Fail2Ban Intrusion prevention software

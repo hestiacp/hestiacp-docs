@@ -34,7 +34,7 @@ Use
 
    v-restore-user newusername username.2020.01.01-00-00.tar
    
-User accounts that do not not exist will be created.
+User accounts that do not exist will be created.
 
 
 

@@ -14,19 +14,19 @@ Main Features
   - php7.4
   - php8.0
 
-- Per-domain SSL certificates for inbound and outbound mail services
+- Per-domain TLS certificates for inbound and outbound mail services
   (exim4, dovecot, webmail)
-- Per-domain SSL certificates for web domains
+- Per-domain TLS certificates for web domains
 - Let's Encrypt support for web and email domains
-- 2 Factor authentication login for admin panel
+- 2 Factor authentication authentication for the Admin Panel
 - SSH keys for login via SFTP and SSH
 - Latest version for PHPmyAdmin and Roundcube and Rainloop
 - SMTP relay setup for Exim 
 - Back up to FTP, SFTP and Blackblaze
-- 1 Click Install APPS
+- 1 Click Install Apps
     
     - Wordpress
-    - Docuwiki 
+    - Dokuwiki 
     - Drupal
     - Grav
     - Larael

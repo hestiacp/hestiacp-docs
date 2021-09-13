@@ -13,7 +13,7 @@ How to setup a remote database server
 
    v-add-database-host mysql new-server.com root password
 
-Mysql maybe replaced by the PostgreSQL
+MySQL may be replaced by the PostgreSQL
 
 #. To make sure database has been added run following command
 
@@ -25,7 +25,7 @@ Mysql maybe replaced by the PostgreSQL
 Why I can't use :samp:`http://ip/phpmyadmin/`
 ***************************************************************
 
-For security reason we have decided to disable this option
+For security reasons we have decided to disable this option.
 
 Please use :samp:`https://host.domain.tld/phpmyadmin/`
     
@@ -43,5 +43,9 @@ By default connections are disabled open port 3306 in the firewall. Open port 33
     :alt: Add Firewall rule
 
 Then edit /etc/mysql/mariadb.conf.d/50-server.cnf
+
+.. code-block:: bash
+
+   nano /etc/mysql/mariadb.conf.d/50-server.cnf
 
 And set bind-address = 0.0.0.0 or bind-address = "your.server.ip.address"

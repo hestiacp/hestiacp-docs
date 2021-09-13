@@ -32,15 +32,15 @@ You could also try `our Forum <https://forum.hestiacp.com>`_
 Can I use HestiaCP behind Cloudflare CDN?
 ************************************************
 
-By default  `Cloudflare <https://support.cloudflare.com/hc/en-us/articles/200169156-Identifying-network-ports-compatible-with-Cloudflare-s-proxy>`_ supports only a limited number of ports
+By default  `Cloudflare Proxy <https://support.cloudflare.com/hc/en-us/articles/200169156-Identifying-network-ports-compatible-with-Cloudflare-s-proxy>`_ supports only a limited number of ports. This means Cloudflare will not forward port 8083, which is the default port which HestiaCP listens on.
 
-To change the port you can run the command
+To change the port to one that Cloudflare will forward, you can run this command
 
 .. code-block:: bash
 
     v-change-sys-port 2083
 
-Or you can disable the proxy of Cloudflare
+Or you can disable the proxy feature of Cloudflare
 
 
 ***************************************************************

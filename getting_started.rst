@@ -14,7 +14,7 @@ Log in to your server as root, either directly or via SSH to install HestiaCP wi
 .. code-block:: bash
 
     ssh root@your.server
-    wget https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh && chmod +x hst-install.sh
+    wget https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh
     bash hst-install.sh
 
 

@@ -1,0 +1,29 @@
+***********************************
+Release notes for HestiaCP v1.4.13
+***********************************
+
+Release date: September 15 2021
+
+#########
+Features
+#########
+
+- Introduce UPGRADE_MESSAGE variable to support custom messages in e-mail upgrade notification.
+
+#########
+Bugfixes
+#########
+
+- Improve the hostname check to prevent invalid hostnames or the use of an ip address (RFC1178).
+- Prevent CSRF from other domains / websites
+- Fix #2096 Hostname SSL got overwritten by mail.hostname.com certificate
+- Add small wait for /usr/bin/iptables-restore Forum + Fixed v-add-firewall / v-delete-firewall function (#2112) @myrevery
+- Fix bug in v-change-sys-api. When using v-change-sys-api remove and then v-change-sys-api enable + custom release branch the resetting of api failed + no "error" output was produced
+- Improve error reporting PMA Single sign on function function
+- Fixed an issue in v-change-web-domain-name where web server where not able to start because old config files where not properly deleted #2104
+- Fixed potential XSS vulnerability in /list/keys/ @wtwwer Disclosure
+- Removed /edit/file as it has been replaced by Filegator and part of the old Vesta Filemanager
+- Fixed potential External control / path vulnerability in /add/package @wtwwer Disclosure
+- Add extra checks to prevent type juggling @vikychoi Disclosure
+- Improved and updated some missing translation strings @myrevery
+- Sync translations with Github

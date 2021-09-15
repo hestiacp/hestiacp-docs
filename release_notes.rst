@@ -5,7 +5,8 @@ Release Notes
 .. toctree::
   :maxdepth: 1
   :glob:
-  
+ 
+  release_notes/1.4.13.rst 
   release_notes/1.4.12.rst
   release_notes/1.4.11.rst
   release_notes/1.4.10.rst

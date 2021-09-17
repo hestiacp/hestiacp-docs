@@ -1,0 +1,15 @@
+***********************************
+Release notes for HestiaCP v1.4.14
+***********************************
+
+Release date: September 17 2021
+
+#########
+Bugfixes
+#########
+
+- Fixed an issue with edit package
+- Fixed an issue with v-update-letsencrypt and v-restart-service
+- Fixed an issue with v-add-sys-ip and Ubuntu with no netplan enabled
+- Fixed broken UPGRADE_MESSAGE variable not showing up in email
+- Include / expand the config backup system during update

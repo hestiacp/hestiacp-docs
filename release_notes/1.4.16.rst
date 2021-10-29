@@ -1,0 +1,9 @@
+***********************************
+Release notes for HestiaCP v1.4.16
+***********************************
+
+Release date: September 30 2021
+
+Bugfixes
+
+Fix bug with .json not loading on Apache2 due to rule in /etc/apache2/conf.d/phpmyadmin.conf

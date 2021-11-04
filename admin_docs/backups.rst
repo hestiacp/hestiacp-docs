@@ -58,7 +58,7 @@ How to increase the number of backups
 #. On the "Package Name" field, type the name you whish to give to the new package, and then in the "Backups" field type the number of backups you would like to set, then click on the "Save" button
 #. Click on the "USERS" menu
 #. Now hover the mouse pointer above the user to which you would like to assign the newly created package, and then click on "Edit User" button
-#. In the "Package"field select with the drop-down menu the name of the newly created package and finally click on the "Save" button.
+#. In the "Package" field select with the drop-down menu the name of the newly created package and finally click on the "Save" button.
 
 ************************************************
 What is the difference between zstd and gzip

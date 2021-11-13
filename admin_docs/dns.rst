@@ -35,10 +35,10 @@ This will generate an API key. Replace the username "admin" with the generated k
 This way you can set up master->slave or master-master-master cluster. There is no limitation on how to chain dns servers.
 
 ************************************************
-Can I seperate DNS accounts by users 
+Can I separate DNS accounts by users 
 ************************************************
 
-Yes you can just supply the user varibale behind the command. 
+Yes you can just supply the user variable behind the command. 
 
 .. code-block:: bash
 
@@ -50,4 +50,15 @@ Or
 
     v-add-remote-dns-host slave.yourhost.com 8083 api_key '' useraccount
     
-    
+************************************************
+I am not able to add a server as DNS host 
+************************************************
+
+When trying to add a DNS server for a cluster I get the following error
+
+.. code-block:: bash 
+
+    /usr/local/hestia/func/remote.sh: line 43: return: Error:: numeric argument required
+    Error: api connection to slave.domain.com failed
+
+By default API access to has been disabled for not local ip adresses. Please add you ip adress to the "Allowed ip adresses for API" in the settings 

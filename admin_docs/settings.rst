@@ -85,4 +85,18 @@ Can I restrict access to the "Admin" account
 
 In 1.3 we have added the function in Hestia to give an other user Administrator  access for 1.4 we have decided to give system administrators the options to limit access to the main "system administrator" account to improve security. 
 
+***************************************************************
+My server ip has changed what do I need to do
+***************************************************************
+
+When a server ip has changed run the de following command
+
+.. code-block:: bash
+
+    # Update system ip
+    v-update-sys-ip
+    
+It will rebuild all config files...
+
+
 

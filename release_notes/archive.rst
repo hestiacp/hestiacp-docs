@@ -6,6 +6,12 @@ Archive
   :maxdepth: 1
   :glob:
 
+  archive/1.3.5.rst
+  archive/1.3.4.rst
+  archive/1.3.3.rst
+  archive/1.3.2.rst
+  archive/1.3.1.rst
+  archive/1.3.0.rst
   archive/1.2.4.rst
   archive/1.2.3.rst
   archive/1.2.2.rst

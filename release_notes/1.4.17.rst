@@ -4,7 +4,9 @@ Release notes for HestiaCP v1.4.17
 
 Release date: September 30 2021
 
+#########
 Bugfixes
+#########
 
 Fix bug with nginx and phmyadmin not loading
 Fix #2166 Search function broken

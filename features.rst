@@ -29,7 +29,7 @@ Main Features
     - Dokuwiki 
     - Drupal
     - Grav
-    - Larael
+    - Laravel
     - MediaWiki
     - NextCloud
     - Opencart

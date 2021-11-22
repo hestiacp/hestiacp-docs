@@ -29,7 +29,44 @@ For security reasons we have decided to disable this option.
 
 Please use :samp:`https://host.domain.tld/phpmyadmin/`
     
+***************************************************************
+How can I enable access to :samp:`http://ip/phpmyadmin/`
+***************************************************************
 
+For Apache2
+.. code-block:: bash
+
+   nano /etc/apache2/conf.d/ip.conf
+   
+   # And add the code before both </VirtualHost>
+   IncludeOptional /etc/apache2/conf.d/*.inc
+   
+   # Restart apache2
+   systemctl restart apache2 
+   
+   # Or add in /etc/apache2.conf 
+   IncludeOptional /etc/apache2/conf.d/*.inc
+
+For Nginx
+
+.. code-block:: bash
+
+   nano /etc/nginx/conf.d/ip.conf
+   
+   # replace 
+   location /phpmyadmin/ {
+         alias /var/www/document_errors/;
+         return 404;
+     }
+   location /phppgadmin/ {
+         alias /var/www/document_errors/;
+         return 404;
+     }
+   
+   # with 
+   include     /etc/nginx/conf.d/phpmyadmin.inc*;
+   include     /etc/nginx/conf.d/phppgadmin.inc*;
+   
 ***************************************************************
 How can I connect from a remote location to the database
 ***************************************************************

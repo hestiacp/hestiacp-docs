@@ -92,5 +92,44 @@ TXT record with name "@" with the content "v=spf1 a mx ip4:your ip; ~all"
 TXT record with name "_domainkey" with content "t=y; o=~;"
 TXT record with name "mail._domainkey" with content "t=y; o=~DKIM key;"
 
-The DKIM key can be found via: "Mail" -> When hovering the domain go to DNS records you will see an page with the required info
+The DKIM key and SPF record can be found via: "Mail" -> When hovering the domain go to DNS records you will see an page with the required info
 
+**********************************************************************************
+If I send email from my server they end up in the spam folder?
+**********************************************************************************
+
+Make sure you have set up the correct RDNS, SFP records and DKIM records. DKIM and  SPF record can be found in "Mail" -> When hovering the domain go to DNS records
+
+If this doesn't work it might be possible that you ip adress is on one or more black lists. You can try to unblock your self or often the easier method is to use SMTP with Amazon SES or an other SMTP provider. 
+
+*****************************************
+How can I enable Managesieve
+*****************************************
+
+During install use --sieve during install after that there is a an upgrade script provided in /usr/local/hestia/install/manual/install_sieve.sh
+
+**********************************************************************************
+Can I allow access to Manage sieve via a external mail client
+**********************************************************************************
+
+Open port 4190 in the firewall 
+
+**********************************************************************************
+How can I enable manage sieve for Rainloop 
+**********************************************************************************
+
+Go to /etc/rainloop/data/_data_/_default_/domains and open default.ini and modify the following settings
+
+.. code-block:: bash
+
+   sieve_use = On
+   sieve_allow_raw = Off
+   sieve_host = "localhost"
+   sieve_port = 4190
+   sieve_secure = "None"
+
+**********************************************************************************
+Are there any known issues with Manage sieve 
+**********************************************************************************
+
+Yes, quotas are supposed be handled by dovecote now instead of Exim4. Quotas set in the Edit mail account will beignored.

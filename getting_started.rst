@@ -17,10 +17,21 @@ Log in to your server as root, either directly or via SSH to install HestiaCP wi
     wget https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh
     bash hst-install.sh
 
+***************************************
+Requirements
+***************************************
 
-***************************************
+- CPU Architecture: AMD64 (x86_64 Intel or AMD) or ARM64 (Aarch64) (32 bit operating systems are not supported!)
+- Debian 11, 10 or 9
+- Ubuntu 20.04 LTS or 18.04 LTS
+
+.. note 
+
+Hestia Control Panel must be installed on top of a fresh operating system installation to ensure proper functionality.
+
+*****************************************
 All available options of install script
-***************************************
+*****************************************
 To get all installation options run the following command
 **bash hst-install.sh -h**
 
@@ -38,6 +49,7 @@ You will see the entire list of options available
     -g, --postgresql      Install PostgreSQL    [yes|no]  default: no
     -x, --exim            Install Exim          [yes|no]  default: yes
     -z, --dovecot         Install Dovecot       [yes|no]  default: yes
+    -Z, --sieve           Install Sieve         [yes|no]  default: no
     -c, --clamav          Install ClamAV        [yes|no]  default: yes
     -t, --spamassassin    Install SpamAssassin  [yes|no]  default: yes
     -i, --iptables        Install Iptables      [yes|no]  default: yes

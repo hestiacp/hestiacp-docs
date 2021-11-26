@@ -34,6 +34,7 @@ How can I enable access to :samp:`http://ip/phpmyadmin/`
 ***************************************************************
 
 For Apache2
+
 .. code-block:: bash
 
    nano /etc/apache2/conf.d/ip.conf

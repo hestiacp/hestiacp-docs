@@ -53,6 +53,12 @@ Refer to the install script ./install/hst-install-debian.sh for all the changes 
     
 Returning all of the other parameters to their defaults and also changing to PasswordAuthentication no did not reproduce the error, thus it would seem to be isolated to the Subsystem sftp internal-sftp parameter.
 
+For more information regarding debugging:
+
+.. code-block:: bash
+
+   tail -f -s0.1 /var/log/hestia/nginx-error.log
+
 ****************************************************************
 Changed SSH Port and now I can not use the file manager any more
 ****************************************************************

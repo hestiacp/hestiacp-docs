@@ -100,13 +100,13 @@ If I send email from my server they end up in the spam folder?
 
 Make sure you have set up the correct RDNS, SFP records and DKIM records. DKIM and  SPF record can be found in "Mail" -> When hovering the domain go to DNS records
 
-If this doesn't work it might be possible that you ip adress is on one or more black lists. You can try to unblock your self or often the easier method is to use SMTP with Amazon SES or an other SMTP provider. 
+If this doesn't work it might be possible that you ip address is on one or more black lists. You can try to unblock your self or often the easier method is to use SMTP with Amazon SES or an other SMTP provider. 
 
 *****************************************
 How can I enable Managesieve
 *****************************************
 
-During install use --sieve during install after that there is a an upgrade script provided in /usr/local/hestia/install/manual/install_sieve.sh
+During install use --sieve during install after that there is a an upgrade script provided in /usr/local/hestia/install/upgrade/manual/install_sieve.sh
 
 **********************************************************************************
 Can I allow access to Manage sieve via a external mail client

@@ -132,4 +132,4 @@ Go to /etc/rainloop/data/_data_/_default_/domains and open default.ini and modif
 Are there any known issues with Manage sieve 
 **********************************************************************************
 
-Yes, quotas are supposed be handled by dovecote now instead of Exim4. Quotas set in the Edit mail account will beignored.
+Yes, quotas are supposed be handled by dovecote now instead of Exim4. Quotas set in the Edit mail account will be ignored.

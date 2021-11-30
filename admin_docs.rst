@@ -13,5 +13,6 @@ Admin Documentation
   admin_docs/cron.rst
   admin_docs/backups.rst
   admin_docs/settings.rst
+  admin_docs/server.rst
   admin_docs/users.rst
   admin_docs/api.rst 

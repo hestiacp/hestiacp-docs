@@ -6799,7 +6799,7 @@ v-restore-database
 
 .. code-block:: bash
    
-  v-restore-web-domain USER BACKUP DATABASE [NOTIFY]
+  v-restore-database USER BACKUP DATABASE [NOTIFY]
    
 
 The function allows the user to restore a single database from a backup archive.
@@ -6819,7 +6819,7 @@ v-restore-dns-domain
 
 .. code-block:: bash
    
-  v-restore-web-domain USER BACKUP DOMAIN [NOTIFY]
+  v-restore-dns-domain USER BACKUP DOMAIN [NOTIFY]
    
 
 The function allows the user to restore a single DNS domain from a backup archive.
@@ -6839,7 +6839,7 @@ v-restore-mail-domain
 
 .. code-block:: bash
    
-  v-restore-web-domain USER BACKUP DOMAIN [NOTIFY]
+  v-restore-mail-domain USER BACKUP DOMAIN [NOTIFY]
    
 
 The function allows the user to restore a single mail domain from a backup archive.

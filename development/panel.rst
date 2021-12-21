@@ -5,9 +5,9 @@ Follow the current `guidelines <https://github.com/hestiacp/hestiacp/blob/main/C
 
 .. note::
 
-Are you following any tutorial regarding ARM + Hestia please use the normal install method. Since 1.5.0 we have added ARM packages to our atp server! 
-For current active installs 
-To enable updates please remove the # in /etc/apt/sources.list/hestia and then run apt update && apt upgrade 
+  Are you following any tutorial regarding ARM + Hestia please use the normal install method. Since 1.5.0 we have added ARM packages to our atp server! 
+  For current active installs 
+  To enable updates please remove the # in /etc/apt/sources.list/hestia and then run apt update && apt upgrade 
 
 #####################
 Checklist

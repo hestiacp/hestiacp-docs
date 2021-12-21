@@ -15,7 +15,7 @@ Bugfixes
 #########
 
 - Fix bug in v-add-sys-ip with netplan active
-- Limit access to files/folders that are not required on default /phpmyadmin (*.json, templates, locale, vendor) #2143
+- Limit access to files/folders that are not required on default /phpmyadmin (`*`.json, templates, locale, vendor) #2143
 - Update translations
 - Fix issue with Exim 4.94 and Autoreply #2151
 - Fix multiple UI bugs #2415

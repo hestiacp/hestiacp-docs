@@ -73,7 +73,7 @@ You can access the admin via https://webmail.domain.com/?admin_f0e5a5aa
 And use the data supplied above. When not needed feel free to remove this file.
 
 *****************************************
-Can I use Cloudflare Proxy is email
+Can I use Cloudflare Proxy with email
 *****************************************
 
 No Cloudflare with Proxy enabled does not work with email. If you use email hosted on you server make sure proxy for the A record is switched of mail.domain.com is switched off. Otherwise you are not able to use receive email.

@@ -64,7 +64,7 @@ How to increase the number of backups
 What is the difference between zstd and gzip
 ************************************************
 
-ZSTD was developed by Facebook as a replacement. During testing we a significant speed increase and lower disk space usage against gzip. 
+ZSTD was developed by Facebook as a replacement. During testing we found a significant speed increase and lower disk space usage against gzip. 
 
 For more information see https://github.com/facebook/zstd
 

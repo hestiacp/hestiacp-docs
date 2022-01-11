@@ -1,0 +1,23 @@
+***********************************
+Release notes for HestiaCP v1.5.4
+***********************************
+
+Release date: January 11 2022
+
+############
+Features
+############
+
+- No new features where introduced
+
+############
+Bugfixes
+############
+
+- Fixed an issue with v-add-sys-phpmailer not updating properly (#2336)
+- Fixed an issue where users where not able to download backups via UI (#2335)
+- Fixed an issue where php8.0 got "rounded" to php8 causing default.tpl falling back to 8.1 (#2340)
+- Fixed an issue with recalculating disk usage (#2341)
+- Fixed an issue where php files where still executable in upload folder Wordpress
+- Fixed an bug where version numbers including revisions (-x) where unable to build properly
+

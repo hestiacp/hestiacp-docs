@@ -59,7 +59,7 @@ In the future we hope to improve debugging but so far the easiest currently is:
 
 Go to /var/log/hestia/ and when you run the command you will multiple log files:
 
-``LE-{user}-{domain}-{date}-{time}.log``
+``LE-{user}-{domain}.log``
 
 Open this log file an go to "Step 5"
 

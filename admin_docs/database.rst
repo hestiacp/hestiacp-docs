@@ -2,6 +2,12 @@
 Database
 ###############################
 
+.. toctree::
+  :maxdepth: 2
+  :glob:
+  
+  database/phpmyadmin-sso.rst
+
 ************************************************
 How to setup a remote database server
 ************************************************

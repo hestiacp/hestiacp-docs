@@ -19,7 +19,7 @@ Unable to connect over API please check api connection
 =================================================================
 
 1. Check if the api has been enabled
-2. Add your public ip of your server to the allowed ips in the "Server settings"
+2. Add your public ip of your server to the allowed ip in the "Server settings"
 
 =================================================================
 Access denied: There is a security token mismatch

@@ -126,3 +126,19 @@ The following command should allow services to assign to non existing ip address
 .. code-block:: bash
 
     sysctl -w net.ipv4.ip_nonlocal_bind=1 
+
+***************************************************************
+I am unable to monitor proccess with Zabbix
+***************************************************************
+
+For security reasons users are not allowed to monitor processes from other users by default.
+
+To solve the issue in case you use monitoring via Zabbix
+
+Edit /etc/fstab and modify to the following
+
+.. code-block:: bash
+
+  proc   /proc   proc   defaults,hidepid=2,gid=zabbix   0   0
+  
+Reboot the server or remount /proc 

@@ -1,0 +1,12 @@
+***********************************
+Release notes for HestiaCP v1.5.6
+***********************************
+
+Release date: January 27 2022
+
+############
+Bugfixes
+############
+
+- Fixed an issue with the installer. system.pkg didn't allow for a Web alias #2381
+- Fixed an issue with upgrade script causing command to to be executed (https://forum.hestiacp.com/t/upgrading-to-1-5-5-error-line/5449/3)

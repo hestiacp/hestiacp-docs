@@ -134,6 +134,12 @@ For a permanent fix  you should add a record to fstab, so this folder would load
 3. Save the file.
 
 ***************************************************************
+How to extract .zstd file
+***************************************************************
+
+Follow the instructions below or use Winrar 6.10 or later to uppack .zstd
+
+***************************************************************
 How to untar the  domain_data.tar.zst in windows using zstd.exe
 ***************************************************************
 

@@ -1,0 +1,25 @@
+***********************************
+Release notes for HestiaCP v1.5.7
+***********************************
+
+Release date: January 27 2022
+
+############
+Bugfixes
+############
+
+- Fixed an issue with apt update and public key missing
+
+.. note::
+    If you have to following error
+    
+    The following signatures couldn't be verified because the public key is not available: NO_PUBKEY A189E93654F0B0E5
+
+    Follow the following instructions
+    
+    .. code-block:: bash
+        rm /usr/share/keyrings/hestia-keyring.gpg
+        mkdir /root/.gnupg/
+        gpg --no-default-keyring --keyring /usr/share/keyrings/hestia-keyring.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys A189E93654F0B0E5
+    
+    After that run apt update && apt upgrade

@@ -1,5 +1,5 @@
 ***********************************
-Release notes for HestiaCP v1.5.7
+Release notes for HestiaCP v1.5.8
 ***********************************
 
 Release date: January 27 2022

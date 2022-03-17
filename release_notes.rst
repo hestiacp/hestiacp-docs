@@ -6,6 +6,7 @@ Release Notes
   :maxdepth: 1
   :glob:
 
+  release_notes/1.5.11.rst
   release_notes/1.5.10.rst
   release_notes/1.5.9.rst
   release_notes/1.5.8.rst

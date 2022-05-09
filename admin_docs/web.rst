@@ -16,12 +16,17 @@ How do Web templates work?
 .. warning::
     Modifying templates could cause errors on the server and services that are not able to reload or start.
     
-Every time you will rebuild the user or domain
-the config files of the domain will be over written by the new templates.
-This is done by default during update of HestiaCP
-or it can be initiated by the admin or by modifying settings by the user.
+Everytime you rebuild the user or domain
+the config files of the domain are overwritten by the new templates.
+This happens when:
+- HestiaCP is updated
+- the admin initiates it
+- the user modifies settings
 
-The templates can be found in the /data/templates/ directory in the install folder.
+The templates can be found in the `/data/templates/` directory in the install folder.
+For webservers they consist of an initializer script (`.sh`),
+a default template (`.tpl`)
+and an ssl template (`.stpl`).
 
 .. list-table:: Template locations
    :widths: 25 75
@@ -40,8 +45,8 @@ The templates can be found in the /data/templates/ directory in the install fold
    * - PHP-FPM
      - /usr/local/hestia/data/templates/web/php-fpm/
      
-When editing it is the best practice to copy the template before editing.
-As the default templates will reset after update of HestiaCP
+When editing it is the best practice to copy the template before editing,
+as the default templates will reset after update of HestiaCP:
 
 .. code-block:: bash
 
@@ -50,12 +55,12 @@ As the default templates will reset after update of HestiaCP
     cp original.sh new.sh
 
 .. note::
-    Modifying any default templates can cause issues in the future as there are commonly overwritten during updates.
+    Avoid modifying default templates as they are overwritten by updates.
     
-When you are done modifying enable the template with the selected domain from the control panel.
+When you are done modifying, enable the template with the selected domain from the control panel.
 
-After modifying existing template you need to rebuild user configuration.
-This can be done using v-rebuild-user command or bulk operation in the web interface
+After modifying an existing template you need to rebuild the user configuration.
+This can be done using the `v-rebuild-user` command or bulk operation in the web interface
 (drop down list on a "User" page).
 
 -------------------

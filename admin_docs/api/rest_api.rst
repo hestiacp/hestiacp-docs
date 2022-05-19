@@ -122,6 +122,7 @@ To create the api key run the following command first
         // Server credentials
         $hst_hostname = 'server.hestiacp.com';
         $hst_port = '8083';
+        # For the new access key replace APIKEYHEREAPIKEYHERE with ACCESS_KEY:SECRET_KEY 
         $hst_hash= 'APIKEYHEREAPIKEYHERE';
         $hst_returncode = 'yes';
         $hst_command = 'v-add-user';
@@ -172,6 +173,7 @@ To create the api key run the following command first
         //Admin Credentials
         const hst_hostname = 'server.hestiacp.com'
         const hst_port = 8083
+        // For the new access key replace APIKEYHEREAPIKEYHERE with ACCESS_KEY:SECRET_KEY 
         const hst_hash = 'APIKEYHEREAPIKEYHERE'
         const hst_returncode = 'yes'
         const hst_command = 'v-add-user'

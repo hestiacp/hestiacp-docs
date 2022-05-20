@@ -1,0 +1,12 @@
+***********************************
+Release notes for HestiaCP v1.5.12
+***********************************
+
+Release date: April 37 2022
+
+############
+Bugfixes
+############
+
+- Fixed vulnerability with Sed CVE-2022-1509
+- Remove localhost exception for invalidating sessions SSD disclosure

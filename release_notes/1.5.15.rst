@@ -1,0 +1,17 @@
+***********************************
+Release notes for HestiaCP v1.5.15
+***********************************
+
+Release date: May 24 2022
+
+############
+Bugfixes
+############
+
+Fixed an issue with wildcard DNS records
+
+############
+Dependencies
+############
+
+Update phpMyAdmin to 5.1.4 (https://www.phpmyadmin.net/files/5.1.4/) (#2529)

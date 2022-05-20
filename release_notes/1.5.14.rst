@@ -1,0 +1,12 @@
+***********************************
+Release notes for HestiaCP v1.5.14
+***********************************
+
+Release date: May 3 2022
+
+############
+Bugfixes
+############
+
+- Fixed an issue with login with ipv6 (#2564)
+- Fixed an issue with dns records containing an . (#2559)

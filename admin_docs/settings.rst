@@ -147,13 +147,13 @@ Reboot the server or remount /proc
 Error: 24: Too many open files
 ***************************************************************
 
-.. code-block::
+.. code-block:: bash
 
   2022/02/21 15:04:38 [emerg] 51772#51772: open() "/var/log/apache2/domains/<redactedforprivacy>.error.log" failed (24: Too many open files)
   
 or 
 
-.. code-block::
+.. code-block:: bash
 
   2022/02/21 15:04:38 [emerg] 2724394#2724394: open() "/var/log/nginx/domains/xxx.error.log" failed (24: Too many open files)
   
@@ -168,13 +168,13 @@ This error means that there are to many open files with Nginx. To resolve this i
   
 Then run:
 
-.. code-block ::
+.. code-block:: bash
   
   systemctl daemon-reload
   
 Add this to the Nginx config file (Needs to be smaller or equal to LimitNOFILE!)
 
-.. code-block ::
+.. code-block:: bash
   
   worker_rlimit_nofile 16384; 
 
@@ -182,6 +182,6 @@ And then restart nginx with systemctl restart nginx
 
 To verifiy run:
 
-.. code-block::
+.. code-block:: bash
    
   cat /proc/<nginx-pid>/limits.

@@ -2,6 +2,10 @@
 
 # General
 
+..note::
+
+    Make sure to verify MariaDB is running on a supported version for the new operating system If that is not the case please update MariaDB version to a supported version!
+
 Before you start with upgrading your operating system make sure to make a backup
 
 After a backup has been made update Hestia / Operating system to the last supported version
@@ -43,6 +47,11 @@ https://github.com/hestiacp/hestiacp/blob/1ff8a4e5207aae1e241954a83b7e8070bcdca7
 No issues have been found in the past
 
 ## Ubuntu 20.04 Focal to Ubuntu 22.04 Jammy
+
+..note::
+
+    Verify that MariaDB is running at least 10.6. If not upgrade first to this version in your current operating system!
+    After that comment out the line in /etc/apt/sources.list.d/mariadb.list and upgrade operating system
 
 If you want to use sha512 Password encryption 
 

@@ -4,9 +4,7 @@ v-acknowledge-user-notification
 
 **update user notification**
 
-
 **Options**: `USER` `NOTIFICATION` 
-
 
 This function updates user notification.
 
@@ -16,9 +14,7 @@ v-add-access-key
 
 **generate access key**
 
-
 **Options**: `USER` `[PERMISSIONS]` `[COMMENT]` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -34,9 +30,7 @@ v-add-backup-host
 
 **add backup host**
 
-
 **Options**: `TYPE` `HOST` `USERNAME` `PASSWORD` `[PATH]` `[PORT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -53,9 +47,7 @@ v-add-cron-hestia-autoupdate
 
 **add cron job for hestia automatic updates**
 
-
 **Options**: `MODE` 
-
 
 This function adds a cronjob for hestia automatic updates that can be downloaded from apt or git.
 
@@ -65,9 +57,7 @@ v-add-cron-job
 
 **add cron job**
 
-
 **Options**: `USER` `MIN` `HOUR` `DAY` `MONTH` `WDAY` `COMMAND` `[JOB]` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -83,9 +73,7 @@ v-add-cron-letsencrypt-job
 
 **add cron job for Let's Encrypt certificates**
 
-
 **Options**: none 
-
 
 This function adds a new cron job for Let's Encrypt.
 
@@ -95,9 +83,7 @@ v-add-cron-reports
 
 **add cron reports**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -113,9 +99,7 @@ v-add-cron-restart-job
 
 **add cron reports**
 
-
 **Options**: none 
-
 
 This function for enabling restart cron tasks
 
@@ -125,9 +109,7 @@ v-add-database
 
 **add database**
 
-
 **Options**: `USER` `DATABASE` `DBUSER` `DBPASS` `[TYPE]` `[HOST]` `[CHARSET]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -143,9 +125,7 @@ v-add-database-host
 
 **add new database server**
 
-
 **Options**: `TYPE` `HOST` `DBUSER` `DBPASS` `[MAX_DB]` `[CHARSETS]` `[TEMPLATE]` `[PORT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -161,9 +141,7 @@ v-add-database-temp-user
 
 **add temp database user**
 
-
 **Options**: `USER` `DATABASE` `[TYPE]` `[HOST]` `[TTL]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -179,9 +157,7 @@ v-add-dns-domain
 
 **add dns domain**
 
-
 **Options**: `USER` `DOMAIN` `IP` `[NS1]` `[NS2]` `[NS3]` `[NS4]` `[NS5]` `[NS6]` `[NS7]` `[NS8]` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -197,9 +173,7 @@ v-add-dns-on-web-alias
 
 **add dns domain or dns record after web domain alias**
 
-
 **Options**: `USER` `ALIAS` `IP` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -215,9 +189,7 @@ v-add-dns-record
 
 **add dns record**
 
-
 **Options**: `USER` `DOMAIN` `RECORD` `TYPE` `VALUE` `[PRIORITY]` `[ID]` `[RESTART]` `[TTL]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -233,9 +205,7 @@ v-add-domain
 
 **add web/dns/mail domain**
 
-
 **Options**: `USER` `DOMAIN` `[IP]` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -251,9 +221,7 @@ v-add-fastcgi-cache
 
 **Enable FastCGI cache for nginx**
 
-
 **Options**: `USER` `DOMAIN` `[DURATION]` `[DEBUG]` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -269,9 +237,7 @@ v-add-firewall-ban
 
 **add firewall blocking rule**
 
-
 **Options**: `IP` `CHAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -287,9 +253,7 @@ v-add-firewall-chain
 
 **add firewall chain**
 
-
 **Options**: `CHAIN` `[PORT]` `[PROTOCOL]` `[PROTOCOL]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -305,9 +269,7 @@ v-add-firewall-ipset
 
 **add firewall ipset**
 
-
 **Options**: `NAME` `[SOURCE]` `[IPVERSION]` `[AUTOUPDATE]` `[FORCE]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -323,9 +285,7 @@ v-add-firewall-rule
 
 **add firewall rule**
 
-
 **Options**: `ACTION` `IP` `PORT` `[PROTOCOL]` `[COMMENT]` `[RULE]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -341,9 +301,7 @@ v-add-fs-archive
 
 **archive directory**
 
-
 **Options**: `USER` `ARCHIVE` `SOURCE` `[SOURCE...]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -359,9 +317,7 @@ v-add-fs-directory
 
 **add directory**
 
-
 **Options**: `USER` `DIRECTORY` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -377,9 +333,7 @@ v-add-fs-file
 
 **add file**
 
-
 **Options**: `USER` `FILE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -395,9 +349,7 @@ v-add-letsencrypt-domain
 
 **check letsencrypt domain**
 
-
 **Options**: `USER` `DOMAIN` `[ALIASES]` `[MAIL]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -414,9 +366,7 @@ v-add-letsencrypt-host
 
 **add letsencrypt for host and backend**
 
-
 **Options**: none 
-
 
 This function check and validates the backend certificate and generate a new let's encrypt certificate.
 
@@ -426,9 +376,7 @@ v-add-letsencrypt-user
 
 **register letsencrypt user account**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -444,9 +392,7 @@ v-add-mail-account
 
 **add mail domain account**
 
-
 **Options**: `USER` `DOMAIN` `ACCOUNT` `PASSWORD` `[QUOTA]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -462,9 +408,7 @@ v-add-mail-account-alias
 
 **add mail account alias aka nickname**
 
-
 **Options**: `USER` `DOMAIN` `ACCOUNT` `ALIAS` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -480,9 +424,7 @@ v-add-mail-account-autoreply
 
 **add mail account autoreply message**
 
-
 **Options**: `USER` `DOMAIN` `ACCOUNT` `MESSAGE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -498,9 +440,7 @@ v-add-mail-account-forward
 
 **add mail account forward address**
 
-
 **Options**: `USER` `DOMAIN` `ACCOUNT` `FORWARD` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -516,9 +456,7 @@ v-add-mail-account-fwd-only
 
 **add mail account forward-only flag**
 
-
 **Options**: `USER` `DOMAIN` `ACCOUNT` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -534,9 +472,7 @@ v-add-mail-domain
 
 **add mail domain**
 
-
 **Options**: `USER` `DOMAIN` `[ANTISPAM]` `[ANTIVIRUS]` `[DKIM]` `[DKIM_SIZE]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -552,9 +488,7 @@ v-add-mail-domain-antispam
 
 **add mail domain antispam support**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -570,9 +504,7 @@ v-add-mail-domain-antivirus
 
 **add mail domain antivirus support**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -588,9 +520,7 @@ v-add-mail-domain-catchall
 
 **add mail domain catchall account**
 
-
 **Options**: `USER` `DOMAIN` `EMAIL` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -606,9 +536,7 @@ v-add-mail-domain-dkim
 
 **add mail domain dkim support**
 
-
 **Options**: `USER` `DOMAIN` `[DKIM_SIZE]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -624,9 +552,7 @@ v-add-mail-domain-reject
 
 **add mail domain reject spam**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -642,9 +568,7 @@ v-add-mail-domain-smtp-relay
 
 **Add mail domain smtp relay support**
 
-
 **Options**: `USER` `DOMAIN` `HOST` `[USERNAME]` `[PASSWORD]` `[PORT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -660,9 +584,7 @@ v-add-mail-domain-ssl
 
 **add mail SSL for $domain**
 
-
 **Options**: `USER` `DOMAIN` `SSL_DIR` `[RESTART]` 
-
 
 This function turns on SSL support for a mail domain. Parameter ssl_dir is a path to a directory where 2 or 3 ssl files can be found. Certificate file mail.domain.tld.crt and its key mail.domain.tld.key are mandatory. Certificate authority mail.domain.tld.ca file is optional.
 
@@ -672,9 +594,7 @@ v-add-mail-domain-webmail
 
 **add webmail support for a domain**
 
-
 **Options**: `USER` `DOMAIN` `[WEBMAIL]` `[RESTART]` `[QUIET]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -692,9 +612,7 @@ v-add-remote-dns-domain
 
 **add remote dns domain**
 
-
 **Options**: `USER` `DOMAIN` `[FLUSH]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -710,9 +628,7 @@ v-add-remote-dns-host
 
 **add new remote dns host**
 
-
 **Options**: `HOST` `PORT` `USER` `PASSWORD` `[TYPE]` `[DNS_USER]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -733,9 +649,7 @@ v-add-remote-dns-record
 
 **add remote dns domain record**
 
-
 **Options**: `USER` `DOMAIN` `ID` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -751,9 +665,7 @@ v-add-sys-api-ip
 
 **add IP address to API allow list**
 
-
 **Options**: `IP` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -769,9 +681,7 @@ v-add-sys-filemanager
 
 **add file manager functionality to Hestia Control Panel**
 
-
 **Options**: `[MODE]` 
-
 
 This function installs the File Manager on the server for access through the Web interface.
 
@@ -781,9 +691,7 @@ v-add-sys-firewall
 
 **add system firewall**
 
-
 **Options**: none 
-
 
 This function enables the system firewall.
 
@@ -793,9 +701,7 @@ v-add-sys-ip
 
 **add system ip address**
 
-
 **Options**: `IP` `NETMASK` `[INTERFACE]` `[USER]` `[IP_STATUS]` `[IP_NAME]` `[NAT_IP]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -811,9 +717,7 @@ v-add-sys-phpmailer
 
 **add PHPMailer functionality to Hestia Control Panel**
 
-
 **Options**: `[MODE]` 
-
 
 This function installs PHPMailer for server-side email communication.
 
@@ -823,9 +727,7 @@ v-add-sys-pma-sso
 
 **enables support for single sign on phpMyAdmin**
 
-
 **Options**: `[MODE]` 
-
 
 This function enables support for SSO to phpMyAdmin
 
@@ -835,9 +737,7 @@ v-add-sys-quota
 
 **add system quota**
 
-
 **Options**: none 
-
 
 This function enables filesystem quota on /home partition Some kernels do require additional packages to be installed first
 
@@ -847,9 +747,7 @@ v-add-sys-rainloop
 
 **Install Rainloop webmail client**
 
-
 **Options**: `[MODE]` 
-
 
 This function installs the Rainloop webmail client.
 
@@ -859,9 +757,7 @@ v-add-sys-roundcube
 
 **Install Roundcube webmail client**
 
-
 **Options**: `[MODE]` 
-
 
 This function installs the Roundcube webmail client.
 
@@ -871,9 +767,7 @@ v-add-sys-sftp-jail
 
 **add system sftp jail**
 
-
 **Options**: `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -889,9 +783,7 @@ v-add-sys-smtp
 
 **Add SMTP Account for logging, notification and internal mail**
 
-
 **Options**: `DOMAIN` `PORT` `SMTP_SECURITY` `USERNAME` `PASSWORD` `EMAIL` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -907,9 +799,7 @@ v-add-sys-smtp-relay
 
 **add system wide smtp relay support**
 
-
 **Options**: `HOST` `[USERNAME]` `[PASSWORD]` `[PORT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -925,9 +815,7 @@ v-add-user
 
 **add system user**
 
-
 **Options**: `USER` `PASSWORD` `EMAIL` `[PACKAGE]` `[NAME]` `[LASTNAME]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -943,9 +831,7 @@ v-add-user-2fa
 
 **add 2fa to existing user**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -961,9 +847,7 @@ v-add-user-composer
 
 **add composer (php dependency manager) for a user**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -979,9 +863,7 @@ v-add-user-notification
 
 **add user notification**
 
-
 **Options**: `USER` `TOPIC` `NOTICE` `[TYPE]` 
-
 
 This function adds a new user notification to the panel.
 
@@ -991,9 +873,7 @@ v-add-user-package
 
 **adding user package**
 
-
 **Options**: `TMPFILE` `PACKAGE` `[REWRITE]` 
-
 
 This function adds new user package to the system.
 
@@ -1003,9 +883,7 @@ v-add-user-sftp-jail
 
 **add user sftp jail**
 
-
 **Options**: `USER` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1021,9 +899,7 @@ v-add-user-sftp-key
 
 **add user sftp key**
 
-
 **Options**: `USER` `[TTL]` 
-
 
 This function creates and updates SSH keys for used with the File Manager.
 
@@ -1033,9 +909,7 @@ v-add-user-ssh-key
 
 **add ssh key**
 
-
 **Options**: `USER` `KEY` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1051,9 +925,7 @@ v-add-user-wp-cli
 
 **add wp-cli for a user**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1069,9 +941,7 @@ v-add-web-domain
 
 **add web domain**
 
-
 **Options**: `USER` `DOMAIN` `[IP]` `[RESTART]` `[ALIASES]` `[PROXY_EXTENSIONS]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1087,9 +957,7 @@ v-add-web-domain-alias
 
 **add web domain alias**
 
-
 **Options**: `USER` `DOMAIN` `ALIASES` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1105,9 +973,7 @@ v-add-web-domain-allow-users
 
 **Allow other users create subdomains**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1123,9 +989,7 @@ v-add-web-domain-backend
 
 **add web domain backend**
 
-
 **Options**: `USER` `DOMAIN` `[TEMPLATE]` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1141,9 +1005,7 @@ v-add-web-domain-ftp
 
 **add ftp account for web domain.**
 
-
 **Options**: `USER` `DOMAIN` `FTP_USER` `FTP_PASSWORD` `[FTP_PATH]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1159,9 +1021,7 @@ v-add-web-domain-httpauth
 
 **add password protection for web domain**
 
-
 **Options**: `USER` `DOMAIN` `AUTH_USER` `AUTH_PASSWORD` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1177,9 +1037,7 @@ v-add-web-domain-proxy
 
 **add webdomain proxy support**
 
-
 **Options**: `USER` `DOMAIN` `[TEMPLATE]` `[EXTENTIONS]` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1195,9 +1053,7 @@ v-add-web-domain-redirect
 
 **Adding force redirect to domain**
 
-
 **Options**: `USER` `DOMAIN` `REDIRECT` `HTTPCODE` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1218,9 +1074,7 @@ v-add-web-domain-ssl
 
 **adding ssl for domain**
 
-
 **Options**: `USER` `DOMAIN` `SSL_DIR` `[SSL_HOME]` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1236,9 +1090,7 @@ v-add-web-domain-ssl-force
 
 **Adding force SSL for a domain**
 
-
 **Options**: `USER` `DOMAIN` `[RESTART]` `[QUIET]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1254,9 +1106,7 @@ v-add-web-domain-ssl-hsts
 
 **Adding hsts to a domain**
 
-
 **Options**: `USER` `DOMAIN` `[RESTART]` `[QUIET]` 
-
 
 This function enables HSTS for the requested domain.
 
@@ -1266,9 +1116,7 @@ v-add-web-domain-ssl-preset
 
 **Adding force SSL for a domain**
 
-
 **Options**: `USER` `DOMAIN` `[SSL]` 
-
 
 Up on creating an web domain set the SSL Force values due to the delay of LE due to DNS propergation over DNS cluster When LE has been activated it will set the actions
 
@@ -1278,9 +1126,7 @@ v-add-web-domain-stats
 
 **add log analyzer to generate domain statistics**
 
-
 **Options**: `USER` `DOMAIN` `TYPE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1296,9 +1142,7 @@ v-add-web-domain-stats-user
 
 **add password protection to web domain statistics**
 
-
 **Options**: `USER` `DOMAIN` `STATS_USER` `STATS_PASSWORD` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1314,9 +1158,7 @@ v-add-web-php
 
 **add php fpm version**
 
-
 **Options**: `VERSION` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1332,9 +1174,7 @@ v-backup-user
 
 **backup system user with all its objects**
 
-
 **Options**: `USER` `NOTIFY` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1350,9 +1190,7 @@ v-backup-users
 
 **backup all users**
 
-
 **Options**: none 
-
 
 This function backups all system users.
 
@@ -1362,9 +1200,7 @@ v-change-cron-job
 
 **change cron job**
 
-
 **Options**: `USER` `JOB` `MIN` `HOUR` `DAY` `MONTH` `WDAY` `COMMAND` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1380,9 +1216,7 @@ v-change-database-host-password
 
 **change database server password**
 
-
 **Options**: `TYPE` `HOST` `USER` `PASSWORD` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1398,9 +1232,7 @@ v-change-database-owner
 
 **change database owner**
 
-
 **Options**: `DATABASE` `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1416,9 +1248,7 @@ v-change-database-password
 
 **change database password**
 
-
 **Options**: `USER` `DATABASE` `DBPASS` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1434,9 +1264,7 @@ v-change-database-user
 
 **change database username**
 
-
 **Options**: `USER` `DATABASE` `DBUSER` `[DBPASS]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1452,9 +1280,7 @@ v-change-dns-domain-exp
 
 **change dns domain expiration date**
 
-
 **Options**: `USER` `DOMAIN` `EXP` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1470,9 +1296,7 @@ v-change-dns-domain-ip
 
 **change dns domain ip address**
 
-
 **Options**: `USER` `DOMAIN` `IP` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1488,9 +1312,7 @@ v-change-dns-domain-soa
 
 **change dns domain soa record**
 
-
 **Options**: `USER` `DOMAIN` `SOA` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1506,9 +1328,7 @@ v-change-dns-domain-tpl
 
 **change dns domain template**
 
-
 **Options**: `USER` `DOMAIN` `TEMPLATE` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1524,9 +1344,7 @@ v-change-dns-domain-ttl
 
 **change dns domain ttl**
 
-
 **Options**: `USER` `DOMAIN` `TTL` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1542,9 +1360,7 @@ v-change-dns-record
 
 **change dns domain record**
 
-
 **Options**: `USER` `DOMAIN` `ID` `RECORD` `TYPE` `VALUE` `[PRIORITY]` `[RESTART]` `[TTL]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1560,9 +1376,7 @@ v-change-dns-record-id
 
 **change dns domain record id**
 
-
 **Options**: `USER` `DOMAIN` `ID` `NEWID` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1578,9 +1392,7 @@ v-change-domain-owner
 
 **change domain owner**
 
-
 **Options**: `DOMAIN` `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1596,9 +1408,7 @@ v-change-firewall-rule
 
 **change firewall rule**
 
-
 **Options**: `RULE` `ACTION` `IP` `PORT` `[PROTOCOL]` `[COMMENT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1614,9 +1424,7 @@ v-change-fs-file-permission
 
 **change file permission**
 
-
 **Options**: `USER` `FILE` `PERMISSIONS` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1632,9 +1440,7 @@ v-change-mail-account-password
 
 **change mail account password**
 
-
 **Options**: `USER` `DOMAIN` `ACCOUNT` `PASSWORD` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1650,9 +1456,7 @@ v-change-mail-account-quota
 
 **change mail account quota**
 
-
 **Options**: `USER` `DOMAIN` `ACCOUNT` `QUOTA` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1668,9 +1472,7 @@ v-change-mail-account-rate-limit
 
 **change mail domain rate limit**
 
-
 **Options**: `USER` `DOMAIN` `ACCOUNT` `RATE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1686,9 +1488,7 @@ v-change-mail-domain-catchall
 
 **change mail domain catchall email**
 
-
 **Options**: `USER` `DOMAIN` `EMAIL` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1704,9 +1504,7 @@ v-change-mail-domain-rate-limit
 
 **change mail account rate limit**
 
-
 **Options**: `USER` `DOMAIN` `ACCOUNT` `RATE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1722,9 +1520,7 @@ v-change-mail-domain-sslcert
 
 **change domain ssl certificate**
 
-
 **Options**: `USER` `DOMAIN` `SSL_DIR` `[RESTART]` 
-
 
 This function changes SSL domain certificate and the key. If ca file present it will be replaced as well.
 
@@ -1734,9 +1530,7 @@ v-change-remote-dns-domain-exp
 
 **change remote dns domain expiration date**
 
-
 **Options**: `USER` `DOMAIN` 
-
 
 This function synchronize dns domain with the remote server.
 
@@ -1746,9 +1540,7 @@ v-change-remote-dns-domain-soa
 
 **change remote dns domain SOA**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1764,9 +1556,7 @@ v-change-remote-dns-domain-ttl
 
 **change remote dns domain TTL**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1782,9 +1572,7 @@ v-change-sys-api
 
 **Enable / Disable API access**
 
-
 **Options**: `STATUS` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1809,9 +1597,7 @@ v-change-sys-config-value
 
 **change sysconfig value**
 
-
 **Options**: `KEY` `VALUE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1827,9 +1613,7 @@ v-change-sys-db-alias
 
 **change phpmyadmin/phppgadmin alias url**
 
-
 **Options**: `TYPE` `ALIAS` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1852,9 +1636,7 @@ v-change-sys-demo-mode
 
 **enable or disable demo mode**
 
-
 **Options**: `ACTIVE` 
-
 
 This function will set the demo mode variable, which will prevent usage of certain v-scripts in the backend and prevent modification of objects in the control panel. It will also disable virtual hosts for Apache and NGINX for domains which have been created.
 
@@ -1864,9 +1646,7 @@ v-change-sys-hestia-ssl
 
 **change hestia ssl certificate**
 
-
 **Options**: `SSL_DIR` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1882,9 +1662,7 @@ v-change-sys-hostname
 
 **change hostname**
 
-
 **Options**: `HOSTNAME` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1900,9 +1678,7 @@ v-change-sys-ip-name
 
 **change ip name**
 
-
 **Options**: `IP` `NAME` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1918,9 +1694,7 @@ v-change-sys-ip-nat
 
 **change ip nat address**
 
-
 **Options**: `IP` `NAT_IP` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1936,9 +1710,7 @@ v-change-sys-ip-owner
 
 **change ip owner**
 
-
 **Options**: `IP` `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1954,9 +1726,7 @@ v-change-sys-ip-status
 
 **change ip status**
 
-
 **Options**: `IP` `IP_STATUS` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1972,9 +1742,7 @@ v-change-sys-language
 
 **change sys language**
 
-
 **Options**: `LANGUAGE` `[UPDATE_USERS]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -1990,9 +1758,7 @@ v-change-sys-php
 
 **Change default php version server wide**
 
-
 **Options**: `VERSION` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2008,9 +1774,7 @@ v-change-sys-port
 
 **change system backend port**
 
-
 **Options**: `PORT` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2026,9 +1790,7 @@ v-change-sys-release
 
 **update web templates**
 
-
 **Options**: `[RESTART]` 
-
 
 This function for changing the release branch for the Hestia Control Panel. This allows the user to switch between stable and pre-release builds which will automaticlly update based on the appropriate release schedule if auto-update is turned on.
 
@@ -2038,9 +1800,7 @@ v-change-sys-service-config
 
 **change service config**
 
-
 **Options**: `CONFIG` `SERVICE` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2056,9 +1816,7 @@ v-change-sys-timezone
 
 **change system timezone**
 
-
 **Options**: `TIMEZONE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2074,9 +1832,7 @@ v-change-sys-webmail
 
 **change webmail alias url**
 
-
 **Options**: `WEBMAIL` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2092,9 +1848,7 @@ v-change-user-config-value
 
 **changes user configuration value**
 
-
 **Options**: `USER` `KEY` `VALUE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2110,9 +1864,7 @@ v-change-user-contact
 
 **change user contact email**
 
-
 **Options**: `USER` `EMAIL` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2128,9 +1880,7 @@ v-change-user-language
 
 **change user language**
 
-
 **Options**: `USER` `LANGUAGE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2146,9 +1896,7 @@ v-change-user-name
 
 **change user full name**
 
-
 **Options**: `USER` `NAME` `[LAST_NAME]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2164,9 +1912,7 @@ v-change-user-ns
 
 **change user nameservers**
 
-
 **Options**: `USER` `NS1` `NS2` `[NS3]` `[NS4]` `[NS5]` `[NS6]` `[NS7]` `[NS8]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2182,9 +1928,7 @@ v-change-user-package
 
 **change user package**
 
-
 **Options**: `USER` `PACKAGE` `[FORCE]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2200,9 +1944,7 @@ v-change-user-password
 
 **change user password**
 
-
 **Options**: `USER` `PASSWORD` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2218,9 +1960,7 @@ v-change-user-php-cli
 
 **add php  version alias to .bash_aliases**
 
-
 **Options**: `USER` `VERSION` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2236,9 +1976,7 @@ v-change-user-rkey
 
 **change user random key**
 
-
 **Options**: `USER` `[HASH]` 
-
 
 This function changes user's RKEY value thats has been used for security value to be used forgot password function only.
 
@@ -2248,9 +1986,7 @@ v-change-user-role
 
 **updates user role**
 
-
 **Options**: `USER` `ROLE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2266,9 +2002,7 @@ v-change-user-shell
 
 **change user shell**
 
-
 **Options**: `USER` `SHELL` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2284,9 +2018,7 @@ v-change-user-sort-order
 
 **updates user role**
 
-
 **Options**: `USER` `SORT_ORDER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2302,9 +2034,7 @@ v-change-user-template
 
 **change user default template**
 
-
 **Options**: `USER` `TYPE` `TEMPLATE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2320,9 +2050,7 @@ v-change-user-theme
 
 **updates user role**
 
-
 **Options**: `USER` `ROLE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2338,9 +2066,7 @@ v-change-web-domain-backend-tpl
 
 **change web domain backend template**
 
-
 **Options**: `USER` `DOMAIN` `TEMPLATE` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2356,9 +2082,7 @@ v-change-web-domain-dirlist
 
 **enable/disable directory listing**
 
-
 **Options**: `USER` `DOMAIN` `MODE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2374,9 +2098,7 @@ v-change-web-domain-docroot
 
 **Changes the document root for an existing web domain**
 
-
 **Options**: `USER` `DOMAIN` `TARGET_DOMAIN` `[DIRECTORY]` `[PHP]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2401,9 +2123,7 @@ v-change-web-domain-ftp-password
 
 **change ftp user password.**
 
-
 **Options**: `USER` `DOMAIN` `FTP_USER` `FTP_PASSWORD` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2419,9 +2139,7 @@ v-change-web-domain-ftp-path
 
 **change path for ftp user.**
 
-
 **Options**: `USER` `DOMAIN` `FTP_USER` `FTP_PATH` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2437,9 +2155,7 @@ v-change-web-domain-httpauth
 
 **change password for http auth user**
 
-
 **Options**: `USER` `DOMAIN` `AUTH_USER` `AUTH_PASSWORD` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2455,9 +2171,7 @@ v-change-web-domain-ip
 
 **change web domain ip**
 
-
 **Options**: `USER` `DOMAIN` `DOMAIN` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2473,9 +2187,7 @@ v-change-web-domain-name
 
 **change web domain name**
 
-
 **Options**: `USER` `DOMAIN` `NEW_DOMAIN` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2491,9 +2203,7 @@ v-change-web-domain-proxy-tpl
 
 **change web domain proxy template**
 
-
 **Options**: `USER` `DOMAIN` `TEMPLATE` `[EXTENTIONS]` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2509,9 +2219,7 @@ v-change-web-domain-sslcert
 
 **change domain ssl certificate**
 
-
 **Options**: `USER` `DOMAIN` `SSL_DIR` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2527,9 +2235,7 @@ v-change-web-domain-sslhome
 
 **changing domain ssl home**
 
-
 **Options**: `USER` `DOMAIN` `SSL_HOME` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2546,9 +2252,7 @@ v-change-web-domain-stats
 
 **change web domain statistics**
 
-
 **Options**: `USER` `DOMAIN` `TYPE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2564,9 +2268,7 @@ v-change-web-domain-tpl
 
 **change web domain template**
 
-
 **Options**: `USER` `DOMAIN` `TEMPLATE` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2582,9 +2284,7 @@ v-check-access-key
 
 **check access key**
 
-
 **Options**: `ACCESS_KEY_ID` `SECRET_ACCESS_KEY` `COMMAND` `[IP]` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2600,9 +2300,7 @@ v-check-api-key
 
 **check api key**
 
-
 **Options**: `KEY` `[IP]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2618,9 +2316,7 @@ v-check-fs-permission
 
 **open file**
 
-
 **Options**: `USER` `FILE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2636,9 +2332,7 @@ v-check-mail-account-hash
 
 **check user password**
 
-
 **Options**: `TYPE` `PASSWORD` `HASH` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2654,9 +2348,7 @@ v-check-user-2fa
 
 **check user token**
 
-
 **Options**: `USER` `TOKEN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2672,9 +2364,7 @@ v-check-user-hash
 
 **check user hash**
 
-
 **Options**: `USER` `HASH` `[IP]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2690,9 +2380,7 @@ v-check-user-password
 
 **check user password**
 
-
 **Options**: `USER` `PASSWORD` `[IP]` `[RETURN_HASH]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2708,9 +2396,7 @@ v-copy-fs-directory
 
 **copy directory**
 
-
 **Options**: `USER` `SRC_DIRECTORY` `DST_DIRECTORY` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2726,9 +2412,7 @@ v-copy-fs-file
 
 **copy file**
 
-
 **Options**: `USER` `SRC_FILE` `DST_FILE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2744,9 +2428,7 @@ v-copy-user-package
 
 **duplicate existing package**
 
-
 **Options**: `PACKAGE` `NEW_PACKAGE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2762,9 +2444,7 @@ v-delete-access-key
 
 **delete access key**
 
-
 **Options**: `ACCESS_KEY_ID` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2780,9 +2460,7 @@ v-delete-backup-host
 
 **delete backup ftp server**
 
-
 **Options**: `TYPE` `[HOST]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2798,9 +2476,7 @@ v-delete-cron-hestia-autoupdate
 
 **delete hestia autoupdate cron job**
 
-
 **Options**: none 
-
 
 This function deletes hestia autoupdate cron job.
 
@@ -2810,9 +2486,7 @@ v-delete-cron-job
 
 **delete cron job**
 
-
 **Options**: `USER` `JOB` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2828,9 +2502,7 @@ v-delete-cron-reports
 
 **delete cron reports**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2846,9 +2518,7 @@ v-delete-cron-restart-job
 
 **delete restart job**
 
-
 **Options**: none 
-
 
 This function for disabling restart cron tasks
 
@@ -2858,9 +2528,7 @@ v-delete-database
 
 **delete database**
 
-
 **Options**: `USER` `DATABASE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2876,9 +2544,7 @@ v-delete-database-host
 
 **delete database server**
 
-
 **Options**: `TYPE` `HOST` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2894,9 +2560,7 @@ v-delete-database-temp-user
 
 **deletes temp database user**
 
-
 **Options**: `USER` `DBUSER` `[TYPE]` `[HOST]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2912,9 +2576,7 @@ v-delete-databases
 
 **delete user databases**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2930,9 +2592,7 @@ v-delete-dns-domain
 
 **delete dns domain**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2948,9 +2608,7 @@ v-delete-dns-domains
 
 **delete dns domains**
 
-
 **Options**: `USER` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2966,9 +2624,7 @@ v-delete-dns-domains-src
 
 **delete dns domains based on SRC field**
 
-
 **Options**: `USER` `SRC` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -2984,9 +2640,7 @@ v-delete-dns-on-web-alias
 
 **delete dns domain or dns record based on web domain alias**
 
-
 **Options**: `USER` `DOMAIN` `ALIAS` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3002,9 +2656,7 @@ v-delete-dns-record
 
 **delete dns record**
 
-
 **Options**: `USER` `DOMAIN` `ID` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3020,9 +2672,7 @@ v-delete-domain
 
 **delete web/dns/mail domain**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3038,9 +2688,7 @@ v-delete-fastcgi-cache
 
 **Disable FastCGI cache for nginx**
 
-
 **Options**: `USER` `DOMAIN` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3056,9 +2704,7 @@ v-delete-firewall-ban
 
 **delete firewall blocking rule**
 
-
 **Options**: `IP` `CHAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3074,9 +2720,7 @@ v-delete-firewall-chain
 
 **delete firewall chain**
 
-
 **Options**: `CHAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3092,9 +2736,7 @@ v-delete-firewall-ipset
 
 **delete firewall ipset**
 
-
 **Options**: `NAME` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3110,9 +2752,7 @@ v-delete-firewall-rule
 
 **delete firewall rule**
 
-
 **Options**: `RULE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3128,9 +2768,7 @@ v-delete-fs-directory
 
 **delete directory**
 
-
 **Options**: `USER` `DIRECTORY` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3146,9 +2784,7 @@ v-delete-fs-file
 
 **delete file**
 
-
 **Options**: `USER` `FILE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3164,9 +2800,7 @@ v-delete-letsencrypt-domain
 
 **deleting letsencrypt ssl cetificate for domain**
 
-
 **Options**: `USER` `DOMAIN` `[RESTART]` `[MAIL]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3182,9 +2816,7 @@ v-delete-mail-account
 
 **delete mail account**
 
-
 **Options**: `USER` `DOMAIN` `ACCOUNT` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3200,9 +2832,7 @@ v-delete-mail-account-alias
 
 **delete mail account alias aka nickname**
 
-
 **Options**: `USER` `DOMAIN` `ACCOUNT` `ALIAS` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3218,9 +2848,7 @@ v-delete-mail-account-autoreply
 
 **delete mail account autoreply message**
 
-
 **Options**: `USER` `DOMAIN` `ACCOUNT` `ALIAS` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3236,9 +2864,7 @@ v-delete-mail-account-forward
 
 **delete mail account forward**
 
-
 **Options**: `USER` `DOMAIN` `ACCOUNT` `EMAIL` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3254,9 +2880,7 @@ v-delete-mail-account-fwd-only
 
 **delete mail account forward-only flag**
 
-
 **Options**: `USER` `DOMAIN` `ACCOUNT` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3272,9 +2896,7 @@ v-delete-mail-domain
 
 **delete mail domain**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3290,9 +2912,7 @@ v-delete-mail-domain-antispam
 
 **delete mail domain antispam support**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3308,9 +2928,7 @@ v-delete-mail-domain-antivirus
 
 **delete mail domain antivirus support**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3326,9 +2944,7 @@ v-delete-mail-domain-catchall
 
 **delete mail domain catchall email**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3344,9 +2960,7 @@ v-delete-mail-domain-dkim
 
 **delete mail domain dkim support**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3362,9 +2976,7 @@ v-delete-mail-domain-reject
 
 **delete mail domain reject spam support**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3380,9 +2992,7 @@ v-delete-mail-domain-smtp-relay
 
 **Remove mail domain smtp relay support**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3398,9 +3008,7 @@ v-delete-mail-domain-ssl
 
 **delete mail domain ssl support**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3416,9 +3024,7 @@ v-delete-mail-domain-webmail
 
 **delete webmail support for a domain**
 
-
 **Options**: `USER` `DOMAIN` `[RESTART]` `[QUIET]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3434,9 +3040,7 @@ v-delete-mail-domains
 
 **delete mail domains**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3452,9 +3056,7 @@ v-delete-remote-dns-domain
 
 **delete remote dns domain**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3470,9 +3072,7 @@ v-delete-remote-dns-domains
 
 **delete remote dns domains**
 
-
 **Options**: `[HOST]` 
-
 
 This function deletes remote dns domains.
 
@@ -3482,9 +3082,7 @@ v-delete-remote-dns-host
 
 **delete remote dns host**
 
-
 **Options**: `HOST` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3500,9 +3098,7 @@ v-delete-remote-dns-record
 
 **delete remote dns domain record**
 
-
 **Options**: `USER` `DOMAIN` `ID` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3518,9 +3114,7 @@ v-delete-sys-api-ip
 
 **delete ip adresss from allowed ip list api**
 
-
 **Options**: `IP` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3536,9 +3130,7 @@ v-delete-sys-filemanager
 
 **remove file manager functionality from Hestia Control Panel**
 
-
 **Options**: `[FULL]` 
-
 
 This function removes the File Manager and its entry points
 
@@ -3548,9 +3140,7 @@ v-delete-sys-firewall
 
 **delete system firewall**
 
-
 **Options**: none 
-
 
 This function disables firewall support
 
@@ -3560,9 +3150,7 @@ v-delete-sys-ip
 
 **delete system ip**
 
-
 **Options**: `IP` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3578,9 +3166,7 @@ v-delete-sys-mail-queue
 
 **delete exim mail queue**
 
-
 **Options**: none 
-
 
 This function checks for messages stuck in the exim mail queue and prompts the user to clear the queue if desired.
 
@@ -3590,9 +3176,7 @@ v-delete-sys-pma-sso
 
 **disables support for single sign on PHPMYADMIN**
 
-
 **Options**: `[MODE]` 
-
 
 Disables support for SSO to phpMyAdmin
 
@@ -3602,9 +3186,7 @@ v-delete-sys-quota
 
 **delete system quota**
 
-
 **Options**: none 
-
 
 This function disables filesystem quota on /home partition
 
@@ -3614,9 +3196,7 @@ v-delete-sys-sftp-jail
 
 **delete system sftp jail**
 
-
 **Options**: none 
-
 
 This function disables sftp jailed environment
 
@@ -3626,9 +3206,7 @@ v-delete-sys-smtp
 
 **Remove SMTP Account for logging, notification and internal mail**
 
-
 **Options**: none 
-
 
 This function allows configuring a SMTP account for the server to use for logging, notification and warn emails etc.
 
@@ -3638,9 +3216,7 @@ v-delete-sys-smtp-relay
 
 **disable system wide smtp relay support**
 
-
 **Options**: `` 
-
 
 This function disables system wide smtp relay support.
 
@@ -3650,9 +3226,7 @@ v-delete-user
 
 **delete user**
 
-
 **Options**: `USER` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3668,9 +3242,7 @@ v-delete-user-2fa
 
 **delete 2fa of existing user**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3686,9 +3258,7 @@ v-delete-user-auth-log
 
 **Delete auth log file for user**
 
-
 **Options**: 
-
 
 This function for deleting a users auth log file
 
@@ -3698,9 +3268,7 @@ v-delete-user-backup
 
 **delete user backup**
 
-
 **Options**: `USER` `BACKUP` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3716,9 +3284,7 @@ v-delete-user-backup-exclusions
 
 **delete backup exclusion**
 
-
 **Options**: `USER` `[SYSTEM]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3734,9 +3300,7 @@ v-delete-user-ips
 
 **delete user ips**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3752,9 +3316,7 @@ v-delete-user-log
 
 **Delete log file for user**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3770,9 +3332,7 @@ v-delete-user-notification
 
 **delete user notification**
 
-
 **Options**: `USER` `NOTIFICATION` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3788,9 +3348,7 @@ v-delete-user-package
 
 **delete user package**
 
-
 **Options**: `PACKAGE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3806,9 +3364,7 @@ v-delete-user-sftp-jail
 
 **delete user sftp jail**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3824,9 +3380,7 @@ v-delete-user-ssh-key
 
 **add ssh key**
 
-
 **Options**: `USER` `KEY` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3842,9 +3396,7 @@ v-delete-user-stats
 
 **delete user usage statistics**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3861,9 +3413,7 @@ v-delete-web-domain
 
 **delete web domain**
 
-
 **Options**: `USER` `DOMAIN` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3879,9 +3429,7 @@ v-delete-web-domain-alias
 
 **delete web domain alias**
 
-
 **Options**: `USER` `DOMAIN` `ALIAS` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3897,9 +3445,7 @@ v-delete-web-domain-allow-users
 
 **disables other users create subdomains**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3915,9 +3461,7 @@ v-delete-web-domain-backend
 
 **deleting web domain backend configuration**
 
-
 **Options**: `USER` `DOMAIN` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3933,9 +3477,7 @@ v-delete-web-domain-ftp
 
 **delete webdomain ftp account**
 
-
 **Options**: `USER` `DOMAIN` `FTP_USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3951,9 +3493,7 @@ v-delete-web-domain-httpauth
 
 **delete http auth user**
 
-
 **Options**: `USER` `DOMAIN` `AUTH_USER` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3969,9 +3509,7 @@ v-delete-web-domain-proxy
 
 **deleting web domain proxy configuration**
 
-
 **Options**: `USER` `DOMAIN` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -3987,9 +3525,7 @@ v-delete-web-domain-redirect
 
 **Delete force redirect to domain**
 
-
 **Options**: `USER` `DOMAIN` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4005,9 +3541,7 @@ v-delete-web-domain-ssl
 
 **delete web domain SSL support**
 
-
 **Options**: `USER` `DOMAIN` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4023,9 +3557,7 @@ v-delete-web-domain-ssl-force
 
 **remove ssl force from domain**
 
-
 **Options**: `USER` `DOMAIN` `[RESTART]` `[QUIET]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4041,9 +3573,7 @@ v-delete-web-domain-ssl-hsts
 
 **remove ssl force from domain**
 
-
 **Options**: `USER` `DOMAIN` `[RESTART]` `[QUIET]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4059,9 +3589,7 @@ v-delete-web-domain-stats
 
 **delete web domain statistics**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4077,9 +3605,7 @@ v-delete-web-domain-stats-user
 
 **disable web domain stats authentication support**
 
-
 **Options**: `USER` `DOMAIN` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4095,9 +3621,7 @@ v-delete-web-domains
 
 **delete web domains**
 
-
 **Options**: `USER` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4113,9 +3637,7 @@ v-delete-web-php
 
 **delete php fpm version**
 
-
 **Options**: `VERSION` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4131,9 +3653,7 @@ v-download-backup
 
 **Download backup**
 
-
 **Options**: `USER` `BACKUP` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4149,9 +3669,7 @@ v-extract-fs-archive
 
 **archive to directory**
 
-
 **Options**: `USER` `ARCHIVE` `DIRECTORY` `[SELECTED_DIR]` `[STRIP]` `[TEST]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4167,9 +3685,7 @@ v-generate-api-key
 
 **generate api key**
 
-
 **Options**: none 
-
 
 This function creates a key file in $HESTIA/data/keys/
 
@@ -4178,9 +3694,7 @@ v-generate-debug-report
 *******************************************************************
 
 
-
 **Options**: 
-
 
 Includes shellcheck source=/etc/hestiacp/hestia.conf
 
@@ -4190,9 +3704,7 @@ v-generate-password-hash
 
 **generate password hash**
 
-
 **Options**: `HASH_METHOD` `SALT` `PASSWORD` 
-
 **Examples**:
 
 .. code-block:: php
@@ -4208,9 +3720,7 @@ v-generate-ssl-cert
 
 **generate self signed certificate and CSR request**
 
-
 **Options**: `DOMAIN` `EMAIL` `COUNTRY` `STATE` `CITY` `ORG` `UNIT` `[ALIASES]` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4226,9 +3736,7 @@ v-get-dns-domain-value
 
 **get dns domain value**
 
-
 **Options**: `USER` `DOMAIN` `KEY` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4244,9 +3752,7 @@ v-get-fs-file-type
 
 **get file type**
 
-
 **Options**: `USER` `FILE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4262,9 +3768,7 @@ v-get-mail-account-value
 
 **get mail account value**
 
-
 **Options**: `USER` `DOMAIN` `ACCOUNT` `KEY` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4280,9 +3784,7 @@ v-get-mail-domain-value
 
 **get mail domain value**
 
-
 **Options**: `USER` `DOMAIN` `KEY` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4298,9 +3800,7 @@ v-get-sys-timezone
 
 **get system timezone**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function to get system timezone
 
@@ -4310,9 +3810,7 @@ v-get-sys-timezones
 
 **list system timezone**
 
-
 **Options**: `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4328,9 +3826,7 @@ v-get-user-salt
 
 **get user salt**
 
-
 **Options**: `USER` `[IP]` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4346,9 +3842,7 @@ v-get-user-value
 
 **get user value**
 
-
 **Options**: `USER` `KEY` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4364,9 +3858,7 @@ v-insert-dns-domain
 
 **insert dns domain**
 
-
 **Options**: `USER` `DATA` `[SRC]` `[FLUSH]` `[RESTART]` 
-
 
 This function inserts raw record to the dns.conf
 
@@ -4376,9 +3868,7 @@ v-insert-dns-record
 
 **insert dns record**
 
-
 **Options**: `USER` `DOMAIN` `DATA` `[RESTART]` 
-
 
 This function inserts raw dns record to the domain conf
 
@@ -4388,9 +3878,7 @@ v-insert-dns-records
 
 **inserts dns records**
 
-
 **Options**: `USER` `DOMAIN` `DATA_FILE` `[RESTART]` 
-
 
 This function copy dns record to the domain conf
 
@@ -4400,9 +3888,7 @@ v-list-access-key
 
 **list all API access keys**
 
-
 **Options**: `ACCESS_KEY_ID` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4418,9 +3904,7 @@ v-list-access-keys
 
 **list all API access keys**
 
-
 **Options**: `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4436,9 +3920,7 @@ v-list-api
 
 **list api**
 
-
 **Options**: `API` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4454,9 +3936,7 @@ v-list-apis
 
 **list available APIs**
 
-
 **Options**: `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4472,9 +3952,7 @@ v-list-backup-host
 
 **list backup host**
 
-
 **Options**: `TYPE` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4490,9 +3968,7 @@ v-list-cron-job
 
 **list cron job**
 
-
 **Options**: `USER` `JOB` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4508,9 +3984,7 @@ v-list-cron-jobs
 
 **list user cron jobs**
 
-
 **Options**: `USER` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4526,9 +4000,7 @@ v-list-database
 
 **list database**
 
-
 **Options**: `USER` `DATABASE` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4544,9 +4016,7 @@ v-list-database-host
 
 **list database host**
 
-
 **Options**: `TYPE` `HOST` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4562,9 +4032,7 @@ v-list-database-hosts
 
 **list database hosts**
 
-
 **Options**: `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4580,9 +4048,7 @@ v-list-database-types
 
 **list supported database types**
 
-
 **Options**: `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4598,9 +4064,7 @@ v-list-databases
 
 **listing databases**
 
-
 **Options**: `USER` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4616,9 +4080,7 @@ v-list-dns-domain
 
 **list dns domain**
 
-
 **Options**: `USER` `DOMAIN` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4634,9 +4096,7 @@ v-list-dns-domains
 
 **list dns domains**
 
-
 **Options**: `USER` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4652,9 +4112,7 @@ v-list-dns-records
 
 **list dns domain records**
 
-
 **Options**: `USER` `DOMAIN` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4670,9 +4128,7 @@ v-list-dns-template
 
 **list dns template**
 
-
 **Options**: `TEMPLATE` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4688,9 +4144,7 @@ v-list-dns-templates
 
 **list dns templates**
 
-
 **Options**: `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4706,9 +4160,7 @@ v-list-firewall
 
 **list iptables rules**
 
-
 **Options**: `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4724,9 +4176,7 @@ v-list-firewall-ban
 
 **list firewall block list**
 
-
 **Options**: `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4742,9 +4192,7 @@ v-list-firewall-ipset
 
 **List firewall ipset**
 
-
 **Options**: `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4760,9 +4208,7 @@ v-list-firewall-rule
 
 **list firewall rule**
 
-
 **Options**: `RULE` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4778,9 +4224,7 @@ v-list-fs-directory
 
 **list directory**
 
-
 **Options**: `USER` `DIRECTORY` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4796,9 +4240,7 @@ v-list-letsencrypt-user
 
 **list letsencrypt key**
 
-
 **Options**: `USER` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4814,9 +4256,7 @@ v-list-mail-account
 
 **list mail domain account**
 
-
 **Options**: `USER` `DOMAIN` `ACCOUNT` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4832,9 +4272,7 @@ v-list-mail-account-autoreply
 
 **list mail account autoreply**
 
-
 **Options**: `USER` `DOMAIN` `ACCOUNT` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4850,9 +4288,7 @@ v-list-mail-accounts
 
 **list mail domain accounts**
 
-
 **Options**: `USER` `DOMAIN` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4868,9 +4304,7 @@ v-list-mail-domain
 
 **list mail domain**
 
-
 **Options**: `USER` `DOMAIN` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4886,9 +4320,7 @@ v-list-mail-domain-dkim
 
 **list mail domain dkim**
 
-
 **Options**: `USER` `DOMAIN` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4904,9 +4336,7 @@ v-list-mail-domain-dkim-dns
 
 **list mail domain dkim dns records**
 
-
 **Options**: `USER` `DOMAIN` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4922,9 +4352,7 @@ v-list-mail-domain-ssl
 
 **list mail domain ssl certificate**
 
-
 **Options**: `USER` `DOMAIN` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4940,9 +4368,7 @@ v-list-mail-domains
 
 **list mail domains**
 
-
 **Options**: `USER` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4958,9 +4384,7 @@ v-list-remote-dns-hosts
 
 **list remote dns host**
 
-
 **Options**: `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -4976,9 +4400,7 @@ v-list-sys-clamd-config
 
 **list clamd config parameters**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function for obtaining the list of clamd config parameters.
 
@@ -4988,9 +4410,7 @@ v-list-sys-config
 
 **list system configuration**
 
-
 **Options**: `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5006,9 +4426,7 @@ v-list-sys-cpu-status
 
 **list system cpu info**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function lists cpu information
 
@@ -5018,9 +4436,7 @@ v-list-sys-db-status
 
 **list db status**
 
-
 **Options**: `[FORMAT]` 
-
 
 v-list-sys-db-status
 
@@ -5030,9 +4446,7 @@ v-list-sys-disk-status
 
 **list disk information**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function lists disk information
 
@@ -5042,9 +4456,7 @@ v-list-sys-dns-status
 
 **list dns status**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function lists dns server status
 
@@ -5054,9 +4466,7 @@ v-list-sys-dovecot-config
 
 **list dovecot config parameters**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function for obtaining the list of dovecot config parameters.
 
@@ -5066,9 +4476,7 @@ v-list-sys-hestia-autoupdate
 
 **list hestia autoupdate settings**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function for obtaining autoupdate settings.
 
@@ -5078,9 +4486,7 @@ v-list-sys-hestia-ssl
 
 **list hestia ssl certificate**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function of obtaining hestia ssl files.
 
@@ -5090,9 +4496,7 @@ v-list-sys-hestia-updates
 
 **list system updates**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function checks available updates for hestia packages.
 
@@ -5102,9 +4506,7 @@ v-list-sys-info
 
 **list system os**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function checks available updates for hestia packages.
 
@@ -5114,9 +4516,7 @@ v-list-sys-interfaces
 
 **list system interfaces**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function for obtaining the list of network interfaces.
 
@@ -5126,9 +4526,7 @@ v-list-sys-ip
 
 **list system ip**
 
-
 **Options**: `IP` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5144,9 +4542,7 @@ v-list-sys-ips
 
 **list system ips**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function for obtaining the list of system ip adresses.
 
@@ -5156,9 +4552,7 @@ v-list-sys-languages
 
 **list system languages**
 
-
 **Options**: `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5174,9 +4568,7 @@ v-list-sys-mail-status
 
 **list mail status**
 
-
 **Options**: `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5192,9 +4584,7 @@ v-list-sys-memory-status
 
 **list virtual memory info**
 
-
 **Options**: `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5210,9 +4600,7 @@ v-list-sys-mysql-config
 
 **list mysql config parameters**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function for obtaining the list of mysql config parameters.
 
@@ -5222,9 +4610,7 @@ v-list-sys-network-status
 
 **list system network status**
 
-
 **Options**: `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5240,9 +4626,7 @@ v-list-sys-nginx-config
 
 **list nginx config parameters**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function for obtaining the list of nginx config parameters.
 
@@ -5252,9 +4636,7 @@ v-list-sys-pgsql-config
 
 **list postgresql config parameters**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function for obtaining the list of postgresql config parameters.
 
@@ -5264,9 +4646,7 @@ v-list-sys-php
 
 **listing availble PHP versions installed**
 
-
 **Options**: `[FORMAT]` 
-
 
 List /etc/php/* version check if folder fpm is available
 
@@ -5276,9 +4656,7 @@ v-list-sys-php-config
 
 **list php config parameters**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function for obtaining the list of php config parameters.
 
@@ -5288,9 +4666,7 @@ v-list-sys-proftpd-config
 
 **list proftpd config parameters**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function for obtaining the list of proftpd config parameters.
 
@@ -5300,9 +4676,7 @@ v-list-sys-rrd
 
 **list system rrd charts**
 
-
 **Options**: `[FORMAT]` 
-
 
 List available rrd graphics, its titles and paths.
 
@@ -5312,9 +4686,7 @@ v-list-sys-services
 
 **list system services**
 
-
 **Options**: `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5330,9 +4702,7 @@ v-list-sys-shells
 
 **list system shells**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function for obtaining the list of system shells.
 
@@ -5342,9 +4712,7 @@ v-list-sys-spamd-config
 
 **list spamassassin config parameters**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function for obtaining the list of spamassassin config parameters.
 
@@ -5354,9 +4722,7 @@ v-list-sys-sshd-port
 
 **list sshd port**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function for obtainings the port of sshd listens to
 
@@ -5366,9 +4732,7 @@ v-list-sys-themes
 
 **list system themes**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function for obtaining the list of themes in the theme library and displaying them in the backend or user interface.
 
@@ -5378,9 +4742,7 @@ v-list-sys-users
 
 **list system users**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function for obtaining the list of system users without detailed information.
 
@@ -5390,9 +4752,7 @@ v-list-sys-vsftpd-config
 
 **list vsftpd config parameters**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function for obtaining the list of vsftpd config parameters.
 
@@ -5402,9 +4762,7 @@ v-list-sys-web-status
 
 **list web status**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function lists web server status
 
@@ -5414,9 +4772,7 @@ v-list-sys-webmail
 
 **listing available webmail clients**
 
-
 **Options**: `[FORMAT]` 
-
 
 List available webmail clients
 
@@ -5426,9 +4782,7 @@ v-list-user
 
 **list user parameters**
 
-
 **Options**: `USER` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5444,9 +4798,7 @@ v-list-user-auth-log
 
 **list user log**
 
-
 **Options**: `USER` `[FORMAT]` 
-
 
 This function of obtaining the list of 10 last users commands.
 
@@ -5456,9 +4808,7 @@ v-list-user-backup
 
 **list user backup**
 
-
 **Options**: `USER` `BACKUP` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5474,9 +4824,7 @@ v-list-user-backup-exclusions
 
 **list backup exclusions**
 
-
 **Options**: `USER` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5492,9 +4840,7 @@ v-list-user-backups
 
 **list user backups**
 
-
 **Options**: `USER` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5510,9 +4856,7 @@ v-list-user-ips
 
 **list user ips**
 
-
 **Options**: `USER` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5528,9 +4872,7 @@ v-list-user-log
 
 **list user log**
 
-
 **Options**: `USER` `[FORMAT]` 
-
 
 This function of obtaining the list of 100 last users commands.
 
@@ -5540,9 +4882,7 @@ v-list-user-notifications
 
 **list user notifications**
 
-
 **Options**: `USER` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5558,9 +4898,7 @@ v-list-user-ns
 
 **list user nameservers**
 
-
 **Options**: `USER` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5576,9 +4914,7 @@ v-list-user-package
 
 **list user package**
 
-
 **Options**: `PACKAGE` `[FORMAT]` 
-
 
 This function for getting the list of system ip parameters.
 
@@ -5588,9 +4924,7 @@ v-list-user-packages
 
 **list user packages**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function for obtaining the list of available hosting packages.
 
@@ -5600,9 +4934,7 @@ v-list-user-ssh-key
 
 **add ssh key**
 
-
 **Options**: `USER` `[FORMAT]` 
-
 
 Lists $user/.ssh/authorized_keys
 
@@ -5612,9 +4944,7 @@ v-list-user-stats
 
 **list user stats**
 
-
 **Options**: `USER` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5630,9 +4960,7 @@ v-list-users
 
 **list users**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function to obtain the list of all system users.
 
@@ -5642,9 +4970,7 @@ v-list-users-stats
 
 **list overall user stats**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function for listing overall user statistics
 
@@ -5654,9 +4980,7 @@ v-list-web-domain
 
 **list web domain parameters**
 
-
 **Options**: `USER` `DOMAIN` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5672,9 +4996,7 @@ v-list-web-domain-accesslog
 
 **list web domain access log**
 
-
 **Options**: `USER` `DOMAIN` `[LINES]` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5690,9 +5012,7 @@ v-list-web-domain-errorlog
 
 **list web domain error log**
 
-
 **Options**: `USER` `DOMAIN` `[LINES]` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5708,9 +5028,7 @@ v-list-web-domain-ssl
 
 **list web domain ssl certificate**
 
-
 **Options**: `USER` `DOMAIN` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5726,9 +5044,7 @@ v-list-web-domains
 
 **list web domains**
 
-
 **Options**: `USER` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5744,9 +5060,7 @@ v-list-web-stats
 
 **list web statistics**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function for obtaining the list of web statistics analyzer.
 
@@ -5756,9 +5070,7 @@ v-list-web-templates
 
 **list web templates**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function for obtaining the list of web templates available to a user.
 
@@ -5768,9 +5080,7 @@ v-list-web-templates-backend
 
 **listing backend templates**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function for obtaining the list of available backend templates.
 
@@ -5780,9 +5090,7 @@ v-list-web-templates-proxy
 
 **listing proxy templates**
 
-
 **Options**: `[FORMAT]` 
-
 
 This function for obtaining the list of proxy templates available to a user.
 
@@ -5792,9 +5100,7 @@ v-log-action
 
 **adds action event to user or system log**
 
-
 **Options**: `LOG_TYPE` `USER` 
-
 
 Event Levels: info, warning, error
 
@@ -5804,9 +5110,7 @@ v-log-user-login
 
 **add user login**
 
-
 **Options**: `USER` `IP` `STATUS` `[FINGERPRINT]` 
-
 
 
 
@@ -5816,9 +5120,7 @@ v-log-user-logout
 
 **Log User logout event**
 
-
 **Options**: `USER` `FINGERPRINT` 
-
 
 
 
@@ -5828,9 +5130,7 @@ v-move-fs-directory
 
 **move file**
 
-
 **Options**: `USER` `SRC_DIRECTORY` `DST_DIRECTORY` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5846,9 +5146,7 @@ v-move-fs-file
 
 **move file**
 
-
 **Options**: `USER` `SRC_FILE` `DST_FILE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5864,9 +5162,7 @@ v-open-fs-config
 
 **open config**
 
-
 **Options**: `CONFIG` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5882,9 +5178,7 @@ v-open-fs-file
 
 **open file**
 
-
 **Options**: `USER` `FILE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5900,9 +5194,7 @@ v-purge-nginx-cache
 
 **Purge nginx cache**
 
-
 **Options**: `USER` `DOMAINÅ` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5918,9 +5210,7 @@ v-rebuild-all
 
 **rebuild all assets for a specified user**
 
-
 **Options**: `USER` `[RESTART]` 
-
 
 This function rebuilds all assets for a user account: - Web domains - DNS zones - Mail domains - Databases - Cron Jobs - User account configuration
 
@@ -5930,9 +5220,7 @@ v-rebuild-cron-jobs
 
 **rebuild cron jobs**
 
-
 **Options**: `USER` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5948,9 +5236,7 @@ v-rebuild-database
 
 **rebuild databases**
 
-
 **Options**: `USER` `DATABASE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5966,9 +5252,7 @@ v-rebuild-databases
 
 **rebuild databases**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -5984,9 +5268,7 @@ v-rebuild-dns-domain
 
 **rebuild dns domain**
 
-
 **Options**: `USER` `DOMAIN` `[RESTART]` `[UPDATE_SERIAL]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6002,9 +5284,7 @@ v-rebuild-dns-domains
 
 **rebuild dns domains**
 
-
 **Options**: `USER` `[RESTART]` `[UPDATE_SERIAL]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6020,9 +5300,7 @@ v-rebuild-mail-domain
 
 **rebuild mail domain**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6038,9 +5316,7 @@ v-rebuild-mail-domains
 
 **rebuild mail domains**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6056,9 +5332,7 @@ v-rebuild-user
 
 **rebuild system user**
 
-
 **Options**: `USER` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6074,9 +5348,7 @@ v-rebuild-users
 
 **rebuild system users**
 
-
 **Options**: `[RESTART]` 
-
 
 This function rebuilds user configuration for all users.
 
@@ -6086,9 +5358,7 @@ v-rebuild-web-domain
 
 **rebuild web domain**
 
-
 **Options**: `USER` `DOMAIN` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6104,9 +5374,7 @@ v-rebuild-web-domains
 
 **rebuild web domains**
 
-
 **Options**: `USER` `[RESTART]` 
-
 
 This function rebuilds web configuration files.
 
@@ -6116,9 +5384,7 @@ v-refresh-sys-theme
 
 **change active system theme**
 
-
 **Options**: none 
-
 
 This function for changing the currently active system theme.
 
@@ -6128,9 +5394,7 @@ v-rename-user-package
 
 **change package name**
 
-
 **Options**: `OLD_NAME` `NEW_NAME` `[MODE]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6146,9 +5410,7 @@ v-repair-sys-config
 
 **Restore system configuration**
 
-
 **Options**: `[SYSTEM]` 
-
 
 This function repairs or restores the system configuration file.
 
@@ -6158,9 +5420,7 @@ v-restart-cron
 
 **restart cron service**
 
-
 **Options**: none 
-
 
 This function tells crond service to reread its configuration files.
 
@@ -6170,9 +5430,7 @@ v-restart-dns
 
 **restart dns service**
 
-
 **Options**: none 
-
 
 This function tells BIND service to reload dns zone files.
 
@@ -6182,9 +5440,7 @@ v-restart-ftp
 
 **restart ftp service**
 
-
 **Options**: none 
-
 
 This function tells ftp server to reread its configuration.
 
@@ -6194,9 +5450,7 @@ v-restart-mail
 
 **restart mail service**
 
-
 **Options**: none 
-
 
 This function tells exim or dovecot services to reload configuration files.
 
@@ -6206,9 +5460,7 @@ v-restart-proxy
 
 **restart proxy server**
 
-
 **Options**: none 
-
 
 This function reloads proxy server configuration.
 
@@ -6218,9 +5470,7 @@ v-restart-service
 
 **restart service**
 
-
 **Options**: `SERVICE` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6236,9 +5486,7 @@ v-restart-system
 
 **restart operating system**
 
-
 **Options**: `RESTART` `[DELAY]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6254,9 +5502,7 @@ v-restart-web
 
 **restart web server**
 
-
 **Options**: none 
-
 
 This function reloads web server configuration.
 
@@ -6266,9 +5512,7 @@ v-restart-web-backend
 
 **restart backend server**
 
-
 **Options**: none 
-
 
 This function reloads backend server configuration.
 
@@ -6278,9 +5522,7 @@ v-restore-cron-job
 
 **restore single cron job**
 
-
 **Options**: `USER` `BACKUP` `DOMAIN` `[NOTIFY]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6296,9 +5538,7 @@ v-restore-database
 
 **restore single database**
 
-
 **Options**: `USER` `BACKUP` `DATABASE` `[NOTIFY]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6314,9 +5554,7 @@ v-restore-dns-domain
 
 **restore single dns domain**
 
-
 **Options**: `USER` `BACKUP` `DOMAIN` `[NOTIFY]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6332,9 +5570,7 @@ v-restore-mail-domain
 
 **restore single mail domain**
 
-
 **Options**: `USER` `BACKUP` `DOMAIN` `[NOTIFY]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6350,9 +5586,7 @@ v-restore-user
 
 **restore user**
 
-
 **Options**: `USER` `BACKUP` `[WEB]` `[DNS]` `[MAIL]` `[DB]` `[CRON]` `[UDIR]` `[NOTIFY]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6368,9 +5602,7 @@ v-restore-web-domain
 
 **restore single web domain**
 
-
 **Options**: `USER` `BACKUP` `DOMAIN` `[NOTIFY]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6386,9 +5618,7 @@ v-revoke-api-key
 
 **revokes api key**
 
-
 **Options**: `[HASH]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6404,9 +5634,7 @@ v-run-cli-cmd
 
 **run cli command**
 
-
 **Options**: `USER` `CMD` `[ARG...]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6422,9 +5650,7 @@ v-schedule-letsencrypt-domain
 
 **adding cronjob for letsencrypt cetificate installation**
 
-
 **Options**: `USER` `DOMAIN` `[ALIASES]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6440,9 +5666,7 @@ v-schedule-user-backup
 
 **schedule user backup creation**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6458,9 +5682,7 @@ v-schedule-user-backup-download
 
 **Schedule a backup**
 
-
 **Options**: `USER` `BACKUP` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6476,9 +5698,7 @@ v-schedule-user-restore
 
 **schedule user backup restoration**
 
-
 **Options**: `USER` `BACKUP` `[WEB]` `[DNS]` `[MAIL]` `[DB]` `[CRON]` `[UDIR]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6494,9 +5714,7 @@ v-search-command
 
 **search for available commands**
 
-
 **Options**: `ARG1` `[ARG...]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6512,9 +5730,7 @@ v-search-domain-owner
 
 **search domain owner**
 
-
 **Options**: `DOMAIN` `[TYPE]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6530,9 +5746,7 @@ v-search-fs-object
 
 **search file or directory**
 
-
 **Options**: `USER` `OBJECT` `[PATH]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6548,9 +5762,7 @@ v-search-object
 
 **search objects**
 
-
 **Options**: `OBJECT` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6566,9 +5778,7 @@ v-search-user-object
 
 **search objects**
 
-
 **Options**: `USER` `OBJECT` `[FORMAT]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6584,9 +5794,7 @@ v-start-service
 
 **start service**
 
-
 **Options**: `SERVICE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6602,9 +5810,7 @@ v-stop-firewall
 
 **stop system firewall**
 
-
 **Options**: none 
-
 
 This function stops iptables
 
@@ -6614,9 +5820,7 @@ v-stop-service
 
 **stop service**
 
-
 **Options**: `SERVICE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6632,9 +5836,7 @@ v-suspend-cron-job
 
 **suspend cron job**
 
-
 **Options**: `USER` `JOB` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6650,9 +5852,7 @@ v-suspend-cron-jobs
 
 **Suspending sys cron jobs**
 
-
 **Options**: `USER` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6668,9 +5868,7 @@ v-suspend-database
 
 **suspend database**
 
-
 **Options**: `USER` `DATABASE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6686,9 +5884,7 @@ v-suspend-database-host
 
 **suspend database server**
 
-
 **Options**: `TYPE` `HOST` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6704,9 +5900,7 @@ v-suspend-databases
 
 **suspend databases**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6722,9 +5916,7 @@ v-suspend-dns-domain
 
 **suspend dns domain**
 
-
 **Options**: `USER` `DOMAIN` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6740,9 +5932,7 @@ v-suspend-dns-domains
 
 **suspend dns domains**
 
-
 **Options**: `USER` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6758,9 +5948,7 @@ v-suspend-dns-record
 
 **suspend dns domain record**
 
-
 **Options**: `USER` `DOMAIN` `ID` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6776,9 +5964,7 @@ v-suspend-domain
 
 **suspend web/dns/mail domain**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6794,9 +5980,7 @@ v-suspend-firewall-rule
 
 **suspend firewall rule**
 
-
 **Options**: `RULE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6812,9 +5996,7 @@ v-suspend-mail-account
 
 **suspend mail account**
 
-
 **Options**: `USER` `DOMAIN` `ACCOUNT` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6830,9 +6012,7 @@ v-suspend-mail-accounts
 
 **suspend all mail domain accounts**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6848,9 +6028,7 @@ v-suspend-mail-domain
 
 **suspend mail domain**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6866,9 +6044,7 @@ v-suspend-mail-domains
 
 **suspend mail domains**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6884,9 +6060,7 @@ v-suspend-remote-dns-host
 
 **suspend remote dns server**
 
-
 **Options**: `HOST` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6902,9 +6076,7 @@ v-suspend-user
 
 **suspend user**
 
-
 **Options**: `USER` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6920,9 +6092,7 @@ v-suspend-web-domain
 
 **suspend web domain**
 
-
 **Options**: `USER` `DOMAIN` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6938,9 +6108,7 @@ v-suspend-web-domains
 
 **suspend web domains**
 
-
 **Options**: `USER` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6956,9 +6124,7 @@ v-sync-dns-cluster
 
 **synchronize dns domains**
 
-
 **Options**: `HOST` 
-
 
 This function synchronize all dns domains.
 
@@ -6968,9 +6134,7 @@ v-unsuspend-cron-job
 
 **unsuspend cron job**
 
-
 **Options**: `USER` `JOB` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -6986,9 +6150,7 @@ v-unsuspend-cron-jobs
 
 **unsuspend sys cron**
 
-
 **Options**: `USER` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7004,9 +6166,7 @@ v-unsuspend-database
 
 **unsuspend database**
 
-
 **Options**: `USER` `DATABASE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7022,9 +6182,7 @@ v-unsuspend-database-host
 
 **unsuspend database server**
 
-
 **Options**: `TYPE` `HOST` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7040,9 +6198,7 @@ v-unsuspend-databases
 
 **unsuspend databases**
 
-
 **Options**: `USER` 
-
 
 This function for unsuspending all user's databases.
 
@@ -7052,9 +6208,7 @@ v-unsuspend-dns-domain
 
 **unsuspend dns domain**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7070,9 +6224,7 @@ v-unsuspend-dns-domains
 
 **unsuspend dns domains**
 
-
 **Options**: `USER` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7088,9 +6240,7 @@ v-unsuspend-dns-record
 
 **unsuspend dns domain record**
 
-
 **Options**: `USER` `DOMAIN` `ID` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7106,9 +6256,7 @@ v-unsuspend-domain
 
 **unsuspend web/dns/mail domain**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7124,9 +6272,7 @@ v-unsuspend-firewall-rule
 
 **unsuspend firewall rule**
 
-
 **Options**: `RULE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7142,9 +6288,7 @@ v-unsuspend-mail-account
 
 **unsuspend mail account**
 
-
 **Options**: `USER` `DOMAIN` `ACCOUNT` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7160,9 +6304,7 @@ v-unsuspend-mail-accounts
 
 **unsuspend all mail domain accounts**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7178,9 +6320,7 @@ v-unsuspend-mail-domain
 
 **unsuspend mail domain**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7196,9 +6336,7 @@ v-unsuspend-mail-domains
 
 **unsuspend mail domains**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7214,9 +6352,7 @@ v-unsuspend-remote-dns-host
 
 **unsuspend remote dns server**
 
-
 **Options**: `HOST` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7232,9 +6368,7 @@ v-unsuspend-user
 
 **unsuspend user**
 
-
 **Options**: `USER` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7250,9 +6384,7 @@ v-unsuspend-web-domain
 
 **unsuspend web domain**
 
-
 **Options**: `USER` `DOMAIN` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7268,9 +6400,7 @@ v-unsuspend-web-domains
 
 **unsuspend web domains**
 
-
 **Options**: `USER` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7286,9 +6416,7 @@ v-update-database-disk
 
 **update database disk usage**
 
-
 **Options**: `USER` `DATABASE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7304,9 +6432,7 @@ v-update-databases-disk
 
 **update databases disk usage**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7322,9 +6448,7 @@ v-update-dns-templates
 
 **update dns templates**
 
-
 **Options**: `[RESTART]` 
-
 
 This function for obtaining updated dns templates from Hestia package.
 
@@ -7334,9 +6458,7 @@ v-update-firewall
 
 **update system firewall rules**
 
-
 **Options**: none 
-
 
 This function updates iptables rules
 
@@ -7346,9 +6468,7 @@ v-update-firewall-ipset
 
 **update firewall ipset**
 
-
 **Options**: `[REFRESH]` 
-
 
 This function creates ipset lists and updates the lists if they are expired or ondemand
 
@@ -7358,9 +6478,7 @@ v-update-host-certificate
 
 **update host certificate for hestia**
 
-
 **Options**: `USER` `HOSTNAME` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7376,9 +6494,7 @@ v-update-letsencrypt-ssl
 
 **update letsencrypt ssl certificates**
 
-
 **Options**: none 
-
 
 This function for renew letsencrypt expired ssl certificate for all users
 
@@ -7388,9 +6504,7 @@ v-update-mail-domain-disk
 
 **update mail domain disk usage**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7406,9 +6520,7 @@ v-update-mail-domain-ssl
 
 **updating ssl certificate for domain**
 
-
 **Options**: `USER` `DOMAIN` `SSL_DIR` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7424,9 +6536,7 @@ v-update-mail-domains-disk
 
 **calculate disk usage for all mail domains**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7442,9 +6552,7 @@ v-update-mail-templates
 
 **update mail templates**
 
-
 **Options**: `[RESTART]` `[SKIP]` 
-
 
 This function for obtaining updated webmail templates from Hestia package.
 
@@ -7454,9 +6562,7 @@ v-update-sys-defaults
 
 **update default key database**
 
-
 **Options**: `[SYSTEM]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7473,9 +6579,7 @@ v-update-sys-hestia
 
 **update hestia package/configs**
 
-
 **Options**: `PACKAGE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7491,9 +6595,7 @@ v-update-sys-hestia-all
 
 **update all hestia packages**
 
-
 **Options**: none 
-
 
 This function of updating all hestia packages
 
@@ -7503,9 +6605,7 @@ v-update-sys-hestia-git
 
 **Install update from Git repository**
 
-
 **Options**: `REPOSITORY` `BRANCH` `INSTALL` `[PACKAGES]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7527,9 +6627,7 @@ v-update-sys-ip
 
 **update system ip**
 
-
 **Options**: none 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7546,9 +6644,7 @@ v-update-sys-ip-counters
 
 **update IP usage counters**
 
-
 **Options**: `IP` 
-
 
 Function updates usage U_WEB_ADOMAINS and U_SYS_USERS counters.
 
@@ -7558,9 +6654,7 @@ v-update-sys-queue
 
 **update system queue**
 
-
 **Options**: `PIPE` 
-
 
 This function is responsible queue processing. Restarts of services, scheduled backups, web log parsing and other heavy resource consuming operations are handled by this script. It helps to optimize system behaviour. In a nutshell Apache will be restarted only once even if 10 domains are added or deleted.
 
@@ -7570,9 +6664,7 @@ v-update-sys-rrd
 
 **update system rrd charts**
 
-
 **Options**: none 
-
 
 This function is wrapper for all rrd functions. It updates all v-update-sys-rrd_* at once.
 
@@ -7582,9 +6674,7 @@ v-update-sys-rrd-apache2
 
 **update apache2 rrd**
 
-
 **Options**: `PERIOD` 
-
 
 This function is for updating apache rrd database and graphic.
 
@@ -7594,9 +6684,7 @@ v-update-sys-rrd-ftp
 
 **update ftp rrd**
 
-
 **Options**: `PERIOD` 
-
 
 This function is for updating ftpd rrd database and graphic.
 
@@ -7606,9 +6694,7 @@ v-update-sys-rrd-httpd
 
 **update httpd rrd**
 
-
 **Options**: `PERIOD` 
-
 
 This function is for updating apache rrd database and graphic.
 
@@ -7618,9 +6704,7 @@ v-update-sys-rrd-la
 
 **update load average rrd**
 
-
 **Options**: `PERIOD` 
-
 
 This function is for updating load average rrd database and graphic.
 
@@ -7630,9 +6714,7 @@ v-update-sys-rrd-mail
 
 **update mail rrd**
 
-
 **Options**: `PERIOD` 
-
 
 This function is for updating mail rrd database and graphic.
 
@@ -7642,9 +6724,7 @@ v-update-sys-rrd-mem
 
 **update memory rrd**
 
-
 **Options**: `PERIOD` 
-
 
 This function is for updating memory rrd database and graphic.
 
@@ -7654,9 +6734,7 @@ v-update-sys-rrd-mysql
 
 **update MySQL rrd**
 
-
 **Options**: `PERIOD` 
-
 
 This function is for updating mysql rrd database and graphic.
 
@@ -7666,9 +6744,7 @@ v-update-sys-rrd-net
 
 **update network rrd**
 
-
 **Options**: `PERIOD` 
-
 
 This function is for updating network usage rrd database and graphic.
 
@@ -7678,9 +6754,7 @@ v-update-sys-rrd-nginx
 
 **update nginx rrd**
 
-
 **Options**: `PERIOD` 
-
 
 This function is for updating nginx rrd database and graphic.
 
@@ -7690,9 +6764,7 @@ v-update-sys-rrd-pgsql
 
 **update PostgreSQL rrd**
 
-
 **Options**: `PERIOD` 
-
 
 This function is for updating postgresql rrd database and graphic.
 
@@ -7702,9 +6774,7 @@ v-update-sys-rrd-ssh
 
 **update ssh rrd**
 
-
 **Options**: `PERIOD` 
-
 
 This function is for updating ssh rrd database and graphic.
 
@@ -7714,9 +6784,7 @@ v-update-user-backup-exclusions
 
 **update backup exclusion list**
 
-
 **Options**: `USER` `FILE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7732,9 +6800,7 @@ v-update-user-counters
 
 **update user usage counters**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7750,9 +6816,7 @@ v-update-user-disk
 
 **update user disk usage**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7768,9 +6832,7 @@ v-update-user-package
 
 **update user package**
 
-
 **Options**: `PACKAGE` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7786,9 +6848,7 @@ v-update-user-quota
 
 **update user disk quota**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7804,9 +6864,7 @@ v-update-user-stats
 
 **update user statistics**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7822,9 +6880,7 @@ v-update-web-domain-disk
 
 **update disk usage for domain**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7840,9 +6896,7 @@ v-update-web-domain-ssl
 
 **updating ssl certificate for domain**
 
-
 **Options**: `USER` `DOMAIN` `SSL_DIR` `[RESTART]` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7858,9 +6912,7 @@ v-update-web-domain-stat
 
 **update domain statistics**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7876,9 +6928,7 @@ v-update-web-domain-traff
 
 **update domain bandwidth usage**
 
-
 **Options**: `USER` `DOMAIN` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7894,9 +6944,7 @@ v-update-web-domains-disk
 
 **update domains disk usage**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7912,9 +6960,7 @@ v-update-web-domains-stat
 
 **update domains statistics**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7930,9 +6976,7 @@ v-update-web-domains-traff
 
 **update domains bandwidth usage**
 
-
 **Options**: `USER` 
-
 **Examples**:
 
 .. code-block:: bash
@@ -7948,9 +6992,7 @@ v-update-web-templates
 
 **update web templates**
 
-
 **Options**: `[RESTART]` `[SKIP]` 
-
 
 This function for obtaining updated web (Nginx/Apache2/PHP) templates from the Hestia package.
 

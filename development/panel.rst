@@ -75,8 +75,27 @@ Update HestiaCP from Github
 
 .. code-block:: bash
     
-    v-update-sys-hestia-git username branch install
+    v-update-sys-hestia-git username branch
     
+
+Sometimes dependencies will get added or removed as the pakages are installed with dpkg it is not possible to "preload" the dependencies.
+
+In that case you will see an error like:
+
+.. code-block:: bash 
+  
+  dpkg: error processing package hestia (–install):
+  dependency problems - leaving unconfigured
+    
+To solve this issue run:
+
+.. code-block:: bash 
+  
+  apt-get install -f 
+
+To resolve the issue with missing packages.  After that run v-update-sys-hestia-git username branch again
+
+
 #############################
 Automated testing
 #############################

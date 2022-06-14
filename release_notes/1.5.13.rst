@@ -1,0 +1,11 @@
+***********************************
+Release notes for HestiaCP v1.5.13
+***********************************
+
+Release date: April 28 2022
+
+############
+Bugfixes
+############
+
+- Fixed an issue in add / change dns record via GUI. (#2557)

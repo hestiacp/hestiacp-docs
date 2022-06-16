@@ -8,6 +8,21 @@ v-acknowledge-user-notification
 
 This function updates user notification.
 
+*******************************************************************
+v-add-access-key
+*******************************************************************
+
+**generate access key**
+
+**Options**: `USER` `[PERMISSIONS]` `[COMMENT]` `[FORMAT]` 
+**Examples**:
+
+.. code-block:: bash
+   
+  v-add-access-key admin v-purge-nginx-cache,v-list-mail-accounts comment json
+   
+
+The "PERMISSIONS" argument is optional for the admin user only. This function creates a key file in $HESTIA/data/access-keys/
 
 *******************************************************************
 v-add-backup-host
@@ -26,7 +41,6 @@ v-add-backup-host
 
 Add a new remote backup location. Currently SFTP, FTP and Backblaze are supported
 
-
 *******************************************************************
 v-add-cron-hestia-autoupdate
 *******************************************************************
@@ -36,7 +50,6 @@ v-add-cron-hestia-autoupdate
 **Options**: `MODE` 
 
 This function adds a cronjob for hestia automatic updates that can be downloaded from apt or git.
-
 
 *******************************************************************
 v-add-cron-job
@@ -54,17 +67,15 @@ v-add-cron-job
 
 This function adds a job to cron daemon. When executing commands, any output is mailed to user's email if parameter REPORTS is set to 'yes'.
 
-
 *******************************************************************
 v-add-cron-letsencrypt-job
 *******************************************************************
 
 **add cron job for Let's Encrypt certificates**
 
-**Options**: – 
+**Options**: none 
 
 This function adds a new cron job for Let's Encrypt.
-
 
 *******************************************************************
 v-add-cron-reports
@@ -82,17 +93,15 @@ v-add-cron-reports
 
 This function for enabling reports on cron tasks and administrative notifications.
 
-
 *******************************************************************
 v-add-cron-restart-job
 *******************************************************************
 
 **add cron reports**
 
-**Options**: – 
+**Options**: none 
 
 This function for enabling restart cron tasks
-
 
 *******************************************************************
 v-add-database
@@ -110,7 +119,6 @@ v-add-database
 
 This function creates the database concatenating username and user_db. Supported types of databases you can get using v-list-sys-config script. If the host isn't stated and there are few hosts configured on the server, then the host will be defined by one of three algorithms. "First" will choose the first host in the list. "Random" will chose the host by a chance. "Weight" will distribute new database through hosts evenly. Algorithm and types of supported databases is designated in the main configuration file.
 
-
 *******************************************************************
 v-add-database-host
 *******************************************************************
@@ -126,7 +134,6 @@ v-add-database-host
    
 
 This function add new database server to the server pool. It supports local and remote database servers, which is useful for clusters. By adding a host you can set limit for number of databases on a host. Template parameter is used only for PostgreSQL and has an default value "template1". You can read more about templates in official PostgreSQL documentation.
-
 
 *******************************************************************
 v-add-database-temp-user
@@ -144,7 +151,6 @@ v-add-database-temp-user
 
 This function creates an temporary database user mysql_sso_db_XXXXXXXX and a random password The user has an limited validity and only granted access to the specific database Returns json to be read SSO Script
 
-
 *******************************************************************
 v-add-dns-domain
 *******************************************************************
@@ -160,7 +166,6 @@ v-add-dns-domain
    
 
 This function adds DNS zone with records defined in the template. If the exp argument isn't stated, the expiration date value will be set to next year. The soa argument is responsible for the relevant record. By default the first user's NS server is used. TTL is set as common for the zone and for all of its records with a default value of 14400 seconds.
-
 
 *******************************************************************
 v-add-dns-on-web-alias
@@ -178,7 +183,6 @@ v-add-dns-on-web-alias
 
 This function adds dns domain or dns record based on web domain alias.
 
-
 *******************************************************************
 v-add-dns-record
 *******************************************************************
@@ -194,7 +198,6 @@ v-add-dns-record
    
 
 This function is used to add a new DNS record. Complex records of TXT, MX and SRV types can be used by a filling in the 'value' argument. This function also gets an ID parameter for definition of certain record identifiers or for the regulation of records.
-
 
 *******************************************************************
 v-add-domain
@@ -212,7 +215,6 @@ v-add-domain
 
 This function adds web/dns/mail domain to a server.
 
-
 *******************************************************************
 v-add-fastcgi-cache
 *******************************************************************
@@ -228,7 +230,6 @@ v-add-fastcgi-cache
    
 
 This function enables FastCGI cache for nginx Acceptable values for duration is time in seconds (10s) minutes (10m) or days (10d) Add "yes" as last parameter to append debug information to response headers
-
 
 *******************************************************************
 v-add-firewall-ban
@@ -246,7 +247,6 @@ v-add-firewall-ban
 
 This function adds new blocking rule to system firewall
 
-
 *******************************************************************
 v-add-firewall-chain
 *******************************************************************
@@ -262,7 +262,6 @@ v-add-firewall-chain
    
 
 This function adds new rule to system firewall
-
 
 *******************************************************************
 v-add-firewall-ipset
@@ -280,7 +279,6 @@ v-add-firewall-ipset
 
 This function adds new ipset to system firewall
 
-
 *******************************************************************
 v-add-firewall-rule
 *******************************************************************
@@ -296,7 +294,6 @@ v-add-firewall-rule
    
 
 This function adds new rule to system firewall
-
 
 *******************************************************************
 v-add-fs-archive
@@ -314,7 +311,6 @@ v-add-fs-archive
 
 This function creates tar archive
 
-
 *******************************************************************
 v-add-fs-directory
 *******************************************************************
@@ -330,7 +326,6 @@ v-add-fs-directory
    
 
 This function creates new directory on the file system
-
 
 *******************************************************************
 v-add-fs-file
@@ -348,7 +343,6 @@ v-add-fs-file
 
 This function creates new files on file system
 
-
 *******************************************************************
 v-add-letsencrypt-domain
 *******************************************************************
@@ -360,11 +354,11 @@ v-add-letsencrypt-domain
 
 .. code-block:: bash
    
-  v-add-letsencrypt-domain admin wonderland.com www.wonderland.com
+  v-add-letsencrypt-domain admin wonderland.com www.wonderland.com,demo.wonderland.com
+ example: v-add-letsencrypt-domain admin wonderland.com '' yes
    
 
 This function check and validates domain with Let's Encrypt
-
 
 *******************************************************************
 v-add-letsencrypt-host
@@ -372,10 +366,9 @@ v-add-letsencrypt-host
 
 **add letsencrypt for host and backend**
 
-**Options**: – 
+**Options**: none 
 
 This function check and validates the backend certificate and generate a new let's encrypt certificate.
-
 
 *******************************************************************
 v-add-letsencrypt-user
@@ -393,7 +386,6 @@ v-add-letsencrypt-user
 
 This function creates and register LetsEncrypt account
 
-
 *******************************************************************
 v-add-mail-account
 *******************************************************************
@@ -409,7 +401,6 @@ v-add-mail-account
    
 
 This function add new email account.
-
 
 *******************************************************************
 v-add-mail-account-alias
@@ -427,7 +418,6 @@ v-add-mail-account-alias
 
 This function add new email alias.
 
-
 *******************************************************************
 v-add-mail-account-autoreply
 *******************************************************************
@@ -443,7 +433,6 @@ v-add-mail-account-autoreply
    
 
 This function add new email account.
-
 
 *******************************************************************
 v-add-mail-account-forward
@@ -461,7 +450,6 @@ v-add-mail-account-forward
 
 This function add new email account.
 
-
 *******************************************************************
 v-add-mail-account-fwd-only
 *******************************************************************
@@ -477,7 +465,6 @@ v-add-mail-account-fwd-only
    
 
 This function adds fwd-only flag
-
 
 *******************************************************************
 v-add-mail-domain
@@ -495,7 +482,6 @@ v-add-mail-domain
 
 This function adds MAIL domain.
 
-
 *******************************************************************
 v-add-mail-domain-antispam
 *******************************************************************
@@ -511,7 +497,6 @@ v-add-mail-domain-antispam
    
 
 This function enables spamassasin for incoming emails.
-
 
 *******************************************************************
 v-add-mail-domain-antivirus
@@ -529,7 +514,6 @@ v-add-mail-domain-antivirus
 
 This function enables clamav scan for incoming emails.
 
-
 *******************************************************************
 v-add-mail-domain-catchall
 *******************************************************************
@@ -545,7 +529,6 @@ v-add-mail-domain-catchall
    
 
 This function enables catchall account for incoming emails.
-
 
 *******************************************************************
 v-add-mail-domain-dkim
@@ -563,6 +546,21 @@ v-add-mail-domain-dkim
 
 This function adds DKIM signature to outgoing domain emails.
 
+*******************************************************************
+v-add-mail-domain-reject
+*******************************************************************
+
+**add mail domain reject spam**
+
+**Options**: `USER` `DOMAIN` 
+**Examples**:
+
+.. code-block:: bash
+   
+  v-add-mail-domain-antivirus admin mydomain.tld
+   
+
+The function enables clamav scan for incoming emails.
 
 *******************************************************************
 v-add-mail-domain-smtp-relay
@@ -570,7 +568,7 @@ v-add-mail-domain-smtp-relay
 
 **Add mail domain smtp relay support**
 
-**Options**: `USER` `DOMAIN` `HOST` `USERNAME` `PASSWORD` `[PORT]` 
+**Options**: `USER` `DOMAIN` `HOST` `[USERNAME]` `[PASSWORD]` `[PORT]` 
 **Examples**:
 
 .. code-block:: bash
@@ -579,7 +577,6 @@ v-add-mail-domain-smtp-relay
    
 
 This function adds mail domain smtp relay support.
-
 
 *******************************************************************
 v-add-mail-domain-ssl
@@ -590,7 +587,6 @@ v-add-mail-domain-ssl
 **Options**: `USER` `DOMAIN` `SSL_DIR` `[RESTART]` 
 
 This function turns on SSL support for a mail domain. Parameter ssl_dir is a path to a directory where 2 or 3 ssl files can be found. Certificate file mail.domain.tld.crt and its key mail.domain.tld.key are mandatory. Certificate authority mail.domain.tld.ca file is optional.
-
 
 *******************************************************************
 v-add-mail-domain-webmail
@@ -610,7 +606,6 @@ v-add-mail-domain-webmail
 
 This function enables webmail client for a mail domain.
 
-
 *******************************************************************
 v-add-remote-dns-domain
 *******************************************************************
@@ -626,7 +621,6 @@ v-add-remote-dns-domain
    
 
 This function synchronize dns domain with the remote server.
-
 
 *******************************************************************
 v-add-remote-dns-host
@@ -649,7 +643,6 @@ v-add-remote-dns-host
 
 This function adds remote dns server to the dns cluster. As alternative api_key generated on the slave server. See v-generate-api-key can be used to connect the remote dns server
 
-
 *******************************************************************
 v-add-remote-dns-record
 *******************************************************************
@@ -665,7 +658,6 @@ v-add-remote-dns-record
    
 
 This function synchronize dns domain with the remote server.
-
 
 *******************************************************************
 v-add-sys-api-ip
@@ -683,7 +675,6 @@ v-add-sys-api-ip
 
 
 
-
 *******************************************************************
 v-add-sys-filemanager
 *******************************************************************
@@ -694,17 +685,15 @@ v-add-sys-filemanager
 
 This function installs the File Manager on the server for access through the Web interface.
 
-
 *******************************************************************
 v-add-sys-firewall
 *******************************************************************
 
 **add system firewall**
 
-**Options**: – 
+**Options**: none 
 
 This function enables the system firewall.
-
 
 *******************************************************************
 v-add-sys-ip
@@ -720,8 +709,7 @@ v-add-sys-ip
   v-add-sys-ip 216.239.32.21 255.255.255.0
    
 
-This function adds ip address into a system. It also creates rc scripts. You can specify ip name which will be used as root domain for temporary aliases. For example, if you set a1.myhosting.com as name, each new domain created on this ip will automatically receive alias $domain.a1.myhosting.com. Of course you must have wildcard record `*`.a1.myhosting.com pointed to ip. This feature is very handy when customer wants to test domain before dns migration.
-
+This function adds ip address into a system. It also creates rc scripts. You can specify ip name which will be used as root domain for temporary aliases. For example, if you set a1.myhosting.com as name, each new domain created on this ip will automatically receive alias $domain.a1.myhosting.com. Of course you must have wildcard record *.a1.myhosting.com pointed to ip. This feature is very handy when customer wants to test domain before dns migration.
 
 *******************************************************************
 v-add-sys-phpmailer
@@ -733,7 +721,6 @@ v-add-sys-phpmailer
 
 This function installs PHPMailer for server-side email communication.
 
-
 *******************************************************************
 v-add-sys-pma-sso
 *******************************************************************
@@ -744,17 +731,15 @@ v-add-sys-pma-sso
 
 This function enables support for SSO to phpMyAdmin
 
-
 *******************************************************************
 v-add-sys-quota
 *******************************************************************
 
 **add system quota**
 
-**Options**: – 
+**Options**: none 
 
 This function enables filesystem quota on /home partition Some kernels do require additional packages to be installed first
-
 
 *******************************************************************
 v-add-sys-rainloop
@@ -766,7 +751,6 @@ v-add-sys-rainloop
 
 This function installs the Rainloop webmail client.
 
-
 *******************************************************************
 v-add-sys-roundcube
 *******************************************************************
@@ -776,7 +760,6 @@ v-add-sys-roundcube
 **Options**: `[MODE]` 
 
 This function installs the Roundcube webmail client.
-
 
 *******************************************************************
 v-add-sys-sftp-jail
@@ -794,7 +777,6 @@ v-add-sys-sftp-jail
 
 This function enables sftp jailed environment.
 
-
 *******************************************************************
 v-add-sys-smtp
 *******************************************************************
@@ -811,14 +793,13 @@ v-add-sys-smtp
 
 This function allows configuring a SMTP account for the server to use for logging, notification and warn emails etc.
 
-
 *******************************************************************
 v-add-sys-smtp-relay
 *******************************************************************
 
 **add system wide smtp relay support**
 
-**Options**: `HOST` `USERNAME` `PASSWORD` `[PORT]` 
+**Options**: `HOST` `[USERNAME]` `[PASSWORD]` `[PORT]` 
 **Examples**:
 
 .. code-block:: bash
@@ -827,7 +808,6 @@ v-add-sys-smtp-relay
    
 
 This function adds system wide smtp relay support.
-
 
 *******************************************************************
 v-add-user
@@ -845,7 +825,6 @@ v-add-user
 
 This function creates new user account.
 
-
 *******************************************************************
 v-add-user-2fa
 *******************************************************************
@@ -861,7 +840,6 @@ v-add-user-2fa
    
 
 This function creates a new 2fa token for user.
-
 
 *******************************************************************
 v-add-user-composer
@@ -879,7 +857,6 @@ v-add-user-composer
 
 This function adds support for composer (php dependency manager) Homepage: https://getcomposer.org/
 
-
 *******************************************************************
 v-add-user-notification
 *******************************************************************
@@ -890,7 +867,6 @@ v-add-user-notification
 
 This function adds a new user notification to the panel.
 
-
 *******************************************************************
 v-add-user-package
 *******************************************************************
@@ -900,7 +876,6 @@ v-add-user-package
 **Options**: `TMPFILE` `PACKAGE` `[REWRITE]` 
 
 This function adds new user package to the system.
-
 
 *******************************************************************
 v-add-user-sftp-jail
@@ -918,7 +893,6 @@ v-add-user-sftp-jail
 
 This function enables sftp jailed environment
 
-
 *******************************************************************
 v-add-user-sftp-key
 *******************************************************************
@@ -928,7 +902,6 @@ v-add-user-sftp-key
 **Options**: `USER` `[TTL]` 
 
 This function creates and updates SSH keys for used with the File Manager.
-
 
 *******************************************************************
 v-add-user-ssh-key
@@ -946,7 +919,6 @@ v-add-user-ssh-key
 
 Function check if $user/.ssh/authorized_keys exists and create it. After that it append the new key(s)
 
-
 *******************************************************************
 v-add-user-wp-cli
 *******************************************************************
@@ -962,7 +934,6 @@ v-add-user-wp-cli
    
 
 This function adds support for wp-cli to the user account
-
 
 *******************************************************************
 v-add-web-domain
@@ -980,7 +951,6 @@ v-add-web-domain
 
 This function adds virtual host to a server. In cases when ip is undefined in the script, "default" template will be used. The alias of www.domain.tld type will be automatically assigned to the domain unless "none" is transmited as argument. If ip have associated dns name, this domain will also get the alias domain-tpl.$ipname. An alias with the ip name is useful during the site testing while dns isn't moved to server yet.
 
-
 *******************************************************************
 v-add-web-domain-alias
 *******************************************************************
@@ -995,8 +965,7 @@ v-add-web-domain-alias
   v-add-web-domain-alias admin acme.com www.acme.com yes
    
 
-This function adds one or more aliases to a domain (it is also called "domain parking"). This function supports wildcards `*`.domain.tpl.
-
+This function adds one or more aliases to a domain (it is also called "domain parking"). This function supports wildcards *.domain.tpl.
 
 *******************************************************************
 v-add-web-domain-allow-users
@@ -1014,7 +983,6 @@ v-add-web-domain-allow-users
 
 Bypass the rule check for Enforce subdomain ownership for a specific domain. Enforce subdomain ownership setting in /edit/server/ set to no will always overwrite this behaviour eg: admin adds admin.com user can create user.admin.com
 
-
 *******************************************************************
 v-add-web-domain-backend
 *******************************************************************
@@ -1026,11 +994,10 @@ v-add-web-domain-backend
 
 .. code-block:: bash
    
-  v-add-web-domain-backend admin exmaple.com default yes
+  v-add-web-domain-backend admin example.com default yes
    
 
 This function is used to add the web backend configuration.
-
 
 *******************************************************************
 v-add-web-domain-ftp
@@ -1048,7 +1015,6 @@ v-add-web-domain-ftp
 
 This function creates additional ftp account for web domain.
 
-
 *******************************************************************
 v-add-web-domain-httpauth
 *******************************************************************
@@ -1065,7 +1031,6 @@ v-add-web-domain-httpauth
 
 This function is used for securing web domain with http auth
 
-
 *******************************************************************
 v-add-web-domain-proxy
 *******************************************************************
@@ -1081,7 +1046,6 @@ v-add-web-domain-proxy
    
 
 This function enables proxy support for a domain. This can significantly improve website speed.
-
 
 *******************************************************************
 v-add-web-domain-redirect
@@ -1104,7 +1068,6 @@ v-add-web-domain-redirect
 
 Function creates a forced redirect to a domain
 
-
 *******************************************************************
 v-add-web-domain-ssl
 *******************************************************************
@@ -1120,7 +1083,6 @@ v-add-web-domain-ssl
    
 
 This function turns on SSL support for a domain. Parameter ssl_dir is a path to directory where 2 or 3 ssl files can be found. Certificate file domain.tld.crt and its key domain.tld.key are mandatory. Certificate authority domain.tld.ca file is optional. If home directory parameter (ssl_home) is not set, https domain uses public_shtml as separate documentroot directory.
-
 
 *******************************************************************
 v-add-web-domain-ssl-force
@@ -1138,7 +1100,6 @@ v-add-web-domain-ssl-force
 
 This function forces SSL for the requested domain.
 
-
 *******************************************************************
 v-add-web-domain-ssl-hsts
 *******************************************************************
@@ -1149,7 +1110,6 @@ v-add-web-domain-ssl-hsts
 
 This function enables HSTS for the requested domain.
 
-
 *******************************************************************
 v-add-web-domain-ssl-preset
 *******************************************************************
@@ -1159,7 +1119,6 @@ v-add-web-domain-ssl-preset
 **Options**: `USER` `DOMAIN` `[SSL]` 
 
 Up on creating an web domain set the SSL Force values due to the delay of LE due to DNS propergation over DNS cluster When LE has been activated it will set the actions
-
 
 *******************************************************************
 v-add-web-domain-stats
@@ -1177,7 +1136,6 @@ v-add-web-domain-stats
 
 This function is used for enabling log analyzer system to a domain. For viewing the domain statistics use http://domain.tld/vstats/ link. Access this page is not protected by default. If you want to secure it with passwords you should use v-add-web-domain_stat_auth script.
 
-
 *******************************************************************
 v-add-web-domain-stats-user
 *******************************************************************
@@ -1193,7 +1151,6 @@ v-add-web-domain-stats-user
    
 
 This function is used for securing the web statistics page.
-
 
 *******************************************************************
 v-add-web-php
@@ -1211,7 +1168,6 @@ v-add-web-php
 
 This function checks and delete a fpm php version if not used by any domain.
 
-
 *******************************************************************
 v-backup-user
 *******************************************************************
@@ -1228,17 +1184,15 @@ v-backup-user
 
 This function is used for backing up user with all its domains and databases.
 
-
 *******************************************************************
 v-backup-users
 *******************************************************************
 
 **backup all users**
 
-**Options**: – 
+**Options**: none 
 
 This function backups all system users.
-
 
 *******************************************************************
 v-change-cron-job
@@ -1256,7 +1210,6 @@ v-change-cron-job
 
 This function is used for changing existing job. It fully replace job parameters with new one but with same id.
 
-
 *******************************************************************
 v-change-database-host-password
 *******************************************************************
@@ -1272,7 +1225,6 @@ v-change-database-host-password
    
 
 This function changes database server password.
-
 
 *******************************************************************
 v-change-database-owner
@@ -1290,7 +1242,6 @@ v-change-database-owner
 
 This function for changing database owner.
 
-
 *******************************************************************
 v-change-database-password
 *******************************************************************
@@ -1306,7 +1257,6 @@ v-change-database-password
    
 
 This function for changing database user password to a database. It uses the full name of database as argument.
-
 
 *******************************************************************
 v-change-database-user
@@ -1324,7 +1274,6 @@ v-change-database-user
 
 This function for changing database user. It uses the
 
-
 *******************************************************************
 v-change-dns-domain-exp
 *******************************************************************
@@ -1340,7 +1289,6 @@ v-change-dns-domain-exp
    
 
 This function of changing the term of expiration domain's registration. The serial number will be refreshed automatically during update.
-
 
 *******************************************************************
 v-change-dns-domain-ip
@@ -1358,7 +1306,6 @@ v-change-dns-domain-ip
 
 This function for changing the main ip of DNS zone.
 
-
 *******************************************************************
 v-change-dns-domain-soa
 *******************************************************************
@@ -1374,7 +1321,6 @@ v-change-dns-domain-soa
    
 
 This function for changing SOA record. This type of records can not be modified by v-change-dns-record call.
-
 
 *******************************************************************
 v-change-dns-domain-tpl
@@ -1392,7 +1338,6 @@ v-change-dns-domain-tpl
 
 This function for changing the template of records. By updating old records will be removed and new records will be generated in accordance with parameters of new template.
 
-
 *******************************************************************
 v-change-dns-domain-ttl
 *******************************************************************
@@ -1408,7 +1353,6 @@ v-change-dns-domain-ttl
    
 
 This function for changing the time to live TTL parameter for all records.
-
 
 *******************************************************************
 v-change-dns-record
@@ -1426,7 +1370,6 @@ v-change-dns-record
 
 This function for changing DNS record.
 
-
 *******************************************************************
 v-change-dns-record-id
 *******************************************************************
@@ -1442,7 +1385,6 @@ v-change-dns-record-id
    
 
 This function for changing internal record id.
-
 
 *******************************************************************
 v-change-domain-owner
@@ -1460,7 +1402,6 @@ v-change-domain-owner
 
 This function of changing domain ownership.
 
-
 *******************************************************************
 v-change-firewall-rule
 *******************************************************************
@@ -1476,7 +1417,6 @@ v-change-firewall-rule
    
 
 This function is used for changing existing firewall rule. It fully replace rule with new one but keeps same id.
-
 
 *******************************************************************
 v-change-fs-file-permission
@@ -1494,7 +1434,6 @@ v-change-fs-file-permission
 
 This function changes file access permissions on the file system
 
-
 *******************************************************************
 v-change-mail-account-password
 *******************************************************************
@@ -1510,7 +1449,6 @@ v-change-mail-account-password
    
 
 This function changes email account password.
-
 
 *******************************************************************
 v-change-mail-account-quota
@@ -1528,6 +1466,21 @@ v-change-mail-account-quota
 
 This function changes email account disk quota.
 
+*******************************************************************
+v-change-mail-account-rate-limit
+*******************************************************************
+
+**change mail domain rate limit**
+
+**Options**: `USER` `DOMAIN` `ACCOUNT` `RATE` 
+**Examples**:
+
+.. code-block:: bash
+   
+  v-change-mail-domain-quota admin mydomain.tld user01 100
+   
+
+This function changes email account rate limit. Use system to use domain or "server" setting
 
 *******************************************************************
 v-change-mail-domain-catchall
@@ -1545,6 +1498,21 @@ v-change-mail-domain-catchall
 
 This function changes mail domain catchall.
 
+*******************************************************************
+v-change-mail-domain-rate-limit
+*******************************************************************
+
+**change mail account rate limit**
+
+**Options**: `USER` `DOMAIN` `ACCOUNT` `RATE` 
+**Examples**:
+
+.. code-block:: bash
+   
+  v-change-mail-account-quota admin mydomain.tld user01 100
+   
+
+This function changes email account rate limit for the domain. account specific setting will overwrite domain setting!
 
 *******************************************************************
 v-change-mail-domain-sslcert
@@ -1556,7 +1524,6 @@ v-change-mail-domain-sslcert
 
 This function changes SSL domain certificate and the key. If ca file present it will be replaced as well.
 
-
 *******************************************************************
 v-change-remote-dns-domain-exp
 *******************************************************************
@@ -1566,7 +1533,6 @@ v-change-remote-dns-domain-exp
 **Options**: `USER` `DOMAIN` 
 
 This function synchronize dns domain with the remote server.
-
 
 *******************************************************************
 v-change-remote-dns-domain-soa
@@ -1584,7 +1550,6 @@ v-change-remote-dns-domain-soa
 
 This function synchronize dns domain with the remote server.
 
-
 *******************************************************************
 v-change-remote-dns-domain-ttl
 *******************************************************************
@@ -1601,7 +1566,6 @@ v-change-remote-dns-domain-ttl
 
 This function synchronize dns domain with the remote server.
 
-
 *******************************************************************
 v-change-sys-api
 *******************************************************************
@@ -1613,8 +1577,10 @@ v-change-sys-api
 
 .. code-block:: bash
    
-  v-change-sys-api enable
- # Enable API
+  v-change-sys-api enable legacy
+ # Enable legacy api currently default on most of api based systems
+ example: v-change-sys-api enable api
+ # Enable api
    
 
 .. code-block:: bash
@@ -1624,7 +1590,6 @@ v-change-sys-api
    
 
 Enabled / Disable API
-
 
 *******************************************************************
 v-change-sys-config-value
@@ -1641,7 +1606,6 @@ v-change-sys-config-value
    
 
 This function is for changing main config settings such as COMPANY_NAME or COMPANY_EMAIL and so on.
-
 
 *******************************************************************
 v-change-sys-db-alias
@@ -1666,7 +1630,6 @@ v-change-sys-db-alias
 
 This function changes the database editor url in apache2 or nginx configuration.
 
-
 *******************************************************************
 v-change-sys-demo-mode
 *******************************************************************
@@ -1676,7 +1639,6 @@ v-change-sys-demo-mode
 **Options**: `ACTIVE` 
 
 This function will set the demo mode variable, which will prevent usage of certain v-scripts in the backend and prevent modification of objects in the control panel. It will also disable virtual hosts for Apache and NGINX for domains which have been created.
-
 
 *******************************************************************
 v-change-sys-hestia-ssl
@@ -1694,7 +1656,6 @@ v-change-sys-hestia-ssl
 
 This function changes hestia SSL certificate and the key.
 
-
 *******************************************************************
 v-change-sys-hostname
 *******************************************************************
@@ -1710,7 +1671,6 @@ v-change-sys-hostname
    
 
 This function for changing system hostname.
-
 
 *******************************************************************
 v-change-sys-ip-name
@@ -1728,7 +1688,6 @@ v-change-sys-ip-name
 
 This function for changing dns domain associated with ip.
 
-
 *******************************************************************
 v-change-sys-ip-nat
 *******************************************************************
@@ -1744,7 +1703,6 @@ v-change-sys-ip-nat
    
 
 This function for changing nat ip associated with ip.
-
 
 *******************************************************************
 v-change-sys-ip-owner
@@ -1762,7 +1720,6 @@ v-change-sys-ip-owner
 
 This function of changing ip address ownership.
 
-
 *******************************************************************
 v-change-sys-ip-status
 *******************************************************************
@@ -1779,7 +1736,6 @@ v-change-sys-ip-status
 
 This function of changing an ip address's status.
 
-
 *******************************************************************
 v-change-sys-language
 *******************************************************************
@@ -1795,6 +1751,21 @@ v-change-sys-language
    
 
 This function for changing system language.
+
+*******************************************************************
+v-change-sys-php
+*******************************************************************
+
+**Change default php version server wide**
+
+**Options**: `VERSION` 
+**Examples**:
+
+.. code-block:: bash
+   
+  v-change-sys-php 8.0
+   
+
 
 
 *******************************************************************
@@ -1813,7 +1784,6 @@ v-change-sys-port
 
 This function for changing the system backend port in NGINX configuration.
 
-
 *******************************************************************
 v-change-sys-release
 *******************************************************************
@@ -1823,7 +1793,6 @@ v-change-sys-release
 **Options**: `[RESTART]` 
 
 This function for changing the release branch for the Hestia Control Panel. This allows the user to switch between stable and pre-release builds which will automaticlly update based on the appropriate release schedule if auto-update is turned on.
-
 
 *******************************************************************
 v-change-sys-service-config
@@ -1841,7 +1810,6 @@ v-change-sys-service-config
 
 This function for changing service confguration.
 
-
 *******************************************************************
 v-change-sys-timezone
 *******************************************************************
@@ -1857,7 +1825,6 @@ v-change-sys-timezone
    
 
 This function for changing system timezone.
-
 
 *******************************************************************
 v-change-sys-webmail
@@ -1875,7 +1842,6 @@ v-change-sys-webmail
 
 This function changes the webmail url in apache2 or nginx configuration.
 
-
 *******************************************************************
 v-change-user-config-value
 *******************************************************************
@@ -1891,7 +1857,6 @@ v-change-user-config-value
    
 
 Changes key/value for specified user.
-
 
 *******************************************************************
 v-change-user-contact
@@ -1909,7 +1874,6 @@ v-change-user-contact
 
 This function for changing of e-mail associated with a certain user.
 
-
 *******************************************************************
 v-change-user-language
 *******************************************************************
@@ -1925,7 +1889,6 @@ v-change-user-language
    
 
 This function for changing language.
-
 
 *******************************************************************
 v-change-user-name
@@ -1943,7 +1906,6 @@ v-change-user-name
 
 This function allow to change user's full name.
 
-
 *******************************************************************
 v-change-user-ns
 *******************************************************************
@@ -1959,7 +1921,6 @@ v-change-user-ns
    
 
 This function for changing default nameservers for specific user.
-
 
 *******************************************************************
 v-change-user-package
@@ -1977,7 +1938,6 @@ v-change-user-package
 
 This function changes user's hosting package.
 
-
 *******************************************************************
 v-change-user-password
 *******************************************************************
@@ -1993,7 +1953,6 @@ v-change-user-password
    
 
 This function changes user's password and updates RKEY value.
-
 
 *******************************************************************
 v-change-user-php-cli
@@ -2011,7 +1970,6 @@ v-change-user-php-cli
 
 add line to .bash_aliases to set default php command line version when multi-php is enabled.
 
-
 *******************************************************************
 v-change-user-rkey
 *******************************************************************
@@ -2021,7 +1979,6 @@ v-change-user-rkey
 **Options**: `USER` `[HASH]` 
 
 This function changes user's RKEY value thats has been used for security value to be used forgot password function only.
-
 
 *******************************************************************
 v-change-user-role
@@ -2039,7 +1996,6 @@ v-change-user-role
 
 Give/revoke user administrator rights to manage all accounts as admin
 
-
 *******************************************************************
 v-change-user-shell
 *******************************************************************
@@ -2055,7 +2011,6 @@ v-change-user-shell
    
 
 This function changes system shell of a user. Shell gives ability to use ssh.
-
 
 *******************************************************************
 v-change-user-sort-order
@@ -2073,7 +2028,6 @@ v-change-user-sort-order
 
 Changes web UI display sort order for specified user.
 
-
 *******************************************************************
 v-change-user-template
 *******************************************************************
@@ -2089,7 +2043,6 @@ v-change-user-template
    
 
 This function changes default user web template.
-
 
 *******************************************************************
 v-change-user-theme
@@ -2107,7 +2060,6 @@ v-change-user-theme
 
 Changes web UI display theme for specified user.
 
-
 *******************************************************************
 v-change-web-domain-backend-tpl
 *******************************************************************
@@ -2124,7 +2076,6 @@ v-change-web-domain-backend-tpl
 
 This function changes backend template
 
-
 *******************************************************************
 v-change-web-domain-dirlist
 *******************************************************************
@@ -2140,7 +2091,6 @@ v-change-web-domain-dirlist
    
 
 This function is used for changing the directory list mode.
-
 
 *******************************************************************
 v-change-web-domain-docroot
@@ -2167,7 +2117,6 @@ v-change-web-domain-docroot
 
 This call changes the document root of a chosen web domain to another available domain under the user context.
 
-
 *******************************************************************
 v-change-web-domain-ftp-password
 *******************************************************************
@@ -2183,7 +2132,6 @@ v-change-web-domain-ftp-password
    
 
 This function changes ftp user password.
-
 
 *******************************************************************
 v-change-web-domain-ftp-path
@@ -2201,7 +2149,6 @@ v-change-web-domain-ftp-path
 
 This function changes ftp user path.
 
-
 *******************************************************************
 v-change-web-domain-httpauth
 *******************************************************************
@@ -2217,7 +2164,6 @@ v-change-web-domain-httpauth
    
 
 This function is used for changing http auth user password
-
 
 *******************************************************************
 v-change-web-domain-ip
@@ -2235,7 +2181,6 @@ v-change-web-domain-ip
 
 This function is used for changing domain ip
 
-
 *******************************************************************
 v-change-web-domain-name
 *******************************************************************
@@ -2251,7 +2196,6 @@ v-change-web-domain-name
    
 
 This function is used for changing the domain name.
-
 
 *******************************************************************
 v-change-web-domain-proxy-tpl
@@ -2269,7 +2213,6 @@ v-change-web-domain-proxy-tpl
 
 This function changes proxy template
 
-
 *******************************************************************
 v-change-web-domain-sslcert
 *******************************************************************
@@ -2285,7 +2228,6 @@ v-change-web-domain-sslcert
    
 
 This function changes SSL domain certificate and the key. If ca file present it will be replaced as well.
-
 
 *******************************************************************
 v-change-web-domain-sslhome
@@ -2304,7 +2246,6 @@ v-change-web-domain-sslhome
 
 This function changes SSL home directory. Single will seperate the both public_html / public_shtml. Same will always point to public_shtml
 
-
 *******************************************************************
 v-change-web-domain-stats
 *******************************************************************
@@ -2320,7 +2261,6 @@ v-change-web-domain-stats
    
 
 This function of deleting site's system of statistics. Its type is automatically chooses from client's configuration file.
-
 
 *******************************************************************
 v-change-web-domain-tpl
@@ -2338,6 +2278,21 @@ v-change-web-domain-tpl
 
 This function changes template of the web configuration file. The content of webdomain directories remains untouched.
 
+*******************************************************************
+v-check-access-key
+*******************************************************************
+
+**check access key**
+
+**Options**: `ACCESS_KEY_ID` `SECRET_ACCESS_KEY` `COMMAND` `[IP]` `[FORMAT]` 
+**Examples**:
+
+.. code-block:: bash
+   
+  v-check-access-key key_id secret v-purge-nginx-cache 127.0.0.1 json
+   
+
+* Checks if the key exists; * Checks if the secret belongs to the key; * Checks if the key user is suspended; * Checks if the key has permission to run the command.
 
 *******************************************************************
 v-check-api-key
@@ -2355,7 +2310,6 @@ v-check-api-key
 
 This function checks a key file in $HESTIA/data/keys/
 
-
 *******************************************************************
 v-check-fs-permission
 *******************************************************************
@@ -2372,6 +2326,21 @@ v-check-fs-permission
 
 This function opens/reads files on the file system
 
+*******************************************************************
+v-check-mail-account-hash
+*******************************************************************
+
+**check user password**
+
+**Options**: `TYPE` `PASSWORD` `HASH` 
+**Examples**:
+
+.. code-block:: bash
+   
+  v-check-mail-account-hash ARGONID2 PASS HASH
+   
+
+This function verifies email account password hash
 
 *******************************************************************
 v-check-user-2fa
@@ -2389,7 +2358,6 @@ v-check-user-2fa
 
 This function verifies user 2fa token.
 
-
 *******************************************************************
 v-check-user-hash
 *******************************************************************
@@ -2406,14 +2374,13 @@ v-check-user-hash
 
 This function verifies user hash
 
-
 *******************************************************************
 v-check-user-password
 *******************************************************************
 
 **check user password**
 
-**Options**: `USER` `PASSWORD` `[IP]` 
+**Options**: `USER` `PASSWORD` `[IP]` `[RETURN_HASH]` 
 **Examples**:
 
 .. code-block:: bash
@@ -2422,7 +2389,6 @@ v-check-user-password
    
 
 This function verifies user password from file
-
 
 *******************************************************************
 v-copy-fs-directory
@@ -2440,7 +2406,6 @@ v-copy-fs-directory
 
 This function copies directory on the file system
 
-
 *******************************************************************
 v-copy-fs-file
 *******************************************************************
@@ -2456,7 +2421,6 @@ v-copy-fs-file
    
 
 This function copies file on the file system
-
 
 *******************************************************************
 v-copy-user-package
@@ -2474,6 +2438,21 @@ v-copy-user-package
 
 This function allows the user to duplicate an existing package file to facilitate easier configuration.
 
+*******************************************************************
+v-delete-access-key
+*******************************************************************
+
+**delete access key**
+
+**Options**: `ACCESS_KEY_ID` 
+**Examples**:
+
+.. code-block:: bash
+   
+  v-delete-access-key mykey
+   
+
+This function removes a key from in $HESTIA/data/access-keys/
 
 *******************************************************************
 v-delete-backup-host
@@ -2491,17 +2470,15 @@ v-delete-backup-host
 
 This function deletes ftp backup host
 
-
 *******************************************************************
 v-delete-cron-hestia-autoupdate
 *******************************************************************
 
 **delete hestia autoupdate cron job**
 
-**Options**: – 
+**Options**: none 
 
 This function deletes hestia autoupdate cron job.
-
 
 *******************************************************************
 v-delete-cron-job
@@ -2519,7 +2496,6 @@ v-delete-cron-job
 
 This function deletes cron job.
 
-
 *******************************************************************
 v-delete-cron-reports
 *******************************************************************
@@ -2536,17 +2512,15 @@ v-delete-cron-reports
 
 This function for disabling reports on cron tasks and administrative notifications.
 
-
 *******************************************************************
 v-delete-cron-restart-job
 *******************************************************************
 
 **delete restart job**
 
-**Options**: – 
+**Options**: none 
 
 This function for disabling restart cron tasks
-
 
 *******************************************************************
 v-delete-database
@@ -2564,7 +2538,6 @@ v-delete-database
 
 This function for deleting the database. If database user have access to another database, he will not be deleted.
 
-
 *******************************************************************
 v-delete-database-host
 *******************************************************************
@@ -2580,7 +2553,6 @@ v-delete-database-host
    
 
 This function for deleting the database host from hestia configuration. It will be deleted if there are no databases created on it only.
-
 
 *******************************************************************
 v-delete-database-temp-user
@@ -2598,7 +2570,6 @@ v-delete-database-temp-user
 
 Revokes "temp user" access to a database and removes the user To be used in combination with v-add-database-temp-user
 
-
 *******************************************************************
 v-delete-databases
 *******************************************************************
@@ -2614,7 +2585,6 @@ v-delete-databases
    
 
 This function deletes all user databases.
-
 
 *******************************************************************
 v-delete-dns-domain
@@ -2632,7 +2602,6 @@ v-delete-dns-domain
 
 This function for deleting DNS domain. By deleting it all records will also be deleted.
 
-
 *******************************************************************
 v-delete-dns-domains
 *******************************************************************
@@ -2648,7 +2617,6 @@ v-delete-dns-domains
    
 
 This function for deleting all users DNS domains.
-
 
 *******************************************************************
 v-delete-dns-domains-src
@@ -2666,7 +2634,6 @@ v-delete-dns-domains-src
 
 This function for deleting DNS domains related to a certain host.
 
-
 *******************************************************************
 v-delete-dns-on-web-alias
 *******************************************************************
@@ -2682,7 +2649,6 @@ v-delete-dns-on-web-alias
    
 
 This function deletes dns domain or dns record based on web domain alias.
-
 
 *******************************************************************
 v-delete-dns-record
@@ -2700,7 +2666,6 @@ v-delete-dns-record
 
 This function for deleting a certain record of DNS zone.
 
-
 *******************************************************************
 v-delete-domain
 *******************************************************************
@@ -2716,7 +2681,6 @@ v-delete-domain
    
 
 This function deletes web/dns/mail domain.
-
 
 *******************************************************************
 v-delete-fastcgi-cache
@@ -2734,7 +2698,6 @@ v-delete-fastcgi-cache
 
 This function disables FastCGI cache for nginx
 
-
 *******************************************************************
 v-delete-firewall-ban
 *******************************************************************
@@ -2750,7 +2713,6 @@ v-delete-firewall-ban
    
 
 This function deletes blocking rule from system firewall
-
 
 *******************************************************************
 v-delete-firewall-chain
@@ -2768,7 +2730,6 @@ v-delete-firewall-chain
 
 This function adds new rule to system firewall
 
-
 *******************************************************************
 v-delete-firewall-ipset
 *******************************************************************
@@ -2784,7 +2745,6 @@ v-delete-firewall-ipset
    
 
 This function removes ipset from system and from hestia
-
 
 *******************************************************************
 v-delete-firewall-rule
@@ -2802,7 +2762,6 @@ v-delete-firewall-rule
 
 This function deletes firewall rule.
 
-
 *******************************************************************
 v-delete-fs-directory
 *******************************************************************
@@ -2818,7 +2777,6 @@ v-delete-fs-directory
    
 
 This function deletes directory on the file system
-
 
 *******************************************************************
 v-delete-fs-file
@@ -2836,7 +2794,6 @@ v-delete-fs-file
 
 This function deletes file on the file system
 
-
 *******************************************************************
 v-delete-letsencrypt-domain
 *******************************************************************
@@ -2852,7 +2809,6 @@ v-delete-letsencrypt-domain
    
 
 This function turns off letsencrypt SSL support for a domain.
-
 
 *******************************************************************
 v-delete-mail-account
@@ -2870,7 +2826,6 @@ v-delete-mail-account
 
 This function deletes email account.
 
-
 *******************************************************************
 v-delete-mail-account-alias
 *******************************************************************
@@ -2886,7 +2841,6 @@ v-delete-mail-account-alias
    
 
 This function deletes email account alias.
-
 
 *******************************************************************
 v-delete-mail-account-autoreply
@@ -2904,7 +2858,6 @@ v-delete-mail-account-autoreply
 
 This function deletes an email accounts autoreply.
 
-
 *******************************************************************
 v-delete-mail-account-forward
 *******************************************************************
@@ -2920,7 +2873,6 @@ v-delete-mail-account-forward
    
 
 This function deletes an email accounts forwarding address.
-
 
 *******************************************************************
 v-delete-mail-account-fwd-only
@@ -2938,7 +2890,6 @@ v-delete-mail-account-fwd-only
 
 This function deletes fwd-only flag
 
-
 *******************************************************************
 v-delete-mail-domain
 *******************************************************************
@@ -2954,7 +2905,6 @@ v-delete-mail-domain
    
 
 This function for deleting MAIL domain. By deleting it all accounts will also be deleted.
-
 
 *******************************************************************
 v-delete-mail-domain-antispam
@@ -2972,7 +2922,6 @@ v-delete-mail-domain-antispam
 
 This function disable spamassasin for incoming emails.
 
-
 *******************************************************************
 v-delete-mail-domain-antivirus
 *******************************************************************
@@ -2988,7 +2937,6 @@ v-delete-mail-domain-antivirus
    
 
 This function disables clamav scan for incoming emails.
-
 
 *******************************************************************
 v-delete-mail-domain-catchall
@@ -3006,7 +2954,6 @@ v-delete-mail-domain-catchall
 
 This function disables mail domain cathcall.
 
-
 *******************************************************************
 v-delete-mail-domain-dkim
 *******************************************************************
@@ -3023,6 +2970,21 @@ v-delete-mail-domain-dkim
 
 This function delete DKIM domain pem.
 
+*******************************************************************
+v-delete-mail-domain-reject
+*******************************************************************
+
+**delete mail domain reject spam support**
+
+**Options**: `USER` `DOMAIN` 
+**Examples**:
+
+.. code-block:: bash
+   
+  v-delete-mail-domain-antispam admin mydomain.tld
+   
+
+The function disable spamassasin for incoming emails.
 
 *******************************************************************
 v-delete-mail-domain-smtp-relay
@@ -3040,7 +3002,6 @@ v-delete-mail-domain-smtp-relay
 
 This function removes mail domain smtp relay support.
 
-
 *******************************************************************
 v-delete-mail-domain-ssl
 *******************************************************************
@@ -3056,7 +3017,6 @@ v-delete-mail-domain-ssl
    
 
 This function delete ssl certificates.
-
 
 *******************************************************************
 v-delete-mail-domain-webmail
@@ -3074,7 +3034,6 @@ v-delete-mail-domain-webmail
 
 This function removes support for webmail from a specified mail domain.
 
-
 *******************************************************************
 v-delete-mail-domains
 *******************************************************************
@@ -3090,7 +3049,6 @@ v-delete-mail-domains
    
 
 This function for deleting all users mail domains.
-
 
 *******************************************************************
 v-delete-remote-dns-domain
@@ -3108,7 +3066,6 @@ v-delete-remote-dns-domain
 
 This function synchronize dns with the remote server.
 
-
 *******************************************************************
 v-delete-remote-dns-domains
 *******************************************************************
@@ -3118,7 +3075,6 @@ v-delete-remote-dns-domains
 **Options**: `[HOST]` 
 
 This function deletes remote dns domains.
-
 
 *******************************************************************
 v-delete-remote-dns-host
@@ -3136,7 +3092,6 @@ v-delete-remote-dns-host
 
 This function for deleting the remote dns host from hestia configuration.
 
-
 *******************************************************************
 v-delete-remote-dns-record
 *******************************************************************
@@ -3152,7 +3107,6 @@ v-delete-remote-dns-record
    
 
 This function synchronize dns with the remote server.
-
 
 *******************************************************************
 v-delete-sys-api-ip
@@ -3170,7 +3124,6 @@ v-delete-sys-api-ip
 
 
 
-
 *******************************************************************
 v-delete-sys-filemanager
 *******************************************************************
@@ -3181,17 +3134,15 @@ v-delete-sys-filemanager
 
 This function removes the File Manager and its entry points
 
-
 *******************************************************************
 v-delete-sys-firewall
 *******************************************************************
 
 **delete system firewall**
 
-**Options**: – 
+**Options**: none 
 
 This function disables firewall support
-
 
 *******************************************************************
 v-delete-sys-ip
@@ -3209,17 +3160,15 @@ v-delete-sys-ip
 
 This function for deleting a system ip. It does not allow to delete first ip on interface and do not allow to delete ip which is used by a web domain.
 
-
 *******************************************************************
 v-delete-sys-mail-queue
 *******************************************************************
 
 **delete exim mail queue**
 
-**Options**: – 
+**Options**: none 
 
 This function checks for messages stuck in the exim mail queue and prompts the user to clear the queue if desired.
-
 
 *******************************************************************
 v-delete-sys-pma-sso
@@ -3231,17 +3180,15 @@ v-delete-sys-pma-sso
 
 Disables support for SSO to phpMyAdmin
 
-
 *******************************************************************
 v-delete-sys-quota
 *******************************************************************
 
 **delete system quota**
 
-**Options**: – 
+**Options**: none 
 
 This function disables filesystem quota on /home partition
-
 
 *******************************************************************
 v-delete-sys-sftp-jail
@@ -3249,10 +3196,9 @@ v-delete-sys-sftp-jail
 
 **delete system sftp jail**
 
-**Options**: – 
+**Options**: none 
 
 This function disables sftp jailed environment
-
 
 *******************************************************************
 v-delete-sys-smtp
@@ -3260,10 +3206,9 @@ v-delete-sys-smtp
 
 **Remove SMTP Account for logging, notification and internal mail**
 
-**Options**: – 
+**Options**: none 
 
 This function allows configuring a SMTP account for the server to use for logging, notification and warn emails etc.
-
 
 *******************************************************************
 v-delete-sys-smtp-relay
@@ -3274,7 +3219,6 @@ v-delete-sys-smtp-relay
 **Options**: `` 
 
 This function disables system wide smtp relay support.
-
 
 *******************************************************************
 v-delete-user
@@ -3292,7 +3236,6 @@ v-delete-user
 
 This function deletes a certain user and all his resources such as domains, databases, cron jobs, etc.
 
-
 *******************************************************************
 v-delete-user-2fa
 *******************************************************************
@@ -3309,7 +3252,6 @@ v-delete-user-2fa
 
 This function deletes 2fa token of a user.
 
-
 *******************************************************************
 v-delete-user-auth-log
 *******************************************************************
@@ -3319,7 +3261,6 @@ v-delete-user-auth-log
 **Options**: 
 
 This function for deleting a users auth log file
-
 
 *******************************************************************
 v-delete-user-backup
@@ -3337,7 +3278,6 @@ v-delete-user-backup
 
 This function deletes user backup.
 
-
 *******************************************************************
 v-delete-user-backup-exclusions
 *******************************************************************
@@ -3353,7 +3293,6 @@ v-delete-user-backup-exclusions
    
 
 This function for deleting backup exclusion
-
 
 *******************************************************************
 v-delete-user-ips
@@ -3371,7 +3310,6 @@ v-delete-user-ips
 
 This function deletes all user's ip addresses.
 
-
 *******************************************************************
 v-delete-user-log
 *******************************************************************
@@ -3387,7 +3325,6 @@ v-delete-user-log
    
 
 This function for deleting a users log file
-
 
 *******************************************************************
 v-delete-user-notification
@@ -3405,7 +3342,6 @@ v-delete-user-notification
 
 This function deletes user notification.
 
-
 *******************************************************************
 v-delete-user-package
 *******************************************************************
@@ -3421,7 +3357,6 @@ v-delete-user-package
    
 
 This function for deleting user package.
-
 
 *******************************************************************
 v-delete-user-sftp-jail
@@ -3439,7 +3374,6 @@ v-delete-user-sftp-jail
 
 This function disables sftp jailed environment for USER
 
-
 *******************************************************************
 v-delete-user-ssh-key
 *******************************************************************
@@ -3455,7 +3389,6 @@ v-delete-user-ssh-key
    
 
 Delete user ssh key from authorized_keys
-
 
 *******************************************************************
 v-delete-user-stats
@@ -3474,7 +3407,6 @@ v-delete-user-stats
 
 This function deletes user statistics data.
 
-
 *******************************************************************
 v-delete-web-domain
 *******************************************************************
@@ -3490,7 +3422,6 @@ v-delete-web-domain
    
 
 The call of function leads to the removal of domain and all its components (statistics, folders contents, ssl certificates, etc.). This operation is not fully supported by "undo" function, so the data recovery is possible only with a help of reserve copy.
-
 
 *******************************************************************
 v-delete-web-domain-alias
@@ -3508,7 +3439,6 @@ v-delete-web-domain-alias
 
 This function of deleting the alias domain (parked domain). By this call default www aliase can be removed as well.
 
-
 *******************************************************************
 v-delete-web-domain-allow-users
 *******************************************************************
@@ -3524,7 +3454,6 @@ v-delete-web-domain-allow-users
    
 
 Enable the rule check for Enforce subdomain ownership for a specific domain. Enforce subdomain ownership setting in /edit/server/ set to no will always overwrite this behaviour eg: admin adds admin.com user can create user.admin.com
-
 
 *******************************************************************
 v-delete-web-domain-backend
@@ -3542,7 +3471,6 @@ v-delete-web-domain-backend
 
 This function of deleting the virtualhost backend configuration.
 
-
 *******************************************************************
 v-delete-web-domain-ftp
 *******************************************************************
@@ -3558,7 +3486,6 @@ v-delete-web-domain-ftp
    
 
 This function deletes additional ftp account.
-
 
 *******************************************************************
 v-delete-web-domain-httpauth
@@ -3576,7 +3503,6 @@ v-delete-web-domain-httpauth
 
 This function is used for deleting http auth user
 
-
 *******************************************************************
 v-delete-web-domain-proxy
 *******************************************************************
@@ -3592,7 +3518,6 @@ v-delete-web-domain-proxy
    
 
 This function of deleting the virtualhost proxy configuration.
-
 
 *******************************************************************
 v-delete-web-domain-redirect
@@ -3610,7 +3535,6 @@ v-delete-web-domain-redirect
 
 Function delete a forced redirect to a domain
 
-
 *******************************************************************
 v-delete-web-domain-ssl
 *******************************************************************
@@ -3626,7 +3550,6 @@ v-delete-web-domain-ssl
    
 
 This function disable https support and deletes SSL certificates.
-
 
 *******************************************************************
 v-delete-web-domain-ssl-force
@@ -3644,7 +3567,6 @@ v-delete-web-domain-ssl-force
 
 This function removes force SSL configurations.
 
-
 *******************************************************************
 v-delete-web-domain-ssl-hsts
 *******************************************************************
@@ -3660,7 +3582,6 @@ v-delete-web-domain-ssl-hsts
    
 
 This function removes force SSL configurations.
-
 
 *******************************************************************
 v-delete-web-domain-stats
@@ -3678,7 +3599,6 @@ v-delete-web-domain-stats
 
 This function of deleting site's system of statistics. Its type is automatically chooses from client's configuration file.
 
-
 *******************************************************************
 v-delete-web-domain-stats-user
 *******************************************************************
@@ -3694,7 +3614,6 @@ v-delete-web-domain-stats-user
    
 
 This function removes authentication of statistics system. If the script is called without naming a certain user, all users will be removed. After deleting all of them statistics will be accessible for view without an authentication.
-
 
 *******************************************************************
 v-delete-web-domains
@@ -3712,7 +3631,6 @@ v-delete-web-domains
 
 This function deletes all user's webdomains.
 
-
 *******************************************************************
 v-delete-web-php
 *******************************************************************
@@ -3728,7 +3646,6 @@ v-delete-web-php
    
 
 This function checks and delete a fpm php version if not used by any domain.
-
 
 *******************************************************************
 v-download-backup
@@ -3746,7 +3663,6 @@ v-download-backup
 
 This function download back-up from remote server
 
-
 *******************************************************************
 v-extract-fs-archive
 *******************************************************************
@@ -3763,17 +3679,15 @@ v-extract-fs-archive
 
 This function extracts archive into directory on the file system
 
-
 *******************************************************************
 v-generate-api-key
 *******************************************************************
 
 **generate api key**
 
-**Options**: – 
+**Options**: none 
 
 This function creates a key file in $HESTIA/data/keys/
-
 
 *******************************************************************
 v-generate-debug-report
@@ -3783,7 +3697,6 @@ v-generate-debug-report
 **Options**: 
 
 Includes shellcheck source=/etc/hestiacp/hestia.conf
-
 
 *******************************************************************
 v-generate-password-hash
@@ -3801,7 +3714,6 @@ v-generate-password-hash
 
 This function generates password hash
 
-
 *******************************************************************
 v-generate-ssl-cert
 *******************************************************************
@@ -3817,7 +3729,6 @@ v-generate-ssl-cert
    
 
 This function generates self signed SSL certificate and CSR request
-
 
 *******************************************************************
 v-get-dns-domain-value
@@ -3835,7 +3746,6 @@ v-get-dns-domain-value
 
 This function for getting a certain DNS domain parameter.
 
-
 *******************************************************************
 v-get-fs-file-type
 *******************************************************************
@@ -3851,7 +3761,6 @@ v-get-fs-file-type
    
 
 This function shows file type
-
 
 *******************************************************************
 v-get-mail-account-value
@@ -3869,7 +3778,6 @@ v-get-mail-account-value
 
 This function for getting a certain mail account parameter.
 
-
 *******************************************************************
 v-get-mail-domain-value
 *******************************************************************
@@ -3886,7 +3794,6 @@ v-get-mail-domain-value
 
 This function for getting a certain mail domain parameter.
 
-
 *******************************************************************
 v-get-sys-timezone
 *******************************************************************
@@ -3896,7 +3803,6 @@ v-get-sys-timezone
 **Options**: `[FORMAT]` 
 
 This function to get system timezone
-
 
 *******************************************************************
 v-get-sys-timezones
@@ -3914,7 +3820,6 @@ v-get-sys-timezones
 
 This function checks system timezone settings
 
-
 *******************************************************************
 v-get-user-salt
 *******************************************************************
@@ -3930,7 +3835,6 @@ v-get-user-salt
    
 
 This function provides users salt
-
 
 *******************************************************************
 v-get-user-value
@@ -3948,7 +3852,6 @@ v-get-user-value
 
 This function for obtaining certain user's parameters.
 
-
 *******************************************************************
 v-insert-dns-domain
 *******************************************************************
@@ -3958,7 +3861,6 @@ v-insert-dns-domain
 **Options**: `USER` `DATA` `[SRC]` `[FLUSH]` `[RESTART]` 
 
 This function inserts raw record to the dns.conf
-
 
 *******************************************************************
 v-insert-dns-record
@@ -3970,7 +3872,6 @@ v-insert-dns-record
 
 This function inserts raw dns record to the domain conf
 
-
 *******************************************************************
 v-insert-dns-records
 *******************************************************************
@@ -3980,6 +3881,69 @@ v-insert-dns-records
 **Options**: `USER` `DOMAIN` `DATA_FILE` `[RESTART]` 
 
 This function copy dns record to the domain conf
+
+*******************************************************************
+v-list-access-key
+*******************************************************************
+
+**list all API access keys**
+
+**Options**: `ACCESS_KEY_ID` `[FORMAT]` 
+**Examples**:
+
+.. code-block:: bash
+   
+  v-list-access-key 1234567890ABCDefghij json
+   
+
+
+
+*******************************************************************
+v-list-access-keys
+*******************************************************************
+
+**list all API access keys**
+
+**Options**: `[FORMAT]` 
+**Examples**:
+
+.. code-block:: bash
+   
+  v-list-access-keys json
+   
+
+
+
+*******************************************************************
+v-list-api
+*******************************************************************
+
+**list api**
+
+**Options**: `API` `[FORMAT]` 
+**Examples**:
+
+.. code-block:: bash
+   
+  v-list-api mail-accounts json
+   
+
+
+
+*******************************************************************
+v-list-apis
+*******************************************************************
+
+**list available APIs**
+
+**Options**: `[FORMAT]` 
+**Examples**:
+
+.. code-block:: bash
+   
+  v-list-apis json
+   
+
 
 
 *******************************************************************
@@ -3998,7 +3962,6 @@ v-list-backup-host
 
 This function for obtaining the list of backup host parameters.
 
-
 *******************************************************************
 v-list-cron-job
 *******************************************************************
@@ -4014,7 +3977,6 @@ v-list-cron-job
    
 
 This function of obtaining cron job parameters.
-
 
 *******************************************************************
 v-list-cron-jobs
@@ -4032,7 +3994,6 @@ v-list-cron-jobs
 
 This function for obtaining the list of all users cron jobs.
 
-
 *******************************************************************
 v-list-database
 *******************************************************************
@@ -4048,7 +4009,6 @@ v-list-database
    
 
 This function for obtaining of all database's parameters.
-
 
 *******************************************************************
 v-list-database-host
@@ -4066,7 +4026,6 @@ v-list-database-host
 
 This function for obtaining database host parameters.
 
-
 *******************************************************************
 v-list-database-hosts
 *******************************************************************
@@ -4082,7 +4041,6 @@ v-list-database-hosts
    
 
 This function for obtaining the list of all configured database hosts.
-
 
 *******************************************************************
 v-list-database-types
@@ -4100,7 +4058,6 @@ v-list-database-types
 
 This function for obtaining the list of database types.
 
-
 *******************************************************************
 v-list-databases
 *******************************************************************
@@ -4116,7 +4073,6 @@ v-list-databases
    
 
 This function for obtaining the list of all user's databases.
-
 
 *******************************************************************
 v-list-dns-domain
@@ -4134,7 +4090,6 @@ v-list-dns-domain
 
 This function of obtaining the list of dns domain parameters.
 
-
 *******************************************************************
 v-list-dns-domains
 *******************************************************************
@@ -4150,7 +4105,6 @@ v-list-dns-domains
    
 
 This function for obtaining all DNS domains of a user.
-
 
 *******************************************************************
 v-list-dns-records
@@ -4168,7 +4122,6 @@ v-list-dns-records
 
 This function for getting all DNS domain records.
 
-
 *******************************************************************
 v-list-dns-template
 *******************************************************************
@@ -4184,7 +4137,6 @@ v-list-dns-template
    
 
 This function for obtaining the DNS template parameters.
-
 
 *******************************************************************
 v-list-dns-templates
@@ -4202,7 +4154,6 @@ v-list-dns-templates
 
 This function for obtaining the list of all DNS templates available.
 
-
 *******************************************************************
 v-list-firewall
 *******************************************************************
@@ -4218,7 +4169,6 @@ v-list-firewall
    
 
 This function of obtaining the list of all iptables rules.
-
 
 *******************************************************************
 v-list-firewall-ban
@@ -4236,7 +4186,6 @@ v-list-firewall-ban
 
 This function of obtaining the list of currently blocked ips.
 
-
 *******************************************************************
 v-list-firewall-ipset
 *******************************************************************
@@ -4252,7 +4201,6 @@ v-list-firewall-ipset
    
 
 This function prints defined ipset lists
-
 
 *******************************************************************
 v-list-firewall-rule
@@ -4270,7 +4218,6 @@ v-list-firewall-rule
 
 This function of obtaining firewall rule parameters.
 
-
 *******************************************************************
 v-list-fs-directory
 *******************************************************************
@@ -4286,7 +4233,6 @@ v-list-fs-directory
    
 
 This function lists directory on the file system
-
 
 *******************************************************************
 v-list-letsencrypt-user
@@ -4304,7 +4250,6 @@ v-list-letsencrypt-user
 
 This function for obtaining the letsencrypt key thumbprint
 
-
 *******************************************************************
 v-list-mail-account
 *******************************************************************
@@ -4320,7 +4265,6 @@ v-list-mail-account
    
 
 This function of obtaining the list of account parameters.
-
 
 *******************************************************************
 v-list-mail-account-autoreply
@@ -4338,7 +4282,6 @@ v-list-mail-account-autoreply
 
 This function of obtaining mail account autoreply message.
 
-
 *******************************************************************
 v-list-mail-accounts
 *******************************************************************
@@ -4354,7 +4297,6 @@ v-list-mail-accounts
    
 
 This function of obtaining the list of all user domains.
-
 
 *******************************************************************
 v-list-mail-domain
@@ -4372,7 +4314,6 @@ v-list-mail-domain
 
 This function of obtaining the list of domain parameters.
 
-
 *******************************************************************
 v-list-mail-domain-dkim
 *******************************************************************
@@ -4388,7 +4329,6 @@ v-list-mail-domain-dkim
    
 
 This function of obtaining domain dkim files.
-
 
 *******************************************************************
 v-list-mail-domain-dkim-dns
@@ -4406,7 +4346,6 @@ v-list-mail-domain-dkim-dns
 
 This function of obtaining domain dkim dns records for proper setup.
 
-
 *******************************************************************
 v-list-mail-domain-ssl
 *******************************************************************
@@ -4422,7 +4361,6 @@ v-list-mail-domain-ssl
    
 
 This function of obtaining domain ssl files.
-
 
 *******************************************************************
 v-list-mail-domains
@@ -4440,7 +4378,6 @@ v-list-mail-domains
 
 This function of obtaining the list of all user domains.
 
-
 *******************************************************************
 v-list-remote-dns-hosts
 *******************************************************************
@@ -4457,7 +4394,6 @@ v-list-remote-dns-hosts
 
 This function for obtaining the list of remote dns host.
 
-
 *******************************************************************
 v-list-sys-clamd-config
 *******************************************************************
@@ -4467,7 +4403,6 @@ v-list-sys-clamd-config
 **Options**: `[FORMAT]` 
 
 This function for obtaining the list of clamd config parameters.
-
 
 *******************************************************************
 v-list-sys-config
@@ -4485,7 +4420,6 @@ v-list-sys-config
 
 This function for obtaining the list of system parameters.
 
-
 *******************************************************************
 v-list-sys-cpu-status
 *******************************************************************
@@ -4495,7 +4429,6 @@ v-list-sys-cpu-status
 **Options**: `[FORMAT]` 
 
 This function lists cpu information
-
 
 *******************************************************************
 v-list-sys-db-status
@@ -4507,7 +4440,6 @@ v-list-sys-db-status
 
 v-list-sys-db-status
 
-
 *******************************************************************
 v-list-sys-disk-status
 *******************************************************************
@@ -4517,7 +4449,6 @@ v-list-sys-disk-status
 **Options**: `[FORMAT]` 
 
 This function lists disk information
-
 
 *******************************************************************
 v-list-sys-dns-status
@@ -4529,7 +4460,6 @@ v-list-sys-dns-status
 
 This function lists dns server status
 
-
 *******************************************************************
 v-list-sys-dovecot-config
 *******************************************************************
@@ -4539,7 +4469,6 @@ v-list-sys-dovecot-config
 **Options**: `[FORMAT]` 
 
 This function for obtaining the list of dovecot config parameters.
-
 
 *******************************************************************
 v-list-sys-hestia-autoupdate
@@ -4551,7 +4480,6 @@ v-list-sys-hestia-autoupdate
 
 This function for obtaining autoupdate settings.
 
-
 *******************************************************************
 v-list-sys-hestia-ssl
 *******************************************************************
@@ -4561,7 +4489,6 @@ v-list-sys-hestia-ssl
 **Options**: `[FORMAT]` 
 
 This function of obtaining hestia ssl files.
-
 
 *******************************************************************
 v-list-sys-hestia-updates
@@ -4573,7 +4500,6 @@ v-list-sys-hestia-updates
 
 This function checks available updates for hestia packages.
 
-
 *******************************************************************
 v-list-sys-info
 *******************************************************************
@@ -4584,7 +4510,6 @@ v-list-sys-info
 
 This function checks available updates for hestia packages.
 
-
 *******************************************************************
 v-list-sys-interfaces
 *******************************************************************
@@ -4594,7 +4519,6 @@ v-list-sys-interfaces
 **Options**: `[FORMAT]` 
 
 This function for obtaining the list of network interfaces.
-
 
 *******************************************************************
 v-list-sys-ip
@@ -4612,7 +4536,6 @@ v-list-sys-ip
 
 This function for getting the list of system ip parameters.
 
-
 *******************************************************************
 v-list-sys-ips
 *******************************************************************
@@ -4622,7 +4545,6 @@ v-list-sys-ips
 **Options**: `[FORMAT]` 
 
 This function for obtaining the list of system ip adresses.
-
 
 *******************************************************************
 v-list-sys-languages
@@ -4640,7 +4562,6 @@ v-list-sys-languages
 
 This function for obtaining the available languages for HestiaCP Output is always in the ISO language code
 
-
 *******************************************************************
 v-list-sys-mail-status
 *******************************************************************
@@ -4656,7 +4577,6 @@ v-list-sys-mail-status
    
 
 This function lists mail server status
-
 
 *******************************************************************
 v-list-sys-memory-status
@@ -4674,7 +4594,6 @@ v-list-sys-memory-status
 
 This function lists virtual memory information
 
-
 *******************************************************************
 v-list-sys-mysql-config
 *******************************************************************
@@ -4684,7 +4603,6 @@ v-list-sys-mysql-config
 **Options**: `[FORMAT]` 
 
 This function for obtaining the list of mysql config parameters.
-
 
 *******************************************************************
 v-list-sys-network-status
@@ -4702,7 +4620,6 @@ v-list-sys-network-status
 
 This function lists network status
 
-
 *******************************************************************
 v-list-sys-nginx-config
 *******************************************************************
@@ -4712,7 +4629,6 @@ v-list-sys-nginx-config
 **Options**: `[FORMAT]` 
 
 This function for obtaining the list of nginx config parameters.
-
 
 *******************************************************************
 v-list-sys-pgsql-config
@@ -4724,7 +4640,6 @@ v-list-sys-pgsql-config
 
 This function for obtaining the list of postgresql config parameters.
 
-
 *******************************************************************
 v-list-sys-php
 *******************************************************************
@@ -4734,7 +4649,6 @@ v-list-sys-php
 **Options**: `[FORMAT]` 
 
 List /etc/php/* version check if folder fpm is available
-
 
 *******************************************************************
 v-list-sys-php-config
@@ -4746,7 +4660,6 @@ v-list-sys-php-config
 
 This function for obtaining the list of php config parameters.
 
-
 *******************************************************************
 v-list-sys-proftpd-config
 *******************************************************************
@@ -4757,7 +4670,6 @@ v-list-sys-proftpd-config
 
 This function for obtaining the list of proftpd config parameters.
 
-
 *******************************************************************
 v-list-sys-rrd
 *******************************************************************
@@ -4767,7 +4679,6 @@ v-list-sys-rrd
 **Options**: `[FORMAT]` 
 
 List available rrd graphics, its titles and paths.
-
 
 *******************************************************************
 v-list-sys-services
@@ -4785,7 +4696,6 @@ v-list-sys-services
 
 This function for obtaining the list of configured system services.
 
-
 *******************************************************************
 v-list-sys-shells
 *******************************************************************
@@ -4795,7 +4705,6 @@ v-list-sys-shells
 **Options**: `[FORMAT]` 
 
 This function for obtaining the list of system shells.
-
 
 *******************************************************************
 v-list-sys-spamd-config
@@ -4807,7 +4716,6 @@ v-list-sys-spamd-config
 
 This function for obtaining the list of spamassassin config parameters.
 
-
 *******************************************************************
 v-list-sys-sshd-port
 *******************************************************************
@@ -4817,7 +4725,6 @@ v-list-sys-sshd-port
 **Options**: `[FORMAT]` 
 
 This function for obtainings the port of sshd listens to
-
 
 *******************************************************************
 v-list-sys-themes
@@ -4829,7 +4736,6 @@ v-list-sys-themes
 
 This function for obtaining the list of themes in the theme library and displaying them in the backend or user interface.
 
-
 *******************************************************************
 v-list-sys-users
 *******************************************************************
@@ -4839,7 +4745,6 @@ v-list-sys-users
 **Options**: `[FORMAT]` 
 
 This function for obtaining the list of system users without detailed information.
-
 
 *******************************************************************
 v-list-sys-vsftpd-config
@@ -4851,7 +4756,6 @@ v-list-sys-vsftpd-config
 
 This function for obtaining the list of vsftpd config parameters.
 
-
 *******************************************************************
 v-list-sys-web-status
 *******************************************************************
@@ -4862,7 +4766,6 @@ v-list-sys-web-status
 
 This function lists web server status
 
-
 *******************************************************************
 v-list-sys-webmail
 *******************************************************************
@@ -4872,7 +4775,6 @@ v-list-sys-webmail
 **Options**: `[FORMAT]` 
 
 List available webmail clients
-
 
 *******************************************************************
 v-list-user
@@ -4890,7 +4792,6 @@ v-list-user
 
 This function to obtain user parameters.
 
-
 *******************************************************************
 v-list-user-auth-log
 *******************************************************************
@@ -4900,7 +4801,6 @@ v-list-user-auth-log
 **Options**: `USER` `[FORMAT]` 
 
 This function of obtaining the list of 10 last users commands.
-
 
 *******************************************************************
 v-list-user-backup
@@ -4918,7 +4818,6 @@ v-list-user-backup
 
 This function of obtaining the list of backup parameters. This call, just as all v_list_* calls, supports 3 formats - json, shell and plain.
 
-
 *******************************************************************
 v-list-user-backup-exclusions
 *******************************************************************
@@ -4934,7 +4833,6 @@ v-list-user-backup-exclusions
    
 
 This function for obtaining the backup exclusion list
-
 
 *******************************************************************
 v-list-user-backups
@@ -4952,7 +4850,6 @@ v-list-user-backups
 
 This function for obtaining the list of available user backups.
 
-
 *******************************************************************
 v-list-user-ips
 *******************************************************************
@@ -4969,7 +4866,6 @@ v-list-user-ips
 
 This function for obtaining the list of available ip addresses.
 
-
 *******************************************************************
 v-list-user-log
 *******************************************************************
@@ -4979,7 +4875,6 @@ v-list-user-log
 **Options**: `USER` `[FORMAT]` 
 
 This function of obtaining the list of 100 last users commands.
-
 
 *******************************************************************
 v-list-user-notifications
@@ -4997,7 +4892,6 @@ v-list-user-notifications
 
 This function for getting the list notifications
 
-
 *******************************************************************
 v-list-user-ns
 *******************************************************************
@@ -5014,7 +4908,6 @@ v-list-user-ns
 
 Function for obtaining the list of user's DNS servers.
 
-
 *******************************************************************
 v-list-user-package
 *******************************************************************
@@ -5024,7 +4917,6 @@ v-list-user-package
 **Options**: `PACKAGE` `[FORMAT]` 
 
 This function for getting the list of system ip parameters.
-
 
 *******************************************************************
 v-list-user-packages
@@ -5036,7 +4928,6 @@ v-list-user-packages
 
 This function for obtaining the list of available hosting packages.
 
-
 *******************************************************************
 v-list-user-ssh-key
 *******************************************************************
@@ -5046,7 +4937,6 @@ v-list-user-ssh-key
 **Options**: `USER` `[FORMAT]` 
 
 Lists $user/.ssh/authorized_keys
-
 
 *******************************************************************
 v-list-user-stats
@@ -5064,7 +4954,6 @@ v-list-user-stats
 
 This function for listing user statistics
 
-
 *******************************************************************
 v-list-users
 *******************************************************************
@@ -5075,7 +4964,6 @@ v-list-users
 
 This function to obtain the list of all system users.
 
-
 *******************************************************************
 v-list-users-stats
 *******************************************************************
@@ -5085,7 +4973,6 @@ v-list-users-stats
 **Options**: `[FORMAT]` 
 
 This function for listing overall user statistics
-
 
 *******************************************************************
 v-list-web-domain
@@ -5103,7 +4990,6 @@ v-list-web-domain
 
 This function to obtain web domain parameters.
 
-
 *******************************************************************
 v-list-web-domain-accesslog
 *******************************************************************
@@ -5119,7 +5005,6 @@ v-list-web-domain-accesslog
    
 
 This function of obtaining raw access web domain logs.
-
 
 *******************************************************************
 v-list-web-domain-errorlog
@@ -5137,7 +5022,6 @@ v-list-web-domain-errorlog
 
 This function of obtaining raw error web domain logs.
 
-
 *******************************************************************
 v-list-web-domain-ssl
 *******************************************************************
@@ -5153,7 +5037,6 @@ v-list-web-domain-ssl
    
 
 This function of obtaining domain ssl files.
-
 
 *******************************************************************
 v-list-web-domains
@@ -5171,7 +5054,6 @@ v-list-web-domains
 
 This function to obtain the list of all user web domains.
 
-
 *******************************************************************
 v-list-web-stats
 *******************************************************************
@@ -5181,7 +5063,6 @@ v-list-web-stats
 **Options**: `[FORMAT]` 
 
 This function for obtaining the list of web statistics analyzer.
-
 
 *******************************************************************
 v-list-web-templates
@@ -5193,7 +5074,6 @@ v-list-web-templates
 
 This function for obtaining the list of web templates available to a user.
 
-
 *******************************************************************
 v-list-web-templates-backend
 *******************************************************************
@@ -5203,7 +5083,6 @@ v-list-web-templates-backend
 **Options**: `[FORMAT]` 
 
 This function for obtaining the list of available backend templates.
-
 
 *******************************************************************
 v-list-web-templates-proxy
@@ -5215,7 +5094,6 @@ v-list-web-templates-proxy
 
 This function for obtaining the list of proxy templates available to a user.
 
-
 *******************************************************************
 v-log-action
 *******************************************************************
@@ -5225,7 +5103,6 @@ v-log-action
 **Options**: `LOG_TYPE` `USER` 
 
 Event Levels: info, warning, error
-
 
 *******************************************************************
 v-log-user-login
@@ -5237,7 +5114,6 @@ v-log-user-login
 
 
 
-
 *******************************************************************
 v-log-user-logout
 *******************************************************************
@@ -5245,7 +5121,6 @@ v-log-user-logout
 **Log User logout event**
 
 **Options**: `USER` `FINGERPRINT` 
-
 
 
 
@@ -5265,7 +5140,6 @@ v-move-fs-directory
 
 This function moved file or directory on the file system. This function can also be used to rename files just like normal mv command.
 
-
 *******************************************************************
 v-move-fs-file
 *******************************************************************
@@ -5281,7 +5155,6 @@ v-move-fs-file
    
 
 This function moved file or directory on the file system. This function can also be used to rename files just like normal mv command.
-
 
 *******************************************************************
 v-open-fs-config
@@ -5299,7 +5172,6 @@ v-open-fs-config
 
 This function opens/reads config files on the file system
 
-
 *******************************************************************
 v-open-fs-file
 *******************************************************************
@@ -5315,7 +5187,6 @@ v-open-fs-file
    
 
 This function opens/reads files on the file system
-
 
 *******************************************************************
 v-purge-nginx-cache
@@ -5333,7 +5204,6 @@ v-purge-nginx-cache
 
 This function purges nginx cache.
 
-
 *******************************************************************
 v-rebuild-all
 *******************************************************************
@@ -5343,7 +5213,6 @@ v-rebuild-all
 **Options**: `USER` `[RESTART]` 
 
 This function rebuilds all assets for a user account: - Web domains - DNS zones - Mail domains - Databases - Cron Jobs - User account configuration
-
 
 *******************************************************************
 v-rebuild-cron-jobs
@@ -5361,7 +5230,6 @@ v-rebuild-cron-jobs
 
 This function rebuilds system cron config file for specified user.
 
-
 *******************************************************************
 v-rebuild-database
 *******************************************************************
@@ -5377,7 +5245,6 @@ v-rebuild-database
    
 
 This function for rebuilding a single database for a user
-
 
 *******************************************************************
 v-rebuild-databases
@@ -5395,7 +5262,6 @@ v-rebuild-databases
 
 This function for rebuilding of all databases of a single user.
 
-
 *******************************************************************
 v-rebuild-dns-domain
 *******************************************************************
@@ -5411,7 +5277,6 @@ v-rebuild-dns-domain
    
 
 This function rebuilds DNS configuration files.
-
 
 *******************************************************************
 v-rebuild-dns-domains
@@ -5429,7 +5294,6 @@ v-rebuild-dns-domains
 
 This function rebuilds DNS configuration files.
 
-
 *******************************************************************
 v-rebuild-mail-domain
 *******************************************************************
@@ -5445,7 +5309,6 @@ v-rebuild-mail-domain
    
 
 This function rebuilds configuration files for a single domain.
-
 
 *******************************************************************
 v-rebuild-mail-domains
@@ -5463,7 +5326,6 @@ v-rebuild-mail-domains
 
 This function rebuilds EXIM configuration files for all mail domains.
 
-
 *******************************************************************
 v-rebuild-user
 *******************************************************************
@@ -5480,7 +5342,6 @@ v-rebuild-user
 
 This function rebuilds system user account.
 
-
 *******************************************************************
 v-rebuild-users
 *******************************************************************
@@ -5490,7 +5351,6 @@ v-rebuild-users
 **Options**: `[RESTART]` 
 
 This function rebuilds user configuration for all users.
-
 
 *******************************************************************
 v-rebuild-web-domain
@@ -5508,7 +5368,6 @@ v-rebuild-web-domain
 
 This function rebuilds web configuration files.
 
-
 *******************************************************************
 v-rebuild-web-domains
 *******************************************************************
@@ -5519,17 +5378,15 @@ v-rebuild-web-domains
 
 This function rebuilds web configuration files.
 
-
 *******************************************************************
 v-refresh-sys-theme
 *******************************************************************
 
 **change active system theme**
 
-**Options**: – 
+**Options**: none 
 
 This function for changing the currently active system theme.
-
 
 *******************************************************************
 v-rename-user-package
@@ -5547,7 +5404,6 @@ v-rename-user-package
 
 This function changes the name of an existing package.
 
-
 *******************************************************************
 v-repair-sys-config
 *******************************************************************
@@ -5558,17 +5414,15 @@ v-repair-sys-config
 
 This function repairs or restores the system configuration file.
 
-
 *******************************************************************
 v-restart-cron
 *******************************************************************
 
 **restart cron service**
 
-**Options**: – 
+**Options**: none 
 
 This function tells crond service to reread its configuration files.
-
 
 *******************************************************************
 v-restart-dns
@@ -5576,10 +5430,9 @@ v-restart-dns
 
 **restart dns service**
 
-**Options**: – 
+**Options**: none 
 
 This function tells BIND service to reload dns zone files.
-
 
 *******************************************************************
 v-restart-ftp
@@ -5587,10 +5440,9 @@ v-restart-ftp
 
 **restart ftp service**
 
-**Options**: – 
+**Options**: none 
 
 This function tells ftp server to reread its configuration.
-
 
 *******************************************************************
 v-restart-mail
@@ -5598,10 +5450,9 @@ v-restart-mail
 
 **restart mail service**
 
-**Options**: – 
+**Options**: none 
 
 This function tells exim or dovecot services to reload configuration files.
-
 
 *******************************************************************
 v-restart-proxy
@@ -5609,10 +5460,9 @@ v-restart-proxy
 
 **restart proxy server**
 
-**Options**: – 
+**Options**: none 
 
 This function reloads proxy server configuration.
-
 
 *******************************************************************
 v-restart-service
@@ -5630,7 +5480,6 @@ v-restart-service
 
 This function restarts system service.
 
-
 *******************************************************************
 v-restart-system
 *******************************************************************
@@ -5647,17 +5496,15 @@ v-restart-system
 
 This function restarts operating system.
 
-
 *******************************************************************
 v-restart-web
 *******************************************************************
 
 **restart web server**
 
-**Options**: – 
+**Options**: none 
 
 This function reloads web server configuration.
-
 
 *******************************************************************
 v-restart-web-backend
@@ -5665,10 +5512,9 @@ v-restart-web-backend
 
 **restart backend server**
 
-**Options**: – 
+**Options**: none 
 
 This function reloads backend server configuration.
-
 
 *******************************************************************
 v-restore-cron-job
@@ -5686,7 +5532,6 @@ v-restore-cron-job
 
 This function allows the user to restore a single cron job from a backup archive.
 
-
 *******************************************************************
 v-restore-database
 *******************************************************************
@@ -5702,7 +5547,6 @@ v-restore-database
    
 
 This function allows the user to restore a single database from a backup archive.
-
 
 *******************************************************************
 v-restore-dns-domain
@@ -5720,7 +5564,6 @@ v-restore-dns-domain
 
 This function allows the user to restore a single DNS domain from a backup archive.
 
-
 *******************************************************************
 v-restore-mail-domain
 *******************************************************************
@@ -5736,7 +5579,6 @@ v-restore-mail-domain
    
 
 This function allows the user to restore a single mail domain from a backup archive.
-
 
 *******************************************************************
 v-restore-user
@@ -5754,7 +5596,6 @@ v-restore-user
 
 This function for restoring user from backup. To be able to restore the backup, the archive needs to be placed in /backup.
 
-
 *******************************************************************
 v-restore-web-domain
 *******************************************************************
@@ -5770,7 +5611,6 @@ v-restore-web-domain
    
 
 This function allows the user to restore a single web domain from a backup archive.
-
 
 *******************************************************************
 v-revoke-api-key
@@ -5788,7 +5628,6 @@ v-revoke-api-key
 
 This function removes a key from in $HESTIA/data/keys/
 
-
 *******************************************************************
 v-run-cli-cmd
 *******************************************************************
@@ -5804,7 +5643,6 @@ v-run-cli-cmd
    
 
 This function runs a limited list of cli commands with dropped privileges as the specific hestia user
-
 
 *******************************************************************
 v-schedule-letsencrypt-domain
@@ -5822,7 +5660,6 @@ v-schedule-letsencrypt-domain
 
 This function adds cronjob for letsencrypt ssl certificate installation
 
-
 *******************************************************************
 v-schedule-user-backup
 *******************************************************************
@@ -5838,7 +5675,6 @@ v-schedule-user-backup
    
 
 This function for scheduling user backup creation.
-
 
 *******************************************************************
 v-schedule-user-backup-download
@@ -5856,7 +5692,6 @@ v-schedule-user-backup-download
 
 This function for scheduling user backup creation.
 
-
 *******************************************************************
 v-schedule-user-restore
 *******************************************************************
@@ -5872,7 +5707,6 @@ v-schedule-user-restore
    
 
 This function for scheduling user backup restoration.
-
 
 *******************************************************************
 v-search-command
@@ -5890,7 +5724,6 @@ v-search-command
 
 This function searches for available Hestia Control Panel commands and returns results based on the specified criteria. Originally developed for VestaCP by Federico Krum https://github.com/FastDigitalOceanDroplets/VestaCP/blob/master/files/v-search-command
 
-
 *******************************************************************
 v-search-domain-owner
 *******************************************************************
@@ -5906,7 +5739,6 @@ v-search-domain-owner
    
 
 This function that allows to find user objects.
-
 
 *******************************************************************
 v-search-fs-object
@@ -5924,7 +5756,6 @@ v-search-fs-object
 
 This function search files and directories on the file system
 
-
 *******************************************************************
 v-search-object
 *******************************************************************
@@ -5940,7 +5771,6 @@ v-search-object
    
 
 This function that allows to find system objects.
-
 
 *******************************************************************
 v-search-user-object
@@ -5958,7 +5788,6 @@ v-search-user-object
 
 This function that allows to find user objects.
 
-
 *******************************************************************
 v-start-service
 *******************************************************************
@@ -5975,17 +5804,15 @@ v-start-service
 
 This function starts system service.
 
-
 *******************************************************************
 v-stop-firewall
 *******************************************************************
 
 **stop system firewall**
 
-**Options**: – 
+**Options**: none 
 
 This function stops iptables
-
 
 *******************************************************************
 v-stop-service
@@ -6003,7 +5830,6 @@ v-stop-service
 
 This function stops system service.
 
-
 *******************************************************************
 v-suspend-cron-job
 *******************************************************************
@@ -6019,7 +5845,6 @@ v-suspend-cron-job
    
 
 This function suspends a certain job of the cron scheduler.
-
 
 *******************************************************************
 v-suspend-cron-jobs
@@ -6037,7 +5862,6 @@ v-suspend-cron-jobs
 
 This function suspends all user cron jobs.
 
-
 *******************************************************************
 v-suspend-database
 *******************************************************************
@@ -6053,7 +5877,6 @@ v-suspend-database
    
 
 This function for suspending a certain user database.
-
 
 *******************************************************************
 v-suspend-database-host
@@ -6071,7 +5894,6 @@ v-suspend-database-host
 
 This function for suspending a database server.
 
-
 *******************************************************************
 v-suspend-databases
 *******************************************************************
@@ -6087,7 +5909,6 @@ v-suspend-databases
    
 
 This function for suspending of all databases of a single user.
-
 
 *******************************************************************
 v-suspend-dns-domain
@@ -6105,7 +5926,6 @@ v-suspend-dns-domain
 
 This function suspends a certain user's domain.
 
-
 *******************************************************************
 v-suspend-dns-domains
 *******************************************************************
@@ -6121,7 +5941,6 @@ v-suspend-dns-domains
    
 
 This function suspends all user's DNS domains.
-
 
 *******************************************************************
 v-suspend-dns-record
@@ -6139,7 +5958,6 @@ v-suspend-dns-record
 
 This function suspends a certain domain record.
 
-
 *******************************************************************
 v-suspend-domain
 *******************************************************************
@@ -6155,7 +5973,6 @@ v-suspend-domain
    
 
 This function suspends web/dns/mail domain.
-
 
 *******************************************************************
 v-suspend-firewall-rule
@@ -6173,7 +5990,6 @@ v-suspend-firewall-rule
 
 This function suspends a certain firewall rule.
 
-
 *******************************************************************
 v-suspend-mail-account
 *******************************************************************
@@ -6189,7 +6005,6 @@ v-suspend-mail-account
    
 
 This function suspends mail account.
-
 
 *******************************************************************
 v-suspend-mail-accounts
@@ -6207,7 +6022,6 @@ v-suspend-mail-accounts
 
 This function suspends all mail domain accounts.
 
-
 *******************************************************************
 v-suspend-mail-domain
 *******************************************************************
@@ -6223,7 +6037,6 @@ v-suspend-mail-domain
    
 
 This function suspends mail domain.
-
 
 *******************************************************************
 v-suspend-mail-domains
@@ -6241,7 +6054,6 @@ v-suspend-mail-domains
 
 This function suspends all user's MAIL domains.
 
-
 *******************************************************************
 v-suspend-remote-dns-host
 *******************************************************************
@@ -6257,7 +6069,6 @@ v-suspend-remote-dns-host
    
 
 This function for suspending remote dns server.
-
 
 *******************************************************************
 v-suspend-user
@@ -6275,7 +6086,6 @@ v-suspend-user
 
 This function suspends a certain user and all his objects.
 
-
 *******************************************************************
 v-suspend-web-domain
 *******************************************************************
@@ -6291,7 +6101,6 @@ v-suspend-web-domain
    
 
 This function for suspending the site's operation. After blocking it all visitors will be redirected to a web page explaining the reason of suspend. By blocking the site the content of all its directories remains untouched.
-
 
 *******************************************************************
 v-suspend-web-domains
@@ -6309,7 +6118,6 @@ v-suspend-web-domains
 
 This function of suspending all user's sites.
 
-
 *******************************************************************
 v-sync-dns-cluster
 *******************************************************************
@@ -6319,7 +6127,6 @@ v-sync-dns-cluster
 **Options**: `HOST` 
 
 This function synchronize all dns domains.
-
 
 *******************************************************************
 v-unsuspend-cron-job
@@ -6337,7 +6144,6 @@ v-unsuspend-cron-job
 
 This function unsuspend certain cron job.
 
-
 *******************************************************************
 v-unsuspend-cron-jobs
 *******************************************************************
@@ -6353,7 +6159,6 @@ v-unsuspend-cron-jobs
    
 
 This function unsuspends all suspended cron jobs.
-
 
 *******************************************************************
 v-unsuspend-database
@@ -6371,7 +6176,6 @@ v-unsuspend-database
 
 This function for unsuspending database.
 
-
 *******************************************************************
 v-unsuspend-database-host
 *******************************************************************
@@ -6388,7 +6192,6 @@ v-unsuspend-database-host
 
 This function for unsuspending a database server.
 
-
 *******************************************************************
 v-unsuspend-databases
 *******************************************************************
@@ -6398,7 +6201,6 @@ v-unsuspend-databases
 **Options**: `USER` 
 
 This function for unsuspending all user's databases.
-
 
 *******************************************************************
 v-unsuspend-dns-domain
@@ -6416,7 +6218,6 @@ v-unsuspend-dns-domain
 
 This function unsuspends a certain user's domain.
 
-
 *******************************************************************
 v-unsuspend-dns-domains
 *******************************************************************
@@ -6432,7 +6233,6 @@ v-unsuspend-dns-domains
    
 
 This function unsuspends all user's DNS domains.
-
 
 *******************************************************************
 v-unsuspend-dns-record
@@ -6450,7 +6250,6 @@ v-unsuspend-dns-record
 
 This function unsuspends a certain domain record.
 
-
 *******************************************************************
 v-unsuspend-domain
 *******************************************************************
@@ -6466,7 +6265,6 @@ v-unsuspend-domain
    
 
 This function unsuspends web/dns/mail domain.
-
 
 *******************************************************************
 v-unsuspend-firewall-rule
@@ -6484,7 +6282,6 @@ v-unsuspend-firewall-rule
 
 This function unsuspends a certain firewall rule.
 
-
 *******************************************************************
 v-unsuspend-mail-account
 *******************************************************************
@@ -6500,7 +6297,6 @@ v-unsuspend-mail-account
    
 
 This function unsuspends mail account.
-
 
 *******************************************************************
 v-unsuspend-mail-accounts
@@ -6518,7 +6314,6 @@ v-unsuspend-mail-accounts
 
 This function unsuspends all mail domain accounts.
 
-
 *******************************************************************
 v-unsuspend-mail-domain
 *******************************************************************
@@ -6534,7 +6329,6 @@ v-unsuspend-mail-domain
    
 
 This function unsuspends mail domain.
-
 
 *******************************************************************
 v-unsuspend-mail-domains
@@ -6552,7 +6346,6 @@ v-unsuspend-mail-domains
 
 This function unsuspends all user's MAIL domains.
 
-
 *******************************************************************
 v-unsuspend-remote-dns-host
 *******************************************************************
@@ -6568,7 +6361,6 @@ v-unsuspend-remote-dns-host
    
 
 This function for unsuspending remote dns server.
-
 
 *******************************************************************
 v-unsuspend-user
@@ -6586,7 +6378,6 @@ v-unsuspend-user
 
 This function unsuspends user and all his objects.
 
-
 *******************************************************************
 v-unsuspend-web-domain
 *******************************************************************
@@ -6602,7 +6393,6 @@ v-unsuspend-web-domain
    
 
 This function of unsuspending the domain.
-
 
 *******************************************************************
 v-unsuspend-web-domains
@@ -6620,7 +6410,6 @@ v-unsuspend-web-domains
 
 This function of unsuspending all user's sites.
 
-
 *******************************************************************
 v-update-database-disk
 *******************************************************************
@@ -6636,7 +6425,6 @@ v-update-database-disk
    
 
 This function recalculates disk usage for specific database.
-
 
 *******************************************************************
 v-update-databases-disk
@@ -6654,7 +6442,6 @@ v-update-databases-disk
 
 This function recalculates disk usage for all user databases.
 
-
 *******************************************************************
 v-update-dns-templates
 *******************************************************************
@@ -6665,17 +6452,15 @@ v-update-dns-templates
 
 This function for obtaining updated dns templates from Hestia package.
 
-
 *******************************************************************
 v-update-firewall
 *******************************************************************
 
 **update system firewall rules**
 
-**Options**: – 
+**Options**: none 
 
 This function updates iptables rules
-
 
 *******************************************************************
 v-update-firewall-ipset
@@ -6686,7 +6471,6 @@ v-update-firewall-ipset
 **Options**: `[REFRESH]` 
 
 This function creates ipset lists and updates the lists if they are expired or ondemand
-
 
 *******************************************************************
 v-update-host-certificate
@@ -6704,17 +6488,15 @@ v-update-host-certificate
 
 This function updates the SSL certificate used for Hestia Control Panel.
 
-
 *******************************************************************
 v-update-letsencrypt-ssl
 *******************************************************************
 
 **update letsencrypt ssl certificates**
 
-**Options**: – 
+**Options**: none 
 
 This function for renew letsencrypt expired ssl certificate for all users
-
 
 *******************************************************************
 v-update-mail-domain-disk
@@ -6732,7 +6514,6 @@ v-update-mail-domain-disk
 
 This function updates domain disk usage.
 
-
 *******************************************************************
 v-update-mail-domain-ssl
 *******************************************************************
@@ -6748,7 +6529,6 @@ v-update-mail-domain-ssl
    
 
 This function updates the SSL certificate for a domain. Parameter ssl_dir is a path to directory where 2 or 3 ssl files can be found. Certificate file domain.tld.crt and its key domain.tld.key are mandatory. Certificate authority domain.tld.ca file is optional.
-
 
 *******************************************************************
 v-update-mail-domains-disk
@@ -6766,7 +6546,6 @@ v-update-mail-domains-disk
 
 This function calculates disk usage for all mail domains.
 
-
 *******************************************************************
 v-update-mail-templates
 *******************************************************************
@@ -6776,7 +6555,6 @@ v-update-mail-templates
 **Options**: `[RESTART]` `[SKIP]` 
 
 This function for obtaining updated webmail templates from Hestia package.
-
 
 *******************************************************************
 v-update-sys-defaults
@@ -6795,7 +6573,6 @@ v-update-sys-defaults
 
 This function updates the known key/value pair database
 
-
 *******************************************************************
 v-update-sys-hestia
 *******************************************************************
@@ -6812,17 +6589,15 @@ v-update-sys-hestia
 
 This function runs as apt update trigger. It pulls shell script from hestia server and runs it. (hestia, hestia-nginx and hestia-php are valid options)
 
-
 *******************************************************************
 v-update-sys-hestia-all
 *******************************************************************
 
 **update all hestia packages**
 
-**Options**: – 
+**Options**: none 
 
 This function of updating all hestia packages
-
 
 *******************************************************************
 v-update-sys-hestia-git
@@ -6846,14 +6621,13 @@ v-update-sys-hestia-git
 
 Downloads and compiles/installs packages from GitHub repositories
 
-
 *******************************************************************
 v-update-sys-ip
 *******************************************************************
 
 **update system ip**
 
-**Options**: – 
+**Options**: none 
 **Examples**:
 
 .. code-block:: bash
@@ -6863,7 +6637,6 @@ v-update-sys-ip
    
 
 This function scans configured ip in the system and register them with hestia internal database. This call is intended for use on vps servers, where ip is set by hypervizor.
-
 
 *******************************************************************
 v-update-sys-ip-counters
@@ -6875,7 +6648,6 @@ v-update-sys-ip-counters
 
 Function updates usage U_WEB_ADOMAINS and U_SYS_USERS counters.
 
-
 *******************************************************************
 v-update-sys-queue
 *******************************************************************
@@ -6886,17 +6658,15 @@ v-update-sys-queue
 
 This function is responsible queue processing. Restarts of services, scheduled backups, web log parsing and other heavy resource consuming operations are handled by this script. It helps to optimize system behaviour. In a nutshell Apache will be restarted only once even if 10 domains are added or deleted.
 
-
 *******************************************************************
 v-update-sys-rrd
 *******************************************************************
 
 **update system rrd charts**
 
-**Options**: – 
+**Options**: none 
 
 This function is wrapper for all rrd functions. It updates all v-update-sys-rrd_* at once.
-
 
 *******************************************************************
 v-update-sys-rrd-apache2
@@ -6908,7 +6678,6 @@ v-update-sys-rrd-apache2
 
 This function is for updating apache rrd database and graphic.
 
-
 *******************************************************************
 v-update-sys-rrd-ftp
 *******************************************************************
@@ -6918,7 +6687,6 @@ v-update-sys-rrd-ftp
 **Options**: `PERIOD` 
 
 This function is for updating ftpd rrd database and graphic.
-
 
 *******************************************************************
 v-update-sys-rrd-httpd
@@ -6930,7 +6698,6 @@ v-update-sys-rrd-httpd
 
 This function is for updating apache rrd database and graphic.
 
-
 *******************************************************************
 v-update-sys-rrd-la
 *******************************************************************
@@ -6940,7 +6707,6 @@ v-update-sys-rrd-la
 **Options**: `PERIOD` 
 
 This function is for updating load average rrd database and graphic.
-
 
 *******************************************************************
 v-update-sys-rrd-mail
@@ -6952,7 +6718,6 @@ v-update-sys-rrd-mail
 
 This function is for updating mail rrd database and graphic.
 
-
 *******************************************************************
 v-update-sys-rrd-mem
 *******************************************************************
@@ -6962,7 +6727,6 @@ v-update-sys-rrd-mem
 **Options**: `PERIOD` 
 
 This function is for updating memory rrd database and graphic.
-
 
 *******************************************************************
 v-update-sys-rrd-mysql
@@ -6974,7 +6738,6 @@ v-update-sys-rrd-mysql
 
 This function is for updating mysql rrd database and graphic.
 
-
 *******************************************************************
 v-update-sys-rrd-net
 *******************************************************************
@@ -6984,7 +6747,6 @@ v-update-sys-rrd-net
 **Options**: `PERIOD` 
 
 This function is for updating network usage rrd database and graphic.
-
 
 *******************************************************************
 v-update-sys-rrd-nginx
@@ -6996,7 +6758,6 @@ v-update-sys-rrd-nginx
 
 This function is for updating nginx rrd database and graphic.
 
-
 *******************************************************************
 v-update-sys-rrd-pgsql
 *******************************************************************
@@ -7007,7 +6768,6 @@ v-update-sys-rrd-pgsql
 
 This function is for updating postgresql rrd database and graphic.
 
-
 *******************************************************************
 v-update-sys-rrd-ssh
 *******************************************************************
@@ -7017,7 +6777,6 @@ v-update-sys-rrd-ssh
 **Options**: `PERIOD` 
 
 This function is for updating ssh rrd database and graphic.
-
 
 *******************************************************************
 v-update-user-backup-exclusions
@@ -7035,7 +6794,6 @@ v-update-user-backup-exclusions
 
 This function for updating backup exclusion list
 
-
 *******************************************************************
 v-update-user-counters
 *******************************************************************
@@ -7051,7 +6809,6 @@ v-update-user-counters
    
 
 Function updates usage counters like U_WEB_DOMAINS, U_MAIL_ACCOUNTS, etc.
-
 
 *******************************************************************
 v-update-user-disk
@@ -7069,7 +6826,6 @@ v-update-user-disk
 
 The functions recalculates disk usage and updates database.
 
-
 *******************************************************************
 v-update-user-package
 *******************************************************************
@@ -7085,7 +6841,6 @@ v-update-user-package
    
 
 This function propagates package to connected users.
-
 
 *******************************************************************
 v-update-user-quota
@@ -7103,7 +6858,6 @@ v-update-user-quota
 
 The functions upates disk quota for specific user
 
-
 *******************************************************************
 v-update-user-stats
 *******************************************************************
@@ -7119,7 +6873,6 @@ v-update-user-stats
    
 
 Function logs user parameters into statistics database.
-
 
 *******************************************************************
 v-update-web-domain-disk
@@ -7137,7 +6890,6 @@ v-update-web-domain-disk
 
 This function recalculates disk usage for specific webdomain.
 
-
 *******************************************************************
 v-update-web-domain-ssl
 *******************************************************************
@@ -7153,7 +6905,6 @@ v-update-web-domain-ssl
    
 
 This function updates the SSL certificate for a domain. Parameter ssl_dir is a path to directory where 2 or 3 ssl files can be found. Certificate file domain.tld.crt and its key domain.tld.key are mandatory. Certificate authority domain.tld.ca file is optional.
-
 
 *******************************************************************
 v-update-web-domain-stat
@@ -7171,7 +6922,6 @@ v-update-web-domain-stat
 
 This function runs log analyzer for specific webdomain.
 
-
 *******************************************************************
 v-update-web-domain-traff
 *******************************************************************
@@ -7187,7 +6937,6 @@ v-update-web-domain-traff
    
 
 This function recalculates bandwidth usage for specific domain.
-
 
 *******************************************************************
 v-update-web-domains-disk
@@ -7205,7 +6954,6 @@ v-update-web-domains-disk
 
 This function recalculates disk usage for all user webdomains.
 
-
 *******************************************************************
 v-update-web-domains-stat
 *******************************************************************
@@ -7221,7 +6969,6 @@ v-update-web-domains-stat
    
 
 This function runs log analyzer usage for all user webdomains.
-
 
 *******************************************************************
 v-update-web-domains-traff
@@ -7239,7 +6986,6 @@ v-update-web-domains-traff
 
 This function recalculates bandwidth usage for all user webdomains.
 
-
 *******************************************************************
 v-update-web-templates
 *******************************************************************
@@ -7249,5 +6995,4 @@ v-update-web-templates
 **Options**: `[RESTART]` `[SKIP]` 
 
 This function for obtaining updated web (Nginx/Apache2/PHP) templates from the Hestia package.
-
 

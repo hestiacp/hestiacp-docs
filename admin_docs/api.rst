@@ -2,9 +2,11 @@
 Rest Api
 ##################################
 
-The Hestia WEB API is available to perform core functions of the Control Panel. We use it internaly to synchronyze DNS clusters, to integrate WHMCS billing system  The API can be used as well to create new user accounts, domains, databases or even to build an alternative web interface.
+The Hestia WEB API is available to perform core functions of the Control Panel. We use it internally to synchronise DNS clusters, to integrate WHMCS billing system  The API can be used as well to create new user accounts, domains, databases or even to build an alternative web interface.
 
 This reference provides php code samples demonstrating how you can seamlessly integrate API into your application or script. However you can use other languages to communicate with API.
+
+With the release of Hestia 1.6.0 we have introduced a more advanced api system and it will allow "standard" users to use specific commands.
 
 .. toctree::
   :maxdepth: 2
@@ -16,7 +18,7 @@ This reference provides php code samples demonstrating how you can seamlessly in
 Unable to connect to the api
 ************************************************
    
-With the release of 1.4 Hestia has decided it was needed to tighten the security. If you connect from a remote server to the api. You are required to enter the ip address into the white. By default 127.0.0.1 is always allowed. If you need multiple ip addresses separate them with an enter.
+With the release of 1.4 Hestia has decided it was needed to tighten the security. If you connect from a remote server to the api. You are required to enter the ip address into the white. If you need multiple ip addresses separate them with an enter.
    
 .. image:: ../images/api/api-1.png
     :width: 600px
@@ -29,7 +31,40 @@ Can I disable the api
 ************************************************
    
 Disable the api via the settings. The file will be deleted from the server and all connections will get ignored. Please note some functions may not work without the api enabled.
-     
+
+************************************************
+API Key vs Password vs Access Key
+************************************************
+  
+  # Password 
+  
+  - Only to be used by de admin user   
+  - Loose the posiblity to change your password unless you also update the locations
+  - User is allowed to run all commands 
+  
+  # API Key
+  
+  - Only to be used by the admin user
+  - Allow the user to change the admin password
+  - User is allowed to run all commands 
+  
+  # Access keys 
+  
+  - Ability limited permissions that a user can do with an access key (For example v-pruge-nginx-cache only for 1 specific user)
+  - Ability to disable login via other methods but still allow the use of api keys
+  - Option to disable the use of access key by standaard users
+  - Limited permissions that an access key can run. For example only DNS cluster command for sync-dns-cluster permissions
+  
+************************************************
+How to setup Access key 
+************************************************
+
+Go to Edit user and "Access key" then click "Add Access key"
+
+Fill the form and submit. If the software you are using already supports the hash format use ACCESS_KEY:SECRET_KEY
+
+Please note safe the SECRET_KEY well you are not able to retrieve it.
+
 ************************************************
 Return Codes
 ************************************************

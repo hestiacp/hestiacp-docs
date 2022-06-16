@@ -34,6 +34,8 @@ This will generate an API key. Replace the username "admin" with the generated k
 
 This way you can set up master->slave or master-master-master cluster. There is no limitation on how to chain dns servers.
 
+With the new API system you can also replace api_key with access_key:secret_key 
+
 ************************************************
 Can I separate DNS accounts by users 
 ************************************************
@@ -42,13 +44,17 @@ Yes you can just supply the user variable behind the command.
 
 .. code-block:: bash
 
-    v-add-remote-dns-host slave.yourhost.com 8083 admin p4sw0rd useraccount
+    v-add-remote-dns-host slave.yourhost.com 8083 admin p4sw0rd '' useraccount
 
 Or 
 
 .. code-block:: bash   
 
-    v-add-remote-dns-host slave.yourhost.com 8083 api_key '' useraccount
+    v-add-remote-dns-host slave.yourhost.com 8083 api_key '' '' useraccount
+
+With the new API system you can also replace api_key with access_key:secret_key 
+
+Please note that currently only the user dns-user is exempted from syncing to other servers. If you have a DNS cluster with multiple master slaves you might run in issues.
     
 ************************************************
 I am not able to add a server as DNS host 

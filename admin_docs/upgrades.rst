@@ -1,6 +1,10 @@
-# Upgrading Operating systems
+#######################################
+Upgrading Operating systems
+#######################################
 
-# General
+*********************************************************
+General
+*********************************************************
 
 ..note::
 
@@ -18,7 +22,9 @@ Follow system instructions to upgrade your Operating system
 
 When done make sure to check if the files in /etc/apt/sources.list.d are not hashed out. If so remove the hash and run apt update && apt upgrade again.
 
-## Debian 10 Buster to Debian 11 Bullseye
+*********************************************************
+Debian 10 Buster to Debian 11 Bullseye
+*********************************************************
 
 If you want to use sha512 Password encryption 
 
@@ -75,10 +81,14 @@ Comment out line 29 in
 
 https://github.com/hestiacp/hestiacp/blob/1ff8a4e5207aae1e241954a83b7e8070bcdca788/install/deb/proftpd/proftpd.conf#L29
 
-## Ubuntu 18.04 Bionic to Ubuntu 20.04 Focal
+*********************************************************
+Ubuntu 18.04 Bionic to Ubuntu 20.04 Focal
+*********************************************************
 
 No issues have been found in the past
 
-##Older versions
+*********************************************************
+Older versions
+*********************************************************
 
 We haven't tested a upgrade path from Ubuntu 16.04 to Ubuntu 20.04 or Debian 8 Jessy to Debian 10

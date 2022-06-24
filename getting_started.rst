@@ -18,7 +18,7 @@ Log in to your server as *root*, either directly or via SSH to install HestiaCP 
     bash hst-install.sh
 
 .. note::
-If your not *root*, the whole process can fail!
+  If your not *root*, the whole process can fail!
 
 ***************************************
 Requirements
@@ -73,8 +73,8 @@ You will see the entire list of options available
 **Example of usage:** *bash hst-install.sh -w yes -t no -c no -x yes -z yes -b yes -i yes -m yes -l de  \\                -s hostname.youdomain.tld -e yourmail@mail.com -p yourpasswordhere -a no -k no -o no*
 
 .. note::
-Here is a small tool to create a setup string for you:
-https://gabizz.github.io/hestiacp-scriptline-generator/
+  Here is a small tool to create a setup string for you:
+  https://gabizz.github.io/hestiacp-scriptline-generator/
 
 Then Hestia will install following software
 on your system:

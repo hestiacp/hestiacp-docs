@@ -1,0 +1,17 @@
+---
+kind: pipeline
+type: docker
+name: Test build
+
+concurrency:
+  limit: 1
+
+steps:
+    - name: Build
+      image: sphinxdoc/sphinx
+      commands:
+        - make clean
+        - make html
+  
+  trigger:
+     event: [ pull_request, push ] 

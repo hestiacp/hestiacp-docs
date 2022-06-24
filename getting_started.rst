@@ -25,7 +25,7 @@ Requirements
 ***************************************
 
 - CPU Architecture: AMD64 (x86_64 Intel or AMD) or ARM64 (Aarch64)
-- Debian 11, 10 or 9
+- Debian 11 or 10
 - Ubuntu 20.04 LTS or 18.04 LTS
 
 .. note::

@@ -44,15 +44,21 @@ If you have ProFTPD installed
 
 Comment out line 29 in 
 
-/etc/profpd/prodtpd.conf 
+.. code-block:: bash
+    
+    /etc/profpd/prodtpd.conf 
 
 https://github.com/hestiacp/hestiacp/blob/1ff8a4e5207aae1e241954a83b7e8070bcdca788/install/deb/proftpd/proftpd.conf#L29
 
-## Debian 9 Stretch to Debian 10 Buster
+*********************************************************
+Debian 9 Stretch to Debian 10 Buster
+*********************************************************
 
 No issues have been found in the past
 
-## Ubuntu 20.04 Focal to Ubuntu 22.04 Jammy
+*********************************************************
+Ubuntu 20.04 Focal to Ubuntu 22.04 Jammy
+*********************************************************
 
 ..note::
 
@@ -77,7 +83,9 @@ If you have ProFTPD installed
 
 Comment out line 29 in 
 
-/etc/profpd/prodtpd.conf 
+.. code-block:: bash
+    
+    /etc/profpd/prodtpd.conf 
 
 https://github.com/hestiacp/hestiacp/blob/1ff8a4e5207aae1e241954a83b7e8070bcdca788/install/deb/proftpd/proftpd.conf#L29
 

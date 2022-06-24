@@ -35,30 +35,32 @@ Disable the api via the settings. The file will be deleted from the server and a
 ************************************************
 API Key vs Password vs Access Key
 ************************************************
+
+Advantages Access key vs API key vs Password
   
-  ########
-  Password 
-  ########
+########
+Password 
+########
    
   - Only to be used by de admin user   
-  - Loose the posiblity to change your password unless you also update the locations
+  - Loose the possibility to change your password unless you also update the locations
   - User is allowed to run all commands 
   
-  ########
-  API Key
-  ########
+########
+API Key
+########
   
   - Only to be used by the admin user
   - Allow the user to change the admin password
   - User is allowed to run all commands 
   
-  ################
-  Access keys 
-  ################
+################
+Access keys 
+################
   
   - Ability limited permissions that a user can do with an access key (For example v-pruge-nginx-cache only for 1 specific user)
   - Ability to disable login via other methods but still allow the use of api keys
-  - Option to disable the use of access key by standaard users
+  - Option to disable the use of access key by standard users
   - Limited permissions that an access key can run. For example only DNS cluster command for sync-dns-cluster permissions
   
 ************************************************

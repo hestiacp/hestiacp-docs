@@ -29,10 +29,10 @@ Requirements
 - Ubuntu 20.04 LTS or 18.04 LTS
 
 .. note::
-32 bit operating systems are not supported!
+  32 bit operating systems are not supported!
 
 .. note::
-Hestia Control Panel must be installed on top of a fresh operating system installation to ensure proper functionality.
+  Hestia Control Panel must be installed on top of a fresh operating system installation to ensure proper functionality.
 
 *****************************************
 All available options of install script

@@ -10,6 +10,7 @@ steps:
     - name: Build
       image: sphinxdoc/sphinx
       commands:
+        - pip3 install -r requirements.txt
         - make clean
         - make html
   

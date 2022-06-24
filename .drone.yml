@@ -13,5 +13,5 @@ steps:
         - make clean
         - make html
   
-  trigger:
-     event: [ pull_request, push ] 
+trigger:
+    event: [ pull_request, push ] 

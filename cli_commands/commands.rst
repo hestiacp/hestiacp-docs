@@ -73,7 +73,7 @@ v-add-cron-letsencrypt-job
 
 **add cron job for Let's Encrypt certificates**
 
-**Options**: none 
+**Options**: – 
 
 This function adds a new cron job for Let's Encrypt.
 
@@ -99,7 +99,7 @@ v-add-cron-restart-job
 
 **add cron reports**
 
-**Options**: none 
+**Options**: – 
 
 This function for enabling restart cron tasks
 
@@ -366,7 +366,7 @@ v-add-letsencrypt-host
 
 **add letsencrypt for host and backend**
 
-**Options**: none 
+**Options**: – 
 
 This function check and validates the backend certificate and generate a new let's encrypt certificate.
 
@@ -472,7 +472,7 @@ v-add-mail-domain
 
 **add mail domain**
 
-**Options**: `USER` `DOMAIN` `[ANTISPAM]` `[ANTIVIRUS]` `[DKIM]` `[DKIM_SIZE]` 
+**Options**: `USER` `DOMAIN` `[ANTISPAM]` `[ANTIVIRUS]` `[DKIM]` `[DKIM_SIZE]` `[RESTART]` `[REJECT_SPAM]` 
 **Examples**:
 
 .. code-block:: bash
@@ -691,7 +691,7 @@ v-add-sys-firewall
 
 **add system firewall**
 
-**Options**: none 
+**Options**: – 
 
 This function enables the system firewall.
 
@@ -709,7 +709,7 @@ v-add-sys-ip
   v-add-sys-ip 216.239.32.21 255.255.255.0
    
 
-This function adds ip address into a system. It also creates rc scripts. You can specify ip name which will be used as root domain for temporary aliases. For example, if you set a1.myhosting.com as name, each new domain created on this ip will automatically receive alias $domain.a1.myhosting.com. Of course you must have wildcard record `*`.a1.myhosting.com pointed to ip. This feature is very handy when customer wants to test domain before dns migration.
+This function adds ip address into a system. It also creates rc scripts. You can specify ip name which will be used as root domain for temporary aliases. For example, if you set a1.myhosting.com as name, each new domain created on this ip will automatically receive alias $domain.a1.myhosting.com. Of course you must have wildcard record *.a1.myhosting.com pointed to ip. This feature is very handy when customer wants to test domain before dns migration.
 
 *******************************************************************
 v-add-sys-phpmailer
@@ -737,7 +737,7 @@ v-add-sys-quota
 
 **add system quota**
 
-**Options**: none 
+**Options**: – 
 
 This function enables filesystem quota on /home partition Some kernels do require additional packages to be installed first
 
@@ -965,7 +965,7 @@ v-add-web-domain-alias
   v-add-web-domain-alias admin acme.com www.acme.com yes
    
 
-This function adds one or more aliases to a domain (it is also called "domain parking"). This function supports wildcards `*`.domain.tpl.
+This function adds one or more aliases to a domain (it is also called "domain parking"). This function supports wildcards *.domain.tpl.
 
 *******************************************************************
 v-add-web-domain-allow-users
@@ -1190,7 +1190,7 @@ v-backup-users
 
 **backup all users**
 
-**Options**: none 
+**Options**: – 
 
 This function backups all system users.
 
@@ -2476,7 +2476,7 @@ v-delete-cron-hestia-autoupdate
 
 **delete hestia autoupdate cron job**
 
-**Options**: none 
+**Options**: – 
 
 This function deletes hestia autoupdate cron job.
 
@@ -2518,7 +2518,7 @@ v-delete-cron-restart-job
 
 **delete restart job**
 
-**Options**: none 
+**Options**: – 
 
 This function for disabling restart cron tasks
 
@@ -3140,7 +3140,7 @@ v-delete-sys-firewall
 
 **delete system firewall**
 
-**Options**: none 
+**Options**: – 
 
 This function disables firewall support
 
@@ -3166,7 +3166,7 @@ v-delete-sys-mail-queue
 
 **delete exim mail queue**
 
-**Options**: none 
+**Options**: – 
 
 This function checks for messages stuck in the exim mail queue and prompts the user to clear the queue if desired.
 
@@ -3186,7 +3186,7 @@ v-delete-sys-quota
 
 **delete system quota**
 
-**Options**: none 
+**Options**: – 
 
 This function disables filesystem quota on /home partition
 
@@ -3196,7 +3196,7 @@ v-delete-sys-sftp-jail
 
 **delete system sftp jail**
 
-**Options**: none 
+**Options**: – 
 
 This function disables sftp jailed environment
 
@@ -3206,7 +3206,7 @@ v-delete-sys-smtp
 
 **Remove SMTP Account for logging, notification and internal mail**
 
-**Options**: none 
+**Options**: – 
 
 This function allows configuring a SMTP account for the server to use for logging, notification and warn emails etc.
 
@@ -3685,7 +3685,7 @@ v-generate-api-key
 
 **generate api key**
 
-**Options**: none 
+**Options**: – 
 
 This function creates a key file in $HESTIA/data/keys/
 
@@ -5384,7 +5384,7 @@ v-refresh-sys-theme
 
 **change active system theme**
 
-**Options**: none 
+**Options**: – 
 
 This function for changing the currently active system theme.
 
@@ -5420,7 +5420,7 @@ v-restart-cron
 
 **restart cron service**
 
-**Options**: none 
+**Options**: – 
 
 This function tells crond service to reread its configuration files.
 
@@ -5430,7 +5430,7 @@ v-restart-dns
 
 **restart dns service**
 
-**Options**: none 
+**Options**: – 
 
 This function tells BIND service to reload dns zone files.
 
@@ -5440,7 +5440,7 @@ v-restart-ftp
 
 **restart ftp service**
 
-**Options**: none 
+**Options**: – 
 
 This function tells ftp server to reread its configuration.
 
@@ -5450,7 +5450,7 @@ v-restart-mail
 
 **restart mail service**
 
-**Options**: none 
+**Options**: `[RESTART]` 
 
 This function tells exim or dovecot services to reload configuration files.
 
@@ -5460,7 +5460,13 @@ v-restart-proxy
 
 **restart proxy server**
 
-**Options**: none 
+**Options**: – 
+**Examples**:
+
+.. code-block:: bash
+   
+  v-restart-proxy [RESTART]
+   
 
 This function reloads proxy server configuration.
 
@@ -5502,7 +5508,7 @@ v-restart-web
 
 **restart web server**
 
-**Options**: none 
+**Options**: `[RESTARRT]` 
 
 This function reloads web server configuration.
 
@@ -5512,7 +5518,7 @@ v-restart-web-backend
 
 **restart backend server**
 
-**Options**: none 
+**Options**: – 
 
 This function reloads backend server configuration.
 
@@ -5810,7 +5816,7 @@ v-stop-firewall
 
 **stop system firewall**
 
-**Options**: none 
+**Options**: – 
 
 This function stops iptables
 
@@ -6458,7 +6464,7 @@ v-update-firewall
 
 **update system firewall rules**
 
-**Options**: none 
+**Options**: – 
 
 This function updates iptables rules
 
@@ -6494,7 +6500,7 @@ v-update-letsencrypt-ssl
 
 **update letsencrypt ssl certificates**
 
-**Options**: none 
+**Options**: – 
 
 This function for renew letsencrypt expired ssl certificate for all users
 
@@ -6595,7 +6601,7 @@ v-update-sys-hestia-all
 
 **update all hestia packages**
 
-**Options**: none 
+**Options**: – 
 
 This function of updating all hestia packages
 
@@ -6627,7 +6633,7 @@ v-update-sys-ip
 
 **update system ip**
 
-**Options**: none 
+**Options**: – 
 **Examples**:
 
 .. code-block:: bash
@@ -6664,7 +6670,7 @@ v-update-sys-rrd
 
 **update system rrd charts**
 
-**Options**: none 
+**Options**: – 
 
 This function is wrapper for all rrd functions. It updates all v-update-sys-rrd_* at once.
 

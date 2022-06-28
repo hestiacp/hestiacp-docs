@@ -709,7 +709,7 @@ v-add-sys-ip
   v-add-sys-ip 216.239.32.21 255.255.255.0
    
 
-This function adds ip address into a system. It also creates rc scripts. You can specify ip name which will be used as root domain for temporary aliases. For example, if you set a1.myhosting.com as name, each new domain created on this ip will automatically receive alias $domain.a1.myhosting.com. Of course you must have wildcard record *.a1.myhosting.com pointed to ip. This feature is very handy when customer wants to test domain before dns migration.
+This function adds ip address into a system. It also creates rc scripts. You can specify ip name which will be used as root domain for temporary aliases. For example, if you set a1.myhosting.com as name, each new domain created on this ip will automatically receive alias $domain.a1.myhosting.com. Of course you must have wildcard record `*`.a1.myhosting.com pointed to ip. This feature is very handy when customer wants to test domain before dns migration.
 
 *******************************************************************
 v-add-sys-phpmailer
@@ -965,7 +965,7 @@ v-add-web-domain-alias
   v-add-web-domain-alias admin acme.com www.acme.com yes
    
 
-This function adds one or more aliases to a domain (it is also called "domain parking"). This function supports wildcards *.domain.tpl.
+This function adds one or more aliases to a domain (it is also called "domain parking"). This function supports wildcards `*`.domain.tpl.
 
 *******************************************************************
 v-add-web-domain-allow-users

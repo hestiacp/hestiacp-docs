@@ -5,9 +5,6 @@ Release notes for HestiaCP v1.6.1
 Release date: June 28 2022
 
 ################
-Important Notes
-
-################
 Bugfixes
 ################
 

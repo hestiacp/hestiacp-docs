@@ -17,6 +17,8 @@ Log in to your server as *root*, either directly or via SSH to install HestiaCP 
     wget https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh
     bash hst-install.sh
 
+Then Hestiacp is available on https://127.0.0.1:8083/
+
 .. note::
   If your not *root*, the whole process can fail!
 

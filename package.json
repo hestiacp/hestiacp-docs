@@ -1,15 +1,15 @@
 {
-  "name": "hestia-docs",
-  "version": "1.0.0",
-  "private": true,
-  "license": "GPL-3.0-or-later",
-  "scripts": {
-    "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
-    "serve": "vitepress serve docs"
-  },
-  "devDependencies": {
-    "vitepress": "^1.0.0-alpha.4",
-    "vue": "^3.2.37"
-  }
+	"name": "hestiacp-docs",
+	"version": "1.6.5",
+	"private": true,
+	"license": "GPL-3.0-or-later",
+	"scripts": {
+		"dev": "vitepress dev",
+		"build": "vitepress build",
+		"serve": "vitepress serve"
+	},
+	"devDependencies": {
+		"vitepress": "^1.0.0-alpha.4",
+		"vue": "^3.2.37"
+	}
 }

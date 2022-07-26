@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   lang: "en-US",
   title: "Hestia Control Panel",
-  titleTemplate: "An open-source Linux web server control panel.",
+  titleTemplate: "Hestia Control Panel",
   description: "An open-source Linux web server control panel.",
 
   lastUpdated: true,

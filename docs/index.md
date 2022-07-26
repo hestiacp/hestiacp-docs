@@ -1,8 +1,8 @@
 ---
 layout: home
 
-title: VitePress
-titleTemplate: Vite & Vue Powered Static Site Generator
+title: Hestia Control Panel
+titleTemplate: An open-source Linux web server control panel
 
 hero:
   name: Hestia
@@ -10,7 +10,7 @@ hero:
   tagline: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
   image:
     src: https://www.hestiacp.com/img/logo.png
-    alt: VitePress
+    alt: Hestia Logo
   actions:
     - theme: brand
       text: Get Started

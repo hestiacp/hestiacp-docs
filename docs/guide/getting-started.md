@@ -46,12 +46,6 @@ All the options can be found in the [Documentation]. You can also use the [Insta
 
 ## What's next?
 
-By now, you should have a basic but functional VitePress documentation site. But currently, the user has no way to navigate around the site because it's missing for example sidebar menu we have on this site.
+By now, you should have a Hestia installation on your server.
 
-To enable those navigations, we must add some configurations to the site. Head to [configuration guide](./configuration) to learn how to configure VitePress.
-
-If you would like to know more about what you can do within the page, for example, writing markdown contents, or using Vue Component, check out the "Writing" section of the docs. [Markdown guide](./markdown) would be a greate starting point.
-
-If you want to know how to customize how the site looks (Theme), and find out the features VitePress's default theme provides, visit [Theme: Introduction](./theme-introduction).
-
-When your documentation site starts to take shape, be sure to read the [deployment guide](./deploying).
+[...] Add more info here

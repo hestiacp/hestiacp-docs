@@ -1,0 +1,20 @@
+***********************************
+Release notes for HestiaCP v1.6.4
+***********************************
+
+Release date: July 14 2022
+
+################
+Bugfixes
+################
+
+- Fixed an issue with downloading log files ()
+- Fixed an issue with installing Quick Installers (#2762, #2760, @Hestiacp)
+- Fixed an issue with Apache Access / Awstats logs IP after using v-update-sys-ip (#2759 @adion-gorani)
+
+#############
+Dependencies
+#############
+
+- Update hestia-php to 8.1.8
+- Update disable_functions list php.ini for hestia-php (#2746, #2741)

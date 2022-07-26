@@ -1,8 +1,7 @@
 {
   "name": "hestia-docs",
-  "private": true,
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
   "license": "GPL-3.0-or-later",
   "scripts": {
     "dev": "vitepress dev docs",

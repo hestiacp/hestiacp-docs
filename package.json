@@ -1,0 +1,15 @@
+{
+  "name": "hestia-docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "GPLv3",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.4",
+    "vue": "^3.2.37"
+  }
+}

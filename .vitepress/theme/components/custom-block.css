@@ -1,0 +1,4 @@
+.dark .custom-block a,
+.dark .custom-block a:hover {
+	color: inherit;
+}

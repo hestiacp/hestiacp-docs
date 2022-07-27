@@ -1,0 +1,16 @@
+.dark .VPSidebar .link.active,
+.dark .VPNav .link:hover,
+.dark .VPNav .link.active,
+.dark .VPDocFooter .edit-link-button,
+.dark .VPDocFooter .prev-next .title {
+	color: var(--vp-c-brand-lighter);
+}
+
+.dark .VPDocFooter .edit-info .edit-link-button:hover,
+.dark .VPDocFooter .prev-next .pager-link:hover .title {
+	color: var(--vp-c-brand-light);
+}
+
+.dark .VPDocFooter .prev-next .pager-link:hover {
+	border-color: var(--vp-c-brand-light);
+}

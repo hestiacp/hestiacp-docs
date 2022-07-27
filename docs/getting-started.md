@@ -2,6 +2,10 @@
 
 This section will help you get Hestia installed on your server. If you already have Hestia installed and are just looking for options, you can skip this page.
 
+::: warning
+The installer needs to be run as `root`, either directly from the terminal or remotely, using SSH. If you do not do this, the installer will not proceed.
+:::
+
 ## Requirements
 
 ::: warning
@@ -11,34 +15,29 @@ Hestia must be installed on top of a fresh operating system installation to ensu
 - CPU: 2 cores, x86_64 or ARM64 (32 bit operating systems are **not** supported).
 - Memory: At least 2 GB (4 GB or more recommended).
 - Disk space: x GB (x GB or more recommended). An SSD will make the web server much more responsive.
-- Operating system: Debian 10, 11 **or** Ubuntu 22.04 LTS, 20.04 LTS, 18.04 LTS
+- Operating system: Debian 10, 11 **or** Ubuntu 18.04, 20.04, 22.04 LTS
 
-## Downloading the installer
+## Regular installation
 
-You’ll need to connect to your server as `root`, either directly from the terminal or remotely, using SSH. First you’ll need to download the installer:
+Interactive installer that will install the default Hestia software configuration.
 
 ```sh
-$ wget https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh
+$ curl -sSL https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh | bash
 ```
 
-## Installation
+## Custom installation
 
-### Regular, interactive install
-
-```sh
-$ bash hst-install.sh
-```
-
-### Unattended install
+If you want to customize which software gets installed, or want to run an unattended installation, you will need to run a custom installation.
 
 ```sh
+$ curl -sSL https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh -o hst-install.sh
 $ bash hst-install.sh --interactive no --email email@domain.tld --password p4ssw0rd --hostname hostname.domain.tld
 ```
 
 ## List of installation options
 
-::: info
-An easier way to choose the installation options is by using the [Install string generator](https://gabizz.github.io/hestiacp-scriptline-generator/) by [gabizz](https://github.com/gabizz).
+::: tip
+An easier way to choose your installation options is by using the [Install string generator](https://gabizz.github.io/hestiacp-scriptline-generator/) by [gabizz](https://github.com/gabizz).
 :::
 
 To choose what software gets installed, you can provide flags to the installation script. To get a full list of options, run `bash hst-install.sh --help`.

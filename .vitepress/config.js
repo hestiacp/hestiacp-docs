@@ -85,13 +85,14 @@ function sidebarGuide() {
 			items: [
 				{ text: "Getting Started", link: "/guide/getting-started" },
 				{ text: "Main Features", link: "/guide/main-features" },
+				{ text: "Adding a domain", link: "/guide/adding-a-domain" },
 			],
 		},
-		{
-			text: "Main features",
-			collapsible: true,
-			items: [],
-		},
+		// {
+		// 	text: "Main features",
+		// 	collapsible: true,
+		// 	items: [],
+		// },
 		{
 			text: "Reference",
 			collapsible: true,

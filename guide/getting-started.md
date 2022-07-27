@@ -15,7 +15,7 @@ Hestia must be installed on top of a fresh operating system installation to ensu
 
 ## Downloading the installer
 
-You’ll need to connect to your server as **root**, either directly from the terminal or remotely, using SSH. First you’ll need to download the installer:
+You’ll need to connect to your server as `root`, either directly from the terminal or remotely, using SSH. First you’ll need to download the installer:
 
 ```sh
 $ wget https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh

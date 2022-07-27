@@ -82,8 +82,8 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 		{
 			text: "Introduction",
 			items: [
-				{ text: "Getting started", link: "/docs/getting-started" },
-				{ text: "Customization", link: "/docs/customization" },
+				{ text: "Getting started", link: "/docs/introduction/getting-started.md" },
+				{ text: "Customization", link: "/docs/introduction/customization.md" },
 			],
 		},
 		{

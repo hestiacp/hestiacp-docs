@@ -21,7 +21,7 @@ const projectManagers = [
   },
   {
     avatar: 'https://www.github.com/Lupul.png',
-    name: 'Robert Zollner',
+    name: 'Robert Zollner 🇷🇴',
     links: [{ icon: 'github', link: 'https://github.com/Lupul' }],
   },
   {

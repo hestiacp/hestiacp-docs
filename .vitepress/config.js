@@ -52,7 +52,7 @@ export default defineConfig({
 function nav() {
 	return [
 		{ text: "Guide", link: "/guide/getting-started", activeMatch: "/guide/" },
-		{ text: "Configs", link: "#", activeMatch: "/config/" },
+		{ text: "Team", link: "/team", activeMatch: "/team" },
 		{
 			text: `v${version}`,
 			items: [

@@ -20,7 +20,7 @@ hero:
       link: https://github.com/hestiacp/hestiacp
 
 features:
-  - icon: ⚡️
+  - icon: 🚀
     title: Fast & easy to learn
     details: Hestia is made with ease of use in mind. Creating a user or a website is as easy as clicking a button and filling up a couple of fields, while advanced features are easily accessible.
   - icon: ❤️

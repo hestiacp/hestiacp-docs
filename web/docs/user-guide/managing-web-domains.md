@@ -1,4 +1,4 @@
-# Managing Web Domains
+# Web Domain Management Guide
 
 ## How to add a new Web domain
 

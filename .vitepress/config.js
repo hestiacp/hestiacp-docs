@@ -14,7 +14,7 @@ export default defineConfig({
 
 		nav: nav(),
 
-		sidebar: { "/guide/": sidebarGuide() },
+		sidebar: { "/docs/": sidebarDocs() },
 
 		editLink: {
 			pattern: "https://github.com/hestiacp/hestiacp-docs/edit/main/docs/:path",
@@ -53,11 +53,15 @@ export default defineConfig({
 		// },
 	},
 });
-
+/**
+ * @returns {import("vitepress").DefaultTheme.NavItem[]}
+ */
 function nav() {
 	return [
-		{ text: "Guide", link: "/guide/getting-started", activeMatch: "/guide/" },
+		{ text: "Demo", link: "https://demo.hestiacp.com:8083/" },
+		{ text: "Docs", link: "/docs/getting-started", activeMatch: "/docs/" },
 		{ text: "Team", link: "/team", activeMatch: "/team" },
+		{ text: "Donate", link: "https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=ST87LQH2CHGLA" },
 		{
 			text: `v${version}`,
 			items: [
@@ -77,15 +81,15 @@ function nav() {
 /**
  * @returns {import("vitepress").DefaultTheme.SidebarGroup[]}
  */
-function sidebarGuide() {
+function sidebarDocs() {
 	return [
 		{
 			text: "Introduction",
 			collapsible: false,
 			items: [
-				{ text: "Getting Started", link: "/guide/getting-started" },
-				{ text: "Main Features", link: "/guide/main-features" },
-				{ text: "Adding a domain", link: "/guide/adding-a-domain" },
+				{ text: "Getting Started", link: "/docs/getting-started" },
+				{ text: "Main Features", link: "/docs/main-features" },
+				{ text: "Adding a domain", link: "/docs/adding-a-domain" },
 			],
 		},
 		// {
@@ -97,8 +101,8 @@ function sidebarGuide() {
 			text: "Reference",
 			collapsible: true,
 			items: [
-				{ text: "CLI", link: "/guide/cli-reference" },
-				{ text: "API", link: "/guide/api-reference" },
+				{ text: "CLI", link: "/docs/cli-reference" },
+				{ text: "API", link: "/docs/api-reference" },
 			],
 		},
 	];

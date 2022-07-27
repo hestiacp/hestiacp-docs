@@ -18,6 +18,9 @@ hero:
     - theme: alt
       text: View on GitHub
       link: https://github.com/hestiacp/hestiacp
+    - theme: alt
+      text: Try demo
+      link: https://demo.hestiacp.com:8083/
 
 features:
   - icon: 🚀

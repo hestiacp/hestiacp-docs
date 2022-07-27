@@ -5,64 +5,78 @@ layout: page
 <script setup>
 import { VPTeamPage, VPTeamPageTitle, VPTeamPageSection, VPTeamMembers } from 'vitepress/theme';
 
-const members = [
+const projectManagers = [
   {
     avatar: 'https://www.github.com/jaapmarcus.png',
     name: 'Jaap Marcus',
-    title: 'Developer',
     links: [
       { icon: 'github', link: 'https://github.com/jaapmarcus' },
-      { icon: 'twitter', link: 'https://twitter.com/jaapmarcus' }
-    ]
+      { icon: 'twitter', link: 'https://twitter.com/jaapmarcus' },
+    ],
   },
   {
     avatar: 'https://www.github.com/ScIT-Raphael.png',
-    name: 'Raphael',
-    title: 'Developer',
-    links: [{ icon: 'github', link: 'https://github.com/ScIT-Raphael' }]
+    name: 'Raphael Schneeberger',
+    links: [{ icon: 'github', link: 'https://github.com/ScIT-Raphael' }],
   },
   {
     avatar: 'https://www.github.com/divinity76.png',
     name: 'divinity76',
-    title: 'Developer',
-    links: [{ icon: 'github', link: 'https://github.com/divinity76' }]
+    links: [{ icon: 'github', link: 'https://github.com/divinity76' }],
   },
   {
     avatar: 'https://www.github.com/Lupul.png',
-    name: 'Zollner Robert',
-    title: 'Developer',
-    links: [{ icon: 'github', link: 'https://github.com/Lupul' }]
-  }
-]
+    name: 'Robert Zollner',
+    links: [{ icon: 'github', link: 'https://github.com/Lupul' }],
+  },
+];
+
+const teamMembers = [
+  {
+    avatar: 'https://www.github.com/ioannidesalex.png',
+    name: 'Alexandros Ioannides',
+    title: 'CTO',
+    org: "FocusNet",
+    orgLink: "https://focus-net.net/",
+    links: [{ icon: 'github', link: 'https://github.com/ioannidesalex' }],
+  },
+  {
+    avatar: 'https://cdn.discordapp.com/avatars/737905427097845780/32452f630dd8684ed7c580806ccbee09.webp',
+    name: 'Falzo',
+    // links: [{ icon: 'github', link: 'https://github.com/cmstew' }],
+  },
+  {
+    avatar: 'https://www.github.com/cmstew.png',
+    name: 'Curtis Stewart',
+    links: [{ icon: 'github', link: 'https://github.com/cmstew' }],
+  },
+];
+
 const featuredContributors = [
   {
     avatar: 'https://www.github.com/jakobbouchard.png',
     name: 'Jakob Bouchard',
-    title: 'Docs Maintainer',
+    title: 'Developer',
+    org: "Prosomo",
+    orgLink: "https://prosomo.com",
     links: [
       { icon: 'github', link: 'https://github.com/jakobbouchard' },
-      { icon: 'twitter', link: 'https://twitter.com/bouchardjakob' }
-    ]
+      { icon: 'twitter', link: 'https://twitter.com/bouchardjakob' },
+    ],
   },
   {
     avatar: '/logo.png',
     name: 'John Doe',
-    title: 'Lorem ipsum',
-    links: [{ icon: 'github', link: '#' }]
   },
   {
     avatar: '/logo.png',
     name: 'John Doe',
-    title: 'Lorem ipsum',
-    links: [{ icon: 'github', link: '#' }]
   },
   {
     avatar: '/logo.png',
     name: 'John Doe',
-    title: 'Lorem ipsum',
-    links: [{ icon: 'github', link: '#' }]
-  }
-]
+  },
+];
 </script>
 
 <VPTeamPage>
@@ -75,9 +89,15 @@ const featuredContributors = [
     </template>
   </VPTeamPageTitle>
   <VPTeamPageSection>
-    <template #title>Main Team Members</template>
+    <template #title>Project Managers</template>
     <template #members>
-      <VPTeamMembers size="small" :members="members" />
+      <VPTeamMembers :members="projectManagers" />
+    </template>
+  </VPTeamPageSection>
+  <VPTeamPageSection>
+    <template #title>Team Members</template>
+    <template #members>
+      <VPTeamMembers :members="teamMembers" />
     </template>
   </VPTeamPageSection>
   <VPTeamPageSection>

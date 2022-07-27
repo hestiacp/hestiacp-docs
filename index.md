@@ -5,7 +5,7 @@ title: Hestia Control Panel
 titleTemplate: Open-source web server control panel.
 
 hero:
-  name: Hestia
+  name: Hestia Control Panel
   text: Open-source web server control panel
   tagline: Fast, reliable, open-source. The control panel you’ve always wanted is just 3 commands away.
   image:

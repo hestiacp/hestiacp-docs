@@ -1,9 +1,5 @@
 # Server setting / Config
 
-::: {.toctree maxdepth="2" glob=""}
-settings/filemanager.rst settings/firewall.rst
-:::
-
 ## I am not able to login
 
 For installing dependencies we use Composer. As are currently not able

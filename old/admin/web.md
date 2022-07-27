@@ -1,9 +1,5 @@
 # Web domains and SSL Certicates
 
-::: {.toctree maxdepth="2" glob=""}
-web/fastcgi.rst web/ssl_certificates.rst
-:::
-
 ## How do Web templates work?
 
 ::: warning

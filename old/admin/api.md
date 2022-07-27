@@ -12,11 +12,6 @@ can use other languages to communicate with API.
 
 With the release of Hestia 1.6.0 we have introduced a more advanced api
 system and it will allow "standard" users to use specific commands.
-
-::: {.toctree maxdepth="2" glob=""}
-api/rest_api.rst
-:::
-
 ## Unable to connect to the api
 
 With the release of 1.4 Hestia has decided it was needed to tighten the

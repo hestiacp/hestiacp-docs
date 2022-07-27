@@ -13,6 +13,5 @@
 8.  You are logged in as regular user now. Make all tasks you want
     securely under unprivileged account.
 
-::: youtube
-<https://www.youtube.com/watch?v=FY4l7qQeKHk>
-:::
+
+[![Add regular user of domain](http://img.youtube.com/vi/FY4l7qQeKHk/0.jpg)](https://www.youtube.com/watch?v=FY4l7qQeKHk "Add regular user of domain")

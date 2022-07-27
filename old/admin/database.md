@@ -1,9 +1,5 @@
 # Database
 
-::: {.toctree maxdepth="2" glob=""}
-database/phpmyadmin-sso.rst
-:::
-
 ## How to setup a remote database server
 
 1.  It is assumed you already have your second server up and running

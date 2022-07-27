@@ -14,7 +14,7 @@ hero:
   actions:
     - theme: brand
       text: Get started
-      link: /docs/introduction/getting-started.md
+      link: /docs/introduction/getting-started
     - theme: alt
       text: Try the demo
       link: https://demo.hestiacp.com:8083/

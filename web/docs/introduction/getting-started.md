@@ -85,11 +85,11 @@ $ wget -qO - https://raw.githubusercontent.com/hestiacp/hestiacp/release/install
 
 This command will install Hestia in French with the following software:
 
-- nginx Web Server
+- Nginx Web Server
 - PHP-FPM Application Server
 - MariaDB Database Server
 - IPtables Firewall + Fail2Ban Intrusion prevention software
-- vsftpd FTP Server
+- Vsftpd FTP Server
 - Exim Mail Server
 - Dovecot POP3/IMAP Server
 

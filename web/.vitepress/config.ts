@@ -83,6 +83,7 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 			text: "Introduction",
 			items: [
 				{ text: "Getting started", link: "/docs/introduction/getting-started.md" },
+				{ text: "Architecture overview", link: "/docs/introduction/architecture.md" },
 				{ text: "Customization", link: "/docs/introduction/customization.md" },
 			],
 		},

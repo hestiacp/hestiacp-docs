@@ -46,6 +46,17 @@ const teamMembers = [
     links: [{ icon: 'github', link: 'https://github.com/ioannidesalex' }],
   },
   {
+    avatar: 'https://www.github.com/jakobbouchard.png',
+    name: 'Jakob Bouchard',
+    title: 'Developer',
+    org: "Prosomo",
+    orgLink: "https://prosomo.com",
+    links: [
+      { icon: 'github', link: 'https://github.com/jakobbouchard' },
+      { icon: 'twitter', link: 'https://twitter.com/bouchardjakob' },
+    ],
+  },
+  {
     avatar: 'https://cdn.discordapp.com/avatars/737905427097845780/32452f630dd8684ed7c580806ccbee09.webp',
     name: 'Falzo',
     // links: [{ icon: 'github', link: 'https://github.com/cmstew' }],
@@ -58,17 +69,6 @@ const teamMembers = [
 ];
 
 const featuredContributors = [
-  {
-    avatar: 'https://www.github.com/jakobbouchard.png',
-    name: 'Jakob Bouchard',
-    title: 'Developer',
-    org: "Prosomo",
-    orgLink: "https://prosomo.com",
-    links: [
-      { icon: 'github', link: 'https://github.com/jakobbouchard' },
-      { icon: 'twitter', link: 'https://twitter.com/bouchardjakob' },
-    ],
-  },
   {
     avatar: '/logo.png',
     name: 'John Doe',

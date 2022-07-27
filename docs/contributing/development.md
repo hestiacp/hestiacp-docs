@@ -56,7 +56,7 @@ cd ../install
 bash hst-install-{os}.sh --with-debs /tmp/hestiacp-src/deb/
 ```
 
-Any option can be appended to the installer command. [See the complete list](../getting-started#list-of-installation-options).
+Any option can be appended to the installer command. [See the complete list](../introduction/getting-started#list-of-installation-options).
 
 ## Update Hestia from GitHub
 

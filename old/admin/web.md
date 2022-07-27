@@ -7,9 +7,6 @@ web/fastcgi.rst web/ssl_certificates.rst
 ## How do Web templates work?
 
 ::: warning
-::: title
-Warning
-:::
 
 Modifying templates could cause errors on the server and services that
 are not able to reload or start.

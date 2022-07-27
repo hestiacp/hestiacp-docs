@@ -116,10 +116,6 @@ test/test_helper/bats-core/install.sh /usr/local
 ### Run
 
 ::: warning
-::: title
-Warning
-:::
-
 Do not run any testing script on an live server. It might cause issues
 or downtime!
 :::

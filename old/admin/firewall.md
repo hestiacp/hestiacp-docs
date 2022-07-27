@@ -24,11 +24,11 @@ black/white lists.
 Go to "Server" (Cogs icon) then click on Configure -\> Firewall -\>
 Manage IP set and you will see the following page.
 
-![List IP List](..//images/ipset/ipset-1.png)
+![List IP List](/images/ipset/ipset-1.png)
 
 Click on "Add IP list"
 
-![Add IP List](..//images/ipset/ipset-2.png)
+![Add IP List](/images/ipset/ipset-2.png)
 
 Name provide a name for IP list For data source you are able to us the
 following opions:
@@ -48,7 +48,7 @@ And click on save.
 
 The go to the "Firewall" and click on "Add Rule"
 
-![Add Firewall rule](..//images/ipset/ipset-3.png)
+![Add Firewall rule](/images/ipset/ipset-3.png)
 
 Set action to block / allow depending on your needs. Protocol to the
 protocol you want to block/allow Ports to the ports you want to block /

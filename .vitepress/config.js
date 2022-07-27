@@ -82,7 +82,10 @@ function sidebarGuide() {
 		{
 			text: "Introduction",
 			collapsible: false,
-			items: [{ text: "Getting Started", link: "/guide/getting-started" }],
+			items: [
+				{ text: "Getting Started", link: "/guide/getting-started" },
+				{ text: "Main Features", link: "/guide/main-features" },
+			],
 		},
 		{
 			text: "Main features",

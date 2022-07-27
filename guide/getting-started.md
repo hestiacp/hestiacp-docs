@@ -1,8 +1,4 @@
----
-title: Getting Started
----
-
-# {{ $frontmatter.title }}
+# Getting Started
 
 This section will help you get Hestia installed on your server. If you already have Hestia installed and are just looking for options, you can skip this page.
 

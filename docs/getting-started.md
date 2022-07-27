@@ -24,59 +24,54 @@ Hestia must be installed on top of a fresh operating system installation to ensu
 Interactive installer that will install the default Hestia software configuration.
 
 ```sh
-$ curl -sSL https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh | bash
+$ wget -qO - https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh | bash
 ```
 
 ## Custom installation
 
 If you want to customize which software gets installed, or want to run an unattended installation, you will need to run a custom installation.
 
-```sh
-$ curl -sSL https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh -o hst-install.sh
-$ bash hst-install.sh --interactive no --email email@domain.tld --password p4ssw0rd --hostname hostname.domain.tld
-```
-
-## List of installation options
+### List of installation options
 
 ::: tip
 An easier way to choose your installation options is by using the [Install string generator](https://gabizz.github.io/hestiacp-scriptline-generator/) by [gabizz](https://github.com/gabizz).
 :::
 
-To choose what software gets installed, you can provide flags to the installation script. To get a full list of options, run `bash hst-install.sh --help`.
+To choose what software gets installed, you can provide flags to the installation script. You can view the full list of options below.
 
 ```sh
-$ bash hst-install.sh --help
--a, --apache          Install Apache        [yes|no]  default: yes
--w, --phpfpm          Install PHP-FPM       [yes|no]  default: yes
--o, --multiphp        Install Multi-PHP     [yes|no]  default: no
--v, --vsftpd          Install Vsftpd        [yes|no]  default: yes
--j, --proftpd         Install ProFTPD       [yes|no]  default: no
--k, --named           Install Bind          [yes|no]  default: yes
--m, --mysql           Install MariaDB       [yes|no]  default: yes
--g, --postgresql      Install PostgreSQL    [yes|no]  default: no
--x, --exim            Install Exim          [yes|no]  default: yes
--z, --dovecot         Install Dovecot       [yes|no]  default: yes
--Z, --sieve           Install Sieve         [yes|no]  default: no
--c, --clamav          Install ClamAV        [yes|no]  default: yes
--t, --spamassassin    Install SpamAssassin  [yes|no]  default: yes
--i, --iptables        Install Iptables      [yes|no]  default: yes
--b, --fail2ban        Install Fail2ban      [yes|no]  default: yes
--q, --quota           Filesystem Quota      [yes|no]  default: no
--d, --api             Activate API          [yes|no]  default: yes
--r, --port            Change Backend Port             default: 8083
--l, --lang            Default language                default: en
--y, --interactive     Interactive install   [yes|no]  default: yes
--s, --hostname        Set hostname
--e, --email           Set admin email
--p, --password        Set admin password
--f, --force           Force installation
--h, --help            Print this help
+-a, --apache            Install Apache        [yes|no]  default: yes
+-w, --phpfpm            Install PHP-FPM       [yes|no]  default: yes
+-o, --multiphp          Install Multi-PHP     [yes|no]  default: no
+-v, --vsftpd            Install Vsftpd        [yes|no]  default: yes
+-j, --proftpd           Install ProFTPD       [yes|no]  default: no
+-k, --named             Install Bind          [yes|no]  default: yes
+-m, --mysql             Install MariaDB       [yes|no]  default: yes
+-g, --postgresql        Install PostgreSQL    [yes|no]  default: no
+-x, --exim              Install Exim          [yes|no]  default: yes
+-z, --dovecot           Install Dovecot       [yes|no]  default: yes
+-Z, --sieve             Install Sieve         [yes|no]  default: no
+-c, --clamav            Install ClamAV        [yes|no]  default: yes
+-t, --spamassassin      Install SpamAssassin  [yes|no]  default: yes
+-i, --iptables          Install Iptables      [yes|no]  default: yes
+-b, --fail2ban          Install Fail2ban      [yes|no]  default: yes
+-q, --quota             Filesystem Quota      [yes|no]  default: no
+-d, --api               Activate API          [yes|no]  default: yes
+-r, --port              Change Backend Port             default: 8083
+-l, --lang              Default language                default: en
+-y, --interactive       Interactive install   [yes|no]  default: yes
+-s, --hostname          Set hostname
+-e, --email             Set admin email
+-p, --password          Set admin password
+-D, --with-debs         Path to Hestia debs
+-f, --force             Force installation
+-h, --help              Print this help
 ```
 
-### Example
+#### Example
 
 ```sh
-$ bash hst-install.sh \
+$ wget -qO - https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh | bash -s -- \
 --interactive no \
 --hostname host.example.com \
 --email email@example.com \

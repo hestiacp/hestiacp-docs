@@ -12,10 +12,12 @@ The installer needs to be run as `root`, either directly from the terminal or re
 Hestia must be installed on top of a fresh operating system installation to ensure proper functionality.
 :::
 
-- CPU: 2 cores, x86_64 or ARM64 (32 bit operating systems are **not** supported).
-- Memory: At least 2 GB (4 GB or more recommended).
-- Disk space: x GB (x GB or more recommended). An SSD will make the web server much more responsive.
-- Operating system: Debian 10, 11 **or** Ubuntu 18.04, 20.04, 22.04 LTS
+|                  | Minimum                                           | Recommended                          |
+| ---------------- | ------------------------------------------------- | ------------------------------------ |
+| CPU              | 1 core, 64-bit                                    | 4 cores                              |
+| Memory           | 1 GB (no SpamAssassin and ClamAV)                 | 4 GB                                 |
+| Disk             | 10 GB HDD                                         | 40 GB SSD                            |
+| Operating System | Debian 10, 11 <br> Ubuntu 18.04, 20.04, 22.04 LTS | Latest Debian <br> Latest Ubuntu LTS |
 
 ## Regular installation
 

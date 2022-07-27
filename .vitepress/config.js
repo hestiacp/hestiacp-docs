@@ -4,7 +4,6 @@ export default defineConfig({
 	lang: "en-US",
 	title: "Hestia Control Panel",
 	description: "Open-source web server control panel.",
-
 	head: [
 		["link", { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" }],
 		["link", { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" }],
@@ -19,16 +18,12 @@ export default defineConfig({
 
 	themeConfig: {
 		logo: "/logo.png",
-
+		// algolia: {
+		//   appId: "2PN8794ZO9",
+		//   apiKey: "8a55d7d941cd49b3df09337bc46659c5",
+		//   indexName: "hestiacp",
+		// },
 		nav: nav(),
-
-		sidebar: { "/docs/": sidebarDocs() },
-
-		editLink: {
-			pattern: "https://github.com/hestiacp/hestiacp-docs/edit/main/docs/:path",
-			text: "Edit this page on GitHub",
-		},
-
 		socialLinks: [
 			{ icon: "github", link: "https://github.com/hestiacp/hestiacp" },
 			{ icon: "discord", link: "https://discord.com/invite/yy75DKs" },
@@ -42,26 +37,28 @@ export default defineConfig({
 			{ icon: "facebook", link: "https://www.facebook.com/hestiacp" },
 		],
 
+		sidebar: { "/docs/": sidebarDocs() },
+
+		editLink: {
+			pattern: "https://github.com/hestiacp/hestiacp-docs/edit/main/docs/:path",
+			text: "Edit this page on GitHub",
+		},
 		footer: {
 			message: "Released under the GPLv3 License.",
 			copyright: "Copyright © 2019-present Hestia Control Panel",
 		},
-
-		// algolia: {
-		//   appId: "2PN8794ZO9",
-		//   apiKey: "8a55d7d941cd49b3df09337bc46659c5",
-		//   indexName: "hestiacp",
-		// },
 	},
 });
+
 /**
  * @returns {import("vitepress").DefaultTheme.NavItem[]}
  */
 function nav() {
 	return [
+		{ text: "Features", link: "/features.md" },
+		{ text: "Docs", link: "/docs/getting-started.md", activeMatch: "/docs/" },
+		{ text: "Team", link: "/team.md" },
 		{ text: "Demo", link: "https://demo.hestiacp.com:8083/" },
-		{ text: "Docs", link: "/docs/getting-started", activeMatch: "/docs/" },
-		{ text: "Team", link: "/team", activeMatch: "/team" },
 		{ text: "Donate", link: "https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=ST87LQH2CHGLA" },
 		{
 			text: `v1.6.x`,
@@ -90,56 +87,54 @@ function sidebarDocs() {
 	return [
 		{
 			text: "Introduction",
-			collapsible: true,
 			items: [
 				{ text: "Getting started", link: "/docs/getting-started" },
-				{ text: "Main features", link: "/docs/main-features" },
-				{ text: "Customize", link: "/docs/customize_hestia" },
+				{ text: "Customization", link: "/docs/customization" },
 			],
 		},
 		{
 			text: "Admin",
 			collapsible: true,
+			collapsed: true,
 			items: [
-				{ text: "API", link: "/docs/admin/api" },
-				{ text: "API examples", link: "/docs/admin/rest_api" },
-				{ text: "Backups", link: "/docs/admin/backups" },
-				{ text: "Cron", link: "/docs/admin/cron" },
-				{ text: "Database", link: "/docs/admin/database" },
-				{ text: "PHPmyAdmin SSO", link: "/docs/admin/phpmyadmin-sso" },
-				{ text: "DNS", link: "/docs/admin/dns" },
-				{ text: "Mail", link: "/docs/admin/mail" },
-				{ text: "Settings", link: "/docs/admin/settings" },
-				{ text: "File manager", link: "/docs/admin/filemanager" },
-				{ text: "Firewall", link: "/docs/admin/firewall" },
-				{ text: "Upgrades", link: "/docs/admin/upgrades" },
-				{ text: "Users", link: "/docs/admin/users" },
-				{ text: "Web", link: "/docs/admin/web" },
-				{ text: "FastCGI", link: "/docs/admin/fastcgi" },
-				{ text: "SSL certificates", link: "/docs/admin/ssl_certificates" },
+				{ text: "API", link: "/docs/admin/api.md" },
+				{ text: "API examples", link: "/docs/admin/rest_api.md" },
+				{ text: "Backups", link: "/docs/admin/backups.md" },
+				{ text: "Cron", link: "/docs/admin/cron.md" },
+				{ text: "Database", link: "/docs/admin/database.md" },
+				{ text: "PHPmyAdmin SSO", link: "/docs/admin/phpmyadmin-sso.md" },
+				{ text: "DNS", link: "/docs/admin/dns.md" },
+				{ text: "Mail", link: "/docs/admin/mail.md" },
+				{ text: "Settings", link: "/docs/admin/settings.md" },
+				{ text: "File manager", link: "/docs/admin/filemanager.md" },
+				{ text: "Firewall", link: "/docs/admin/firewall.md" },
+				{ text: "Upgrades", link: "/docs/admin/upgrades.md" },
+				{ text: "Users", link: "/docs/admin/users.md" },
+				{ text: "Web", link: "/docs/admin/web.md" },
+				{ text: "FastCGI", link: "/docs/admin/fastcgi.md" },
+				{ text: "SSL certificates", link: "/docs/admin/ssl_certificates.md" },
 			],
 		},
 		{
 			text: "GUI",
 			collapsible: true,
+			collapsed: true,
 			items: [
-				{ text: "Best practices", link: "/docs/gui/best_practices" },
-				{ text: "User options", link: "/docs/gui/user_options" },
-				{ text: "Web domains", link: "/docs/gui/webdomains" },
+				{ text: "Best practices", link: "/docs/gui/best_practices.md" },
+				{ text: "User options", link: "/docs/gui/user_options.md" },
+				{ text: "Web domains", link: "/docs/gui/webdomains.md" },
 			],
 		},
 		{
 			text: "CLI",
-			collapsible: true,
-			items: [{ text: "Commands", link: "/docs/cli_commands" }],
+			items: [{ text: "Commands", link: "/docs/cli/commands.md" }],
 		},
 		{
-			text: "Development",
-			collapsible: true,
+			text: "Contributing",
 			items: [
-				{ text: "Docs", link: "/docs/development/docs" },
-				{ text: "Panel", link: "/docs/development/panel" },
-				{ text: "Translating", link: "/docs/development/translating" },
+				{ text: "Documentation", link: "/docs/contributing/documentation.md" },
+				{ text: "Development", link: "/docs/contributing/development.md" },
+				{ text: "Translations", link: "/docs/contributing/translations.md" },
 			],
 		},
 	];

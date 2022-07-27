@@ -47,12 +47,6 @@ export default defineConfig({
 		//   apiKey: "8a55d7d941cd49b3df09337bc46659c5",
 		//   indexName: "hestiacp",
 		// },
-
-		// https://www.carbonads.net/
-		// carbonAds: {
-		//   code: "CEBDT27Y",
-		//   placement: "hestiacp",
-		// },
 	},
 });
 /**

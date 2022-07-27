@@ -6,30 +6,16 @@ export default defineConfig({
 	lang: "en-US",
 	title: "Hestia Control Panel",
 	titleTemplate: "Hestia Control Panel",
-	description: "An open-source Linux web server control panel.",
+	description: "Open-source web server control panel.",
 
 	lastUpdated: true,
 
 	themeConfig: {
-		logo: "https://www.hestiacp.com/img/logo.png",
+		logo: "/logo.png",
 
-		nav: [
-			{ text: "Guide", link: "#", activeMatch: "/guide/" },
-			{ text: "Configs", link: "#", activeMatch: "/config/" },
-			{
-				text: `v${version}`,
-				items: [
-					{
-						text: "Changelog",
-						link: "https://github.com/hestiacp/hestiacp/blob/main/CHANGELOG.md",
-					},
-					{
-						text: "Contributing",
-						link: "https://github.com/hestiacp/hestiacp/blob/main/CONTRIBUTING.md",
-					},
-				],
-			},
-		],
+		nav: nav(),
+
+		sidebar: { "/guide/": sidebarGuide() },
 
 		editLink: {
 			pattern: "https://github.com/hestiacp/hestiacp-docs/edit/main/docs/:path",
@@ -44,20 +30,59 @@ export default defineConfig({
 		],
 
 		footer: {
-			message:
-				"❤️ Made with love & pride by the open-source community from around the world.",
-			copyright: "GPLv3 | Copyright © 2022-present Hestia Control Panel",
+			message: "Released under the GPLv3 License.",
+			copyright: "Copyright © 2019-present Hestia Control Panel",
 		},
 
+		// Look at https://www.algolia.com/for-open-source/
 		// algolia: {
 		//   appId: "8J64VVRP8K",
 		//   apiKey: "a18e2f4cc5665f6602c5631fd868adfd",
-		//   indexName: "vitepress",
+		//   indexName: "hestiacp",
 		// },
 
+		// https://www.carbonads.net/
 		// carbonAds: {
 		//   code: "CEBDT27Y",
-		//   placement: "vuejsorg",
+		//   placement: "hestiacp",
 		// },
 	},
 });
+
+function nav() {
+	return [
+		{ text: "Guide", link: "/guide/getting-started", activeMatch: "/guide/" },
+		{ text: "Configs", link: "#", activeMatch: "/config/" },
+		{
+			text: `v${version}`,
+			items: [
+				{
+					text: "Changelog",
+					link: "https://github.com/hestiacp/hestiacp/blob/main/CHANGELOG.md",
+				},
+				{
+					text: "Contributing",
+					link: "https://github.com/hestiacp/hestiacp/blob/main/CONTRIBUTING.md",
+				},
+			],
+		},
+	];
+}
+
+/**
+ * @returns {import("vitepress").DefaultTheme.SidebarGroup[]}
+ */
+function sidebarGuide() {
+	return [
+		{
+			text: "Introduction",
+			collapsible: false,
+			items: [{ text: "Getting Started", link: "/guide/getting-started" }],
+		},
+		{
+			text: "Main features",
+			collapsible: true,
+			items: [],
+		},
+	];
+}

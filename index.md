@@ -2,14 +2,14 @@
 layout: home
 
 title: Hestia Control Panel
-titleTemplate: An open-source Linux web server control panel
+titleTemplate: Open-source web server control panel.
 
 hero:
   name: Hestia
-  text: An open-source Linux web server control panel
-  tagline: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  text: Open-source web server control panel
+  tagline: Fast, reliable, open-source. The control panel you’ve always wanted is just 3 commands away.
   image:
-    src: https://www.hestiacp.com/img/logo.png
+    src: /logo.png
     alt: Hestia Logo
   actions:
     - theme: brand
@@ -21,12 +21,12 @@ hero:
 
 features:
   - icon: ⚡️
-    title: Lorem ipsum dolor sit amet
-    details: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam eius alias assumenda aliquam rerum fugit nemo quaerat sequi! Nulla, iusto.
+    title: Fast & easy to learn
+    details: Hestia is made with ease of use in mind. Creating a user or a website is as easy as clicking a button and filling up a couple of fields, while advanced features are easily accessible.
   - icon: ❤️
-    title: Lorem ipsum dolor sit amet
-    details: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam eius alias assumenda aliquam rerum fugit nemo quaerat sequi! Nulla, iusto.
+    title: Made with love & pride
+    details: Hestia is open-source software that is built by passionate people from around the world. This means that the code is reviewed by multiple people and that anybody can contribute to it!
   - icon: 🛠️
-    title: Lorem ipsum dolor sit amet
-    details: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam eius alias assumenda aliquam rerum fugit nemo quaerat sequi! Nulla, iusto.
+    title: Extendable & powerful
+    details: Hestia is extendable despite being easy to learn. You can build your own web templates, quick install applications and can interact with it using third party software via its API.
 ---

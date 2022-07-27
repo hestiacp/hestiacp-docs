@@ -1,4 +1,4 @@
-import { defineConfig } from "vitepress";
+import { defineConfig, type DefaultTheme } from "vitepress";
 
 export default defineConfig({
 	lang: "en-US",
@@ -27,12 +27,12 @@ export default defineConfig({
 		socialLinks: [
 			{ icon: "github", link: "https://github.com/hestiacp/hestiacp" },
 			{ icon: "discord", link: "https://discord.com/invite/yy75DKs" },
-			{
-				icon: {
-					svg: '<svg role="img" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><title>Forum</title><path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" /></svg>',
-				},
-				link: "https://forum.hestiacp.com/",
-			},
+			// {
+			// 	icon: {
+			// 		svg: '<svg role="img" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><title>Forum</title><path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" /></svg>',
+			// 	},
+			// 	link: "https://forum.hestiacp.com/",
+			// },
 			{ icon: "twitter", link: "https://twitter.com/HestiaPanel" },
 			{ icon: "facebook", link: "https://www.facebook.com/hestiacp" },
 		],
@@ -50,10 +50,7 @@ export default defineConfig({
 	},
 });
 
-/**
- * @returns {import("vitepress").DefaultTheme.NavItem[]}
- */
-function nav() {
+function nav(): DefaultTheme.NavItem[] {
 	return [
 		{ text: "Features", link: "/features.md" },
 		{ text: "Docs", link: "/docs/getting-started.md", activeMatch: "/docs/" },
@@ -80,10 +77,7 @@ function nav() {
 	];
 }
 
-/**
- * @returns {import("vitepress").DefaultTheme.SidebarGroup[]}
- */
-function sidebarDocs() {
+function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 	return [
 		{
 			text: "Introduction",

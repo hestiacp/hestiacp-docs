@@ -67,6 +67,16 @@ const teamMembers = [
     name: 'divinity76 🇳🇴',
     links: [{ icon: 'github', link: 'https://github.com/divinity76' }],
   },
+  {
+    avatar: 'https://www.github.com/istiak101.png',
+    name: 'istiak101 🇧🇩',
+    links: [{ icon: 'github', link: 'https://github.com/istiak101' }],
+  },
+  {
+    avatar: 'https://www.github.com/Pleskan.png',
+    name: 'Anton Pleskanovskyy 🇺🇦',
+    links: [{ icon: 'github', link: 'https://github.com/Pleskan' }],
+  },
 ];
 
 const featuredContributors = [

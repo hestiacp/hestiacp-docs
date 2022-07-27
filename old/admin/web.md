@@ -96,7 +96,7 @@ Name Example Description
 
 %user% username Username of user
 
-%backend_lsnr% <proxy:fcgi://127.0.0.1:9000> Your default FPM Server
+%backend_lsnr% `proxy:fcgi://127.0.0.1:9000` Your default FPM Server
 
 %proxy_extentions% List of extensions Extensions that should be handled
 by the proxy server

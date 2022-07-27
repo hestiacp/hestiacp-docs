@@ -1,5 +1,7 @@
 ---
 layout: page
+
+title: The Team
 ---
 
 <script setup>
@@ -94,7 +96,7 @@ const featuredContributors = [
 <VPTeamPage>
   <VPTeamPageTitle>
     <template #title>
-      The Team
+      {{ $frontmatter.title }}
     </template>
     <template #lead>
       The development of Hestia is guided by an international team, some of whom have chosen to be featured below.

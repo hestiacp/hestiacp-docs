@@ -28,5 +28,5 @@ features:
     details: Hestia is open-source software that is built by passionate people from around the world. This means that the code is reviewed by multiple people and that anybody can contribute to it!
   - icon: 🛠️
     title: Extendable & powerful
-    details: Hestia is extendable despite being easy to learn. You can build your own web templates, quick install applications and can interact with it using third party software via its API.
+    details: Hestia is extendable while being easy to learn. You can build your own themes, web templates, quick install applications and can interact with it using third party software via its API.
 ---

@@ -76,14 +76,12 @@ const featuredContributors = [
   </VPTeamPageTitle>
   <VPTeamPageSection>
     <template #title>Main Team Members</template>
-    <template #lead>Lorem ipsum...</template>
     <template #members>
       <VPTeamMembers size="small" :members="members" />
     </template>
   </VPTeamPageSection>
   <VPTeamPageSection>
     <template #title>Contributors</template>
-    <template #lead>Lorem ipsum...</template>
     <template #members>
       <VPTeamMembers size="small" :members="featuredContributors" />
     </template>

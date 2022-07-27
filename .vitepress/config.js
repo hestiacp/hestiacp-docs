@@ -14,7 +14,10 @@ export default defineConfig({
 
 		nav: nav(),
 
-		sidebar: { "/docs/": sidebarDocs() },
+		sidebar: {
+			"/docs/": sidebarDocs(),
+			"/old/": sidebarOld(),
+		},
 
 		editLink: {
 			pattern: "https://github.com/hestiacp/hestiacp-docs/edit/main/docs/:path",
@@ -39,10 +42,9 @@ export default defineConfig({
 			copyright: "Copyright © 2019-present Hestia Control Panel",
 		},
 
-		// Look at https://www.algolia.com/for-open-source/
 		// algolia: {
-		//   appId: "8J64VVRP8K",
-		//   apiKey: "a18e2f4cc5665f6602c5631fd868adfd",
+		//   appId: "2PN8794ZO9",
+		//   apiKey: "8a55d7d941cd49b3df09337bc46659c5",
 		//   indexName: "hestiacp",
 		// },
 
@@ -59,7 +61,7 @@ export default defineConfig({
 function nav() {
 	return [
 		{ text: "Demo", link: "https://demo.hestiacp.com:8083/" },
-		{ text: "Docs", link: "/docs/getting-started", activeMatch: "/docs/" },
+		{ text: "Docs", link: "/old/getting_started", activeMatch: "/old/" },
 		{ text: "Team", link: "/team", activeMatch: "/team" },
 		{ text: "Donate", link: "https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=ST87LQH2CHGLA" },
 		{
@@ -85,24 +87,80 @@ function sidebarDocs() {
 	return [
 		{
 			text: "Introduction",
-			collapsible: false,
 			items: [
 				{ text: "Getting Started", link: "/docs/getting-started" },
 				{ text: "Main Features", link: "/docs/main-features" },
 				{ text: "Adding a domain", link: "/docs/adding-a-domain" },
 			],
 		},
-		// {
-		// 	text: "Main features",
-		// 	collapsible: true,
-		// 	items: [],
-		// },
 		{
 			text: "Reference",
 			collapsible: true,
 			items: [
 				{ text: "CLI", link: "/docs/cli-reference" },
 				{ text: "API", link: "/docs/api-reference" },
+			],
+		},
+	];
+}
+
+/**
+ * @returns {import("vitepress").DefaultTheme.SidebarGroup[]}
+ */
+function sidebarOld() {
+	return [
+		{
+			text: "Introduction",
+			collapsible: true,
+			items: [
+				{ text: "Getting started", link: "/old/getting_started" },
+				{ text: "Main features", link: "/old/features" },
+				{ text: "Customize", link: "/old/customize_hestia" },
+			],
+		},
+		{
+			text: "Admin",
+			collapsible: true,
+			items: [
+				{ text: "API", link: "/old/admin/api" },
+				{ text: "API examples", link: "/old/admin/rest_api" },
+				{ text: "Backups", link: "/old/admin/backups" },
+				{ text: "Cron", link: "/old/admin/cron" },
+				{ text: "Database", link: "/old/admin/database" },
+				{ text: "PHPmyAdmin SSO", link: "/old/admin/phpmyadmin-sso" },
+				{ text: "DNS", link: "/old/admin/dns" },
+				{ text: "Mail", link: "/old/admin/mail" },
+				{ text: "Settings", link: "/old/admin/settings" },
+				{ text: "File manager", link: "/old/admin/filemanager" },
+				{ text: "Firewall", link: "/old/admin/firewall" },
+				{ text: "Upgrades", link: "/old/admin/upgrades" },
+				{ text: "Users", link: "/old/admin/users" },
+				{ text: "Web", link: "/old/admin/web" },
+				{ text: "FastCGI", link: "/old/admin/fastcgi" },
+				{ text: "SSL certificates", link: "/old/admin/ssl_certificates" },
+			],
+		},
+		{
+			text: "GUI",
+			collapsible: true,
+			items: [
+				{ text: "Best practices", link: "/old/gui/best_practices" },
+				{ text: "User options", link: "/old/gui/user_options" },
+				{ text: "Web domains", link: "/old/gui/webdomains" },
+			],
+		},
+		{
+			text: "CLI",
+			collapsible: true,
+			items: [{ text: "Commands", link: "/old/cli_commands" }],
+		},
+		{
+			text: "Development",
+			collapsible: true,
+			items: [
+				{ text: "Docs", link: "/old/development/docs" },
+				{ text: "Panel", link: "/old/development/panel" },
+				{ text: "Translating", link: "/old/development/translating" },
 			],
 		},
 	];

@@ -13,13 +13,13 @@ hero:
     alt: Hestia Logo
   actions:
     - theme: brand
-      text: Get Started
+      text: Get started
       link: /docs/getting-started
     - theme: alt
       text: View on GitHub
       link: https://github.com/hestiacp/hestiacp
     - theme: alt
-      text: Try demo
+      text: Try the demo
       link: https://demo.hestiacp.com:8083/
 
 features:

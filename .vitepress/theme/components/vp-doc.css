@@ -1,9 +1,0 @@
-.dark .vp-doc a,
-.dark .vp-doc a > code {
-	color: var(--vp-c-brand-lighter);
-}
-
-.dark .vp-doc a:hover,
-.dark .vp-doc a:hover > code {
-	color: var(--vp-c-brand-light);
-}

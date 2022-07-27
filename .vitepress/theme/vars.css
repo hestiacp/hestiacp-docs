@@ -10,4 +10,9 @@
 
 .dark {
 	--vp-c-bg: #282828;
+	--vp-c-brand-lighter: #ff85ae;
+	--vp-c-brand-light: #ff558f;
+	--vp-c-brand: #ff558f;
+	--vp-c-brand-dark: #da4778;
+	--vp-c-brand-darker: #b7236a;
 }

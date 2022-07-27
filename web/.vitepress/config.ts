@@ -83,14 +83,26 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 			text: "Introduction",
 			items: [
 				{ text: "Getting started", link: "/docs/introduction/getting-started.md" },
+				{ text: "Best practices", link: "/docs/introduction/best-practices.md" },
 				{ text: "Architecture overview", link: "/docs/introduction/architecture.md" },
 				{ text: "Customization", link: "/docs/introduction/customization.md" },
 			],
 		},
 		{
+			text: "Guides",
+			collapsible: true,
+			items: [
+				{ text: "Managing users", link: "/docs/guides/managing-users.md" },
+				{ text: "Managing web domains", link: "/docs/guides/managing-web-domains.md" },
+				{ text: "Managing DNS", link: "/docs/guides/managing-dns.md" },
+				{ text: "Managing mail domains", link: "/docs/guides/managing-mail-domains.md" },
+				{ text: "Managing cron jobs", link: "/docs/guides/managing-cron-jobs.md" },
+				{ text: "Managing backups", link: "/docs/guides/managing-backups.md" },
+			],
+		},
+		{
 			text: "Admin",
 			collapsible: true,
-			collapsed: true,
 			items: [
 				{ text: "API", link: "/docs/admin/api.md" },
 				{ text: "API examples", link: "/docs/admin/rest_api.md" },
@@ -108,16 +120,6 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 				{ text: "Web", link: "/docs/admin/web.md" },
 				{ text: "FastCGI", link: "/docs/admin/fastcgi.md" },
 				{ text: "SSL certificates", link: "/docs/admin/ssl_certificates.md" },
-			],
-		},
-		{
-			text: "GUI",
-			collapsible: true,
-			collapsed: true,
-			items: [
-				{ text: "Best practices", link: "/docs/gui/best_practices.md" },
-				{ text: "User options", link: "/docs/gui/user_options.md" },
-				{ text: "Web domains", link: "/docs/gui/webdomains.md" },
 			],
 		},
 		{

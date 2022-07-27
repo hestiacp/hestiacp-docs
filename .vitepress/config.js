@@ -1,7 +1,5 @@
 import { defineConfig } from "vitepress";
 
-import { version } from "../package.json";
-
 export default defineConfig({
 	lang: "en-US",
 	title: "Hestia Control Panel",
@@ -66,7 +64,7 @@ function nav() {
 		{ text: "Team", link: "/team", activeMatch: "/team" },
 		{ text: "Donate", link: "https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=ST87LQH2CHGLA" },
 		{
-			text: `v${version}`,
+			text: `v1.6.x`,
 			items: [
 				{
 					text: "Changelog",

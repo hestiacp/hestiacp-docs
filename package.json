@@ -1,6 +1,6 @@
 {
 	"name": "hestiacp-docs",
-	"version": "1.6.5",
+	"version": "1.0.0",
 	"private": true,
 	"license": "GPL-3.0-or-later",
 	"scripts": {

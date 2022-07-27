@@ -16,11 +16,11 @@ hero:
       text: Get started
       link: /docs/getting-started
     - theme: alt
-      text: View on GitHub
-      link: https://github.com/hestiacp/hestiacp
-    - theme: alt
       text: Try the demo
       link: https://demo.hestiacp.com:8083/
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/hestiacp/hestiacp
 
 features:
   - icon: 🚀
@@ -32,4 +32,7 @@ features:
   - icon: 🛠️
     title: Extendable & powerful
     details: Hestia is extendable while being easy to learn. You can build your own themes, web templates, quick install applications and can interact with it using third party software via its API.
+  - icon: 🤝
+    title: Supported by the community
+    details: Hestia has a great support community, join the forum or the Discord server! To keep the project running, we rely on donations, which can be done via PayPal or cryptocurrency.
 ---

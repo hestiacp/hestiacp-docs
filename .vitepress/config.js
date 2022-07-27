@@ -5,7 +5,6 @@ import { version } from "../package.json";
 export default defineConfig({
 	lang: "en-US",
 	title: "Hestia Control Panel",
-	titleTemplate: "Hestia Control Panel",
 	description: "Open-source web server control panel.",
 
 	lastUpdated: true,
@@ -89,6 +88,14 @@ function sidebarGuide() {
 			text: "Main features",
 			collapsible: true,
 			items: [],
+		},
+		{
+			text: "Reference",
+			collapsible: true,
+			items: [
+				{ text: "CLI", link: "/guide/cli-reference" },
+				{ text: "API", link: "/guide/api-reference" },
+			],
 		},
 	];
 }

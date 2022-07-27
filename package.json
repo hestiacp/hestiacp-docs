@@ -4,9 +4,9 @@
 	"private": true,
 	"license": "GPL-3.0-or-later",
 	"scripts": {
-		"dev": "vitepress dev",
-		"build": "vitepress build",
-		"serve": "vitepress serve"
+		"dev": "vitepress dev web",
+		"build": "vitepress build web",
+		"serve": "vitepress serve web"
 	},
 	"devDependencies": {
 		"vitepress": "^1.0.0-alpha.4",

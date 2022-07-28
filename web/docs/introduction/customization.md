@@ -55,7 +55,7 @@ Hooks are located in one of the following files:
 - `/etc/hestiacp/hooks/post_install.sh`
 
 ::: tip
-Don't forget to make the file executable by running `chmod +x /etc/hestiacp/hooks/[file].sh`.
+Don’t forget to make the file executable by running `chmod +x /etc/hestiacp/hooks/[file].sh`.
 :::
 
 For example, to disable demo mode on pre-install:

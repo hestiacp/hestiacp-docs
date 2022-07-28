@@ -1,1 +1,1 @@
-# DNS Management Guide
+# DNS Management

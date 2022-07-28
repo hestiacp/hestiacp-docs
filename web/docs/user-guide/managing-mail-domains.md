@@ -1,1 +1,1 @@
-# Mail Domain Management Guide
+# Mail Domain Management

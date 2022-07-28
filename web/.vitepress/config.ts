@@ -5,6 +5,7 @@ export default defineConfig({
 	title: "Hestia Control Panel",
 	description: "Open-source web server control panel.",
 	head: [
+		["link", { rel: "stylesheet", href: "/styles/fontawesome.min.css" }],
 		["link", { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" }],
 		["link", { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" }],
 		["link", { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" }],
@@ -53,7 +54,7 @@ export default defineConfig({
 function nav(): DefaultTheme.NavItem[] {
 	return [
 		{ text: "Features", link: "/features.md" },
-		{ text: "Docs", link: "/docs/introduction/getting-started.md", activeMatch: "/docs/" },
+		{ text: "Docs", link: "/docs/introduction/why-hestia.md", activeMatch: "/docs/" },
 		{ text: "Team", link: "/team.md" },
 		{ text: "Demo", link: "https://demo.hestiacp.com:8083/" },
 		{ text: "Donate", link: "https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=ST87LQH2CHGLA" },
@@ -82,9 +83,10 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 		{
 			text: "Introduction",
 			items: [
+				{ text: "Why Hestia?", link: "/docs/introduction/why-hestia.md" },
 				{ text: "Getting started", link: "/docs/introduction/getting-started.md" },
 				{ text: "Best practices", link: "/docs/introduction/best-practices.md" },
-				{ text: "Architecture overview", link: "/docs/introduction/architecture.md" },
+				{ text: "Architecture", link: "/docs/introduction/architecture.md" },
 				{ text: "Customization", link: "/docs/introduction/customization.md" },
 			],
 		},
@@ -92,6 +94,7 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 			text: "User guide",
 			collapsible: true,
 			items: [
+				{ text: "Account management", link: "/docs/user-guide/account-management.md" },
 				{ text: "Managing web domains", link: "/docs/user-guide/managing-web-domains.md" },
 				{ text: "Managing DNS", link: "/docs/user-guide/managing-dns.md" },
 				{ text: "Managing mail domains", link: "/docs/user-guide/managing-mail-domains.md" },

@@ -12,12 +12,12 @@ The installer needs to be run as **root**, either directly from the terminal or 
 Hestia must be installed on top of a fresh operating system installation to ensure proper functionality.
 :::
 
-|                  | Minimum                                           | Recommended                          |
-| ---------------- | ------------------------------------------------- | ------------------------------------ |
-| CPU              | 1 core, 64-bit                                    | 4 cores                              |
-| Memory           | 1 GB (no SpamAssassin and ClamAV)                 | 4 GB                                 |
-| Disk             | 10 GB HDD                                         | 40 GB SSD                            |
-| Operating System | Debian 10, 11 <br> Ubuntu 18.04, 20.04, 22.04 LTS | Latest Debian <br> Latest Ubuntu LTS |
+|                      | Minimum                                           | Recommended                          |
+| -------------------- | ------------------------------------------------- | ------------------------------------ |
+| **CPU**              | 1 core, 64-bit                                    | 4 cores                              |
+| **Memory**           | 1 GB (no SpamAssassin and ClamAV)                 | 4 GB                                 |
+| **Disk**             | 10 GB HDD                                         | 40 GB SSD                            |
+| **Operating System** | Debian 10, 11 <br> Ubuntu 18.04, 20.04, 22.04 LTS | Latest Debian <br> Latest Ubuntu LTS |
 
 ## Regular installation
 

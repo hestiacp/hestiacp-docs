@@ -1,8 +1,8 @@
-# Web Domain Management
+# Web Domains
 
 To manage your web domains, you will need to navigate to the **Web <i class="fas fa-fw fa-globe-americas"></i>** tab.
 
-## Adding a new web domain
+## Adding a web domain
 
 1. Click the **<i class="fas fa-fw fa-plus-circle"></i> Add Web Domain** button.
 2. Enter the domain name in the **Domain** field.

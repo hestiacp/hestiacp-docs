@@ -1,12 +1,12 @@
-# Account Management
+# Account
 
 To access your account settings, click on the <i class="fas fa-lg fa-fw fa-user-circle"><span class="visually-hidden">user</span></i> button in the top right corner.
 
 ## Security
 
-### Changing your password
+### Password
 
-### Enabling two-factor authentication (2FA)
+### Two-factor authentication (2FA)
 
 1. In your account settings, check the box labeled **Enable two-factor authentication**.
 2. Click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
@@ -28,14 +28,12 @@ If you do not have an authenticator app, here are a couple of recommendations.
 
 :::
 
-### Restricting logging in to certain IP addresses only
+### Login restrictions
 
-### Viewing security logs
+### Security logs
 
-### Viewing login history
+### Login history
 
-## Managing SSH keys
+## SSH keys
 
-## Managing Access keys (for API access)
-
-## Accessing your account information
+## API Access keys

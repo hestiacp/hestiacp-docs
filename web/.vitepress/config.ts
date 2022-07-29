@@ -6,19 +6,17 @@ export default defineConfig({
 	description: "Open-source web server control panel.",
 	head: [
 		["link", { rel: "stylesheet", href: "/styles/fontawesome.min.css" }],
+		["link", { rel: "icon", sizes: "any", href: "/favicon.ico" }],
+		["link", { rel: "icon", type: "image/svg+xml", sizes: "16x16", href: "/logo.svg" }],
 		["link", { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" }],
-		["link", { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" }],
-		["link", { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" }],
 		["link", { rel: "manifest", href: "/site.webmanifest" }],
-		["link", { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#b7236a" }],
-		["meta", { name: "msapplication-TileColor", content: "#b7236a" }],
 		["meta", { name: "theme-color", content: "#b7236a" }],
 	],
 
 	lastUpdated: true,
 
 	themeConfig: {
-		logo: "/logo.png",
+		logo: "/logo.svg",
 		// algolia: {
 		//   appId: "2PN8794ZO9",
 		//   apiKey: "8a55d7d941cd49b3df09337bc46659c5",

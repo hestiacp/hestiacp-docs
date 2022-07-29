@@ -9,7 +9,7 @@ hero:
   text: Open-source web server control panel
   tagline: Fast, reliable, open-source. The control panel you’ve always wanted is just a command away.
   image:
-    src: /logo.png
+    src: /logo.svg
     alt: Hestia Logo
   actions:
     - theme: brand

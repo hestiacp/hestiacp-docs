@@ -1,3 +1,8 @@
+---
+# TODO: remove every outline: "deep" and replace with new config when update comes out
+outline: "deep"
+---
+
 # Getting Started
 
 This section will help you get Hestia installed on your server. If you already have Hestia installed and are just looking for options, you can skip this page.

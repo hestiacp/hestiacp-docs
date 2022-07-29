@@ -1,3 +1,7 @@
+---
+outline: "deep"
+---
+
 # Contributing to Hestia’s development
 
 [View the current guidelines](https://github.com/hestiacp/hestiacp/blob/main/CONTRIBUTING.md).

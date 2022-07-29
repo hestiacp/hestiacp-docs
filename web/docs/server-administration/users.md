@@ -1,3 +1,7 @@
+---
+outline: "deep"
+---
+
 # Users
 
 To manage users, you will need to be logged in as the **admin** user and navigate to the **Users <i class="fas fa-fw fa-users"></i>** tab.
@@ -14,7 +18,7 @@ To manage users, you will need to be logged in as the **admin** user and navigat
 2. Click the <i class="fas fa-fw fa-sign-in-alt"><span class="visually-hidden">login as</span></i> icon on the right hand of user’s name and email
 3. You are now a regular user. You can refer to the [Account Management](../user-guide/account.md) page for information on how to manage this user.
 
-## Editing a user’s privileges
+## Editing a user
 
 ### Changing their package
 

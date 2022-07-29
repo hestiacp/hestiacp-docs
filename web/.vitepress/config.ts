@@ -18,20 +18,14 @@ export default defineConfig({
 	themeConfig: {
 		logo: "/logo.svg",
 		// algolia: {
-		//   appId: "2PN8794ZO9",
-		//   apiKey: "8a55d7d941cd49b3df09337bc46659c5",
-		//   indexName: "hestiacp",
+		//   appId: "REPLACE_ME",
+		//   apiKey: "REPLACE_ME",
+		//   indexName: "REPLACE_ME",
 		// },
 		nav: nav(),
 		socialLinks: [
 			{ icon: "github", link: "https://github.com/hestiacp/hestiacp" },
 			{ icon: "discord", link: "https://discord.com/invite/yy75DKs" },
-			// {
-			// 	icon: {
-			// 		svg: '<svg role="img" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><title>Forum</title><path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" /></svg>',
-			// 	},
-			// 	link: "https://forum.hestiacp.com/",
-			// },
 			{ icon: "twitter", link: "https://twitter.com/HestiaPanel" },
 			{ icon: "facebook", link: "https://www.facebook.com/hestiacp" },
 		],
@@ -55,9 +49,10 @@ function nav(): DefaultTheme.NavItem[] {
 		{ text: "Docs", link: "/docs/introduction/why-hestia.md", activeMatch: "/docs/" },
 		{ text: "Team", link: "/team.md" },
 		{ text: "Demo", link: "https://demo.hestiacp.com:8083/" },
+		{ text: "Forum", link: "https://forum.hestiacp.com/" },
 		{ text: "Donate", link: "https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=ST87LQH2CHGLA" },
 		{
-			text: `v1.6.x`,
+			text: "v1.6.x",
 			items: [
 				{
 					text: "Changelog",
@@ -92,12 +87,12 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 			text: "User guide",
 			collapsible: true,
 			items: [
-				{ text: "Account", link: "/docs/user-guide/account.md" },
 				{ text: "Web domains", link: "/docs/user-guide/web-domains.md" },
 				{ text: "DNS", link: "/docs/user-guide/dns.md" },
 				{ text: "Mail domains", link: "/docs/user-guide/mail-domains.md" },
 				{ text: "Cron jobs", link: "/docs/user-guide/cron-jobs.md" },
 				{ text: "Backups", link: "/docs/user-guide/backups.md" },
+				{ text: "Account", link: "/docs/user-guide/account.md" },
 			],
 		},
 		{

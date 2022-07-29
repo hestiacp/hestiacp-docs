@@ -1,10 +1,31 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# VS Code
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 !.vscode/*.code-snippets
+# Local History
+.history/
 
-.DS_Store
+# Node
 node_modules/
+
+# Yarn Integrity file
+.yarn-integrity
+
+# yarn v2+
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# vitepress build output
 dist/

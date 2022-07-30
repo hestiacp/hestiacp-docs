@@ -43,7 +43,7 @@ Assigning the **Administrator** role to a user will enable them to see and edit 
 
 To change a user’s package, change the **Package** value from the dropdown.
 
-### Managing their SSH access
+### Changing their SSH access
 
 To change a user’s SSH access, click the **Advanced Options** button, then change the **SSH Access** value from the dropdown.
 

@@ -87,6 +87,7 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 			text: "User guide",
 			collapsible: true,
 			items: [
+				{ text: "Users", link: "/docs/user-guide/users.md" },
 				{ text: "Web domains", link: "/docs/user-guide/web-domains.md" },
 				{ text: "DNS", link: "/docs/user-guide/dns.md" },
 				{ text: "Mail domains", link: "/docs/user-guide/mail-domains.md" },
@@ -98,7 +99,7 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 		{
 			text: "Server administration",
 			collapsible: true,
-			items: [{ text: "Users", link: "/docs/server-administration/users.md" }],
+			items: [],
 		},
 		{
 			text: "CLI",

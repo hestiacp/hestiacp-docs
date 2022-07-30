@@ -66,22 +66,22 @@ const teamMembers: DefaultTheme.TeamMember[] = [
 
 const featuredContributors: DefaultTheme.TeamMember[] = [
 	{
-		avatar: "/logo.png",
+		avatar: "/apple-touch-icon.png",
 		name: "John Doe",
 		links: [{ icon: "github", link: "https://github.com/hestiacp" }],
 	},
 	{
-		avatar: "/logo.png",
+		avatar: "/apple-touch-icon.png",
 		name: "John Doe",
 		links: [{ icon: "github", link: "https://github.com/hestiacp" }],
 	},
 	{
-		avatar: "/logo.png",
+		avatar: "/apple-touch-icon.png",
 		name: "John Doe",
 		links: [{ icon: "github", link: "https://github.com/hestiacp" }],
 	},
 	{
-		avatar: "/logo.png",
+		avatar: "/apple-touch-icon.png",
 		name: "John Doe",
 		links: [{ icon: "github", link: "https://github.com/hestiacp" }],
 	},

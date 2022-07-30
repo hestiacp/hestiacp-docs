@@ -87,13 +87,13 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 			text: "User guide",
 			collapsible: true,
 			items: [
-				{ text: "Users", link: "/docs/user-guide/users.md" },
-				{ text: "Web domains", link: "/docs/user-guide/web-domains.md" },
-				{ text: "DNS", link: "/docs/user-guide/dns.md" },
-				{ text: "Mail domains", link: "/docs/user-guide/mail-domains.md" },
-				{ text: "Cron jobs", link: "/docs/user-guide/cron-jobs.md" },
-				{ text: "Backups", link: "/docs/user-guide/backups.md" },
-				{ text: "Account", link: "/docs/user-guide/account.md" },
+				{ text: "Managing users", link: "/docs/user-guide/users.md" },
+				{ text: "Managing web domains", link: "/docs/user-guide/web-domains.md" },
+				{ text: "Managing DNS", link: "/docs/user-guide/dns.md" },
+				{ text: "Managing mail domains", link: "/docs/user-guide/mail-domains.md" },
+				{ text: "Managing cron jobs", link: "/docs/user-guide/cron-jobs.md" },
+				{ text: "Managing backups", link: "/docs/user-guide/backups.md" },
+				{ text: "Managing your account", link: "/docs/user-guide/account.md" },
 			],
 		},
 		{
@@ -102,16 +102,23 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 			items: [],
 		},
 		{
-			text: "CLI",
-			items: [{ text: "Commands", link: "/docs/cli/commands.md" }],
-		},
-		{
 			text: "Contributing",
 			items: [
 				{ text: "Documentation", link: "/docs/contributing/documentation.md" },
 				{ text: "Development", link: "/docs/contributing/development.md" },
 				{ text: "Translations", link: "/docs/contributing/translations.md" },
 			],
+		},
+		{
+			text: "Community",
+			items: [
+				{ text: "Intall script generator", link: "/docs/community/install-script-generator.md" },
+				{ text: "WordPress plugin", link: "/docs/community/wordpress-plugin.md" },
+			],
+		},
+		{
+			text: "CLI Reference",
+			items: [{ text: "Commands", link: "/docs/cli/commands.md" }],
 		},
 	];
 }

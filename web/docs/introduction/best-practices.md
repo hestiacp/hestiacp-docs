@@ -12,7 +12,7 @@ Managing a server is not easy. Here are a couple of best practices you should tr
 By default, the **admin** user has elevated privileges. This can pose a **security threat** to your server. For example, if you run WordPress under your **admin** user and a vulnerability is found in WordPress or a plugin, a malicious user might be able to run commands as **root**!
 :::
 
-Before adding any web or mail domain on your server, you should create a regular user. To do this, you can refer to our [User Management Guide](../server-administration/users.md#adding-a-user).
+Before adding any web or mail domain on your server, you should create a regular user. To do this, you can refer to our [User Management Guide](../user-guide/users.md#adding-a-user).
 
 ## Enable two-factor authentication (2FA) for the _admin_ user
 

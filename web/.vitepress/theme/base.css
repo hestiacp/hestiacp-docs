@@ -2,6 +2,10 @@ html {
 	scroll-behavior: smooth;
 }
 
+.VPMenu .item.social-links {
+	justify-content: center;
+}
+
 .has-outline .outline-link.nested {
 	padding-left: 0;
 }

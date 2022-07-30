@@ -22,7 +22,7 @@ To manage users, you will need to be logged in as an **administrator** and navig
 
 The settings specified below are only available to administrators. For the regular settings, you can refer to the [Account Management](../user-guide/account.md) page.
 
-To edit a user you can either impersonate them and click on the <i class="fas fa-lg fa-fw fa-user-circle"><span class="visually-hidden">user</span></i> icon in the top right, or follow these steps:
+To edit a user you can either impersonate them and click the <i class="fas fa-lg fa-fw fa-user-circle"><span class="visually-hidden">user</span></i> icon in the top right, or follow these steps:
 
 1. Hover over the user you want to login as.
 2. Click the <i class="fas fa-fw fa-pencil-alt"><span class="visually-hidden">edit user</span></i> icon on the right of the user’s name and email.

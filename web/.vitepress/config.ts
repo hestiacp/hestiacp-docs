@@ -88,9 +88,11 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 			collapsible: true,
 			items: [
 				{ text: "Managing users", link: "/docs/user-guide/users.md" },
+				{ text: "Managing packages", link: "/docs/user-guide/packages.md" },
 				{ text: "Managing web domains", link: "/docs/user-guide/web-domains.md" },
 				{ text: "Managing DNS", link: "/docs/user-guide/dns.md" },
 				{ text: "Managing mail domains", link: "/docs/user-guide/mail-domains.md" },
+				{ text: "Managing databases", link: "/docs/user-guide/databases.md" },
 				{ text: "Managing cron jobs", link: "/docs/user-guide/cron-jobs.md" },
 				{ text: "Managing backups", link: "/docs/user-guide/backups.md" },
 				{ text: "Managing your account", link: "/docs/user-guide/account.md" },

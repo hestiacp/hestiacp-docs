@@ -1,3 +1,7 @@
+---
+outline: "deep"
+---
+
 # Account
 
 To access your account settings, click on the <i class="fas fa-lg fa-fw fa-user-circle"><span class="visually-hidden">user</span></i> button in the top right corner.

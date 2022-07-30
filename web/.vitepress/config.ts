@@ -112,7 +112,7 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 		{
 			text: "Community",
 			items: [
-				{ text: "Intall script generator", link: "/docs/community/install-script-generator.md" },
+				{ text: "Install script generator", link: "/docs/community/install-script-generator.md" },
 				{ text: "WordPress plugin", link: "/docs/community/wordpress-plugin.md" },
 			],
 		},

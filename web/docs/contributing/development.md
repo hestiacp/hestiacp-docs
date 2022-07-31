@@ -25,8 +25,11 @@ Go into the `src` folder and run one of these commands:
 ### Compile only
 
 ```sh
+# Only Hestia
 ./hst_autocompile.sh --hestia --noinstall --keepbuild '~localsrc'
+```
 
+```sh
 # Hestia + hestia-nginx and hestia-php
 ./hst_autocompile.sh --all --noinstall --keepbuild '~localsrc'
 ```
@@ -34,8 +37,11 @@ Go into the `src` folder and run one of these commands:
 ### Compile and install
 
 ```sh
+# Only Hestia
 ./hst_autocompile.sh --hestia --install '~localsrc'
+```
 
+```sh
 # Hestia + hestia-nginx and hestia-php
 ./hst_autocompile.sh --all --install '~localsrc'
 ```

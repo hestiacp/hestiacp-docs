@@ -109,8 +109,8 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 		{
 			text: "Contributing",
 			items: [
-				{ text: "Documentation", link: "/docs/contributing/documentation.md" },
 				{ text: "Development", link: "/docs/contributing/development.md" },
+				{ text: "Documentation", link: "/docs/contributing/documentation.md" },
 				{ text: "Translations", link: "/docs/contributing/translations.md" },
 			],
 		},

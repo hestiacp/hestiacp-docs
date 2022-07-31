@@ -25,19 +25,19 @@ Go into the `src` folder and run one of these commands:
 ### Compile only
 
 ```sh
-./hst_autocompile.sh \--hestia \--noinstall \--keepbuild '\~localsrc'
+./hst_autocompile.sh --hestia --noinstall --keepbuild '~localsrc'
 
 # Hestia + hestia-nginx and hestia-php
-./hst_autocompile.sh \--all \--noinstall \--keepbuild '\~localsrc'
+./hst_autocompile.sh --all --noinstall --keepbuild '~localsrc'
 ```
 
 ### Compile and install
 
 ```sh
-./hst_autocompile.sh \--hestia \--install '\~localsrc'
+./hst_autocompile.sh --hestia --install '~localsrc'
 
 # Hestia + hestia-nginx and hestia-php
-./hst_autocompile.sh \--all \--install '\~localsrc'
+./hst_autocompile.sh --all --install '~localsrc'
 ```
 
 ## Install Hestia from packages

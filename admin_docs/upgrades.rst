@@ -78,7 +78,15 @@ If you have Exim4 installed
 
     rm -f /etc/exim4/exim4.conf.template 
     cp -f /usr/local/hestia/install/deb/exim/exim4.conf.4.94.template /etc/exim4/exim4.conf.template
+    
+If you use sieve
 
+.. code-block:: bash
+
+   # Exim4
+   sed -i "s/\stransport = dovecot_virtual_delivery/ transport = local_delivery/" /etc/exim4/exim4.conf.template
+   sed -i "s/dovecot_virtual_delivery:\n  driver = pipe\n  command = \/usr\/lib\/dovecot\/dovecot-lda -e -d \$local_part@\$domain -f \$sender_address -a \$original_local_part@\$original_domain\n  delivery_date_add\n  envelope_to_add\n  return_path_add\n  log_output = true\n  log_defer_output = true\n  user = \${extract{2}{:}{\${lookup{\$local_part}lsearch{\/etc\/exim4\/domains\/\${lookup{\$domain}dsearch{\/etc\/exim4\/domains\/}}\/passwd}}}}\n  group = mail\n  return_output\n//g" /etc/exim4/exim4.conf.template
+        
 If you have ProFTPD installed
 
 Comment out line 29 in 

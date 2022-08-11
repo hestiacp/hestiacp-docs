@@ -7,10 +7,6 @@ outline: "deep"
 [View the current guidelines](https://github.com/hestiacp/hestiacp/blob/main/CONTRIBUTING.md).
 
 ::: tip
-If you are following any tutorial regarding ARM + Hestia please use the normal install method. Since 1.5.0, we have added ARM packages to our _apt_ server! For current active installs To enable updates please remove the `#` in `/etc/apt/sources.list/hestia` and then run `apt update && apt upgrade`
-:::
-
-::: tip
 We recommend having an existing previous Hestia installation. This will ensure that everything is already installed correctly.
 :::
 

@@ -6,8 +6,8 @@ outline: "deep"
 
 [View the current guidelines](https://github.com/hestiacp/hestiacp/blob/main/CONTRIBUTING.md).
 
-::: tip
-We recommend having an existing previous Hestia installation. This will ensure that everything is already installed correctly.
+::: warning
+Developments build are always unstable. If you encounter a bug please report them via [Github](https://github.com/hestiacp/hestiacp/issues/new/choose) or submit a [Pull request](https://github.com/hestiacp/hestiacp/pulls)
 :::
 
 ## Compiling
@@ -65,6 +65,11 @@ bash hst-install-{os}.sh --with-debs /tmp/hestiacp-src/deb/
 Any option can be appended to the installer command. [See the complete list](../introduction/getting-started#list-of-installation-options).
 
 ## Update Hestia from GitHub
+
+::: info
+Following method only supports building the `hestia` package if you need to build `hestia-nginx` or `hestia-php` use one of the previous commands
+:::
+
 
 ```bash
 v-update-sys-hestia-git [USERNAME] [BRANCH]

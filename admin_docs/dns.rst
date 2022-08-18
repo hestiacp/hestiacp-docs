@@ -80,4 +80,4 @@ When trying to add a DNS server for a cluster I get the following error
     /usr/local/hestia/func/remote.sh: line 43: return: Error:: numeric argument required
     Error: api connection to slave.domain.com failed
 
-By default API access to a new Hestia install has been disabled for non-local ip adresses. Please add youe ip address to the "Allowed ip adresses for API" field in the settings in *Configure Server* -> *Security* -> *Allowed IP addresses for API*
+By default API access to a new Hestia install has been disabled for non-local ip adresses. Please add your ip address to the "Allowed ip adresses for API" field in the settings in *Configure Server* -> *Security* -> *Allowed IP addresses for API*

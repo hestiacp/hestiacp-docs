@@ -2,7 +2,7 @@
 
 ## How to setup a DNS Cluster
 
-If you are looking for the options to minimize DNS-related downtime or
+If you are looking for the options to minimise DNS-related downtime or
 the way to manage dns across all server you have, you might consider to
 set up dns cluster.
 

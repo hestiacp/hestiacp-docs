@@ -553,7 +553,7 @@ This function enables webmail client for a mail domain.
 v-add-remote-dns-domain admin mydomain.tld yes
 ```
 
-This function synchronize dns domain with the remote server.
+This function synchronise dns domain with the remote server.
 
 ## v-add-remote-dns-host
 
@@ -585,7 +585,7 @@ This function adds remote dns server to the dns cluster. As alternative api_key 
 v-add-remote-dns-record bob acme.com 23
 ```
 
-This function synchronize dns domain with the remote server.
+This function synchronise dns domain with the remote server.
 
 ## v-add-sys-api-ip
 
@@ -997,7 +997,7 @@ Up on creating an web domain set the SSL Force values due to the delay of LE due
 
 ## v-add-web-domain-stats
 
-**add log analyzer to generate domain statistics**
+**add log analyser to generate domain statistics**
 
 **Options**: `USER` `DOMAIN` `TYPE`
 
@@ -1007,7 +1007,7 @@ Up on creating an web domain set the SSL Force values due to the delay of LE due
 v-add-web-domain-stats admin example.com awstats
 ```
 
-This function is used for enabling log analyzer system to a domain. For viewing the domain statistics use http://domain.tld/vstats/ link. Access this page is not protected by default. If you want to secure it with passwords you should use v-add-web-domain_stat_auth script.
+This function is used for enabling log analyser system to a domain. For viewing the domain statistics use http://domain.tld/vstats/ link. Access this page is not protected by default. If you want to secure it with passwords you should use v-add-web-domain_stat_auth script.
 
 ## v-add-web-domain-stats-user
 
@@ -1353,7 +1353,7 @@ This function changes SSL domain certificate and the key. If ca file present it 
 
 **Options**: `USER` `DOMAIN`
 
-This function synchronize dns domain with the remote server.
+This function synchronise dns domain with the remote server.
 
 ## v-change-remote-dns-domain-soa
 
@@ -1367,7 +1367,7 @@ This function synchronize dns domain with the remote server.
 v-change-remote-dns-domain-soa admin example.org.uk
 ```
 
-This function synchronize dns domain with the remote server.
+This function synchronise dns domain with the remote server.
 
 ## v-change-remote-dns-domain-ttl
 
@@ -1381,7 +1381,7 @@ This function synchronize dns domain with the remote server.
 v-change-remote-dns-domain-ttl admin domain.tld
 ```
 
-This function synchronize dns domain with the remote server.
+This function synchronise dns domain with the remote server.
 
 ## v-change-sys-api
 
@@ -2699,7 +2699,7 @@ This function for deleting all users mail domains.
 v-delete-remote-dns-domain admin example.tld
 ```
 
-This function synchronize dns with the remote server.
+This function synchronise dns with the remote server.
 
 ## v-delete-remote-dns-domains
 
@@ -2735,7 +2735,7 @@ This function for deleting the remote dns host from hestia configuration.
 v-delete-remote-dns-record user07 acme.com 44
 ```
 
-This function synchronize dns with the remote server.
+This function synchronise dns with the remote server.
 
 ## v-delete-sys-api-ip
 
@@ -4399,7 +4399,7 @@ This function to obtain the list of all user web domains.
 
 **Options**: `[FORMAT]`
 
-This function for obtaining the list of web statistics analyzer.
+This function for obtaining the list of web statistics analyser.
 
 ## v-list-web-templates
 
@@ -5313,11 +5313,11 @@ This function of suspending all user's sites.
 
 ## v-sync-dns-cluster
 
-**synchronize dns domains**
+**synchronise dns domains**
 
 **Options**: `HOST`
 
-This function synchronize all dns domains.
+This function synchronise all dns domains.
 
 ## v-unsuspend-cron-job
 
@@ -5767,7 +5767,7 @@ v-update-sys-ip
 
 ### Intended for internal usage
 
-This function scans configured ip in the system and register them with hestia internal database. This call is intended for use on vps servers, where ip is set by hypervizor.
+This function scans configured ip in the system and register them with hestia internal database. This call is intended for use on vps servers, where ip is set by hypervisor.
 
 ## v-update-sys-ip-counters
 
@@ -5783,7 +5783,7 @@ Function updates usage U_WEB_ADOMAINS and U_SYS_USERS counters.
 
 **Options**: `PIPE`
 
-This function is responsible queue processing. Restarts of services, scheduled backups, web log parsing and other heavy resource consuming operations are handled by this script. It helps to optimize system behaviour. In a nutshell Apache will be restarted only once even if 10 domains are added or deleted.
+This function is responsible queue processing. Restarts of services, scheduled backups, web log parsing and other heavy resource consuming operations are handled by this script. It helps to optimise system behaviour. In a nutshell Apache will be restarted only once even if 10 domains are added or deleted.
 
 ## v-update-sys-rrd
 
@@ -6005,7 +6005,7 @@ This function updates the SSL certificate for a domain. Parameter ssl_dir is a p
 v-update-web-domain-stat alice acme.com
 ```
 
-This function runs log analyzer for specific webdomain.
+This function runs log analyser for specific webdomain.
 
 ## v-update-web-domain-traff
 
@@ -6047,7 +6047,7 @@ This function recalculates disk usage for all user webdomains.
 v-update-web-domains-stat admin
 ```
 
-This function runs log analyzer usage for all user webdomains.
+This function runs log analyser usage for all user webdomains.
 
 ## v-update-web-domains-traff
 

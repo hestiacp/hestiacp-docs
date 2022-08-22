@@ -2,10 +2,10 @@
 outline: "deep"
 ---
 
-# Customization
+# Customisation
 
 ::: warning
-We currently only support changing the layout via CSS. You can customize HTML files and templates, but they **will** be overwritten during updates, so make sure to [set up hooks](#running-commands-before-and-after-updates) to restore your changes after an update.
+We currently only support changing the layout via CSS. You can customise HTML files and templates, but they **will** be overwritten during updates, so make sure to [set up hooks](#running-commands-before-and-after-updates) to restore your changes after an update.
 :::
 
 ## Adding a new theme
@@ -22,7 +22,7 @@ Create a new theme in `/usr/local/hestia/web/css/theme/custom/my_theme.css`
 }
 ```
 
-## Customizing a default theme
+## Customising a default theme
 
 Changes to default themes are always overwritten during updates. However, via the `v-add-sys-theme` command, you can create a new theme.
 
@@ -34,7 +34,7 @@ $ cp $HESTIA/install/deb/themes/dark.css /root/my_dark.css
 
 Apply your changes and follow the instructions above.
 
-## Customizing the _Domain not found_ page
+## Customising the _Domain not found_ page
 
 The _Domain not found_ page is located in `/var/www/html/index.html`. You can edit it using the following command:
 
@@ -42,7 +42,7 @@ The _Domain not found_ page is located in `/var/www/html/index.html`. You can ed
 $ nano /var/www/html/index.html
 ```
 
-## Customizing the default domain skeleton structure
+## Customising the default domain skeleton structure
 
 The default structure that will be added to a domain when it gets created is located in `/usr/local/hestia/data/templates/web/skel/public_html`.
 
@@ -51,7 +51,7 @@ The default structure that will be added to a domain when it gets created is loc
 With the release of Hestia 1.4.6 we have added pre-install and post-install hooks. For example, you can use hooks to:
 
 - Disable and enable demo mode before and after an update.
-- Restore a customized skeleton page.
+- Restore a customised skeleton page.
 
 Hooks are located in one of the following files:
 

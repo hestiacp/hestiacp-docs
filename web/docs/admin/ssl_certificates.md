@@ -43,7 +43,7 @@ following list will be extended in the futere.
 When requesting an SSL certificate the following error is often seen:
 
 Error: Let’s Encrypt validation status 400. Details: Unable to update
-challenge :: authorization must be pending means
+challenge :: authorisation must be pending means
 
 It could mean multiple things:
 

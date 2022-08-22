@@ -80,7 +80,7 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 				{ text: "Getting started", link: "/docs/introduction/getting-started.md" },
 				{ text: "Best practices", link: "/docs/introduction/best-practices.md" },
 				{ text: "Architecture", link: "/docs/introduction/architecture.md" },
-				{ text: "Customization", link: "/docs/introduction/customization.md" },
+				{ text: "Customisation", link: "/docs/introduction/customisation.md" },
 			],
 		},
 		{
@@ -101,11 +101,11 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 				{ text: "Account", link: "/docs/user-guide/account.md" },
 			],
 		},
-		{
-			text: "Server administration",
-			collapsible: true,
-			items: [],
-		},
+		// {
+		// 	text: "Server administration",
+		// 	collapsible: true,
+		// 	items: [],
+		// },
 		{
 			text: "Contributing",
 			items: [

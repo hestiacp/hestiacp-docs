@@ -7,7 +7,7 @@ outline: "deep"
 [View the current guidelines](https://github.com/hestiacp/hestiacp/blob/main/CONTRIBUTING.md).
 
 ::: warning
-Developments build are always unstable. If you encounter a bug please report them via [Github](https://github.com/hestiacp/hestiacp/issues/new/choose) or submit a [Pull request](https://github.com/hestiacp/hestiacp/pulls)
+Developments build are always unstable. If you encounter a bug please report it via [GitHub](https://github.com/hestiacp/hestiacp/issues/new/choose) or submit a [Pull Request](https://github.com/hestiacp/hestiacp/pulls)
 :::
 
 ## Compiling
@@ -69,7 +69,6 @@ Any option can be appended to the installer command. [See the complete list](../
 ::: info
 Following method only supports building the `hestia` package if you need to build `hestia-nginx` or `hestia-php` use one of the previous commands
 :::
-
 
 ```bash
 v-update-sys-hestia-git [USERNAME] [BRANCH]

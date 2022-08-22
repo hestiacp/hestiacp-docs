@@ -34,7 +34,7 @@ $ wget -qO - https://raw.githubusercontent.com/hestiacp/hestiacp/release/install
 
 ## Custom installation
 
-If you want to customize which software gets installed, or want to run an unattended installation, you will need to run a custom installation.
+If you want to customise which software gets installed, or want to run an unattended installation, you will need to run a custom installation.
 
 ### List of installation options
 

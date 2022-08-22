@@ -14,7 +14,7 @@ updated - the admin initiates it - the user modifies settings
 
 The templates can be found in the [/data/templates/]{.title-ref}
 directory in the install folder. For webservers they consist of an
-initializer script ([.sh]).
+initialiser script ([.sh]).
 
 ---
 

@@ -7,7 +7,7 @@ outline: "deep"
 [View the current guidelines](https://github.com/hestiacp/hestiacp/blob/main/CONTRIBUTING.md).
 
 ::: warning
-Developments build are always unstable. If you encounter a bug please report it via [GitHub](https://github.com/hestiacp/hestiacp/issues/new/choose) or submit a [Pull Request](https://github.com/hestiacp/hestiacp/pulls)
+Development builds are always unstable. If you encounter a bug please report them via [Github](https://github.com/hestiacp/hestiacp/issues/new/choose) or submit a [Pull request](https://github.com/hestiacp/hestiacp/pulls)
 :::
 
 ## Compiling
@@ -31,6 +31,10 @@ Go into the `src` folder and run one of these commands:
 ```
 
 ### Compile and install
+
+::: info
+Use it only if you have Hestia already installed
+:::
 
 ```sh
 # Only Hestia
@@ -70,6 +74,7 @@ Any option can be appended to the installer command. [See the complete list](../
 Following method only supports building the `hestia` package if you need to build `hestia-nginx` or `hestia-php` use one of the previous commands
 :::
 
+
 ```bash
 v-update-sys-hestia-git [USERNAME] [BRANCH]
 ```
@@ -88,8 +93,6 @@ To solve this issue, run:
 ```bash
 apt install -f
 ```
-
-After that run `v-update-sys-hestia-git [USERNAME] [BRANCH]` again.
 
 ## Automated testing
 

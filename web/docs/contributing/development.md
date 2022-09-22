@@ -1,7 +1,3 @@
----
-outline: "deep"
----
-
 # Contributing to Hestia’s development
 
 [View the current guidelines](https://github.com/hestiacp/hestiacp/blob/main/CONTRIBUTING.md).
@@ -73,7 +69,6 @@ Any option can be appended to the installer command. [See the complete list](../
 ::: info
 Following method only supports building the `hestia` package if you need to build `hestia-nginx` or `hestia-php` use one of the previous commands
 :::
-
 
 ```bash
 v-update-sys-hestia-git [USERNAME] [BRANCH]

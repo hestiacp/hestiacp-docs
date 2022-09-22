@@ -1,7 +1,3 @@
----
-outline: "deep"
----
-
 # CLI Commands
 
 ## v-acknowledge-user-notification

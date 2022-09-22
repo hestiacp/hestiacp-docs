@@ -32,6 +32,8 @@ export default defineConfig({
 
 		sidebar: { "/docs/": sidebarDocs() },
 
+		outline: [2, 3],
+
 		editLink: {
 			pattern: "https://github.com/hestiacp/hestiacp-docs/edit/main/docs/:path",
 			text: "Edit this page on GitHub",

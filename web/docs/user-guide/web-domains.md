@@ -1,7 +1,3 @@
----
-outline: "deep"
----
-
 # Web Domains
 
 To manage your web domains, you will need to navigate to the **Web <i class="fas fa-fw fa-globe-americas"></i>** tab.

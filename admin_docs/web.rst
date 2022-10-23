@@ -135,7 +135,7 @@ How can I change settings for a specific domain
 
 With the switch to PHP-FPM there are currently 2 different ways.
 
-1. Using user.ini in the directory
+1. Using .user.ini in the public_html folder
 2. Via PHP-FPM pool config
 
 Config templates for the PHP pool can be found in

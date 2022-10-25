@@ -62,6 +62,11 @@ const teamMembers: DefaultTheme.TeamMember[] = [
 		name: "Anton Pleskanovskyy 🇺🇦",
 		links: [{ icon: "github", link: "https://github.com/Pleskan" }],
 	},
+	{
+		avatar: "https://www.github.com/AlecRust.png",
+		name: "Alec Rust 🇬🇧",
+		links: [{ icon: "github", link: "https://github.com/AlecRust" }],
+	},
 ];
 
 const featuredContributors: DefaultTheme.TeamMember[] = [

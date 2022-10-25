@@ -12,4 +12,4 @@ The documentation is built using [VitePress](https://vitepress.vuejs.org). There
 1. Open the project folder in your terminal.
 2. If the dependencies are not installed yet, install them by running `pnpm i`.
 3. Run `pnpm dev`.
-4. Navigate to [http://localhost:5173](http://localhost:5173) in your browser.
+4. Navigate to http://localhost:5173 in your browser.

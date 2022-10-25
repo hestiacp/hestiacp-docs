@@ -124,8 +124,11 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 			],
 		},
 		{
-			text: "CLI Reference",
-			items: [{ text: "Commands", link: "/docs/cli/commands.md" }],
+			text: "Reference",
+			items: [
+				{ text: "API", link: "/docs/reference/api.md" },
+				{ text: "CLI", link: "/docs/reference/cli.md" },
+			],
 		},
 	];
 }

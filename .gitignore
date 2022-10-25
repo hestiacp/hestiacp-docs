@@ -29,3 +29,5 @@ node_modules/
 
 # vitepress build output
 dist/
+
+.nova/

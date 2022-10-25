@@ -9,77 +9,9 @@ As a replacement we have developed "Quick install app"
 - Make a new folder `Example` in `//usr/local/hestia/web/src/app/WebApp/Installers/`
 - Create a file named: `ExampleSetup.php`
 
-```php
-<?php
-
-namespace Hestia\WebApp\Installers\Example;
-
-use Hestia\System\Util;
-use \Hestia\WebApp\Installers\BaseSetup as BaseSetup;
-
-class ExampleSetup extends BaseSetup {
-
-    protected $appInfo = [ 
-        'name' => 'Example',
-        'group' => 'cms',
-        //keep always set to enabled. When PHP version isn't supported it will change it to no and disable it
-        'enabled' => true,
-        'version' => 'latest',
-        'thumbnail' => 'example.png' //Max size is 300px by 300px 
-    ];
-    
-    protected $appname = 'example';
-    protected $config = [
-        'form' => [
-            //Note at least one input field is currently required
-            'protocol' => [ 
-                'type' => 'select',
-                'options' => ['http','https'],
-                'value' => 'https'
-            ],
-            'site_name' => ['type'=>'text', 'value'=>'Demo'],
-            'username' => ['value'=>'Username'],
-            'email' => 'text',
-            'password' => 'password',
-            ],
-        'database' => true, 
-        'resources' => [
-            'archive'  => [ 'src' => 'https://download.example.com/example.version.tar.gz' ],
-        ], 
-        'server' => [
-            'nginx' => [
-                'template' => 'wordpress',
-            ],
-            'apache2' => [
-                'template' => 'example',
-            ],
-            'php' => [
-                'supported' => [ '7.4','8.0','8.1' ],
-            ],
-        ],
-    ];
-    
-    public function install(array $options = null)
-    {
-            return ($status === 0);
-    }
-}
-// When done upload the folder to /usr/local/hestia/web/src/app/WebApp/Installers
-```
+[An example can be found here](https://github.com/hestiacp/hestia-quick-install/blob/main/Example/ExampleSetup.php)
 
 This will include the "Example" app in HestiaCP when you open the Quick install app.
-
-## Code example
-
-Example class can be found on [Example class](https://github.com/hestiacp/hestia-quick-install)
-
-## Downloading an app 
-
-Currently the following methods are supported:
-
-- Download a archive from a website
-- Via [Composer](https://getcomposer.org)
-- Via [Wordpress CLI](https://wp-cli.org)
 
 ## Info
 
@@ -104,7 +36,29 @@ Follow fields are available
 
 Please check existing apps for examples
 
-### Installing the web application
+### Database
+
+Flag to enable / disable databases. If enabled 4 fields are added to allow the user to specify a database user, database and password and a check box if a new database need to be created
+
+### Downloading an app 
+
+Currently the following methods are supported:
+
+- Download a archive from a website
+- Via [Composer](https://getcomposer.org)
+- Via [Wordpress CLI](https://wp-cli.org)
+
+
+
+### Server settings
+
+As certain apps have certain requirements. For example certain apps require a specific template in Nginx or do only run on PHP8.0 or higher. 
+
+- Nginx: Template used for Nginx + PHP-FPM setup
+- Apache2: Template used for Apache2 setup can be usally be omitted.
+- PHP version: Array of all supported php versions
+
+## Installing the web application
 
 There are multiple ways to download the web app after it is has been downloaded
 
@@ -116,10 +70,10 @@ Also make sure to prevent any issues in the future that all commands are execute
 
 Please be aware that the naming of your WebApp should follow the following regex: `[a-zA-Z][a-zA-Z0,9]` otherwise it will not register as a working app!
 
-## Example
-
-Example class can be found on [Example class](https://github.com/hestiacp/hestia-quick-install)
-
 ## Sharing
 
 If you are done you can submit [a Pull Request](https://github.com/hestiacp/hestiacp/pulls) to HestiaCP and we will review the code and if it meeds our standaards we will include in the the next release.
+
+## More information
+
+More information can be found in the [hestia-quick-install repo](https://github.com/hestiacp/hestia-quick-install/blob/main/Example/ExampleSetup.php)

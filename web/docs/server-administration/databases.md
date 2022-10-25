@@ -1,4 +1,6 @@
-# Database
+# Databases
+
+**TODO: Rewrite content**
 
 ## How to setup a remote database server
 
@@ -17,13 +19,13 @@ MySQL may be replaced by the PostgreSQL
 v-list-database-hosts
 ```
 
-## Why I can’t use `http://ip/phpmyadmin/`{.interpreted-text role="samp"}
+## Why I can’t use `http://ip/phpmyadmin/`
 
 For security reasons we have decided to disable this option.
 
 Please use `https://host.domain.tld/phpmyadmin/`
 
-## How can I enable access to `http://ip/phpmyadmin/`{.interpreted-text role="samp"}
+## How can I enable access to `http://ip/phpmyadmin/`
 
 For Apache2
 

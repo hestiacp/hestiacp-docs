@@ -1,4 +1,6 @@
-# Backups / Restore
+# Backup and Restore
+
+**TODO: Rewrite content**
 
 ## How do I move a user to a new server?
 

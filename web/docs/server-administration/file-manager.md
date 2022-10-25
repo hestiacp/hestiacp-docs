@@ -1,5 +1,7 @@
 # File manager
 
+**TODO: Rewrite content**
+
 ## How can I enable / Disable the file manager
 
 By an new install the filemanager will be enabled by default

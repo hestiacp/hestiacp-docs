@@ -1,5 +1,7 @@
 # SSL Certificates and Let’s Encrypt
 
+**TODO: Rewrite content**
+
 ## How to setup Let’s Encrypt for the control panel
 
 Make sure the hostname of the server is pointed to the ip address and

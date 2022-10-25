@@ -1,5 +1,7 @@
 # Firewall / Fail2ban / Ipset
 
+**TODO: Rewrite content**
+
 ## IPTables How can I allow/deny an IP to all ports
 
 By default after each restart Hestia will clear the current iptables

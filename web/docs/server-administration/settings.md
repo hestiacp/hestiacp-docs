@@ -1,5 +1,7 @@
 # Server setting / Config
 
+**TODO: Rewrite content**
+
 ## I am not able to login
 
 For installing dependencies we use Composer. As are currently not able

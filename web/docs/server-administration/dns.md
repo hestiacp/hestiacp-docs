@@ -1,5 +1,7 @@
 # DNS Management / DNS server
 
+**TODO: Check if content can be moved**
+
 ## How to setup a DNS Cluster
 
 If you are looking for the options to minimise DNS-related downtime or

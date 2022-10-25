@@ -1,9 +1,10 @@
-# Web domains and SSL Certicates
+# Web Templates
 
-## How do Web templates work?
+**TODO: REWRITE THIS PAGE**
+
+## How do web templates work?
 
 ::: warning
-
 Modifying templates could cause errors on the server and services that
 are not able to reload or start.
 :::
@@ -136,20 +137,3 @@ YOURNAME-PHP-X_Y.tpl
 ```
 
 There X_Y is your PHP version.
-
-## How to install additional PHP packages / Modules
-
-```bash
-apt-get install php-package-name
-```
-
-For example
-
-```bash
-apt-get install php-memcached php-redis
-```
-
-Will install php-memcached and php-redis including the required
-additional packages for PHP.
-
-Incase you use PHP-FPM you don’t have to do anything.

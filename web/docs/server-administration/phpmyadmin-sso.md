@@ -1,5 +1,7 @@
 # PhpMyAdmin Single Sign On
 
+**TODO: REWRITE PAGE**
+
 ## Unable to activate PhpMyAdmin Single Sign on
 
 Make sure api is enabled and working properly. Hestia PhpMyAdmin Single

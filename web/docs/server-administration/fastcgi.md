@@ -1,5 +1,7 @@
 # Nginx FastCGI Cache
 
+**TODO: Rewrite content**
+
 ..note
 
 > FastCGI only applies for Nginx + PHP-FPM servers. If you use Nginx +

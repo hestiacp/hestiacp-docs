@@ -9,7 +9,8 @@
 		"serve": "vitepress serve web"
 	},
 	"devDependencies": {
-		"vitepress": "1.0.0-alpha.15",
-		"vue": "^3.2.37"
+		"@algolia/client-search": "^4.14.2",
+		"vitepress": "1.0.0-alpha.22",
+		"vue": "^3.2.41"
 	}
 }

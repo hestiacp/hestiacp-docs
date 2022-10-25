@@ -1,4 +1,4 @@
-# Backup and Restore
+# Backup & Restore
 
 **TODO: Rewrite content**
 

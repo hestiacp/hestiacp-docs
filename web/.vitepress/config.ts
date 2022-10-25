@@ -103,11 +103,26 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 				{ text: "Account", link: "/docs/user-guide/account.md" },
 			],
 		},
-		// {
-		// 	text: "Server administration",
-		// 	collapsible: true,
-		// 	items: [],
-		// },
+		{
+			text: "Server administration",
+			collapsible: true,
+			items: [
+				{ text: "Backup & restore", link: "/docs/server-administration/backup-restore.md" },
+				{ text: "Databases", link: "/docs/server-administration/databases.md" },
+				{ text: "DNS", link: "/docs/server-administration/dns.md" },
+				{ text: "FastCGI", link: "/docs/server-administration/fastcgi.md" },
+				{ text: "File manager", link: "/docs/server-administration/file-manager.md" },
+				{ text: "Mail", link: "/docs/server-administration/mail.md" },
+				{ text: "OS upgrades", link: "/docs/server-administration/os-upgrades.md" },
+				{ text: "PHPMyAdmin SSO", link: "/docs/server-administration/phpmyadmin-sso.md" },
+				{ text: "Rest API", link: "/docs/server-administration/rest-api.md" },
+				{ text: "Security", link: "/docs/server-administration/security.md" },
+				{ text: "Settings", link: "/docs/server-administration/settings.md" },
+				{ text: "SSL Certificates", link: "/docs/server-administration/ssl-certificates.md" },
+				{ text: "Web templates", link: "/docs/server-administration/web-templates.md" },
+				{ text: "Troubleshooting", link: "/docs/server-administration/troubleshooting.md" },
+			],
+		},
 		{
 			text: "Contributing",
 			items: [

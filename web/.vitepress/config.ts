@@ -118,7 +118,7 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 				{ text: "Rest API", link: "/docs/server-administration/rest-api.md" },
 				{ text: "Security", link: "/docs/server-administration/security.md" },
 				{ text: "Settings", link: "/docs/server-administration/settings.md" },
-				{ text: "SSL Certificates", link: "/docs/server-administration/ssl-certificates.md" },
+				{ text: "SSL certificates", link: "/docs/server-administration/ssl-certificates.md" },
 				{ text: "Web templates", link: "/docs/server-administration/web-templates.md" },
 				{ text: "Troubleshooting", link: "/docs/server-administration/troubleshooting.md" },
 			],

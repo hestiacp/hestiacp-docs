@@ -1,72 +1,46 @@
-# SSL Certificates and Let’s Encrypt
-
-**TODO: Rewrite content**
+# SSL Certificates
 
 ## How to setup Let’s Encrypt for the control panel
 
-Make sure the hostname of the server is pointed to the ip address and
-you set the hostname correctly.
+Make sure the hostname of the server is pointed to the server’s IP address and that you set the hostname correctly.
 
-If not done use the command
+Running the following commands will change the hostname and generate a Let’s Encrypt certificate for the control panel:
 
-```bash
+```sh
 v-change-sys-hostname host.domain.tld
-```
-
-Then run the following command
-
-```bash
 v-add-letsencrypt-host
 ```
 
-## Common errors using Lets Encrypt
-
-If you are experiencing any problems.
-
-Common errors are that are
+## Common errors using Let’s Encrypt
 
 ::: info
-Due to changes in the code the error message has been changed. The
-following list will be extended in the futere.
+Due to changes in the code, the error message has been changed. The following list will be extended in the future.
 :::
 
-+-------------+-------------------------------------------------------+
-| Error | Message |
-+-------------+-------------------------------------------------------+
-| rateLimited | The |
-| | Rate limit of the maximum requests have been passed. |
-| | |
-| | : Please check <https://crt.sh> for how active |
-| | certificates you have. |
-+-------------+-------------------------------------------------------+
+| Error         | Message                                                                                                                                              |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `rateLimited` | The rate limit of the maximum requests have been passed. Please check [https://crt.sh](https://crt.sh) to see how many active certificates you have. |
 
-## Error: Let’s Encrypt validation status 400.
+### Let’s Encrypt validation status 400.
 
-When requesting an SSL certificate the following error is often seen:
+When requesting an SSL certificate, you may encounter the following error:
 
-Error: Let’s Encrypt validation status 400. Details: Unable to update
-challenge :: authorisation must be pending means
+```
+Error: Let’s Encrypt validation status 400. Details: Unable to update challenge :: authorisation must be pending
+```
 
-It could mean multiple things:
+This could mean multiple things:
 
-1.  Cloudflare proxy is enabled and SSL is set too strict.
-2.  Nginx / Apache2 is not reloading / Issue with an template
-3.  IPv6 is setup. Disable IPV6 in DNS
-4.  Wrong / Incorrect template.
+1.  Cloudflare’s proxy is enabled and the **SSL/TLS** setting is set to **Full (strict)**.
+2.  Nginx or Apache is not reloading correctly.
+3.  IPv6 is setup. Disable IPv6 in DNS.
+4.  There is an issue with a template.
 
-In the future we hope to improve debugging but so far the easiest
-currently is:
+In the future we hope to improve debugging, but currently the easiest way to debug this issue is to navigate to `/var/log/hestia/` and inspect the desired log file (`LE-{user}-{domain}.log`), which should appear after requesting a certificate.
 
-Go to /var/log/hestia/ and when you run the command you will multiple
-log files:
+Find **Step 5**, where you will see something similar to the following:
 
-`LE-{user}-{domain}.log`
-
-Open this log file an go to "Step 5"
-
-You will see something like.
-
-```bash
+```sh
 ==[Step 5]==
 - status: 200
 - nonce: 0004EDQMty6_ZOb1BdRQSc-debiHXGXaXbZuyySFU2xoogk
@@ -94,38 +68,31 @@ strict-transport-security: max-age=604800
 }
 ```
 
-If you follow
-<https://acme-v02.api.letsencrypt.org/acme/chall-v3/12520447717/scDRXA>
+By following the URL in the JSON response, you will get more info about what went wrong.
 
-You will get more info what went wrong.
+### Other tips for debugging Let’s Encrypt
 
-## Any other tips for Debugging Lets Encrypt
+Try to use [Let’s Debug](https://letsdebug.net):
 
-Try to use <https://letsdebug.net> and enter your domain name. Select
-HTTP-01 and press "Run test" After the test it will show an error or
-success message.
+1. Enter your domain name.
+2. Make sure HTTP-01 is selected
+3. Run the test
 
-## Can I request a SSL Certificate with Lets Encrypt
+Once the test is completed, it will show an error or a success message, containing more information.
 
-Yes, you are able to enable Lets Encrypt even with Cloudflare how ever
-it need some special steps
+## Can I enable Cloudflare’s proxy with Let’s Encrypt?
 
-1.  Disable Cloudflare proxy of you domain.
-2.  Wait Approx 5 min due to caches by several name servers
-3.  Request a Certificate via Control panel or use the CLI command
-4.  Enable proxy
-5.  Switch over to Full (strict) (Go to SSL/TLS Tab)
+Yes, you are able to use Let’s Encrypt certificates with Cloudflare’s proxy, however you need to follow some special steps:
 
-Updating should be no issue anymore. And updates are not effected
-anymore
+1.  Disable Cloudflare’s proxy for the desired domain.
+2.  Wait at least 5 minutes, for DNS caches to expire.
+3.  Request the certificate via the control panel or use the CLI command.
+4.  Reenable the proxy.
+5.  In the **SSL/TLS** tab, switch over to **Full (strict)**.
 
-## Can I use a Cloudflare Origin SSL Certificate with Cloudflare
+## Can I use a Cloudflare Origin CA SSL Certificate?
 
-1.  Please follow the following steps
-    <https://support.cloudflare.com/hc/en-us/articles/115000479507>
-2.  When you complete Step 1.
-3.  You can enter your SSL keys in "Edit Web Domain" page.
-4.  You still need to enter the intermediate certificate this one can be
-    found here.
-    <https://support.cloudflare.com/hc/en-us/articles/115000479507#h_30cc332c-8f6e-42d8-9c59-6c1f06650639>
-5.  Switch over to Full (strict) (Go to SSL/TLS Tab)
+1.  Create an Origin CA certificate by [following these steps](https://developers.cloudflare.com/ssl/origin-configuration/origin-ca#1-create-an-origin-ca-certificate).
+2.  Once generated, enter your SSL keys in the **Edit Web Domain** page.
+3.  In the **SSL Certificate Authority / Intermediate** box, enter [this certificate](https://developers.cloudflare.com/ssl/static/origin_ca_rsa_root.pem).
+4.  In Cloudflare’s **SSL/TLS** tab, switch over to **Full (strict)**.

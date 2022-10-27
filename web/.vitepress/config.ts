@@ -135,8 +135,9 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 		{
 			text: "Community",
 			items: [
-				{ text: "Install script generator", link: "/docs/community/install-script-generator.md" },
 				{ text: "Hestia Nginx Cache", link: "/docs/community/hestia-nginx-cache.md" },
+				{ text: "Install script generator", link: "/docs/community/install-script-generator.md" },
+				{ text: "Ioncube installer for Hestia", link: "/docs/community/ioncube-hestia-installer.md" },
 			],
 		},
 		{

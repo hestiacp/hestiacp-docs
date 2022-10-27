@@ -19,6 +19,12 @@ Hestia must be installed on top of a fresh operating system installation to ensu
 | **Disk**             | 10 GB HDD                                         | 40 GB SSD                            |
 | **Operating System** | Debian 10, 11 <br> Ubuntu 18.04, 20.04, 22.04 LTS | Latest Debian <br> Latest Ubuntu LTS |
 
+::: warning
+Hestia does only run on amd64 / x86_64 and arm64 / aarch64 processors.  Also requires a 64bit operating system!
+
+We currently do no support i386 or arm7 based processors. 
+:::
+
 ## Regular installation
 
 Interactive installer that will install the default Hestia software configuration.
@@ -97,4 +103,4 @@ This command will install Hestia in French with the following software:
 
 By now, you should have a Hestia installation on your server. You are be ready to add new users, so that you (or they) can add new websites on your server.
 
-To access your control panel, navigate to https://host.example.com:8083 or http://your.public.ip.address:8083
+To access your control panel, navigate to `https://host.example.com:8083` or `http://your.public.ip.address:8083`

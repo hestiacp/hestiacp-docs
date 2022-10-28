@@ -31,6 +31,8 @@ After that run `apt update && apt upgrade`
 
 Returning to standard repo open  `/etc/apt/sources.list.d/hestia.list` and remove the # infront of the apt.hestiacp.com and add an # infront of beta-apt.hestiacp.com line
 
+After that run `apt update && apt upgrade`
+
 ## Encountering bugs
 
 If you encounter a bug please report them via [Github](https://github.com/hestiacp/hestiacp/issues/new/choose) or submit a [Pull request](https://github.com/hestiacp/hestiacp/pulls) or report them on our forum / discord server

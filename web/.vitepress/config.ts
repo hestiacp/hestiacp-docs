@@ -129,6 +129,7 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 				{ text: "Development", link: "/docs/contributing/development.md" },
 				{ text: "Documentation", link: "/docs/contributing/documentation.md" },
 				{ text: "Quick Install Apps", link: "/docs/contributing/quick-install-app.md" },
+				{ text: "Testing", link: "/docs/contributing/testing.md" },
 				{ text: "Translations", link: "/docs/contributing/translations.md" },
 			],
 		},

@@ -1,420 +1,96 @@
-# Examples
+# Rest API
 
-**TODO: Rewrite/move content**
+The Hestia WEB API is available to perform core functions of the Control
+Panel. We use it internally to synchronise DNS clusters, to integrate
+WHMCS billing system The API can be used as well to create new user
+accounts, domains, databases or even to build an alternative web
+interface.
 
-## Create User Account
+This reference provides php code samples demonstrating how you can
+seamlessly integrate API into your application or script. However you
+can use other languages to communicate with API.
 
-::: tabs
-.. code-tab:: php PHP
+With the release of Hestia v1.6.0 we have introduced a more advanced api
+system and it will allow "standard" users to use specific commands.
 
-\<?php
+## Unable to connect to the api
 
-// Server credentials \$hst_hostname = ’server.hestiacp.com’;
-\$hst_port = ’8083’; \$hst_username = ’admin’; \$hst_password =
-’p4ssw0rd’; \$hst_returncode = ’yes’; \$hst_command =
-’v-add-user’;
+With the release of 1.4 Hestia has decided it was needed to tighten the
+security. If you connect from a remote server to the api. You are
+required to enter the ip address into the white. If you need multiple ip
+addresses separate them with an enter.
 
-// New Account \$username = ’demo’; \$password = ’d3m0p4ssw0rd’;
-\$email = ’<demo@gmail.com>’; \$package = ’default’; \$first_name =
-’Rust’; \$last_name = ’Cohle’;
+![Api settings](/images/api/api-1.png)
 
-// Prepare POST query \$postvars = array( ’user’ =\> \$hst_username,
-’password’ =\> \$hst_password, ’returncode’ =\> \$hst_returncode,
-’cmd’ =\> \$hst_command, ’arg1’ =\> \$username, ’arg2’ =\>
-\$password, ’arg3’ =\> \$email, ’arg4’ =\> \$package, ’arg5’ =\>
-\$first_name, ’arg6’ =\> \$last_name );
+## Can I disable the api
 
-// Send POST query via cURL \$postdata = http_build_query(\$postvars);
-\$curl = curl_init(); curl_setopt(\$curl, CURLOPT_URL, ’<https://>’ .
-\$hst_hostname . ’:’ . \$hst_port . ’/api/’); curl_setopt(\$curl,
-CURLOPT_RETURNTRANSFER,true); curl_setopt(\$curl,
-CURLOPT_SSL_VERIFYPEER, false); curl_setopt(\$curl,
-CURLOPT_SSL_VERIFYHOST, false); curl_setopt(\$curl, CURLOPT_POST, true);
-curl_setopt(\$curl, CURLOPT_POSTFIELDS, \$postdata); \$answer =
-curl_exec(\$curl);
+Disable the api via the settings. The file will be deleted from the
+server and all connections will get ignored. Please note some functions
+may not work with the api disabled.
 
-// Check result if(\$answer === 0) { echo "User account has been
-successfuly createdn"; } else { echo "Query returned error code: "
-.\$answer. "n"; } .. code-tab:: js NodeJS
+## API Key vs Password vs Access Key
 
-//NodeJS Script //You must have the axios module installed const axios =
-require(’axios’) const querystring = require(’querystring’);
+Advantages Access key vs API key vs Password
 
-//Admin Credentials const hst_hostname = ’server.hestiacp.com’ const
-hst_port = 8083 const hst_username = ’admin’ const hst_password =
-’p4ssw0rd’ const hst_returncode = ’yes’ const hst_command =
-’v-add-user’
+### Password
 
-//New account details const username = ’demo’; const password =
-’d3m0p4ssw0rd’; const email = ’<demo@gmail.com>’; const package =
-’default’; const first_name = ’Rust’; const last_name = ’Cohle’;
+- Only to be used by de admin user
+- Loose the possibility to change your password unless you also update the locations
+- User is allowed to run all commands
 
-const data_json = { ’user’: hst_username, ’password’: hst_password,
-’returncode’: hst_returncode, ’cmd’: hst_command, ’arg1’:
-username, ’arg2’: password, ’arg3’: email, ’arg4’: package,
-’arg5’: first_name, ’arg6’: last_name }
+### API Key
 
-const data = querystring.stringify(data_json)
+- Only to be used by the admin user
+- Allow the user to change the admin password
+- User is allowed to run all commands
 
-axios.post(’<https://'+hst_hostname+>’:’+hst_port+’/api/’, data)
-.then(function (response) { console.log(response.data); console.log("0
-means successful") }) .catch(function (error) { console.log(error); });
+### Access keys
+
+- Ability limited permissions that a user can do with an access key (For example v-pruge-nginx-cache only for 1 specific user)
+- Ability to disable login via other methods but still allow the use of api keys
+- Option to disable the use of access key by standard users
+- Limited permissions that an access key can run. For example only DNS cluster command for sync-dns-cluster permissions
+
+## Setup Access/Secret key authentication
+
+Go to Edit user and "Access key" then click "Add Access key"
+
+Fill the form and submit. If the software you are using already supports
+the hash format use ACCESS_KEY:SECRET_KEY
+
+Please note safe the SECRET_KEY well you are not able to retrieve it.
+
+## Create a hash key 
+
+::: warning
+This method has been replace by Setup Access/Secret key authentication we do suggest to use the authentication method suggested above 
 :::
 
-## Create user (With API key)
+Run in command line the command `v-generate-api-key`
+
+## Return Codes
+
+| Value                 | Name                    | Comment                                                      |
+| --------------------- | ----------------------- | ------------------------------------------------------------ |
+| 0                     | OK                      | Command has been successfuly performed                       |
+| 1                     | E_ARGS                  | Not enough arguments provided                                |
+| 2                     | E_INVALID               | Object or argument is not valid                              |
+| 3                     | E_NOTEXIST              | Object doesn’t exist                                         |
+| 4                     | E_EXISTS                | Object already exists                                        |
+| 5                     | E_SUSPENDED             | Object is already suspended                                  |
+| 6                     | E_UNSUSPENDED           | Object is already unsuspended                                |
+| 7                     | E_INUSE                 | Object can’t be deleted because it is used by another object |
+| 8                     | E_LIMIT                 | Object cannot be created because of hosting package limits   |
+| 9                     | E_PASSWORD              | Wrong / Invalid password                                     |
+| 10                    | E_FORBIDEN              | Object cannot be accessed by this user                       |
+| 11                    | E_DISABLED              | Subsystem is disabled                                        |
+| 12                    | E_PARSING               | configuration is broken                                      |
+| 13                    | E_DISK                  | Not enough disk space to complete the action                 |
+| 14                    | E_LA                    | Server is to busy to complete the action                     |
+| 15                    | E_CONNECT               | Connection failed. Host is unreachable                       |
+| 16                    | E_FTP                   | FTP server is not responding                                 |
+| 17                    | E_DB                    | Database server is not responding                            |
+| 18                    | E_RDD                   | RRDtool failed to update the database                        |
+| 19                    | E_UPDATE                | Update operation failed                                      |
+| 20                    | E_RESTART               | Service restart failed                                       |
 
-To create the api key run the following command first
-
-```bash
-v-generate-api-key
-```
-
-::: tabs
-.. code-tab:: php PHP
-
-\<?php
-
-// Server credentials \$hst_hostname = ’server.hestiacp.com’;
-\$hst_port = ’8083’; \# For the new access key replace
-APIKEYHEREAPIKEYHERE with ACCESS_KEY:SECRET_KEY \$hst_hash=
-’APIKEYHEREAPIKEYHERE’; \$hst_returncode = ’yes’; \$hst_command =
-’v-add-user’;
-
-// New Account \$username = ’demo’; \$password = ’d3m0p4ssw0rd’;
-\$email = ’<demo@gmail.com>’; \$package = ’default’; \$first_name =
-’Rust Cohle’;
-
-// Prepare POST query \$postvars = array( ’hash’ =\> \$hst_hash,
-’returncode’ =\> \$hst_returncode, ’cmd’ =\> \$hst_command, ’arg1’
-=\> \$username, ’arg2’ =\> \$password, ’arg3’ =\> \$email, ’arg4’
-=\> \$package, ’arg5’ =\> \$name, );
-
-// Send POST query via cURL \$postdata = http_build_query(\$postvars);
-\$curl = curl_init(); curl_setopt(\$curl, CURLOPT_URL, ’<https://>’ .
-\$hst_hostname . ’:’ . \$hst_port . ’/api/’); curl_setopt(\$curl,
-CURLOPT_RETURNTRANSFER,true); curl_setopt(\$curl,
-CURLOPT_SSL_VERIFYPEER, false); curl_setopt(\$curl,
-CURLOPT_SSL_VERIFYHOST, false); curl_setopt(\$curl, CURLOPT_POST, true);
-curl_setopt(\$curl, CURLOPT_POSTFIELDS, \$postdata); \$answer =
-curl_exec(\$curl);
-
-// Check result if(\$answer === ’0’) { echo "User account has been
-successfuly createdn"; } else { echo "Query returned error code: "
-.\$answer. "n"; } .. code-tab:: js NodeJS
-
-//NodeJS Script //You must have the axios module installed const axios =
-require(’axios’) const querystring = require(’querystring’);
-
-//Admin Credentials const hst_hostname = ’server.hestiacp.com’ const
-hst_port = 8083 // For the new access key replace APIKEYHEREAPIKEYHERE
-with ACCESS_KEY:SECRET_KEY const hst_hash = ’APIKEYHEREAPIKEYHERE’
-const hst_returncode = ’yes’ const hst_command = ’v-add-user’
-
-//New account details const username = ’demo’; const password =
-’d3m0p4ssw0rd’; const email = ’<demo@gmail.com>’; const package =
-’default’; const first_name = ’Rust Cohle’;
-
-const data_json = { ’hash’: hst_hash, ’returncode’: hst_returncode,
-’cmd’: hst_command, ’arg1’: username, ’arg2’: password, ’arg3’:
-email, ’arg4’: package, ’arg5’: first_name }
-
-const data = querystring.stringify(data_json)
-
-axios.post(’<https://'+hst_hostname+>’:’+hst_port+’/api/’, data)
-.then(function (response) { console.log(response.data); console.log("0
-means successful") }) .catch(function (error) { console.log(error); });
-:::
-
-## Add Web/DNS/Mail Domain
-
-::: tabs
-.. code-tab:: php PHP
-
-\<?php
-
-// Server credentials \$hst_hostname = ’server.hestiacp.com’;
-\$hst_port = ’8083’; \$hst_username = ’admin’; \$hst_password =
-’p4ssw0rd’; \$hst_returncode = ’yes’; \$hst_command =
-’v-add-domain’;
-
-// Domain details \$username = ’demo’; \$domain =
-’demo.hestiacp.com’;
-
-// Prepare POST query \$postvars = array( ’user’ =\> \$hst_username,
-’password’ =\> \$hst_password, ’returncode’ =\> \$hst_returncode,
-’cmd’ =\> \$hst_command, ’arg1’ =\> \$username, ’arg2’ =\>
-\$domain );
-
-// Send POST query via cURL \$postdata = http_build_query(\$postvars);
-\$curl = curl_init(); curl_setopt(\$curl, CURLOPT_URL, ’<https://>’ .
-\$hst_hostname . ’:’ . \$hst_port . ’/api/’); curl_setopt(\$curl,
-CURLOPT_RETURNTRANSFER,true); curl_setopt(\$curl,
-CURLOPT_SSL_VERIFYPEER, false); curl_setopt(\$curl,
-CURLOPT_SSL_VERIFYHOST, false); curl_setopt(\$curl, CURLOPT_POST, true);
-curl_setopt(\$curl, CURLOPT_POSTFIELDS, \$postdata); \$answer =
-curl_exec(\$curl);
-
-// Check result if(\$answer === 0) { echo "Domain has been successfuly
-createdn"; } else { echo "Query returned error code: " .\$answer.
-"n"; } .. code-tab:: js NodeJS
-
-//NodeJS Script //You must have the axios module installed const axios =
-require(’axios’) const querystring = require(’querystring’);
-
-//Admin Credentials const hst_hostname = ’server.hestiacp.com’ const
-hst_port = 8083 const hst_username = ’admin’ const hst_password =
-’p4ssw0rd’ const hst_returncode = ’yes’ const hst_command =
-’v-add-domain’
-
-//Domain details const username = ’demo’; //username to associate the
-domain const domain = ’domain.tld’; //domain
-
-const data_json = { ’user’: hst_username, ’password’: hst_password,
-’returncode’: hst_returncode, ’cmd’: hst_command, ’arg1’:
-username, ’arg2’: domain }
-
-const data = querystring.stringify(data_json)
-
-axios.post(’<https://'+hst_hostname+>’:’+hst_port+’/api/’, data)
-.then(function (response) { console.log(response.data); console.log("0
-means successful") }) .catch(function (error) { console.log(error); });
-:::
-
-## Create Database
-
-::: tabs
-.. code-tab:: php PHP
-
-\<?php
-
-// Server credentials \$hst_hostname = ’server.hestiacp.com’;
-\$hst_port = ’8083’; \$hst_username = ’admin’; \$hst_password =
-’p4ssw0rd’; \$hst_returncode = ’yes’; \$hst_command =
-’v-add-database’;
-
-// New Database \$username = ’demo’; \$db_name = ’wordpress’;
-\$db_user = ’wordpress’; \$db_pass = ’wpbl0gp4s’;
-
-// Prepare POST query \$postvars = array( ’user’ =\> \$hst_username,
-’password’ =\> \$hst_password, ’returncode’ =\> \$hst_returncode,
-’cmd’ =\> \$hst_command, ’arg1’ =\> \$username, ’arg2’ =\>
-\$db_name, ’arg3’ =\> \$db_user, ’arg4’ =\> \$db_pass );
-
-// Send POST query via cURL \$postdata = http_build_query(\$postvars);
-\$curl = curl_init(); curl_setopt(\$curl, CURLOPT_URL, ’<https://>’ .
-\$hst_hostname . ’:’ . \$hst_port . ’/api/’); curl_setopt(\$curl,
-CURLOPT_RETURNTRANSFER,true); curl_setopt(\$curl,
-CURLOPT_SSL_VERIFYPEER, false); curl_setopt(\$curl,
-CURLOPT_SSL_VERIFYHOST, false); curl_setopt(\$curl, CURLOPT_POST, true);
-curl_setopt(\$curl, CURLOPT_POSTFIELDS, \$postdata); \$answer =
-curl_exec(\$curl);
-
-// Check result if(\$answer === 0) { echo "Database has been
-successfuly createdn"; } else { echo "Query returned error code: "
-.\$answer. "n"; } .. code-tab:: js NodeJS
-
-//NodeJS Script //You must have the axios module installed const axios =
-require(’axios’) const querystring = require(’querystring’);
-
-//Admin Credentials const hst_hostname = ’server.hestiacp.com’ const
-hst_port = 8083 const hst_username = ’admin’ const hst_password =
-’p4ssw0rd’ const hst_returncode = ’yes’ const hst_command =
-’v-add-databse’
-
-//Domain details const username = ’demo’ const db_name = ’wordpress’
-const db_user = ’wordpress’ const db_pass = ’wpbl0gp4s’
-
-const data_json = { ’user’: hst_username, ’password’: hst_password,
-’returncode’: hst_returncode, ’cmd’: hst_command, ’arg1’:
-username, ’arg2’: db_name, ’arg3’: db_user, ’arg4’: db_pass }
-
-const data = querystring.stringify(data_json)
-
-axios.post(’<https://'+hst_hostname+>’:’+hst_port+’/api/’, data)
-.then(function (response) { console.log(response.data); console.log("0
-means successful") }) .catch(function (error) { console.log(error); });
-:::
-
-## List Web Domains
-
-::: tabs
-.. code-tab:: php PHP
-
-\<?php
-
-// Server credentials \$hst_hostname = ’server.hestiacp.com’;
-\$hst_port = ’8083’; \$hst_returncode = ’no’; \$hst_username =
-’admin’; \$hst_password = ’p4ssw0rd’; \$hst_command =
-’v-list-web-domain’;
-
-// Account \$username = ’demo’; \$domain = ’demo.hestiacp.com’;
-\$format = ’json’;
-
-// Prepare POST query \$postvars = array( ’user’ =\> \$hst_username,
-’password’ =\> \$hst_password, ’returncode’ =\> \$hst_returncode,
-’cmd’ =\> \$hst_command, ’arg1’ =\> \$username, ’arg2’ =\>
-\$domain, ’arg3’ =\> \$format );
-
-// Send POST query via cURL \$postdata = http_build_query(\$postvars);
-\$curl = curl_init(); curl_setopt(\$curl, CURLOPT_URL, ’<https://>’ .
-\$hst_hostname . ’:’ . \$hst_port . ’/api/’); curl_setopt(\$curl,
-CURLOPT_RETURNTRANSFER,true); curl_setopt(\$curl,
-CURLOPT_SSL_VERIFYPEER, false); curl_setopt(\$curl,
-CURLOPT_SSL_VERIFYHOST, false); curl_setopt(\$curl, CURLOPT_POST, true);
-curl_setopt(\$curl, CURLOPT_POSTFIELDS, \$postdata); \$answer =
-curl_exec(\$curl);
-
-// Parse JSON output \$data = json_decode(\$answer, true);
-
-// Print result print_r(\$data); .. code-tab:: js NodeJS
-
-//NodeJS Script //You must have the axios module installed const axios =
-require(’axios’) const querystring = require(’querystring’);
-
-//Admin Credentials const hst_hostname = ’server.hestiacp.com’ const
-hst_port = 8083 const hst_returncode = ’no’ const hst_username =
-’admin’ const hst_password = ’p4ssw0rd’ const hst_command =
-’v-list-web-domain’
-
-//Domain details const username = ’demo’; const domain =
-’demo.hestiacp.com’; const format = ’json’;
-
-const data_json = { ’user’: hst_username, ’password’: hst_password,
-’returncode’: hst_returncode, ’cmd’: hst_command, ’arg1’:
-username, ’arg2’: domain, ’arg3’: format }
-
-const data = querystring.stringify(data_json)
-
-axios.post(’<https://'+hst_hostname+>’:’+hst_port+’/api/’, data)
-.then(function (response) { console.log(JSON.stringify(response.data));
-
-}) .catch(function (error) { console.log(error); });
-:::
-
-## Delete User Account
-
-::: tabs
-.. code-tab:: php PHP
-
-\<?php
-
-// Server credentials \$hst_hostname = ’server.hestiacp.com’;
-\$hst_port = ’8083’; \$hst_username = ’admin’; \$hst_password =
-’p4ssw0rd’; \$hst_returncode = ’yes’; \$hst_command =
-’v-delete-user’;
-
-// Account \$username = ’demo’;
-
-// Prepare POST query \$postvars = array( ’user’ =\> \$hst_username,
-’password’ =\> \$hst_password, ’returncode’ =\> \$hst_returncode,
-’cmd’ =\> \$hst_command, ’arg1’ =\> \$username );
-
-// Send POST query via cURL \$postdata = http_build_query(\$postvars);
-\$curl = curl_init(); curl_setopt(\$curl, CURLOPT_URL, ’<https://>’ .
-\$hst_hostname . ’:’ . \$hst_port . ’/api/’); curl_setopt(\$curl,
-CURLOPT_RETURNTRANSFER,true); curl_setopt(\$curl,
-CURLOPT_SSL_VERIFYPEER, false); curl_setopt(\$curl,
-CURLOPT_SSL_VERIFYHOST, false); curl_setopt(\$curl, CURLOPT_POST, true);
-curl_setopt(\$curl, CURLOPT_POSTFIELDS, \$postdata); \$answer =
-curl_exec(\$curl);
-
-// Parse JSON output \$data = json_decode(\$answer, true);
-
-// Check result if(is_numeric(\$answer) && \$answer === ’0’) { echo
-"User account has been successfuly deletedn"; } else { echo "Query
-returned error code: " .\$answer. "n"; } .. code-tab:: js NodeJS
-(User & Password)
-
-//NodeJS Script //You must have the axios module installed const axios =
-require(’axios’) const querystring = require(’querystring’) //Admin
-Credentials const hst_hostname = ’server.hestiacp.com’ const hst_port
-= 8083 const hst_username = ’admin’ const hst_password = ’p4ssw0rd’
-const hst_returncode = ’yes’ const hst_command = ’v-delete-user’
-
-//Account const username = ’demo’;
-
-const data_json = { ’user’: hst_username, ’password’: hst_password,
-’returncode’: hst_returncode, ’cmd’: hst_command, ’arg1’: username
-}
-
-const data = querystring.stringify(data_json)
-
-axios.post(’<https://'+hst_hostname+>’:’+hst_port+’/api/’, data)
-
-:
-
-    .then(function (response) {
-
-    :   console.log(response.data); console.log("0 means successful")
-
-    }) .catch(function (error) { console.log(error); });
-
-:::
-
-## Check Username and Password
-
-::: tabs
-.. code-tab:: php PHP
-
-\<?php \$hostname = ’server.yourdomain.tld’; \$port = ’8083’;
-\$hstadmin = ’admin’; \$hstadminpw = ’AdMin_pWd’;
-
-\$username = \$\_POST\[’username’\]; \$password =
-\$\_POST\[’password’\];
-
-\$postvars = array(
-
-: ’user’ =\> \$hstadmin, ’password’ =\> \$hstadminpw,
-’returncode’ =\> ’no’, ’cmd’ =\> ’v-check-user-password’,
-’arg1’ =\> \$username, ’arg2’ =\> \$password, );
-
-// Send POST query via cURL \$postdata = http_build_query(\$postvars);
-\$curl = curl_init(); curl_setopt(\$curl, CURLOPT_HEADER, false);
-curl_setopt(\$curl, CURLOPT_URL, ’<https://>’ . \$hostname . ’:’ .
-\$port . ’/api/’); curl_setopt(\$curl, CURLOPT_RETURNTRANSFER,true);
-curl_setopt(\$curl, CURLOPT_SSL_VERIFYPEER, false); curl_setopt(\$curl,
-CURLOPT_SSL_VERIFYHOST, false); curl_setopt(\$curl, CURLOPT_POST, true);
-curl_setopt(\$curl, CURLOPT_POSTFIELDS, \$postdata); \$answer =
-curl_exec(\$curl);
-
-//var_dump(\$answer); // Check result
-
-if(\$answer == ’OK’) {
-
-: echo "OK: User can loginn";
-
-} else {
-
-: echo "Error: Username or password is incorrectn";
-
-}
-
-?\> .. code-tab:: js NodeJS
-
-//NodeJS Script //You must have the axios module installed const axios =
-require(’axios’) const querystring = require(’querystring’) //Admin
-Credentials const hst_hostname = ’server.hestiacp.com’ const hst_port
-= 8083 const hst_username = ’admin’ const hst_password = ’p4ssw0rd’
-const hst_returncode = ’yes’ const hst_command =
-’v-check-user-password’
-
-//Account details const username = ’demo’; const password =
-’demopassword’;
-
-const data_json = { ’user’: hst_username, ’password’: hst_password,
-’returncode’: hst_returncode, ’cmd’: hst_command, ’arg1’:
-username, ’arg2’: password }
-
-const data = querystring.stringify(data_json)
-
-axios.post(’<https://'+hst_hostname+>’:’+hst_port+’/api/’, data)
-
-:
-
-    .then(function (response) {
-
-    :   console.log(response.data); console.log("0 means successful")
-
-    }) .catch(function (error) { console.log(error); });
-
-:::

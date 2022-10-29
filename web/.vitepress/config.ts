@@ -48,7 +48,7 @@ export default defineConfig({
 function nav(): DefaultTheme.NavItem[] {
 	return [
 		{ text: "Features", link: "/features.md" },
-		{ text: "Docs", link: "/docs/introduction/why-hestia.md", activeMatch: "/docs/" },
+		{ text: "Docs", link: "/docs/introduction/getting-started.md", activeMatch: "/docs/" },
 		{ text: "Team", link: "/team.md" },
 		{ text: "Demo", link: "https://demo.hestiacp.com:8083/" },
 		{ text: "Forum", link: "https://forum.hestiacp.com/" },
@@ -78,11 +78,11 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 		{
 			text: "Introduction",
 			items: [
-				{ text: "Why Hestia?", link: "/docs/introduction/why-hestia.md" },
 				{ text: "Getting started", link: "/docs/introduction/getting-started.md" },
 				{ text: "Best practices", link: "/docs/introduction/best-practices.md" },
 				{ text: "Architecture", link: "/docs/introduction/architecture.md" },
 				{ text: "Customisation", link: "/docs/introduction/customisation.md" },
+				{ text: "Why Hestia?", link: "/docs/introduction/why-hestia.md" }, // We should consider moving it to main page
 			],
 		},
 		{

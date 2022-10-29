@@ -59,7 +59,7 @@ When your domain is an international domain containing special changes even if y
 
 If you want to use your own SSL certificate you can enter the ssl certificate in the text area below.
 
-Issues with enabling Lets encrypt? Please check [ssl certicates]("/server-administration/ssl-certificates.md")
+Issues with enabling Lets encrypt? Please check [ssl certicates]("../server-administration/ssl-certificates.md")
 
 ### Changing PHP version
 :::tip

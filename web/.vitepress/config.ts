@@ -82,7 +82,6 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 				{ text: "Best practices", link: "/docs/introduction/best-practices.md" },
 				{ text: "Architecture", link: "/docs/introduction/architecture.md" },
 				{ text: "Customisation", link: "/docs/introduction/customisation.md" },
-				{ text: "Why Hestia?", link: "/docs/introduction/why-hestia.md" }, // We should consider moving it to main page
 			],
 		},
 		{

@@ -48,7 +48,7 @@ If you want to exclude 1 domain use:
 
 If you want to exclude only one or multiple mail account use: `hestiacp.xyz:info:support`
 
-This will excude both `info@hestiacp.com` and `support@hestiacp.com`
+This will excude both `info@hestiacp.xyz` and `support@hestiacp.xyz`
 
 ### Exclude a database
 

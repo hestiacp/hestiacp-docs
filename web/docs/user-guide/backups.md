@@ -22,7 +22,7 @@ A page will show up with the options to restore only some parts for example only
 
 ## Deleting a backup
 
- Click on the **<i class="fas fa-trash"></i>**
+ Click on the **<i class="fas fa-trash"></i>** icon
 
 ## Excluding files from backups
 

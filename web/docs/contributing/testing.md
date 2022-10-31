@@ -16,6 +16,7 @@ Run the following commands as root
 ```bash
 # Collecting data
 ARCH=$(arch)
+case $(arch) in x86_64) ARCH="amd64";; aarch64) ARCH="arm64";;  esac
 codename="$(lsb_release -s -c)"
 apt="/etc/apt/sources.list.d"
 

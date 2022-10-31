@@ -40,7 +40,7 @@ A start of authority (SOA) record includes administrative information about your
 Adjust the default Time to live. Shorter means faster changes but more request to the server. If you are going to change the ip it might be helpfull the decrease it to 300 seconds (5min)
 
 ### DNSSEC
-Enable DNSSEC to improve security. How ever this setting requires some changes to the register before it is active. For more information see [Dns cluster](../server-administration/dns-cluster.md)
+Enable DNSSEC to improve security. How ever this setting requires some changes to the register before it is active. For more information see [Dns cluster](../server-administration/dns.md)
 
 ## View DNSSEK public keys
 

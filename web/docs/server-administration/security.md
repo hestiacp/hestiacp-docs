@@ -72,9 +72,9 @@ de following script:
 #!/bin/bash
 
 BEL=(
-  "http://ipverse.net/ipblocks/data/countries/be.zone"
-  "http://ipverse.net/ipblocks/data/countries/nl.zone"
-  "http://ipverse.net/ipblocks/data/countries/lu.zone"
+  "https://raw.githubusercontent.com/ipverse/rir-ip/master/country/be/ipv4-aggregated.txt"
+  "https://raw.githubusercontent.com/ipverse/rir-ip/master/country/nl/ipv4-aggregated.txt"
+  "https://raw.githubusercontent.com/ipverse/rir-ip/master/country/lu/ipv4-aggregated.txt" 
 )
 
 IP_BEL_TMP=$(mktemp)

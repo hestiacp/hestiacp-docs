@@ -9,7 +9,7 @@ Getting Started
 Getting Hestia installation script
 **********************************
 
-Log in to your server as root, either directly or via SSH to install HestiaCP with 3 easy steps:
+Log in to your server as *root*, either directly or via SSH to install HestiaCP with 3 easy steps:
 
 .. code-block:: bash
 
@@ -17,17 +17,24 @@ Log in to your server as root, either directly or via SSH to install HestiaCP wi
     wget https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh
     bash hst-install.sh
 
+Then Hestiacp is available on https://hostname.com:8083 and https://public.ip:8083
+
+.. note::
+  If your not *root*, the whole process can fail!
+
 ***************************************
 Requirements
 ***************************************
 
-- CPU Architecture: AMD64 (x86_64 Intel or AMD) or ARM64 (Aarch64) (32 bit operating systems are not supported!)
-- Debian 11, 10 or 9
+- CPU Architecture: AMD64 (x86_64 Intel or AMD) or ARM64 (Aarch64)
+- Debian 11 or 10
 - Ubuntu 20.04 LTS or 18.04 LTS
 
-.. note 
+.. note::
+  32 bit operating systems are not supported!
 
-Hestia Control Panel must be installed on top of a fresh operating system installation to ensure proper functionality.
+.. note::
+  Hestia Control Panel must be installed on top of a fresh operating system installation to ensure proper functionality.
 
 *****************************************
 All available options of install script
@@ -65,7 +72,11 @@ You will see the entire list of options available
     -f, --force           Force installation
     -h, --help            Print this help
 
-**Example of usage:** *bash hst-install.sh -w yes -t no -c no -x yes -z yes -b yes -i yes -m yes -l de  \\                -s youdomain.tld -e yourmail@mail.com -p yourpasswordhere -a no -k no -o no*
+**Example of usage:** *bash hst-install.sh -w yes -t no -c no -x yes -z yes -b yes -i yes -m yes -l de  \\                -s hostname.youdomain.tld -e yourmail@mail.com -p yourpasswordhere -a no -k no -o no*
+
+.. note::
+  Here is a small tool to create a setup string for you:
+  https://gabizz.github.io/hestiacp-scriptline-generator/
 
 Then Hestia will install following software
 on your system:

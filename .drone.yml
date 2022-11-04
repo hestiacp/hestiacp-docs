@@ -1,0 +1,19 @@
+---
+kind: pipeline
+type: docker
+name: Test build
+
+concurrency:
+  limit: 1
+
+steps:
+    - name: Build
+      image: sphinxdoc/sphinx
+      commands:
+        - python3 -m pip install install -r requirements.txt
+        - rm conf.py
+        - mv conf3.py conf.py
+        - python3 -m sphinx -b html . _build/html
+  
+trigger:
+    event: [ pull_request, push ] 

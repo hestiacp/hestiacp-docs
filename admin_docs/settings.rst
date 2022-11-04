@@ -126,3 +126,62 @@ The following command should allow services to assign to non existing ip address
 .. code-block:: bash
 
     sysctl -w net.ipv4.ip_nonlocal_bind=1 
+
+***************************************************************
+I am unable to monitor proccess with Zabbix
+***************************************************************
+
+For security reasons users are not allowed to monitor processes from other users by default.
+
+To solve the issue in case you use monitoring via Zabbix
+
+Edit /etc/fstab and modify to the following
+
+.. code-block:: bash
+
+  proc   /proc   proc   defaults,hidepid=2,gid=zabbix   0   0
+  
+Reboot the server or remount /proc 
+
+***************************************************************
+Error: 24: Too many open files
+***************************************************************
+
+.. code-block:: bash
+
+  2022/02/21 15:04:38 [emerg] 51772#51772: open() "/var/log/apache2/domains/<redactedforprivacy>.error.log" failed (24: Too many open files)
+  
+or 
+
+.. code-block:: bash
+
+  2022/02/21 15:04:38 [emerg] 2724394#2724394: open() "/var/log/nginx/domains/xxx.error.log" failed (24: Too many open files)
+  
+This error means that there are to many open files with Nginx. To resolve this issue:
+
+/etc/systemd/system/nginx.service.d/override.conf
+
+.. code-block:: bash 
+
+  [Service]
+  LimitNOFILE=65536
+  
+Then run:
+
+.. code-block:: bash
+  
+  systemctl daemon-reload
+  
+Add this to the Nginx config file (Needs to be smaller or equal to LimitNOFILE!)
+
+.. code-block:: bash
+  
+  worker_rlimit_nofile 16384; 
+
+And then restart nginx with systemctl restart nginx
+
+To verifiy run:
+
+.. code-block:: bash
+   
+  cat /proc/<nginx-pid>/limits.

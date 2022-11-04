@@ -14,4 +14,5 @@ Admin Documentation
   admin_docs/backups.rst
   admin_docs/settings.rst
   admin_docs/users.rst
+  admin_docs/upgrades.rst
   admin_docs/api.rst 

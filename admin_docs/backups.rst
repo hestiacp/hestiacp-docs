@@ -64,7 +64,7 @@ How to increase the number of backups
 What is the difference between zstd and gzip
 ************************************************
 
-ZSTD have been developed by Facebook as a replacement. During testing we a significant speed increase and lower disk space usage against gzip. 
+ZSTD was developed by Facebook as a replacement. During testing we found a significant speed increase and lower disk space usage against gzip. 
 
 For more information see https://github.com/facebook/zstd
 
@@ -132,6 +132,12 @@ For a permanent fix  you should add a record to fstab, so this folder would load
     /path/to/new/backup/folder /backup none defaults,bind 0 0
     
 3. Save the file.
+
+***************************************************************
+How to extract .zstd file
+***************************************************************
+
+Follow the instructions below or use Winrar 6.10 or later to uppack .zstd
 
 ***************************************************************
 How to untar the  domain_data.tar.zst in windows using zstd.exe

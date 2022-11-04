@@ -2499,21 +2499,24 @@ The function changes default user web template.
 v-change-user-theme
 *******************************************************************
 
-**updates user role**
+**updates user theme**
 
 **Label**:   `hestia` 
 
-**Options**: `USER` `ROLE` 
+**Options**: `USER` `THEME` 
 
 **Examples**:
 
 .. code-block:: bash
    
   v-change-user-theme user theme
-   
+  v-change-user-theme admin flat
+  v-change-user-theme peter vestia 
+  
 
 Changes web UI display theme for specified user.
 
+Use v-list-sys-themes to get the complete list of available themes.
 
 *******************************************************************
 v-change-web-domain-backend-tpl

@@ -26,6 +26,8 @@ features:
   - icon: 🚀
     title: Fast & easy to learn
     details: Hestia is made with ease of use in mind. Creating a user or a website is as easy as clicking a button and filling up a couple of fields, while advanced features are easily accessible.
+    link: /docs/introduction/getting-started
+    linkText: Documentation
   - icon: ❤️
     title: Made with love & pride
     details: Hestia is open-source software that is built by passionate people from around the world. This means that the code is reviewed by multiple people and that anybody can contribute to it!

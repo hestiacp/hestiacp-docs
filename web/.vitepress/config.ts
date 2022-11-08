@@ -81,7 +81,6 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 				{ text: "Getting started", link: "/docs/introduction/getting-started.md" },
 				{ text: "Best practices", link: "/docs/introduction/best-practices.md" },
 				{ text: "Architecture", link: "/docs/introduction/architecture.md" },
-				{ text: "Customisation", link: "/docs/introduction/customisation.md" },
 			],
 		},
 		{
@@ -107,6 +106,7 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 			collapsible: true,
 			items: [
 				{ text: "Backup & restore", link: "/docs/server-administration/backup-restore.md" },
+				{ text: "Customisation", link: "/docs/server-administration/customisation.md" },
 				{ text: "Databases", link: "/docs/server-administration/databases.md" },
 				{ text: "DNS Cluster & DNSSEC", link: "/docs/server-administration/dns.md" },
 				{ text: "FastCGI", link: "/docs/server-administration/fastcgi.md" },

@@ -1,7 +1,20 @@
 # DNS Cluster and DNSSEC
 
-With the release of Version 1.7.0 we have implemented support for DNSSEC. DNSSEC requires an Master -> Slave setup and the existing implementation is an Master <-> Master setup. 
+::: info
+  With the release of Version 1.7.0 we have implemented support for DNSSEC. DNSSEC requires an Master -> Slave setup and the existing implementation is an Master <-> Master setup is not supported. Also DNSSEC requires atleast Ubuntu 22.04 or Debian 11! 
+:::
 
+## Host your DNS on Hestia 
+
+1. Login in as a user. 
+2. Go to DNS tab and click on "Add DNS Zone"
+3. Enter your domain you want to use
+4. Select the "child-ns" template. 
+
+Now login into your Domain registrar panel and change the name servers of the domain. Depending your registrar pannel there is a possibility to create glue records. 
+
+Wait up to 1 day before the name servers become active.
+ 
 ## DNS Cluster setup (Both)
 
 If you are looking for the options to minimise DNS-related downtime or the way to manage dns across all server you have, you might consider to set up dns cluster.
@@ -152,13 +165,14 @@ To enable DNSSEC check the checkbox in-front of DNSSEC and save.
 
 To view the public key. Got to the list DNS domains and click on the ** <i class="fas fas-key"></i> ** icon. 
 
-Depending on your register you can create a new record based on the DNSKEY or DS key. This might be diffierent for each provider. 
+Depending on your registrar you can create a new record based on the DNSKEY or DS key. This might be different for each registrar. 
 
 After DNSSEC public has been added to the register. DNSSEC is enabled and live. 
 
 ::: warning
   Any removal or disabling of the private key at Hestia will make the domain in accessble. 
 :::
+
 ## Can I separate DNS accounts by users
 
 Yes you can just supply the user variable behind the command.

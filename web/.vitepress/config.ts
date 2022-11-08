@@ -108,7 +108,7 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 			items: [
 				{ text: "Backup & restore", link: "/docs/server-administration/backup-restore.md" },
 				{ text: "Databases", link: "/docs/server-administration/databases.md" },
-				{ text: "DNS", link: "/docs/server-administration/dns.md" },
+				{ text: "DNS Cluster & DNSSEC", link: "/docs/server-administration/dns.md" },
 				{ text: "FastCGI", link: "/docs/server-administration/fastcgi.md" },
 				{ text: "File manager", link: "/docs/server-administration/file-manager.md" },
 				{ text: "Mail", link: "/docs/server-administration/mail.md" },

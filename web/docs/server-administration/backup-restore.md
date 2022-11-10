@@ -47,35 +47,32 @@ Currently HestiaCP only support backups of:
 
 1.  Log into HestiaCP as admin user
 2.  Click on "Packages" button
-3.  On the displayed list, hover the mouse pointer above the "default"
-    package and click on the "Copy" button
-4.  A "default-copy" package will be created. Hover the mouse pointer
-    above the newly created package and click on the "Edit Package"
-    button
-5.  On the "Package Name" field, type the name you whish to give to
-    the new package, and then in the "Backups" field type the number
-    of backups you would like to set, then click on the "Save" button
+3.  On the displayed list, hover the mouse pointer above the "default" package and click on the "Copy" button
+4.  A "default-copy" package will be created. Hover the mouse pointer above the newly created package and click on the "Edit Package" button
+5.  On the "Package Name" field, type the name you whish to give to the new package, and then in the "Backups" field type the number of backups you would like to set, then click on the "Save" button
 6.  Click on the "USERS" menu
-7.  Now hover the mouse pointer above the user to which you would like
-    to assign the newly created package, and then click on "Edit User"
-    button
-8.  In the "Package" field select with the drop-down menu the name of
-    the newly created package and finally click on the "Save" button.
+7.  Now hover the mouse pointer above the user to which you would like to assign the newly created package, and then click on "Edit User" button
+8.  In the "Package" field select with the drop-down menu the name of the newly created package and finally click on the "Save" button.
+
+## Not enough disk space available to preform the backup
+
+For safety reasons Hestiacp takes in account of 2x the user usage when creating a backup. There for at the start of a backup we check how much disk usage a user has before we preform a backup. If you encounter this error you can do the the following to solve the issue
+
+1. Reduce the amount of backups saved per user saved
+2. Move the backups to a remote storage
+3. Move the backup folder to a different drive
+4. Split up the user in multiple users. 
+5. Exclude certain folders or mail accounts from the backup
 
 ## What is the difference between zstd and gzip
 
-ZSTD was developed by Facebook as a replacement. During testing we found
-a significant speed increase and lower disk space usage against gzip.
+ZSTD was developed by Facebook as a replacement. During testing we found a significant speed increase and lower disk space usage against gzip.
 
 For more information see <https://github.com/facebook/zstd>
 
 ## What is the optimal compression ratio
 
-Higher the number how better the compression ratio. During the testing
-we discoverd that "ZSTD" level 3 compares agains level 9 for disk
-space how ever much faster. ZSTD level 11 took the same time but an
-smaller small size. Level higher then 19 should never be used as zstd
-becomes terrible slow.
+Higher the number how better the compression ratio. During the testing we discoverd that "ZSTD" level 3 compares agains level 9 for disk space how ever much faster. ZSTD level 11 took the same time but a smaller small size. Level higher then 19 should never be used as zstd becomes terrible slow.
 
 ## What kind of protocols are currently supported
 
@@ -83,38 +80,61 @@ Currently supported backup protocols are:
 
 - FTP
 - SFTP
-- Backblaze / B2 Protocol
+- With RCLONE op to 50 different cloud providers
 
-## How to setup a (S)FTP Backup server
+## How to setup a FTP Backup server
 
-Login on a server as root and run following command
-
-```bash
-v-add-backup-host ftp remote.ftp-host.ltd backup-user p4ssw0rd [/path-backups/] [port]
-```
-
-For SFTP
+Login via the SSH / CLI and run the following command as root
 
 ```bash
-v-add-backup-host sftp remote.ftp-host.ltd backup-user p4ssw0rd [/path-backups/] [port]
+v-add-backup-host 'ftp' 'remote.ftp-host.ltd' 'backup-user' 'p4ssw0rd' '/path-backups/' 'port'
 ```
 
-For Backblaze / B2
+### How to setup a SFTP Backup server
+
+Login via the SSH / CLI and run the following command as root
+
+With password. Please note passwords are stored as plain text on the server. Only accessible by the root user... 
+If you want to use a more secure authentication  method please use authentication via public and private key
 
 ```bash
-v-add-backup-host b2 bucketName keyID applicationKey
+v-add-backup-host 'sftp' 'remote.ftp-host.ltd' 'backup-user' 'p4ssw0rd' '/path-backups/' 'port'
 ```
 
-Arguments between brackets \[\] may be omitted
+Via public and private key
+```bash
+v-add-backup-host 'sftp' 'remote.ftp-host.ltd' 'backup-user' '/root/id_rsa' '/path-backups/' 'port'
+```
+
+## How to setup Rclone
+
+::: tip
+  Initial configuration can only be done via CL. After that you can update the settings via the web panel.  
+:::
+
+Download first [Rclone](https://rclone.org/downloads/) easiest method is to do it via:
+
+```bash
+sudo -v ; curl https://rclone.org/install.sh | sudo bash
+```
+
+When download and installation is complete run `rclone config` and then `n`.  And follow the instruction on the screen. Save when completed...
+
+After the config has been save you can setup Hestia with:
+
+```bash
+v-add-backup-host 'rclone' 'config_name' '' '' 'Bucket or Folder name' ''
+```
+::: tip
+  B2 requires you setup a bucket during v-add-backup-host stage. S3 or R2 storage will work fine during the setup stage.
+:::
 
 ## How to change default backup folder
 
-Due to security reasons, symlinks are not allowed. To change the default
-backup folder, you can do the following:
+Due to security reasons, symlinks are not allowed. To change the default backup folder, you can do the following:
 
 1.  Make sure backup folder to set to /backup/
-2.  If it ever had something in it, delete and recreate it, using your
-    FTP client or by typing "mkdir backup" in console.
+2.  If it ever had something in it, delete and recreate it, using your FTP client or by typing "mkdir backup" in console.
 3.  Mount desired folder to backup, using mount:
 
 ```bash
@@ -140,9 +160,7 @@ Follow the instructions below or use Winrar 6.10 or later to uppack
 
 ## How to untar the domain_data.tar.zst in windows using zstd.exe
 
-1\. you’ll have to download the zstd.exe for windows, found in:
-[https://github.com/facebook/zstd/releases/]{.title-ref} depending on
-your version of windows:
+1. you’ll have to download the zstd.exe for windows, found in: [ZSTD Github](https://github.com/facebook/zstd/releases/) depending on your version of windows:
 
 ```bash
 zstd-v*-*.*-win32.zip
@@ -169,8 +187,7 @@ output:
 c:\Users\{user}\Downloads\admin.2021-06-27_05-48-23\web\{domain}\domain_data.tar.zst: 61440 bytes
 ```
 
-3.  the use your favorite program to untar the resulting tar, and you
-    are done.
+3.  the use your favorite program to untar the resulting tar, and you are done.
 
 In this case, the tar was outputted to
 

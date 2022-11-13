@@ -91,6 +91,7 @@ Config templates for the PHP pool can be found in
 :::warning
 Due to the fact we use multi PHP we need to recognise the PHP version to
 be used. Therefore we follow the following naming:
+:::
 
 ```bash
 YOURNAME-PHP-X_Y.tpl
@@ -113,10 +114,9 @@ apt install php-memcached php-redis
 
 ## Nginx FastCGI Cache
 
-**TODO: Rewrite content**
-
 ::: tip
 FastCGI only applies for Nginx + PHP-FPM servers. If you use Nginx + Apache2 + PHP-FPM this will not apply to you!
+:::
 
 FastCGI Cache is an option with in Nginx allowing to cache the out put off FastCGI (in this case php). There will be for a short moment a file created on your server with the contents of the output. If an other user requests the same page Nginx will check if the "age" of the cached file is still valid and if it is true it will send the cached file to to the user.
 

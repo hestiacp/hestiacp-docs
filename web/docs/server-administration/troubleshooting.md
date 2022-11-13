@@ -14,19 +14,6 @@ v-change-user-config-value admin LOGIN_USE_IPLIST 'no'
 v-change-user-config-value admin LOGIN_ALLOW_IPS ''
 ```
 
-## Installing PHP modules
-
-```sh
-apt install php-package-name
-```
-
-For example, the following command will install `php-memcached` and `php-redis`, including the required
-additional packages for PHP.
-
-```sh
-apt install php-memcached php-redis
-```
-
 ## Can I update my cronjobs via `crontab -e`?
 
 No, you cannot. When you update HestiaCP, the crontab will simply get

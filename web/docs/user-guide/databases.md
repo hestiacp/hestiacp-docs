@@ -4,7 +4,7 @@ To manage your databases, you will need to navigate to the **DB <i class="fas fa
 
 ## Adding a database
 
-Check on **<i class="fas fa-fw fa-plus-circle"></i> Add Datbase** button. 
+Check on **<i class="fas fa-fw fa-plus-circle"></i> Add Database** button. 
 
 - Select the database type (Mysql or Pgsql)
 - Provide the database name `user_` is added by default
@@ -20,13 +20,13 @@ To edit a package click on the **<i class="fas fa-pencil-alt"></i>** icon. If yo
 
 ## Accessing a database
 
-By default phpmyadmin or  phppgadmin is availble on `https://hostname.domain.com/phpmyadmin` or `https://hostname.domain.com/phppgadmin` or click on the button in **<i class="fas fa-database"></i> phpMyAdmin** or **<i class="fas fa-database"></i> phpPgAdmin** buttons
+By default phpmyadmin or  phppgadmin is available on `https://hostname.domain.com/phpmyadmin` or `https://hostname.domain.com/phppgadmin` or click on the button in **<i class="fas fa-database"></i> phpMyAdmin** or **<i class="fas fa-database"></i> phpPgAdmin** buttons
 
 For mysql databases if phpMyAdmin Single sign on is enabled an **<i class="fas fa-sign-in-alt"></i>** icon is visible. Click on it to login to phpMyAdmin directly
 
 ## Suspending a database
 
-Check on the **<i class="fas fa-pause"></i>** icon to suspend it. To unsuspend it click on the **<i class="fas fa-play"></i>** icon
+Check on the **<i class="fas fa-pause"></i>** icon to suspend it. To un suspend it click on the **<i class="fas fa-play"></i>** icon
 
 ## Deleting a database
 

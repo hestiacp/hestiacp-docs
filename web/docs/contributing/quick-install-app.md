@@ -6,7 +6,7 @@ As a replacement we have developed "Quick install app"
 
 ## Creating new apps
 
-- Make a new folder `Example` in `//usr/local/hestia/web/src/app/WebApp/Installers/`
+- Make a new folder `Example` in `/usr/local/hestia/web/src/app/WebApp/Installers/`
 - Create a file named: `ExampleSetup.php`
 
 [An example can be found here](https://github.com/hestiacp/hestia-quick-install/blob/main/Example/ExampleSetup.php)

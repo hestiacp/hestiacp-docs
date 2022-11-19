@@ -20,9 +20,17 @@ Hestia must be installed on top of a fresh operating system installation to ensu
 | **Operating System** | Debian 10, 11 <br> Ubuntu 18.04, 20.04, 22.04 LTS | Latest Debian <br> Latest Ubuntu LTS |
 
 ::: warning
-Hestia does only run on amd64 / x86_64 and arm64 / aarch64 processors.  Also requires a 64bit operating system!
-
+Hestia does only run on amd64 / x86_64 and arm64 / aarch64 processors.  It also requires a 64bit operating system!
 We currently do no support i386 or arm7 based processors. 
+:::
+
+### Supported operating systems
+
+- Debian 10 or 11
+- Ubuntu 18.04, 20.04 or 22.04 
+
+::: warning
+Hestia does not support NON LTS Operating systems. For example: Ubuntu 21.10, 22.10, 23.04 and 23.10 will not receive support from us... 
 :::
 
 ## Regular installation

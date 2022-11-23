@@ -1,10 +1,14 @@
 # CLI Reference
 
+::: info
+This page is work in progress. Information might be missing or misleading.
+:::
+
 ## v-acknowledge-user-notification
 
 update user notification
 
-**Options**: `USER` `NOTIFICATION` 
+**Options**: `USER` `NOTIFICATION`
 
 This function updates user notification.
 
@@ -12,9 +16,10 @@ This function updates user notification.
 
 generate access key
 
-**Options**: `USER` `[PERMISSIONS]` `[COMMENT]` `[FORMAT]` 
+**Options**: `USER` `[PERMISSIONS]` `[COMMENT]` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-add-access-key admin v-purge-nginx-cache,v-list-mail-accounts comment json
 ```
@@ -26,9 +31,10 @@ This function creates a key file in $HESTIA/data/access-keys/
 
 add backup host
 
-**Options**: `TYPE` `HOST` `USERNAME` `PASSWORD` `[PATH]` `[PORT]` 
+**Options**: `TYPE` `HOST` `USERNAME` `PASSWORD` `[PATH]` `[PORT]`
 
 **Examples**:
+
 ```bash
     v-add-backup-host sftp backup.acme.com admin p4$$w@Rd
  v-add-backup-host b2 bucketName keyID applicationKey
@@ -40,7 +46,7 @@ Add a new remote backup location. Currently SFTP, FTP and Backblaze are supporte
 
 add cron job for hestia automatic updates
 
-**Options**: `MODE` 
+**Options**: `MODE`
 
 This function adds a cronjob for hestia automatic updates
 that can be downloaded from apt or git.
@@ -49,9 +55,10 @@ that can be downloaded from apt or git.
 
 add cron job
 
-**Options**: `USER` `MIN` `HOUR` `DAY` `MONTH` `WDAY` `COMMAND` `[JOB]` `[RESTART]` 
+**Options**: `USER` `MIN` `HOUR` `DAY` `MONTH` `WDAY` `COMMAND` `[JOB]` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-add-cron-job admin * * * * * sudo /usr/local/hestia/bin/v-backup-users
 ```
@@ -63,7 +70,7 @@ is mailed to user's email if parameter REPORTS is set to 'yes'.
 
 add cron job for Let's Encrypt certificates
 
-**Options**: – 
+**Options**: –
 
 This function adds a new cron job for Let's Encrypt.
 
@@ -71,9 +78,10 @@ This function adds a new cron job for Let's Encrypt.
 
 add cron reports
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-add-cron-reports admin
 ```
@@ -85,7 +93,7 @@ notifications.
 
 add cron reports
 
-**Options**: – 
+**Options**: –
 
 This function for enabling restart cron tasks
 
@@ -93,9 +101,10 @@ This function for enabling restart cron tasks
 
 add database
 
-**Options**: `USER` `DATABASE` `DBUSER` `DBPASS` `[TYPE]` `[HOST]` `[CHARSET]` 
+**Options**: `USER` `DATABASE` `DBUSER` `DBPASS` `[TYPE]` `[HOST]` `[CHARSET]`
 
 **Examples**:
+
 ```bash
     v-add-database admin wordpress_db matt qwerty123
 ```
@@ -112,9 +121,10 @@ types of supported databases is designated in the main configuration file.
 
 add new database server
 
-**Options**: `TYPE` `HOST` `DBUSER` `DBPASS` `[MAX_DB]` `[CHARSETS]` `[TEMPLATE]` `[PORT]` 
+**Options**: `TYPE` `HOST` `DBUSER` `DBPASS` `[MAX_DB]` `[CHARSETS]` `[TEMPLATE]` `[PORT]`
 
 **Examples**:
+
 ```bash
     v-add-database-host mysql localhost alice p@$$wOrd
 ```
@@ -129,24 +139,26 @@ more about templates in official PostgreSQL documentation.
 
 add temp database user
 
-**Options**: `USER` `DATABASE` `[TYPE]` `[HOST]` `[TTL]` 
+**Options**: `USER` `DATABASE` `[TYPE]` `[HOST]` `[TTL]`
 
 **Examples**:
+
 ```bash
     v-add-database-temp-user wordress wordpress_db mysql
 ```
 
-This function creates an temporary database user mysql_sso_db_XXXXXXXX and a random password 
-The user has an limited validity and only granted access to the specific database 
+This function creates an temporary database user mysql_sso_db_XXXXXXXX and a random password
+The user has an limited validity and only granted access to the specific database
 Returns json to be read SSO Script
 
 ## v-add-dns-domain
 
 add dns domain
 
-**Options**: `USER` `DOMAIN` `IP` `[NS1]` `[NS2]` `[NS3]` `[NS4]` `[NS5]` `[NS6]` `[NS7]` `[NS8]` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `IP` `[NS1]` `[NS2]` `[NS3]` `[NS4]` `[NS5]` `[NS6]` `[NS7]` `[NS8]` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-add-dns-domain admin example.com ns1.example.com ns2.example.com '' '' '' '' '' '' yes
 ```
@@ -161,9 +173,10 @@ its records with a default value of 14400 seconds.
 
 add dns domain or dns record after web domain alias
 
-**Options**: `USER` `ALIAS` `IP` `[RESTART]` 
+**Options**: `USER` `ALIAS` `IP` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-add-dns-on-web-alias admin www.example.com 8.8.8.8
 ```
@@ -174,9 +187,10 @@ This function adds dns domain or dns record based on web domain alias.
 
 add dns record
 
-**Options**: `USER` `DOMAIN` `RECORD` `TYPE` `VALUE` `[PRIORITY]` `[ID]` `[RESTART]` `[TTL]` 
+**Options**: `USER` `DOMAIN` `RECORD` `TYPE` `VALUE` `[PRIORITY]` `[ID]` `[RESTART]` `[TTL]`
 
 **Examples**:
+
 ```bash
     v-add-dns-record admin acme.com www A 162.227.73.112
 ```
@@ -190,9 +204,10 @@ regulation of records.
 
 add web/dns/mail domain
 
-**Options**: `USER` `DOMAIN` `[IP]` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `[IP]` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-add-domain admin example.com
 ```
@@ -203,9 +218,10 @@ This function adds web/dns/mail domain to a server.
 
 Enable FastCGI cache for nginx
 
-**Options**: `USER` `DOMAIN` `[DURATION]` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `[DURATION]` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-add-fastcgi-cache user domain.tld 30m
 ```
@@ -218,9 +234,10 @@ Add "yes" as last parameter to restart nginx
 
 add firewall blocking rule
 
-**Options**: `IP` `CHAIN` 
+**Options**: `IP` `CHAIN`
 
 **Examples**:
+
 ```bash
     v-add-firewall-ban 37.120.129.20 MAIL
 ```
@@ -231,9 +248,10 @@ This function adds new blocking rule to system firewall
 
 add firewall chain
 
-**Options**: `CHAIN` `[PORT]` `[PROTOCOL]` `[PROTOCOL]` 
+**Options**: `CHAIN` `[PORT]` `[PROTOCOL]` `[PROTOCOL]`
 
 **Examples**:
+
 ```bash
     v-add-firewall-chain CRM 5678 TCP
 ```
@@ -244,9 +262,10 @@ This function adds new rule to system firewall
 
 add firewall ipset
 
-**Options**: `NAME` `[SOURCE]` `[IPVERSION]` `[AUTOUPDATE]` `[FORCE]` 
+**Options**: `NAME` `[SOURCE]` `[IPVERSION]` `[AUTOUPDATE]` `[FORCE]`
 
 **Examples**:
+
 ```bash
     v-add-firewall-ipset country-nl 'http://ipverse.net/ipblocks/data/countries/nl.zone'
 ```
@@ -257,9 +276,10 @@ This function adds new ipset to system firewall
 
 add firewall rule
 
-**Options**: `ACTION` `IP` `PORT` `[PROTOCOL]` `[COMMENT]` `[RULE]` 
+**Options**: `ACTION` `IP` `PORT` `[PROTOCOL]` `[COMMENT]` `[RULE]`
 
 **Examples**:
+
 ```bash
     v-add-firewall-rule DROP 185.137.111.77 25
 ```
@@ -270,9 +290,10 @@ This function adds new rule to system firewall
 
 archive directory
 
-**Options**: `USER` `ARCHIVE` `SOURCE` `[SOURCE...]` 
+**Options**: `USER` `ARCHIVE` `SOURCE` `[SOURCE...]`
 
 **Examples**:
+
 ```bash
     v-add-fs-archive admin archive.tar readme.txt
 ```
@@ -283,9 +304,10 @@ This function creates tar archive
 
 add directory
 
-**Options**: `USER` `DIRECTORY` 
+**Options**: `USER` `DIRECTORY`
 
 **Examples**:
+
 ```bash
     v-add-fs-directory admin mybar
 ```
@@ -296,9 +318,10 @@ This function creates new directory on the file system
 
 add file
 
-**Options**: `USER` `FILE` 
+**Options**: `USER` `FILE`
 
 **Examples**:
+
 ```bash
     v-add-fs-file admin readme.md
 ```
@@ -309,9 +332,10 @@ This function creates new files on file system
 
 check letsencrypt domain
 
-**Options**: `USER` `DOMAIN` `[ALIASES]` `[MAIL]` 
+**Options**: `USER` `DOMAIN` `[ALIASES]` `[MAIL]`
 
 **Examples**:
+
 ```bash
     v-add-letsencrypt-domain admin wonderland.com www.wonderland.com,demo.wonderland.com
  example: v-add-letsencrypt-domain admin wonderland.com '' yes
@@ -323,7 +347,7 @@ This function check and validates domain with Let's Encrypt
 
 add letsencrypt for host and backend
 
-**Options**: – 
+**Options**: –
 
 This function check and validates the backend certificate and generate
 a new let's encrypt certificate.
@@ -332,9 +356,10 @@ a new let's encrypt certificate.
 
 register letsencrypt user account
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-add-letsencrypt-user bob
 ```
@@ -345,9 +370,10 @@ This function creates and register LetsEncrypt account
 
 add mail domain account
 
-**Options**: `USER` `DOMAIN` `ACCOUNT` `PASSWORD` `[QUOTA]` 
+**Options**: `USER` `DOMAIN` `ACCOUNT` `PASSWORD` `[QUOTA]`
 
 **Examples**:
+
 ```bash
     v-add-mail-account user example.com john P4$$vvOrD
 ```
@@ -358,9 +384,10 @@ This function add new email account.
 
 add mail account alias aka nickname
 
-**Options**: `USER` `DOMAIN` `ACCOUNT` `ALIAS` 
+**Options**: `USER` `DOMAIN` `ACCOUNT` `ALIAS`
 
 **Examples**:
+
 ```bash
     v-add-mail-account-alias admin acme.com alice alicia
 ```
@@ -371,9 +398,10 @@ This function add new email alias.
 
 add mail account autoreply message
 
-**Options**: `USER` `DOMAIN` `ACCOUNT` `MESSAGE` 
+**Options**: `USER` `DOMAIN` `ACCOUNT` `MESSAGE`
 
 **Examples**:
+
 ```bash
     v-add-mail-account-autoreply admin example.com user Hello from e-mail!
 ```
@@ -384,9 +412,10 @@ This function add new email account.
 
 add mail account forward address
 
-**Options**: `USER` `DOMAIN` `ACCOUNT` `FORWARD` 
+**Options**: `USER` `DOMAIN` `ACCOUNT` `FORWARD`
 
 **Examples**:
+
 ```bash
     v-add-mail-account-forward admin acme.com alice bob
 ```
@@ -397,9 +426,10 @@ This function add new email account.
 
 add mail account forward-only flag
 
-**Options**: `USER` `DOMAIN` `ACCOUNT` 
+**Options**: `USER` `DOMAIN` `ACCOUNT`
 
 **Examples**:
+
 ```bash
     v-add-mail-account-fwd-only admin example.com user
 ```
@@ -410,9 +440,10 @@ This function adds fwd-only flag
 
 add mail domain
 
-**Options**: `USER` `DOMAIN` `[ANTISPAM]` `[ANTIVIRUS]` `[DKIM]` `[DKIM_SIZE]` `[RESTART]` `[REJECT_SPAM]` 
+**Options**: `USER` `DOMAIN` `[ANTISPAM]` `[ANTIVIRUS]` `[DKIM]` `[DKIM_SIZE]` `[RESTART]` `[REJECT_SPAM]`
 
 **Examples**:
+
 ```bash
     v-add-mail-domain admin mydomain.tld
 ```
@@ -423,9 +454,10 @@ This function adds MAIL domain.
 
 add mail domain antispam support
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-add-mail-domain-antispam admin mydomain.tld
 ```
@@ -436,9 +468,10 @@ This function enables spamassasin for incoming emails.
 
 add mail domain antivirus support
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-add-mail-domain-antivirus admin mydomain.tld
 ```
@@ -449,9 +482,10 @@ This function enables clamav scan for incoming emails.
 
 add mail domain catchall account
 
-**Options**: `USER` `DOMAIN` `EMAIL` 
+**Options**: `USER` `DOMAIN` `EMAIL`
 
 **Examples**:
+
 ```bash
     v-add-mail-domain-catchall admin example.com master@example.com
 ```
@@ -462,9 +496,10 @@ This function enables catchall account for incoming emails.
 
 add mail domain dkim support
 
-**Options**: `USER` `DOMAIN` `[DKIM_SIZE]` 
+**Options**: `USER` `DOMAIN` `[DKIM_SIZE]`
 
 **Examples**:
+
 ```bash
     v-add-mail-domain-dkim admin acme.com
 ```
@@ -475,9 +510,10 @@ This function adds DKIM signature to outgoing domain emails.
 
 add mail domain reject spam
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-add-mail-domain-antivirus admin mydomain.tld
 ```
@@ -488,9 +524,10 @@ The function enables clamav scan for incoming emails.
 
 Add mail domain smtp relay support
 
-**Options**: `USER` `DOMAIN` `HOST` `[USERNAME]` `[PASSWORD]` `[PORT]` 
+**Options**: `USER` `DOMAIN` `HOST` `[USERNAME]` `[PASSWORD]` `[PORT]`
 
 **Examples**:
+
 ```bash
     v-add-mail-domain-smtp-relay user domain.tld srv.smtprelay.tld uname123 pass12345
 ```
@@ -501,10 +538,10 @@ This function adds mail domain smtp relay support.
 
 add mail SSL for $domain
 
-**Options**: `USER` `DOMAIN` `SSL_DIR` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `SSL_DIR` `[RESTART]`
 
 This function turns on SSL support for a mail domain. Parameter ssl_dir
-is a path to a directory where 2 or 3 ssl files can be found. Certificate file 
+is a path to a directory where 2 or 3 ssl files can be found. Certificate file
 mail.domain.tld.crt and its key mail.domain.tld.key are mandatory. Certificate
 authority mail.domain.tld.ca file is optional.
 
@@ -512,9 +549,10 @@ authority mail.domain.tld.ca file is optional.
 
 add webmail support for a domain
 
-**Options**: `USER` `DOMAIN` `[WEBMAIL]` `[RESTART]` `[QUIET]` 
+**Options**: `USER` `DOMAIN` `[WEBMAIL]` `[RESTART]` `[QUIET]`
 
 **Examples**:
+
 ```bash
     v-add-sys-webmail user domain.com
  example: v-add-sys-webmail user domain.com rainloop
@@ -527,9 +565,10 @@ This function enables webmail client for a mail domain.
 
 add remote dns domain
 
-**Options**: `USER` `DOMAIN` `[FLUSH]` 
+**Options**: `USER` `DOMAIN` `[FLUSH]`
 
 **Examples**:
+
 ```bash
     v-add-remote-dns-domain admin mydomain.tld yes
 ```
@@ -540,9 +579,10 @@ This function synchronise dns domain with the remote server.
 
 add new remote dns host
 
-**Options**: `HOST` `PORT` `USER` `PASSWORD` `[TYPE]` `[DNS_USER]` 
+**Options**: `HOST` `PORT` `USER` `PASSWORD` `[TYPE]` `[DNS_USER]`
 
 **Examples**:
+
 ```bash
     v-add-remote-dns-host slave.your_host.com 8083 admin your_passw0rd
     v-add-remote-dns-host slave.your_host.com 8083 api_key ''
@@ -556,9 +596,10 @@ See v-generate-api-key can be used to connect the remote dns server
 
 add remote dns domain record
 
-**Options**: `USER` `DOMAIN` `ID` 
+**Options**: `USER` `DOMAIN` `ID`
 
 **Examples**:
+
 ```bash
     v-add-remote-dns-record bob acme.com 23
 ```
@@ -569,28 +610,26 @@ This function synchronise dns domain with the remote server.
 
 add IP address to API allow list
 
-**Options**: `IP` 
+**Options**: `IP`
 
 **Examples**:
+
 ```bash
     v-add-sys-api-ip 1.1.1.1
 ```
 
-
-
 ## v-add-sys-dependencies
 
+**Options**:
 
-**Options**: 
-
-Add php dependencies to Hestia 
+Add php dependencies to Hestia
 options: [MODE]
 
 ## v-add-sys-filemanager
 
 add file manager functionality to Hestia Control Panel
 
-**Options**: `[MODE]` 
+**Options**: `[MODE]`
 
 This function installs the File Manager on the server
 for access through the Web interface.
@@ -599,7 +638,7 @@ for access through the Web interface.
 
 add system firewall
 
-**Options**: – 
+**Options**: –
 
 This function enables the system firewall.
 
@@ -607,9 +646,10 @@ This function enables the system firewall.
 
 add system ip address
 
-**Options**: `IP` `NETMASK` `[INTERFACE]` `[USER]` `[IP_STATUS]` `[IP_NAME]` `[NAT_IP]` 
+**Options**: `IP` `NETMASK` `[INTERFACE]` `[USER]` `[IP_STATUS]` `[IP_NAME]` `[NAT_IP]`
 
 **Examples**:
+
 ```bash
     v-add-sys-ip 216.239.32.21 255.255.255.0
 ```
@@ -618,14 +658,14 @@ This function adds ip address into a system. It also creates rc scripts. You
 can specify ip name which will be used as root domain for temporary aliases.
 For example, if you set a1.myhosting.com as name, each new domain created on
 this ip will automatically receive alias $domain.a1.myhosting.com. Of course
-you must have wildcard record *.a1.myhosting.com pointed to ip. This feature 
+you must have wildcard record \*.a1.myhosting.com pointed to ip. This feature
 is very handy when customer wants to test domain before dns migration.
 
 ## v-add-sys-pma-sso
 
 enables support for single sign on phpMyAdmin
 
-**Options**: `[MODE]` 
+**Options**: `[MODE]`
 
 This function enables support for SSO to phpMyAdmin
 
@@ -633,7 +673,7 @@ This function enables support for SSO to phpMyAdmin
 
 add system quota
 
-**Options**: – 
+**Options**: –
 
 This function enables filesystem quota on /home partition
 Some kernels do require additional packages to be installed first
@@ -642,7 +682,7 @@ Some kernels do require additional packages to be installed first
 
 Install Rainloop webmail client
 
-**Options**: `[MODE]` 
+**Options**: `[MODE]`
 
 This function installs the Rainloop webmail client.
 
@@ -650,7 +690,7 @@ This function installs the Rainloop webmail client.
 
 Install Roundcube webmail client
 
-**Options**: `[MODE]` 
+**Options**: `[MODE]`
 
 This function installs the Roundcube webmail client.
 
@@ -658,9 +698,10 @@ This function installs the Roundcube webmail client.
 
 add system sftp jail
 
-**Options**: `[RESTART]` 
+**Options**: `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-add-sys-sftp-jail yes
 ```
@@ -671,9 +712,10 @@ This function enables sftp jailed environment.
 
 Add SMTP Account for logging, notification and internal mail
 
-**Options**: `DOMAIN` `PORT` `SMTP_SECURITY` `USERNAME` `PASSWORD` `EMAIL` 
+**Options**: `DOMAIN` `PORT` `SMTP_SECURITY` `USERNAME` `PASSWORD` `EMAIL`
 
 **Examples**:
+
 ```bash
     v-add-sys-smtp example.com 587 STARTTLS test@domain.com securepassword test@example.com
 ```
@@ -685,9 +727,10 @@ for logging, notification and warn emails etc.
 
 add system wide smtp relay support
 
-**Options**: `HOST` `[USERNAME]` `[PASSWORD]` `[PORT]` 
+**Options**: `HOST` `[USERNAME]` `[PASSWORD]` `[PORT]`
 
 **Examples**:
+
 ```bash
     v-add-sys-smtp-relay srv.smtprelay.tld uname123 pass12345
 ```
@@ -698,9 +741,10 @@ This function adds system wide smtp relay support.
 
 add system user
 
-**Options**: `USER` `PASSWORD` `EMAIL` `[PACKAGE]` `[NAME]` `[LASTNAME]` 
+**Options**: `USER` `PASSWORD` `EMAIL` `[PACKAGE]` `[NAME]` `[LASTNAME]`
 
 **Examples**:
+
 ```bash
     v-add-user admin2 P4$$w@rD bgates@aol.com
 ```
@@ -711,9 +755,10 @@ This function creates new user account.
 
 add 2fa to existing user
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-add-user-2fa admin
 ```
@@ -724,9 +769,10 @@ This function creates a new 2fa token for user.
 
 add composer (php dependency manager) for a user
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-add-user-composer user [version]
 ```
@@ -738,7 +784,7 @@ Homepage: https://getcomposer.org/
 
 add user notification
 
-**Options**: `USER` `TOPIC` `NOTICE` `[TYPE]` 
+**Options**: `USER` `TOPIC` `NOTICE` `[TYPE]`
 
 This function adds a new user notification to the panel.
 
@@ -746,7 +792,7 @@ This function adds a new user notification to the panel.
 
 adding user package
 
-**Options**: `TMPFILE` `PACKAGE` `[REWRITE]` 
+**Options**: `TMPFILE` `PACKAGE` `[REWRITE]`
 
 This function adds new user package to the system.
 
@@ -754,9 +800,10 @@ This function adds new user package to the system.
 
 add user sftp jail
 
-**Options**: `USER` `[RESTART]` 
+**Options**: `USER` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-add-user-sftp-jail admin
 ```
@@ -767,7 +814,7 @@ This function enables sftp jailed environment
 
 add user sftp key
 
-**Options**: `USER` `[TTL]` 
+**Options**: `USER` `[TTL]`
 
 This function creates and updates SSH keys for used with the File Manager.
 
@@ -775,9 +822,10 @@ This function creates and updates SSH keys for used with the File Manager.
 
 add ssh key
 
-**Options**: `USER` `KEY` 
+**Options**: `USER` `KEY`
 
 **Examples**:
+
 ```bash
     v-add-user-ssh-key user 'valid ssh key'
 ```
@@ -789,9 +837,10 @@ After that it append the new key(s)
 
 add wp-cli for a user
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-add-user-wp-cli user
 ```
@@ -802,9 +851,10 @@ This function adds support for wp-cli to the user account
 
 add web domain
 
-**Options**: `USER` `DOMAIN` `[IP]` `[RESTART]` `[ALIASES]` `[PROXY_EXTENSIONS]` 
+**Options**: `USER` `DOMAIN` `[IP]` `[RESTART]` `[ALIASES]` `[PROXY_EXTENSIONS]`
 
 **Examples**:
+
 ```bash
     v-add-web-domain admin wonderland.com 192.18.22.43 yes www.wonderland.com
 ```
@@ -820,28 +870,30 @@ name is useful during the site testing while dns isn't moved to server yet.
 
 add web domain alias
 
-**Options**: `USER` `DOMAIN` `ALIASES` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `ALIASES` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-add-web-domain-alias admin acme.com www.acme.com yes
 ```
 
 This function adds one or more aliases to a domain (it is also called
-"domain parking"). This function supports wildcards *.domain.tpl.
+"domain parking"). This function supports wildcards \*.domain.tpl.
 
 ## v-add-web-domain-allow-users
 
 Allow other users create subdomains
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-add-web-domain-allow-users admin admin.com
 ```
 
-Bypass the rule check for Enforce subdomain ownership for a specific domain. 
+Bypass the rule check for Enforce subdomain ownership for a specific domain.
 Enforce subdomain ownership setting in /edit/server/ set to no will always overwrite this behaviour
 eg: admin adds admin.com
 user can create user.admin.com
@@ -850,9 +902,10 @@ user can create user.admin.com
 
 add web domain backend
 
-**Options**: `USER` `DOMAIN` `[TEMPLATE]` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `[TEMPLATE]` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-add-web-domain-backend admin example.com default yes
 ```
@@ -863,9 +916,10 @@ This function is used to add the web backend configuration.
 
 add ftp account for web domain.
 
-**Options**: `USER` `DOMAIN` `FTP_USER` `FTP_PASSWORD` `[FTP_PATH]` 
+**Options**: `USER` `DOMAIN` `FTP_USER` `FTP_PASSWORD` `[FTP_PATH]`
 
 **Examples**:
+
 ```bash
     v-add-web-domain-ftp alice wonderland.com alice_ftp p4$$vvOrD
 ```
@@ -876,9 +930,10 @@ This function creates additional ftp account for web domain.
 
 add password protection for web domain
 
-**Options**: `USER` `DOMAIN` `AUTH_USER` `AUTH_PASSWORD` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `AUTH_USER` `AUTH_PASSWORD` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-add-web-domain-httpauth admin acme.com user02 super_pass
 ```
@@ -889,9 +944,10 @@ This function is used for securing web domain with http auth
 
 add webdomain proxy support
 
-**Options**: `USER` `DOMAIN` `[TEMPLATE]` `[EXTENTIONS]` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `[TEMPLATE]` `[EXTENTIONS]` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-add-web-domain-proxy admin example.com
 ```
@@ -903,13 +959,14 @@ improve website speed.
 
 Adding force redirect to domain
 
-**Options**: `USER` `DOMAIN` `REDIRECT` `HTTPCODE` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `REDIRECT` `HTTPCODE` `[RESTART]`
 
 **Examples**:
+
 ```bash
-    v-add-web-domain-redirect user domain.tld domain.tld 
- example: v-add-web-domain-redirect user domain.tld www.domain.tld 
- example: v-add-web-domain-redirect user domain.tld shop.domain.tld  
+    v-add-web-domain-redirect user domain.tld domain.tld
+ example: v-add-web-domain-redirect user domain.tld www.domain.tld
+ example: v-add-web-domain-redirect user domain.tld shop.domain.tld
  example: v-add-web-domain-redirect user domain.tld different-domain.com
  example: v-add-web-domain-redirect user domain.tld shop.different-domain.com
  example: v-add-web-domain-redirect user domain.tld different-domain.com 302
@@ -921,15 +978,16 @@ Function creates a forced redirect to a domain
 
 adding ssl for domain
 
-**Options**: `USER` `DOMAIN` `SSL_DIR` `[SSL_HOME]` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `SSL_DIR` `[SSL_HOME]` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-add-web-domain-ssl admin example.com /home/admin/conf/example.com/web
 ```
 
 This function turns on SSL support for a domain. Parameter ssl_dir is a path
-to directory where 2 or 3 ssl files can be found. Certificate file 
+to directory where 2 or 3 ssl files can be found. Certificate file
 domain.tld.crt and its key domain.tld.key are mandatory. Certificate
 authority domain.tld.ca file is optional. If home directory parameter
 (ssl_home) is not set, https domain uses public_shtml as separate
@@ -939,9 +997,10 @@ documentroot directory.
 
 Adding force SSL for a domain
 
-**Options**: `USER` `DOMAIN` `[RESTART]` `[QUIET]` 
+**Options**: `USER` `DOMAIN` `[RESTART]` `[QUIET]`
 
 **Examples**:
+
 ```bash
     v-add-web-domain-ssl-force admin acme.com
 ```
@@ -952,7 +1011,7 @@ This function forces SSL for the requested domain.
 
 Adding hsts to a domain
 
-**Options**: `USER` `DOMAIN` `[RESTART]` `[QUIET]` 
+**Options**: `USER` `DOMAIN` `[RESTART]` `[QUIET]`
 
 This function enables HSTS for the requested domain.
 
@@ -960,7 +1019,7 @@ This function enables HSTS for the requested domain.
 
 Adding force SSL for a domain
 
-**Options**: `USER` `DOMAIN` `[SSL]` 
+**Options**: `USER` `DOMAIN` `[SSL]`
 
 Up on creating an web domain set the SSL Force values due to the delay of LE due to DNS propergation over DNS cluster
 When LE has been activated it will set the actions
@@ -969,9 +1028,10 @@ When LE has been activated it will set the actions
 
 add log analyser to generate domain statistics
 
-**Options**: `USER` `DOMAIN` `TYPE` 
+**Options**: `USER` `DOMAIN` `TYPE`
 
 **Examples**:
+
 ```bash
     v-add-web-domain-stats admin example.com awstats
 ```
@@ -985,9 +1045,10 @@ should use v-add-web-domain_stat_auth script.
 
 add password protection to web domain statistics
 
-**Options**: `USER` `DOMAIN` `STATS_USER` `STATS_PASSWORD` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `STATS_USER` `STATS_PASSWORD` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-add-web-domain-stats-user admin example.com watchdog your_password
 ```
@@ -998,9 +1059,10 @@ This function is used for securing the web statistics page.
 
 add php fpm version
 
-**Options**: `VERSION` 
+**Options**: `VERSION`
 
 **Examples**:
+
 ```bash
     v-add-web-php 8.0
 ```
@@ -1011,9 +1073,10 @@ This function checks and delete a fpm php version if not used by any domain.
 
 backup system user with all its objects
 
-**Options**: `USER` `NOTIFY` 
+**Options**: `USER` `NOTIFY`
 
 **Examples**:
+
 ```bash
     v-backup-user admin yes
 ```
@@ -1024,7 +1087,7 @@ This function is used for backing up user with all its domains and databases.
 
 backup all users
 
-**Options**: – 
+**Options**: –
 
 This function backups all system users.
 
@@ -1032,9 +1095,10 @@ This function backups all system users.
 
 change cron job
 
-**Options**: `USER` `JOB` `MIN` `HOUR` `DAY` `MONTH` `WDAY` `COMMAND` 
+**Options**: `USER` `JOB` `MIN` `HOUR` `DAY` `MONTH` `WDAY` `COMMAND`
 
 **Examples**:
+
 ```bash
     v-change-cron-job admin 7 * * * * * * /usr/bin/uptime
 ```
@@ -1046,9 +1110,10 @@ parameters with new one but with same id.
 
 change database server password
 
-**Options**: `TYPE` `HOST` `USER` `PASSWORD` 
+**Options**: `TYPE` `HOST` `USER` `PASSWORD`
 
 **Examples**:
+
 ```bash
     v-change-database-host-password mysql localhost wp_user pA$$w@rD
 ```
@@ -1059,9 +1124,10 @@ This function changes database server password.
 
 change database owner
 
-**Options**: `DATABASE` `USER` 
+**Options**: `DATABASE` `USER`
 
 **Examples**:
+
 ```bash
     v-change-database-owner mydb alice
 ```
@@ -1072,9 +1138,10 @@ This function for changing database owner.
 
 change database password
 
-**Options**: `USER` `DATABASE` `DBPASS` 
+**Options**: `USER` `DATABASE` `DBPASS`
 
 **Examples**:
+
 ```bash
     v-change-database-password admin wp_db neW_pAssWorD
 ```
@@ -1086,9 +1153,10 @@ full name of database as argument.
 
 change database username
 
-**Options**: `USER` `DATABASE` `DBUSER` `[DBPASS]` 
+**Options**: `USER` `DATABASE` `DBUSER` `[DBPASS]`
 
 **Examples**:
+
 ```bash
     v-change-database-user admin my_db joe_user
 ```
@@ -1099,22 +1167,22 @@ This function for changing database user. It uses the
 
 change dns domain dnssec status
 
-**Options**: `USER` `DOMAIN` `STATUS` 
+**Options**: `USER` `DOMAIN` `STATUS`
 
 **Examples**:
+
 ```bash
     v-change-dns-domain-status admin domain.pp.ua yes
 ```
-
-
 
 ## v-change-dns-domain-exp
 
 change dns domain expiration date
 
-**Options**: `USER` `DOMAIN` `EXP` 
+**Options**: `USER` `DOMAIN` `EXP`
 
 **Examples**:
+
 ```bash
     v-change-dns-domain-exp admin domain.pp.ua 2020-11-20
 ```
@@ -1126,9 +1194,10 @@ serial number will be refreshed automatically during update.
 
 change dns domain ip address
 
-**Options**: `USER` `DOMAIN` `IP` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `IP` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-change-dns-domain-ip admin domain.com 123.212.111.222
 ```
@@ -1139,9 +1208,10 @@ This function for changing the main ip of DNS zone.
 
 change dns domain soa record
 
-**Options**: `USER` `DOMAIN` `SOA` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `SOA` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-change-dns-domain-soa admin acme.com d.ns.domain.tld
 ```
@@ -1153,9 +1223,10 @@ modified by v-change-dns-record call.
 
 change dns domain template
 
-**Options**: `USER` `DOMAIN` `TEMPLATE` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `TEMPLATE` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-change-dns-domain-tpl admin example.com child-ns yes
 ```
@@ -1168,9 +1239,10 @@ parameters of new template.
 
 change dns domain ttl
 
-**Options**: `USER` `DOMAIN` `TTL` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `TTL` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-change-dns-domain-ttl alice example.com 14400
 ```
@@ -1181,9 +1253,10 @@ This function for changing the time to live TTL parameter for all records.
 
 change dns domain record
 
-**Options**: `USER` `DOMAIN` `ID` `RECORD` `TYPE` `VALUE` `[PRIORITY]` `[RESTART]` `[TTL]` 
+**Options**: `USER` `DOMAIN` `ID` `RECORD` `TYPE` `VALUE` `[PRIORITY]` `[RESTART]` `[TTL]`
 
 **Examples**:
+
 ```bash
     v-change-dns-record admin domain.ua 42 192.18.22.43
 ```
@@ -1194,9 +1267,10 @@ This function for changing DNS record.
 
 change dns domain record id
 
-**Options**: `USER` `DOMAIN` `ID` `NEWID` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `ID` `NEWID` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-change-dns-record-id admin acme.com 24 42 yes
 ```
@@ -1207,9 +1281,10 @@ This function for changing internal record id.
 
 change domain owner
 
-**Options**: `DOMAIN` `USER` 
+**Options**: `DOMAIN` `USER`
 
 **Examples**:
+
 ```bash
     v-change-domain-owner www.example.com bob
 ```
@@ -1220,9 +1295,10 @@ This function of changing domain ownership.
 
 change firewall rule
 
-**Options**: `RULE` `ACTION` `IP` `PORT` `[PROTOCOL]` `[COMMENT]` 
+**Options**: `RULE` `ACTION` `IP` `PORT` `[PROTOCOL]` `[COMMENT]`
 
 **Examples**:
+
 ```bash
     v-change-firewall-rule 3 ACCEPT 5.188.123.17 443
 ```
@@ -1234,9 +1310,10 @@ It fully replace rule with new one but keeps same id.
 
 change file permission
 
-**Options**: `USER` `FILE` `PERMISSIONS` 
+**Options**: `USER` `FILE` `PERMISSIONS`
 
 **Examples**:
+
 ```bash
     v-change-fs-file-permission admin readme.txt 0777
 ```
@@ -1247,9 +1324,10 @@ This function changes file access permissions on the file system
 
 change mail account password
 
-**Options**: `USER` `DOMAIN` `ACCOUNT` `PASSWORD` 
+**Options**: `USER` `DOMAIN` `ACCOUNT` `PASSWORD`
 
 **Examples**:
+
 ```bash
     v-change-mail-account-password admin mydomain.tld user p4$$vvOrD
 ```
@@ -1260,9 +1338,10 @@ This function changes email account password.
 
 change mail account quota
 
-**Options**: `USER` `DOMAIN` `ACCOUNT` `QUOTA` 
+**Options**: `USER` `DOMAIN` `ACCOUNT` `QUOTA`
 
 **Examples**:
+
 ```bash
     v-change-mail-account-quota admin mydomain.tld user01 unlimited
 ```
@@ -1273,9 +1352,10 @@ This function changes email account disk quota.
 
 change mail domain rate limit
 
-**Options**: `USER` `DOMAIN` `ACCOUNT` `RATE` 
+**Options**: `USER` `DOMAIN` `ACCOUNT` `RATE`
 
 **Examples**:
+
 ```bash
     v-change-mail-domain-quota admin mydomain.tld user01 100
 ```
@@ -1286,9 +1366,10 @@ This function changes email account rate limit. Use system to use domain or "ser
 
 change mail domain catchall email
 
-**Options**: `USER` `DOMAIN` `EMAIL` 
+**Options**: `USER` `DOMAIN` `EMAIL`
 
 **Examples**:
+
 ```bash
     v-change-mail-domain-catchall user01 mydomain.tld master@mydomain.tld
 ```
@@ -1299,9 +1380,10 @@ This function changes mail domain catchall.
 
 change mail account rate limit
 
-**Options**: `USER` `DOMAIN` `ACCOUNT` `RATE` 
+**Options**: `USER` `DOMAIN` `ACCOUNT` `RATE`
 
 **Examples**:
+
 ```bash
     v-change-mail-account-quota admin mydomain.tld user01 100
 ```
@@ -1312,7 +1394,7 @@ This function changes email account rate limit for the domain. account specific 
 
 change domain ssl certificate
 
-**Options**: `USER` `DOMAIN` `SSL_DIR` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `SSL_DIR` `[RESTART]`
 
 This function changes SSL domain certificate and the key. If ca file present
 it will be replaced as well.
@@ -1321,7 +1403,7 @@ it will be replaced as well.
 
 change remote dns domain expiration date
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 This function synchronise dns domain with the remote server.
 
@@ -1329,9 +1411,10 @@ This function synchronise dns domain with the remote server.
 
 change remote dns domain SOA
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-change-remote-dns-domain-soa admin example.org.uk
 ```
@@ -1342,9 +1425,10 @@ This function synchronise dns domain with the remote server.
 
 change remote dns domain TTL
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-change-remote-dns-domain-ttl admin domain.tld
 ```
@@ -1355,9 +1439,10 @@ This function synchronise dns domain with the remote server.
 
 Enable / Disable API access
 
-**Options**: `STATUS` 
+**Options**: `STATUS`
 
 **Examples**:
+
 ```bash
     v-change-sys-api enable legacy
  # Enable legacy api currently default on most of api based systems
@@ -1373,9 +1458,10 @@ Enabled / Disable API
 
 change sysconfig value
 
-**Options**: `KEY` `VALUE` 
+**Options**: `KEY` `VALUE`
 
 **Examples**:
+
 ```bash
     v-change-sys-config-value VERSION 1.0
 ```
@@ -1387,9 +1473,10 @@ COMPANY_EMAIL and so on.
 
 change phpmyadmin/phppgadmin alias url
 
-**Options**: `TYPE` `ALIAS` 
+**Options**: `TYPE` `ALIAS`
 
 **Examples**:
+
 ```bash
     v-change-sys-db-alias pma phpmyadmin
  # Sets phpMyAdmin alias to phpmyadmin
@@ -1404,7 +1491,7 @@ apache2 or nginx configuration.
 
 enable or disable demo mode
 
-**Options**: `ACTIVE` 
+**Options**: `ACTIVE`
 
 This function will set the demo mode variable,
 which will prevent usage of certain v-scripts in the backend
@@ -1416,9 +1503,10 @@ for domains which have been created.
 
 change hestia ssl certificate
 
-**Options**: `SSL_DIR` `[RESTART]` 
+**Options**: `SSL_DIR` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-change-sys-hestia-ssl /home/new/dir/path yes
 ```
@@ -1429,9 +1517,10 @@ This function changes hestia SSL certificate and the key.
 
 change hostname
 
-**Options**: `HOSTNAME` 
+**Options**: `HOSTNAME`
 
 **Examples**:
+
 ```bash
     v-change-sys-hostname mydomain.tld
 ```
@@ -1442,9 +1531,10 @@ This function for changing system hostname.
 
 change ip name
 
-**Options**: `IP` `NAME` 
+**Options**: `IP` `NAME`
 
 **Examples**:
+
 ```bash
     v-change-sys-ip-name 80.122.52.70 acme.com
 ```
@@ -1455,9 +1545,10 @@ This function for changing dns domain associated with ip.
 
 change ip nat address
 
-**Options**: `IP` `NAT_IP` `[RESTART]` 
+**Options**: `IP` `NAT_IP` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-change-sys-ip-nat 185.209.50.140 10.110.104.205
 ```
@@ -1468,9 +1559,10 @@ This function for changing nat ip associated with ip.
 
 change ip owner
 
-**Options**: `IP` `USER` 
+**Options**: `IP` `USER`
 
 **Examples**:
+
 ```bash
     v-change-sys-ip-owner 91.198.136.14 admin
 ```
@@ -1481,9 +1573,10 @@ This function of changing ip address ownership.
 
 change ip status
 
-**Options**: `IP` `IP_STATUS` 
+**Options**: `IP` `IP_STATUS`
 
 **Examples**:
+
 ```bash
     v-change-sys-ip-status 91.198.136.14 yourstatus
 ```
@@ -1494,9 +1587,10 @@ This function of changing an ip address's status.
 
 change sys language
 
-**Options**: `LANGUAGE` `[UPDATE_USERS]` 
+**Options**: `LANGUAGE` `[UPDATE_USERS]`
 
 **Examples**:
+
 ```bash
     v-change-sys-language ru
 ```
@@ -1507,22 +1601,22 @@ This function for changing system language.
 
 Change default php version server wide
 
-**Options**: `VERSION` 
+**Options**: `VERSION`
 
 **Examples**:
+
 ```bash
     v-change-sys-php 8.0
 ```
-
-
 
 ## v-change-sys-port
 
 change system backend port
 
-**Options**: `PORT` 
+**Options**: `PORT`
 
 **Examples**:
+
 ```bash
     v-change-sys-port 5678
 ```
@@ -1533,7 +1627,7 @@ This function for changing the system backend port in NGINX configuration.
 
 update web templates
 
-**Options**: `[RESTART]` 
+**Options**: `[RESTART]`
 
 This function for changing the release branch for the
 Hestia Control Panel. This allows the user to switch between
@@ -1545,9 +1639,10 @@ turned on.
 
 change service config
 
-**Options**: `CONFIG` `SERVICE` `[RESTART]` 
+**Options**: `CONFIG` `SERVICE` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-change-sys-service-config /home/admin/dovecot.conf dovecot yes
 ```
@@ -1558,9 +1653,10 @@ This function for changing service confguration.
 
 change system timezone
 
-**Options**: `TIMEZONE` 
+**Options**: `TIMEZONE`
 
 **Examples**:
+
 ```bash
     v-change-sys-timezone Europe/Berlin
 ```
@@ -1571,9 +1667,10 @@ This function for changing system timezone.
 
 change webmail alias url
 
-**Options**: `WEBMAIL` 
+**Options**: `WEBMAIL`
 
 **Examples**:
+
 ```bash
     v-change-sys-webmail YourtrickyURLhere
 ```
@@ -1584,9 +1681,10 @@ This function changes the webmail url in apache2 or nginx configuration.
 
 changes user configuration value
 
-**Options**: `USER` `KEY` `VALUE` 
+**Options**: `USER` `KEY` `VALUE`
 
 **Examples**:
+
 ```bash
     v-change-user-config-value admin ROLE admin
 ```
@@ -1597,9 +1695,10 @@ Changes key/value for specified user.
 
 change user contact email
 
-**Options**: `USER` `EMAIL` 
+**Options**: `USER` `EMAIL`
 
 **Examples**:
+
 ```bash
     v-change-user-contact admin admin@yahoo.com
 ```
@@ -1610,9 +1709,10 @@ This function for changing of e-mail associated with a certain user.
 
 change user language
 
-**Options**: `USER` `LANGUAGE` 
+**Options**: `USER` `LANGUAGE`
 
 **Examples**:
+
 ```bash
     v-change-user-language admin en
 ```
@@ -1623,9 +1723,10 @@ This function for changing language.
 
 change user full name
 
-**Options**: `USER` `NAME` `[LAST_NAME]` 
+**Options**: `USER` `NAME` `[LAST_NAME]`
 
 **Examples**:
+
 ```bash
     v-change-user-name admin John Smith
 ```
@@ -1634,24 +1735,26 @@ This function allow to change user's full name.
 
 ## v-change-user-ns
 
-change user nameservers
+change user name servers
 
-**Options**: `USER` `NS1` `NS2` `[NS3]` `[NS4]` `[NS5]` `[NS6]` `[NS7]` `[NS8]` 
+**Options**: `USER` `NS1` `NS2` `[NS3]` `[NS4]` `[NS5]` `[NS6]` `[NS7]` `[NS8]`
 
 **Examples**:
+
 ```bash
     v-change-user-ns ns1.domain.tld ns2.domain.tld
 ```
 
-This function for changing default nameservers for specific user.
+This function for changing default name servers for specific user.
 
 ## v-change-user-package
 
 change user package
 
-**Options**: `USER` `PACKAGE` `[FORCE]` 
+**Options**: `USER` `PACKAGE` `[FORCE]`
 
 **Examples**:
+
 ```bash
     v-change-user-package admin yourpackage
 ```
@@ -1662,9 +1765,10 @@ This function changes user's hosting package.
 
 change user password
 
-**Options**: `USER` `PASSWORD` 
+**Options**: `USER` `PASSWORD`
 
 **Examples**:
+
 ```bash
     v-change-user-password admin NewPassword123
 ```
@@ -1673,11 +1777,12 @@ This function changes user's password and updates RKEY value.
 
 ## v-change-user-php-cli
 
-add php  version alias to .bash_aliases
+add php version alias to .bash_aliases
 
-**Options**: `USER` `VERSION` 
+**Options**: `USER` `VERSION`
 
 **Examples**:
+
 ```bash
     v-change-user-php-cli user 7.4
 ```
@@ -1689,7 +1794,7 @@ version when multi-php is enabled.
 
 change user random key
 
-**Options**: `USER` `[HASH]` 
+**Options**: `USER` `[HASH]`
 
 This function changes user's RKEY value thats has been used for security value to be used forgot password function only.
 
@@ -1697,9 +1802,10 @@ This function changes user's RKEY value thats has been used for security value t
 
 updates user role
 
-**Options**: `USER` `ROLE` 
+**Options**: `USER` `ROLE`
 
 **Examples**:
+
 ```bash
     v-change-user-role user administrator
 ```
@@ -1710,9 +1816,10 @@ Give/revoke user administrator rights to manage all accounts as admin
 
 change user shell
 
-**Options**: `USER` `SHELL` 
+**Options**: `USER` `SHELL`
 
 **Examples**:
+
 ```bash
     v-change-user-shell admin nologin
 ```
@@ -1723,9 +1830,10 @@ This function changes system shell of a user. Shell gives ability to use ssh.
 
 updates user role
 
-**Options**: `USER` `SORT_ORDER` 
+**Options**: `USER` `SORT_ORDER`
 
 **Examples**:
+
 ```bash
     v-change-user-sort-order user date
 ```
@@ -1736,9 +1844,10 @@ Changes web UI display sort order for specified user.
 
 change user default template
 
-**Options**: `USER` `TYPE` `TEMPLATE` 
+**Options**: `USER` `TYPE` `TEMPLATE`
 
 **Examples**:
+
 ```bash
     v-change-user-template admin WEB wordpress
 ```
@@ -1749,9 +1858,10 @@ This function changes default user web template.
 
 updates user theme
 
-**Options**: `USER` `THEME` 
+**Options**: `USER` `THEME`
 
 **Examples**:
+
 ```bash
     v-change-user-theme admin dark
  example:   v-change-user-theme peter vestia
@@ -1763,9 +1873,10 @@ Changes web UI display theme for specified user.
 
 change web domain backend template
 
-**Options**: `USER` `DOMAIN` `TEMPLATE` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `TEMPLATE` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-change-web-domain-backend-tpl admin acme.com PHP-7_4
 ```
@@ -1776,9 +1887,10 @@ This function changes backend template
 
 enable/disable directory listing
 
-**Options**: `USER` `DOMAIN` `MODE` 
+**Options**: `USER` `DOMAIN` `MODE`
 
 **Examples**:
+
 ```bash
     v-change-web-domain-dirlist user demo.com on
 ```
@@ -1789,9 +1901,10 @@ This function is used for changing the directory list mode.
 
 Changes the document root for an existing web domain
 
-**Options**: `USER` `DOMAIN` `TARGET_DOMAIN` `[DIRECTORY]` `[PHP]` 
+**Options**: `USER` `DOMAIN` `TARGET_DOMAIN` `[DIRECTORY]` `[PHP]`
 
 **Examples**:
+
 ```bash
     v-change-web-domain-docroot admin domain.tld otherdomain.tld
  # add custom docroot
@@ -1808,9 +1921,10 @@ to another available domain under the user context.
 
 change ftp user password.
 
-**Options**: `USER` `DOMAIN` `FTP_USER` `FTP_PASSWORD` 
+**Options**: `USER` `DOMAIN` `FTP_USER` `FTP_PASSWORD`
 
 **Examples**:
+
 ```bash
     v-change-web-domain-ftp-password admin example.com ftp_usr ftp_qwerty
 ```
@@ -1821,9 +1935,10 @@ This function changes ftp user password.
 
 change path for ftp user.
 
-**Options**: `USER` `DOMAIN` `FTP_USER` `FTP_PATH` 
+**Options**: `USER` `DOMAIN` `FTP_USER` `FTP_PATH`
 
 **Examples**:
+
 ```bash
     v-change-web-domain-ftp-path admin example.com /home/admin/example.com
 ```
@@ -1834,9 +1949,10 @@ This function changes ftp user path.
 
 change password for http auth user
 
-**Options**: `USER` `DOMAIN` `AUTH_USER` `AUTH_PASSWORD` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `AUTH_USER` `AUTH_PASSWORD` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-change-web-domain-httpauth admin acme.com alice white_rA$$bIt
 ```
@@ -1847,9 +1963,10 @@ This function is used for changing http auth user password
 
 change web domain ip
 
-**Options**: `USER` `DOMAIN` `DOMAIN` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `DOMAIN` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-change-web-domain-ip admin example.com 167.86.105.230 yes
 ```
@@ -1860,9 +1977,10 @@ This function is used for changing domain ip
 
 change web domain name
 
-**Options**: `USER` `DOMAIN` `NEW_DOMAIN` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `NEW_DOMAIN` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-change-web-domain-name alice wonderland.com lookinglass.com yes
 ```
@@ -1873,9 +1991,10 @@ This function is used for changing the domain name.
 
 change web domain proxy template
 
-**Options**: `USER` `DOMAIN` `TEMPLATE` `[EXTENTIONS]` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `TEMPLATE` `[EXTENTIONS]` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-change-web-domain-proxy-tpl admin domain.tld hosting
 ```
@@ -1886,9 +2005,10 @@ This function changes proxy template
 
 change domain ssl certificate
 
-**Options**: `USER` `DOMAIN` `SSL_DIR` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `SSL_DIR` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-change-web-domain-sslcert admin example.com /home/admin/tmp
 ```
@@ -1900,9 +2020,10 @@ it will be replaced as well.
 
 changing domain ssl home
 
-**Options**: `USER` `DOMAIN` `SSL_HOME` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `SSL_HOME` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-change-web-domain-sslhome admin acme.com single
  example: v-change-web-domain-sslhome admin acme.com same
@@ -1914,9 +2035,10 @@ This function changes SSL home directory. Single will seperate the both public_h
 
 change web domain statistics
 
-**Options**: `USER` `DOMAIN` `TYPE` 
+**Options**: `USER` `DOMAIN` `TYPE`
 
 **Examples**:
+
 ```bash
     v-change-web-domain-stats admin example.com awstats
 ```
@@ -1928,9 +2050,10 @@ automatically chooses from client's configuration file.
 
 change web domain template
 
-**Options**: `USER` `DOMAIN` `TEMPLATE` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `TEMPLATE` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-change-web-domain-tpl admin acme.com opencart
 ```
@@ -1942,25 +2065,27 @@ of webdomain directories remains untouched.
 
 check access key
 
-**Options**: `ACCESS_KEY_ID` `SECRET_ACCESS_KEY` `COMMAND` `[IP]` `[FORMAT]` 
+**Options**: `ACCESS_KEY_ID` `SECRET_ACCESS_KEY` `COMMAND` `[IP]` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-check-access-key key_id secret v-purge-nginx-cache 127.0.0.1 json
 ```
 
-* Checks if the key exists;
-* Checks if the secret belongs to the key;
-* Checks if the key user is suspended;
-* Checks if the key has permission to run the command.
+- Checks if the key exists;
+- Checks if the secret belongs to the key;
+- Checks if the key user is suspended;
+- Checks if the key has permission to run the command.
 
 ## v-check-api-key
 
 check api key
 
-**Options**: `KEY` `[IP]` 
+**Options**: `KEY` `[IP]`
 
 **Examples**:
+
 ```bash
     v-check-api-key random_key 127.0.0.1
 ```
@@ -1971,9 +2096,10 @@ This function checks a key file in $HESTIA/data/keys/
 
 open file
 
-**Options**: `USER` `FILE` 
+**Options**: `USER` `FILE`
 
 **Examples**:
+
 ```bash
     v-check-fs-permission admin readme.txt
 ```
@@ -1984,9 +2110,10 @@ This function opens/reads files on the file system
 
 check user password
 
-**Options**: `TYPE` `PASSWORD` `HASH` 
+**Options**: `TYPE` `PASSWORD` `HASH`
 
 **Examples**:
+
 ```bash
     v-check-mail-account-hash ARGONID2 PASS HASH
 ```
@@ -1997,9 +2124,10 @@ This function verifies email account password hash
 
 check user token
 
-**Options**: `USER` `TOKEN` 
+**Options**: `USER` `TOKEN`
 
 **Examples**:
+
 ```bash
     v-check-user-2fa admin 493690
 ```
@@ -2010,9 +2138,10 @@ This function verifies user 2fa token.
 
 check user hash
 
-**Options**: `USER` `HASH` `[IP]` 
+**Options**: `USER` `HASH` `[IP]`
 
 **Examples**:
+
 ```bash
     v-check-user-hash admin CN5JY6SMEyNGnyCuvmK5z4r7gtHAC4mRZ...
 ```
@@ -2023,9 +2152,10 @@ This function verifies user hash
 
 check user password
 
-**Options**: `USER` `PASSWORD` `[IP]` `[RETURN_HASH]` 
+**Options**: `USER` `PASSWORD` `[IP]` `[RETURN_HASH]`
 
 **Examples**:
+
 ```bash
     v-check-user-password admin qwerty1234
 ```
@@ -2036,9 +2166,10 @@ This function verifies user password from file
 
 copy directory
 
-**Options**: `USER` `SRC_DIRECTORY` `DST_DIRECTORY` 
+**Options**: `USER` `SRC_DIRECTORY` `DST_DIRECTORY`
 
 **Examples**:
+
 ```bash
     v-copy-fs-directory alice /home/alice/dir1 /home/bob/dir2
 ```
@@ -2049,9 +2180,10 @@ This function copies directory on the file system
 
 copy file
 
-**Options**: `USER` `SRC_FILE` `DST_FILE` 
+**Options**: `USER` `SRC_FILE` `DST_FILE`
 
 **Examples**:
+
 ```bash
     v-copy-fs-file admin readme.txt readme_new.txt
 ```
@@ -2062,9 +2194,10 @@ This function copies file on the file system
 
 duplicate existing package
 
-**Options**: `PACKAGE` `NEW_PACKAGE` 
+**Options**: `PACKAGE` `NEW_PACKAGE`
 
 **Examples**:
+
 ```bash
     v-copy-user-package default new
 ```
@@ -2076,9 +2209,10 @@ package file to facilitate easier configuration.
 
 delete access key
 
-**Options**: `ACCESS_KEY_ID` 
+**Options**: `ACCESS_KEY_ID`
 
 **Examples**:
+
 ```bash
     v-delete-access-key mykey
 ```
@@ -2089,9 +2223,10 @@ This function removes a key from in $HESTIA/data/access-keys/
 
 delete backup ftp server
 
-**Options**: `TYPE` `[HOST]` 
+**Options**: `TYPE` `[HOST]`
 
 **Examples**:
+
 ```bash
     v-delete-backup-host sftp
 ```
@@ -2102,7 +2237,7 @@ This function deletes ftp backup host
 
 delete hestia autoupdate cron job
 
-**Options**: – 
+**Options**: –
 
 This function deletes hestia autoupdate cron job.
 
@@ -2110,9 +2245,10 @@ This function deletes hestia autoupdate cron job.
 
 delete cron job
 
-**Options**: `USER` `JOB` 
+**Options**: `USER` `JOB`
 
 **Examples**:
+
 ```bash
     v-delete-cron-job admin 9
 ```
@@ -2123,9 +2259,10 @@ This function deletes cron job.
 
 delete cron reports
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-delete-cron-reports admin
 ```
@@ -2137,7 +2274,7 @@ notifications.
 
 delete restart job
 
-**Options**: – 
+**Options**: –
 
 This function for disabling restart cron tasks
 
@@ -2145,9 +2282,10 @@ This function for disabling restart cron tasks
 
 delete database
 
-**Options**: `USER` `DATABASE` 
+**Options**: `USER` `DATABASE`
 
 **Examples**:
+
 ```bash
     v-delete-database admin wp_db
 ```
@@ -2159,9 +2297,10 @@ another database, he will not be deleted.
 
 delete database server
 
-**Options**: `TYPE` `HOST` 
+**Options**: `TYPE` `HOST`
 
 **Examples**:
+
 ```bash
     v-delete-database-host pgsql localhost
 ```
@@ -2173,9 +2312,10 @@ be deleted if there are no databases created on it only.
 
 deletes temp database user
 
-**Options**: `USER` `DBUSER` `[TYPE]` `[HOST]` 
+**Options**: `USER` `DBUSER` `[TYPE]` `[HOST]`
 
 **Examples**:
+
 ```bash
     v-add-database-temp-user wordress hestia_sso_user mysql
 ```
@@ -2187,9 +2327,10 @@ To be used in combination with v-add-database-temp-user
 
 delete user databases
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-delete-databases admin
 ```
@@ -2200,9 +2341,10 @@ This function deletes all user databases.
 
 delete dns domain
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-delete-dns-domain alice acme.com
 ```
@@ -2214,9 +2356,10 @@ deleted.
 
 delete dns domains
 
-**Options**: `USER` `[RESTART]` 
+**Options**: `USER` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-delete-dns-domains bob
 ```
@@ -2227,9 +2370,10 @@ This function for deleting all users DNS domains.
 
 delete dns domains based on SRC field
 
-**Options**: `USER` `SRC` `[RESTART]` 
+**Options**: `USER` `SRC` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-delete-dns-domains-src admin '' yes
 ```
@@ -2240,9 +2384,10 @@ This function for deleting DNS domains related to a certain host.
 
 delete dns domain or dns record based on web domain alias
 
-**Options**: `USER` `DOMAIN` `ALIAS` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `ALIAS` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-delete-dns-on-web-alias admin example.com www.example.com
 ```
@@ -2253,9 +2398,10 @@ This function deletes dns domain or dns record based on web domain alias.
 
 delete dns record
 
-**Options**: `USER` `DOMAIN` `ID` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `ID` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-delete-dns-record bob acme.com 42 yes
 ```
@@ -2266,9 +2412,10 @@ This function for deleting a certain record of DNS zone.
 
 delete web/dns/mail domain
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-delete-domain admin domain.tld
 ```
@@ -2279,9 +2426,10 @@ This function deletes web/dns/mail domain.
 
 Disable FastCGI cache for nginx
 
-**Options**: `USER` `DOMAIN` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-delete-fastcgi-cache user domain.tld
 ```
@@ -2292,9 +2440,10 @@ This function disables FastCGI cache for nginx
 
 delete firewall blocking rule
 
-**Options**: `IP` `CHAIN` 
+**Options**: `IP` `CHAIN`
 
 **Examples**:
+
 ```bash
     v-delete-firewall-ban 198.11.130.250 MAIL
 ```
@@ -2305,9 +2454,10 @@ This function deletes blocking rule from system firewall
 
 delete firewall chain
 
-**Options**: `CHAIN` 
+**Options**: `CHAIN`
 
 **Examples**:
+
 ```bash
     v-delete-firewall-chain WEB
 ```
@@ -2318,9 +2468,10 @@ This function adds new rule to system firewall
 
 delete firewall ipset
 
-**Options**: `NAME` 
+**Options**: `NAME`
 
 **Examples**:
+
 ```bash
     v-delete-firewall-ipset country-nl
 ```
@@ -2331,9 +2482,10 @@ This function removes ipset from system and from hestia
 
 delete firewall rule
 
-**Options**: `RULE` 
+**Options**: `RULE`
 
 **Examples**:
+
 ```bash
     v-delete-firewall-rule SSH_BLOCK
 ```
@@ -2344,9 +2496,10 @@ This function deletes firewall rule.
 
 delete directory
 
-**Options**: `USER` `DIRECTORY` 
+**Options**: `USER` `DIRECTORY`
 
 **Examples**:
+
 ```bash
     v-delete-fs-directory admin report1
 ```
@@ -2357,9 +2510,10 @@ This function deletes directory on the file system
 
 delete file
 
-**Options**: `USER` `FILE` 
+**Options**: `USER` `FILE`
 
 **Examples**:
+
 ```bash
     v-delete-fs-file admin readme.txt
 ```
@@ -2370,9 +2524,10 @@ This function deletes file on the file system
 
 deleting letsencrypt ssl cetificate for domain
 
-**Options**: `USER` `DOMAIN` `[RESTART]` `[MAIL]` 
+**Options**: `USER` `DOMAIN` `[RESTART]` `[MAIL]`
 
 **Examples**:
+
 ```bash
     v-delete-letsencrypt-domain admin acme.com yes
 ```
@@ -2383,9 +2538,10 @@ This function turns off letsencrypt SSL support for a domain.
 
 delete mail account
 
-**Options**: `USER` `DOMAIN` `ACCOUNT` 
+**Options**: `USER` `DOMAIN` `ACCOUNT`
 
 **Examples**:
+
 ```bash
     v-delete-mail-account admin acme.com alice
 ```
@@ -2396,9 +2552,10 @@ This function deletes email account.
 
 delete mail account alias aka nickname
 
-**Options**: `USER` `DOMAIN` `ACCOUNT` `ALIAS` 
+**Options**: `USER` `DOMAIN` `ACCOUNT` `ALIAS`
 
 **Examples**:
+
 ```bash
     v-delete-mail-account-alias admin example.com alice alicia
 ```
@@ -2409,9 +2566,10 @@ This function deletes email account alias.
 
 delete mail account autoreply message
 
-**Options**: `USER` `DOMAIN` `ACCOUNT` `ALIAS` 
+**Options**: `USER` `DOMAIN` `ACCOUNT` `ALIAS`
 
 **Examples**:
+
 ```bash
     v-delete-mail-account-autoreply admin mydomain.tld bob
 ```
@@ -2422,9 +2580,10 @@ This function deletes an email accounts autoreply.
 
 delete mail account forward
 
-**Options**: `USER` `DOMAIN` `ACCOUNT` `EMAIL` 
+**Options**: `USER` `DOMAIN` `ACCOUNT` `EMAIL`
 
 **Examples**:
+
 ```bash
     v-delete-mail-account-forward admin acme.com tony bob@acme.com
 ```
@@ -2435,9 +2594,10 @@ This function deletes an email accounts forwarding address.
 
 delete mail account forward-only flag
 
-**Options**: `USER` `DOMAIN` `ACCOUNT` 
+**Options**: `USER` `DOMAIN` `ACCOUNT`
 
 **Examples**:
+
 ```bash
     v-delete-mail-account-fwd-only admin example.com jack
 ```
@@ -2448,9 +2608,10 @@ This function deletes fwd-only flag
 
 delete mail domain
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-delete-mail-domain admin mydomain.tld
 ```
@@ -2462,9 +2623,10 @@ also be deleted.
 
 delete mail domain antispam support
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-delete-mail-domain-antispam admin mydomain.tld
 ```
@@ -2475,9 +2637,10 @@ This function disable spamassasin for incoming emails.
 
 delete mail domain antivirus support
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-delete-mail-domain-antivirus admin mydomain.tld
 ```
@@ -2488,9 +2651,10 @@ This function disables clamav scan for incoming emails.
 
 delete mail domain catchall email
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-delete-mail-domain-catchall admin mydomain.tld
 ```
@@ -2501,9 +2665,10 @@ This function disables mail domain cathcall.
 
 delete mail domain dkim support
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-delete-mail-domain-dkim admin mydomain.tld
 ```
@@ -2514,9 +2679,10 @@ This function delete DKIM domain pem.
 
 delete mail domain reject spam support
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-delete-mail-domain-antispam admin mydomain.tld
 ```
@@ -2527,9 +2693,10 @@ The function disable spamassasin for incoming emails.
 
 Remove mail domain smtp relay support
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-delete-mail-domain-smtp-relay user domain.tld
 ```
@@ -2540,9 +2707,10 @@ This function removes mail domain smtp relay support.
 
 delete mail domain ssl support
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-delete-mail-domain-ssl user demo.com
 ```
@@ -2553,9 +2721,10 @@ This function delete ssl certificates.
 
 delete webmail support for a domain
 
-**Options**: `USER` `DOMAIN` `[RESTART]` `[QUIET]` 
+**Options**: `USER` `DOMAIN` `[RESTART]` `[QUIET]`
 
 **Examples**:
+
 ```bash
     v-delete-mail-domain-webmail user demo.com
 ```
@@ -2567,9 +2736,10 @@ a specified mail domain.
 
 delete mail domains
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-delete-mail-domains admin
 ```
@@ -2580,9 +2750,10 @@ This function for deleting all users mail domains.
 
 delete remote dns domain
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-delete-remote-dns-domain admin example.tld
 ```
@@ -2593,7 +2764,7 @@ This function synchronise dns with the remote server.
 
 delete remote dns domains
 
-**Options**: `[HOST]` 
+**Options**: `[HOST]`
 
 This function deletes remote dns domains.
 
@@ -2601,9 +2772,10 @@ This function deletes remote dns domains.
 
 delete remote dns host
 
-**Options**: `HOST` 
+**Options**: `HOST`
 
 **Examples**:
+
 ```bash
     v-delete-remote-dns-host example.org
 ```
@@ -2614,9 +2786,10 @@ This function for deleting the remote dns host from hestia configuration.
 
 delete remote dns domain record
 
-**Options**: `USER` `DOMAIN` `ID` 
+**Options**: `USER` `DOMAIN` `ID`
 
 **Examples**:
+
 ```bash
     v-delete-remote-dns-record user07 acme.com 44
 ```
@@ -2627,20 +2800,19 @@ This function synchronise dns with the remote server.
 
 delete ip adresss from allowed ip list api
 
-**Options**: `IP` 
+**Options**: `IP`
 
 **Examples**:
+
 ```bash
     v-delete-sys-api-ip 1.1.1.1
 ```
-
-
 
 ## v-delete-sys-filemanager
 
 remove file manager functionality from Hestia Control Panel
 
-**Options**: `[MODE]` 
+**Options**: `[MODE]`
 
 This function removes the File Manager and its entry points
 
@@ -2648,7 +2820,7 @@ This function removes the File Manager and its entry points
 
 delete system firewall
 
-**Options**: – 
+**Options**: –
 
 This function disables firewall support
 
@@ -2656,9 +2828,10 @@ This function disables firewall support
 
 delete system ip
 
-**Options**: `IP` 
+**Options**: `IP`
 
 **Examples**:
+
 ```bash
     v-delete-sys-ip 212.42.76.210
 ```
@@ -2670,7 +2843,7 @@ on interface and do not allow to delete ip which is used by a web domain.
 
 delete exim mail queue
 
-**Options**: – 
+**Options**: –
 
 This function checks for messages stuck in the exim mail queue
 and prompts the user to clear the queue if desired.
@@ -2679,7 +2852,7 @@ and prompts the user to clear the queue if desired.
 
 disables support for single sign on PHPMYADMIN
 
-**Options**: `[MODE]` 
+**Options**: `[MODE]`
 
 Disables support for SSO to phpMyAdmin
 
@@ -2687,7 +2860,7 @@ Disables support for SSO to phpMyAdmin
 
 delete system quota
 
-**Options**: – 
+**Options**: –
 
 This function disables filesystem quota on /home partition
 
@@ -2695,7 +2868,7 @@ This function disables filesystem quota on /home partition
 
 delete system sftp jail
 
-**Options**: – 
+**Options**: –
 
 This function disables sftp jailed environment
 
@@ -2703,7 +2876,7 @@ This function disables sftp jailed environment
 
 Remove SMTP Account for logging, notification and internal mail
 
-**Options**: – 
+**Options**: –
 
 This function allows configuring a SMTP account for the server to use
 for logging, notification and warn emails etc.
@@ -2712,7 +2885,7 @@ for logging, notification and warn emails etc.
 
 disable system wide smtp relay support
 
-**Options**: `` 
+**Options**: ``
 
 This function disables system wide smtp relay support.
 
@@ -2720,9 +2893,10 @@ This function disables system wide smtp relay support.
 
 delete user
 
-**Options**: `USER` `[RESTART]` 
+**Options**: `USER` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-delete-user whistler
 ```
@@ -2734,9 +2908,10 @@ databases, cron jobs, etc.
 
 delete 2fa of existing user
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-delete-user-2fa admin
 ```
@@ -2747,7 +2922,7 @@ This function deletes 2fa token of a user.
 
 Delete auth log file for user
 
-**Options**: 
+**Options**:
 
 This function for deleting a users auth log file
 
@@ -2755,9 +2930,10 @@ This function for deleting a users auth log file
 
 delete user backup
 
-**Options**: `USER` `BACKUP` 
+**Options**: `USER` `BACKUP`
 
 **Examples**:
+
 ```bash
     v-delete-user-backup admin admin.2012-12-21_00-10-00.tar
 ```
@@ -2768,9 +2944,10 @@ This function deletes user backup.
 
 delete backup exclusion
 
-**Options**: `USER` `[SYSTEM]` 
+**Options**: `USER` `[SYSTEM]`
 
 **Examples**:
+
 ```bash
     v-delete-user-backup-exclusions admin
 ```
@@ -2781,9 +2958,10 @@ This function for deleting backup exclusion
 
 delete user ips
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-delete-user-ips admin
 ```
@@ -2794,9 +2972,10 @@ This function deletes all user's ip addresses.
 
 Delete log file for user
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-delete-user-log user
 ```
@@ -2807,9 +2986,10 @@ This function for deleting a users log file
 
 delete user notification
 
-**Options**: `USER` `NOTIFICATION` 
+**Options**: `USER` `NOTIFICATION`
 
 **Examples**:
+
 ```bash
     v-delete-user-notification admin 1
 ```
@@ -2820,9 +3000,10 @@ This function deletes user notification.
 
 delete user package
 
-**Options**: `PACKAGE` 
+**Options**: `PACKAGE`
 
 **Examples**:
+
 ```bash
     v-delete-user-package admin palegreen
 ```
@@ -2833,9 +3014,10 @@ This function for deleting user package.
 
 delete user sftp jail
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-delete-user-sftp-jail whistler
 ```
@@ -2846,9 +3028,10 @@ This function disables sftp jailed environment for USER
 
 add ssh key
 
-**Options**: `USER` `KEY` 
+**Options**: `USER` `KEY`
 
 **Examples**:
+
 ```bash
     v-delete-user-ssh-key user unique_id
 ```
@@ -2859,9 +3042,10 @@ Delete user ssh key from authorized_keys
 
 delete user usage statistics
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-delete-user-stats user
  example: v-delete-user-stats admin overall
@@ -2873,9 +3057,10 @@ This function deletes user statistics data.
 
 delete web domain
 
-**Options**: `USER` `DOMAIN` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-delete-web-domain admin wonderland.com
 ```
@@ -2889,9 +3074,10 @@ only with a help of reserve copy.
 
 delete web domain alias
 
-**Options**: `USER` `DOMAIN` `ALIAS` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `ALIAS` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-delete-web-domain-alias admin example.com www.example.com
 ```
@@ -2903,14 +3089,15 @@ default www aliase can be removed as well.
 
 disables other users create subdomains
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-delete-web-domain-allow-users admin admin.com
 ```
 
-Enable the rule check for Enforce subdomain ownership for a specific domain. 
+Enable the rule check for Enforce subdomain ownership for a specific domain.
 Enforce subdomain ownership setting in /edit/server/ set to no will always overwrite this behaviour
 eg: admin adds admin.com
 user can create user.admin.com
@@ -2919,9 +3106,10 @@ user can create user.admin.com
 
 deleting web domain backend configuration
 
-**Options**: `USER` `DOMAIN` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-delete-web-domain-backend admin acme.com
 ```
@@ -2932,9 +3120,10 @@ This function of deleting the virtualhost backend configuration.
 
 delete webdomain ftp account
 
-**Options**: `USER` `DOMAIN` `FTP_USER` 
+**Options**: `USER` `DOMAIN` `FTP_USER`
 
 **Examples**:
+
 ```bash
     v-delete-web-domain-ftp admin wonderland.com bob_ftp
 ```
@@ -2945,9 +3134,10 @@ This function deletes additional ftp account.
 
 delete http auth user
 
-**Options**: `USER` `DOMAIN` `AUTH_USER` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `AUTH_USER` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-delete-web-domain-httpauth admin example.com alice
 ```
@@ -2958,9 +3148,10 @@ This function is used for deleting http auth user
 
 deleting web domain proxy configuration
 
-**Options**: `USER` `DOMAIN` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-delete-web-domain-proxy alice lookinglass.com
 ```
@@ -2971,9 +3162,10 @@ This function of deleting the virtualhost proxy configuration.
 
 Delete force redirect to domain
 
-**Options**: `USER` `DOMAIN` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-add-web-domain-redirect user domain.tld
 ```
@@ -2984,9 +3176,10 @@ Function delete a forced redirect to a domain
 
 delete web domain SSL support
 
-**Options**: `USER` `DOMAIN` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-delete-web-domain-ssl admin acme.com
 ```
@@ -2997,9 +3190,10 @@ This function disable https support and deletes SSL certificates.
 
 remove ssl force from domain
 
-**Options**: `USER` `DOMAIN` `[RESTART]` `[QUIET]` 
+**Options**: `USER` `DOMAIN` `[RESTART]` `[QUIET]`
 
 **Examples**:
+
 ```bash
     v-delete-web-domain-ssl-force admin domain.tld
 ```
@@ -3010,9 +3204,10 @@ This function removes force SSL configurations.
 
 remove ssl force from domain
 
-**Options**: `USER` `DOMAIN` `[RESTART]` `[QUIET]` 
+**Options**: `USER` `DOMAIN` `[RESTART]` `[QUIET]`
 
 **Examples**:
+
 ```bash
     v-delete-web-domain-ssl-hsts user domain.tld
 ```
@@ -3023,9 +3218,10 @@ This function removes force SSL configurations.
 
 delete web domain statistics
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-delete-web-domain-stats user02 h1.example.com
 ```
@@ -3037,9 +3233,10 @@ automatically chooses from client's configuration file.
 
 disable web domain stats authentication support
 
-**Options**: `USER` `DOMAIN` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-delete-web-domain-stats-user admin acme.com
 ```
@@ -3053,9 +3250,10 @@ authentication.
 
 delete web domains
 
-**Options**: `USER` `[RESTART]` 
+**Options**: `USER` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-delete-web-domains admin
 ```
@@ -3066,9 +3264,10 @@ This function deletes all user's webdomains.
 
 delete php fpm version
 
-**Options**: `VERSION` 
+**Options**: `VERSION`
 
 **Examples**:
+
 ```bash
     v-delete-web-php 7.3
 ```
@@ -3079,9 +3278,10 @@ This function checks and delete a fpm php version if not used by any domain.
 
 Download backup
 
-**Options**: `USER` `BACKUP` 
+**Options**: `USER` `BACKUP`
 
 **Examples**:
+
 ```bash
     v-download-backup admin admin.2020-11-05_05-10-21.tar
 ```
@@ -3092,9 +3292,10 @@ This function download back-up from remote server
 
 archive to directory
 
-**Options**: `USER` `ARCHIVE` `DIRECTORY` `[SELECTED_DIR]` `[STRIP]` `[TEST]` 
+**Options**: `USER` `ARCHIVE` `DIRECTORY` `[SELECTED_DIR]` `[STRIP]` `[TEST]`
 
 **Examples**:
+
 ```bash
     v-extract-fs-archive admin latest.tar.gz /home/admin
 ```
@@ -3105,14 +3306,13 @@ This function extracts archive into directory on the file system
 
 generate api key
 
-**Options**: – 
+**Options**: –
 
 This function creates a key file in $HESTIA/data/keys/
 
 ## v-generate-debug-report
 
-
-**Options**: 
+**Options**:
 
 Includes
 shellcheck source=/etc/hestiacp/hestia.conf
@@ -3121,9 +3321,10 @@ shellcheck source=/etc/hestiacp/hestia.conf
 
 generate password hash
 
-**Options**: `HASH_METHOD` `SALT` `PASSWORD` 
+**Options**: `HASH_METHOD` `SALT` `PASSWORD`
 
 **Examples**:
+
 ```php
     v-generate-password-hash sha-512 rAnDom_string yourPassWord
 ```
@@ -3134,9 +3335,10 @@ This function generates password hash
 
 generate self signed certificate and CSR request
 
-**Options**: `DOMAIN` `EMAIL` `COUNTRY` `STATE` `CITY` `ORG` `UNIT` `[ALIASES]` `[FORMAT]` 
+**Options**: `DOMAIN` `EMAIL` `COUNTRY` `STATE` `CITY` `ORG` `UNIT` `[ALIASES]` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-generate-ssl-cert example.com mail@yahoo.com USA California Monterey ACME.COM IT
 ```
@@ -3147,9 +3349,10 @@ This function generates self signed SSL certificate and CSR request
 
 get dns domain value
 
-**Options**: `USER` `DOMAIN` `KEY` 
+**Options**: `USER` `DOMAIN` `KEY`
 
 **Examples**:
+
 ```bash
     v-get-dns-domain-value admin example.com SOA
 ```
@@ -3160,9 +3363,10 @@ This function for getting a certain DNS domain parameter.
 
 get file type
 
-**Options**: `USER` `FILE` 
+**Options**: `USER` `FILE`
 
 **Examples**:
+
 ```bash
     v-get-fs-file-type admin index.html
 ```
@@ -3173,9 +3377,10 @@ This function shows file type
 
 get mail account value
 
-**Options**: `USER` `DOMAIN` `ACCOUNT` `KEY` 
+**Options**: `USER` `DOMAIN` `ACCOUNT` `KEY`
 
 **Examples**:
+
 ```bash
     v-get-mail-account-value admin example.tld tester QUOTA
 ```
@@ -3186,9 +3391,10 @@ This function for getting a certain mail account parameter.
 
 get mail domain value
 
-**Options**: `USER` `DOMAIN` `KEY` 
+**Options**: `USER` `DOMAIN` `KEY`
 
 **Examples**:
+
 ```bash
     v-get-mail-domain-value admin example.com DKIM
 ```
@@ -3199,7 +3405,7 @@ This function for getting a certain mail domain parameter.
 
 get system timezone
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function to get system timezone
 
@@ -3207,9 +3413,10 @@ This function to get system timezone
 
 list system timezone
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-get-sys-timezones json
 ```
@@ -3220,9 +3427,10 @@ This function checks system timezone settings
 
 get user salt
 
-**Options**: `USER` `[IP]` `[FORMAT]` 
+**Options**: `USER` `[IP]` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-get-user-salt admin
 ```
@@ -3233,9 +3441,10 @@ This function provides users salt
 
 get user value
 
-**Options**: `USER` `KEY` 
+**Options**: `USER` `KEY`
 
 **Examples**:
+
 ```bash
     v-get-user-value admin FNAME
 ```
@@ -3246,7 +3455,7 @@ This function for obtaining certain user's parameters.
 
 insert dns domain
 
-**Options**: `USER` `DATA` `[SRC]` `[FLUSH]` `#` 
+**Options**: `USER` `DATA` `[SRC]` `[FLUSH]` `#`
 
 This function inserts raw record to the dns.conf
 
@@ -3254,7 +3463,7 @@ This function inserts raw record to the dns.conf
 
 insert dns record
 
-**Options**: `USER` `DOMAIN` `DATA` 
+**Options**: `USER` `DOMAIN` `DATA`
 
 This function inserts raw dns record to the domain conf
 
@@ -3262,7 +3471,7 @@ This function inserts raw dns record to the domain conf
 
 inserts dns records
 
-**Options**: `USER` `DOMAIN` `DATA_FILE` 
+**Options**: `USER` `DOMAIN` `DATA_FILE`
 
 This function copy dns record to the domain conf
 
@@ -3270,61 +3479,58 @@ This function copy dns record to the domain conf
 
 list all API access keys
 
-**Options**: `ACCESS_KEY_ID` `[FORMAT]` 
+**Options**: `ACCESS_KEY_ID` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-access-key 1234567890ABCDefghij json
 ```
-
-
 
 ## v-list-access-keys
 
 list all API access keys
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-access-keys json
 ```
-
-
 
 ## v-list-api
 
 list api
 
-**Options**: `API` `[FORMAT]` 
+**Options**: `API` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-api mail-accounts json
 ```
-
-
 
 ## v-list-apis
 
 list available APIs
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-apis json
 ```
-
-
 
 ## v-list-backup-host
 
 list backup host
 
-**Options**: `TYPE` `[FORMAT]` 
+**Options**: `TYPE` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-backup-host local
 ```
@@ -3335,9 +3541,10 @@ This function for obtaining the list of backup host parameters.
 
 list cron job
 
-**Options**: `USER` `JOB` `[FORMAT]` 
+**Options**: `USER` `JOB` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-cron-job admin 7
 ```
@@ -3348,9 +3555,10 @@ This function of obtaining cron job parameters.
 
 list user cron jobs
 
-**Options**: `USER` `[FORMAT]` 
+**Options**: `USER` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-cron-jobs admin
 ```
@@ -3361,9 +3569,10 @@ This function for obtaining the list of all users cron jobs.
 
 list database
 
-**Options**: `USER` `DATABASE` `[FORMAT]` 
+**Options**: `USER` `DATABASE` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-database wp_db
 ```
@@ -3374,9 +3583,10 @@ This function for obtaining of all database's parameters.
 
 list database host
 
-**Options**: `TYPE` `HOST` `[FORMAT]` 
+**Options**: `TYPE` `HOST` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-database-host mysql localhost
 ```
@@ -3387,9 +3597,10 @@ This function for obtaining database host parameters.
 
 list database hosts
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-database-hosts json
 ```
@@ -3400,9 +3611,10 @@ This function for obtaining the list of all configured database hosts.
 
 list supported database types
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-database-types json
 ```
@@ -3413,9 +3625,10 @@ This function for obtaining the list of database types.
 
 listing databases
 
-**Options**: `USER` `[FORMAT]` 
+**Options**: `USER` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-databases user json
 ```
@@ -3426,7 +3639,7 @@ This function for obtaining the list of all user's databases.
 
 list default PHP version used by default.tpl
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 List the default version used by de the default template
 
@@ -3434,9 +3647,10 @@ List the default version used by de the default template
 
 list dns domain
 
-**Options**: `USER` `DOMAIN` `[FORMAT]` 
+**Options**: `USER` `DOMAIN` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-dns-domain alice wonderland.com
 ```
@@ -3447,9 +3661,10 @@ This function of obtaining the list of dns domain parameters.
 
 list dns domains
 
-**Options**: `USER` `[FORMAT]` 
+**Options**: `USER` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-dns-domains admin
 ```
@@ -3460,9 +3675,10 @@ This function for obtaining all DNS domains of a user.
 
 list dns domain records
 
-**Options**: `USER` `DOMAIN` `[FORMAT]` 
+**Options**: `USER` `DOMAIN` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-dns-records admin example.com
 ```
@@ -3473,9 +3689,10 @@ This function for getting all DNS domain records.
 
 list dns template
 
-**Options**: `TEMPLATE` `[FORMAT]` 
+**Options**: `TEMPLATE` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-dns-template zoho
 ```
@@ -3486,9 +3703,10 @@ This function for obtaining the DNS template parameters.
 
 list dns templates
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-dns-templates json
 ```
@@ -3499,9 +3717,10 @@ This function for obtaining the list of all DNS templates available.
 
 list public dnssec key
 
-**Options**: `USER` `DOMAIN` `[FROMAT]` 
+**Options**: `USER` `DOMAIN` `[FROMAT]`
 
 **Examples**:
+
 ```bash
     v-list-dns-public-key admin acme.com
 ```
@@ -3512,9 +3731,10 @@ This function list the public key to be used with DNSSEC and needs to be added t
 
 list iptables rules
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-firewall json
 ```
@@ -3525,9 +3745,10 @@ This function of obtaining the list of all iptables rules.
 
 list firewall block list
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-firewall-ban json
 ```
@@ -3538,9 +3759,10 @@ This function of obtaining the list of currently blocked ips.
 
 List firewall ipset
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-firewall-ipset json
 ```
@@ -3551,9 +3773,10 @@ This function prints defined ipset lists
 
 list firewall rule
 
-**Options**: `RULE` `[FORMAT]` 
+**Options**: `RULE` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-firewall-rule 2
 ```
@@ -3564,9 +3787,10 @@ This function of obtaining firewall rule parameters.
 
 list directory
 
-**Options**: `USER` `DIRECTORY` 
+**Options**: `USER` `DIRECTORY`
 
 **Examples**:
+
 ```bash
     v-list-fs-directory /home/admin/web
 ```
@@ -3577,9 +3801,10 @@ This function lists directory on the file system
 
 list letsencrypt key
 
-**Options**: `USER` `[FORMAT]` 
+**Options**: `USER` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-letsencrypt-user admin
 ```
@@ -3590,9 +3815,10 @@ This function for obtaining the letsencrypt key thumbprint
 
 list mail domain account
 
-**Options**: `USER` `DOMAIN` `ACCOUNT` `[FORMAT]` 
+**Options**: `USER` `DOMAIN` `ACCOUNT` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-mail-account admin domain.tld tester
 ```
@@ -3603,9 +3829,10 @@ This function of obtaining the list of account parameters.
 
 list mail account autoreply
 
-**Options**: `USER` `DOMAIN` `ACCOUNT` `[FORMAT]` 
+**Options**: `USER` `DOMAIN` `ACCOUNT` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-mail-account-autoreply admin example.com testing
 ```
@@ -3616,9 +3843,10 @@ This function of obtaining mail account autoreply message.
 
 list mail domain accounts
 
-**Options**: `USER` `DOMAIN` `[FORMAT]` 
+**Options**: `USER` `DOMAIN` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-mail-accounts admin acme.com
 ```
@@ -3629,9 +3857,10 @@ This function of obtaining the list of all user domains.
 
 list mail domain
 
-**Options**: `USER` `DOMAIN` `[FORMAT]` 
+**Options**: `USER` `DOMAIN` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-mail-domain user01 mydomain.com
 ```
@@ -3642,9 +3871,10 @@ This function of obtaining the list of domain parameters.
 
 list mail domain dkim
 
-**Options**: `USER` `DOMAIN` `[FORMAT]` 
+**Options**: `USER` `DOMAIN` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-mail-domain-dkim admin maildomain.tld
 ```
@@ -3655,9 +3885,10 @@ This function of obtaining domain dkim files.
 
 list mail domain dkim dns records
 
-**Options**: `USER` `DOMAIN` `[FORMAT]` 
+**Options**: `USER` `DOMAIN` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-mail-domain-dkim-dns admin example.com
 ```
@@ -3668,9 +3899,10 @@ This function of obtaining domain dkim dns records for proper setup.
 
 list mail domain ssl certificate
 
-**Options**: `USER` `DOMAIN` `[FORMAT]` 
+**Options**: `USER` `DOMAIN` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-mail-domain-ssl user acme.com json
 ```
@@ -3681,9 +3913,10 @@ This function of obtaining domain ssl files.
 
 list mail domains
 
-**Options**: `USER` `[FORMAT]` 
+**Options**: `USER` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-mail-domains admin
 ```
@@ -3694,9 +3927,10 @@ This function of obtaining the list of all user domains.
 
 list remote dns host
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-remote-dns-hosts json
 ```
@@ -3707,7 +3941,7 @@ This function for obtaining the list of remote dns host.
 
 list clamd config parameters
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function for obtaining the list of clamd config parameters.
 
@@ -3715,9 +3949,10 @@ This function for obtaining the list of clamd config parameters.
 
 list system configuration
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-sys-config json
 ```
@@ -3728,7 +3963,7 @@ This function for obtaining the list of system parameters.
 
 list system cpu info
 
-**Options**: `` 
+**Options**: ``
 
 This function lists cpu information
 
@@ -3736,7 +3971,7 @@ This function lists cpu information
 
 list db status
 
-**Options**: `` 
+**Options**: ``
 
 v-list-sys-db-status
 
@@ -3744,7 +3979,7 @@ v-list-sys-db-status
 
 list disk information
 
-**Options**: `` 
+**Options**: ``
 
 This function lists disk information
 
@@ -3752,7 +3987,7 @@ This function lists disk information
 
 list dns status
 
-**Options**: `` 
+**Options**: ``
 
 This function lists dns server status
 
@@ -3760,7 +3995,7 @@ This function lists dns server status
 
 list dovecot config parameters
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function for obtaining the list of dovecot config parameters.
 
@@ -3768,7 +4003,7 @@ This function for obtaining the list of dovecot config parameters.
 
 list hestia autoupdate settings
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function for obtaining autoupdate settings.
 
@@ -3776,7 +4011,7 @@ This function for obtaining autoupdate settings.
 
 list hestia ssl certificate
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function of obtaining hestia ssl files.
 
@@ -3784,7 +4019,7 @@ This function of obtaining hestia ssl files.
 
 list system updates
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function checks available updates for hestia packages.
 
@@ -3792,7 +4027,7 @@ This function checks available updates for hestia packages.
 
 list system os
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function checks available updates for hestia packages.
 
@@ -3800,7 +4035,7 @@ This function checks available updates for hestia packages.
 
 list system interfaces
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function for obtaining the list of network interfaces.
 
@@ -3808,9 +4043,10 @@ This function for obtaining the list of network interfaces.
 
 list system ip
 
-**Options**: `IP` `[FORMAT]` 
+**Options**: `IP` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-sys-ip 116.203.78.202
 ```
@@ -3821,7 +4057,7 @@ This function for getting the list of system ip parameters.
 
 list system ips
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function for obtaining the list of system ip adresses.
 
@@ -3829,9 +4065,10 @@ This function for obtaining the list of system ip adresses.
 
 list system languages
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-sys-languages json
 ```
@@ -3843,7 +4080,7 @@ Output is always in the ISO language code
 
 list mail status
 
-**Options**: `` 
+**Options**: ``
 
 This function lists mail server status
 
@@ -3851,7 +4088,7 @@ This function lists mail server status
 
 list virtual memory info
 
-**Options**: `` 
+**Options**: ``
 
 This function lists virtual memory information
 
@@ -3859,7 +4096,7 @@ This function lists virtual memory information
 
 list mysql config parameters
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function for obtaining the list of mysql config parameters.
 
@@ -3867,7 +4104,7 @@ This function for obtaining the list of mysql config parameters.
 
 list system network status
 
-**Options**: `` 
+**Options**: ``
 
 This function lists network status
 
@@ -3875,7 +4112,7 @@ This function lists network status
 
 list nginx config parameters
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function for obtaining the list of nginx config parameters.
 
@@ -3883,7 +4120,7 @@ This function for obtaining the list of nginx config parameters.
 
 list postgresql config parameters
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function for obtaining the list of postgresql config parameters.
 
@@ -3891,15 +4128,15 @@ This function for obtaining the list of postgresql config parameters.
 
 listing availble PHP versions installed
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
-List /etc/php/* version check if folder fpm is available
+List /etc/php/\* version check if folder fpm is available
 
 ## v-list-sys-php-config
 
 list php config parameters
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function for obtaining the list of php config parameters.
 
@@ -3907,7 +4144,7 @@ This function for obtaining the list of php config parameters.
 
 list proftpd config parameters
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function for obtaining the list of proftpd config parameters.
 
@@ -3915,7 +4152,7 @@ This function for obtaining the list of proftpd config parameters.
 
 list system rrd charts
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 List available rrd graphics, its titles and paths.
 
@@ -3923,9 +4160,10 @@ List available rrd graphics, its titles and paths.
 
 list system services
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-sys-services json
 ```
@@ -3936,7 +4174,7 @@ This function for obtaining the list of configured system services.
 
 list system shells
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function for obtaining the list of system shells.
 
@@ -3944,7 +4182,7 @@ This function for obtaining the list of system shells.
 
 list spamassassin config parameters
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function for obtaining the list of spamassassin config parameters.
 
@@ -3952,7 +4190,7 @@ This function for obtaining the list of spamassassin config parameters.
 
 list sshd port
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function for obtainings the port of sshd listens to
 
@@ -3960,7 +4198,7 @@ This function for obtainings the port of sshd listens to
 
 list system themes
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function for obtaining the list of themes in the theme
 library and displaying them in the backend or user interface.
@@ -3969,7 +4207,7 @@ library and displaying them in the backend or user interface.
 
 list system users
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function for obtaining the list of system users without
 detailed information.
@@ -3978,7 +4216,7 @@ detailed information.
 
 list vsftpd config parameters
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function for obtaining the list of vsftpd config parameters.
 
@@ -3986,7 +4224,7 @@ This function for obtaining the list of vsftpd config parameters.
 
 list web status
 
-**Options**: `` 
+**Options**: ``
 
 This function lists web server status
 
@@ -3994,7 +4232,7 @@ This function lists web server status
 
 listing available webmail clients
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 List available webmail clients
 
@@ -4002,9 +4240,10 @@ List available webmail clients
 
 list user parameters
 
-**Options**: `USER` `[FORMAT]` 
+**Options**: `USER` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-user admin
 ```
@@ -4015,7 +4254,7 @@ This function to obtain user parameters.
 
 list user log
 
-**Options**: `USER` `[FORMAT]` 
+**Options**: `USER` `[FORMAT]`
 
 This function of obtaining the list of 10 last users commands.
 
@@ -4023,23 +4262,25 @@ This function of obtaining the list of 10 last users commands.
 
 list user backup
 
-**Options**: `USER` `BACKUP` `[FORMAT]` 
+**Options**: `USER` `BACKUP` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-user-backups admin admin.2019-05-19_03-31-30.tar
 ```
 
 This function of obtaining the list of backup parameters. This call, just as
-all v_list_* calls, supports 3 formats - json, shell and plain.
+all v*list*\* calls, supports 3 formats - json, shell and plain.
 
 ## v-list-user-backup-exclusions
 
 list backup exclusions
 
-**Options**: `USER` `[FORMAT]` 
+**Options**: `USER` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-user-backup-exclusions admin
 ```
@@ -4050,9 +4291,10 @@ This function for obtaining the backup exclusion list
 
 list user backups
 
-**Options**: `USER` `[FORMAT]` 
+**Options**: `USER` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-user-backups admin
 ```
@@ -4063,9 +4305,10 @@ This function for obtaining the list of available user backups.
 
 list user ips
 
-**Options**: `USER` `[FORMAT]` 
+**Options**: `USER` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-user-ips admin
 ```
@@ -4076,7 +4319,7 @@ This function for obtaining the list of available ip addresses.
 
 list user log
 
-**Options**: `USER` `[FORMAT]` 
+**Options**: `USER` `[FORMAT]`
 
 This function of obtaining the list of 100 last users commands.
 
@@ -4084,9 +4327,10 @@ This function of obtaining the list of 100 last users commands.
 
 list user notifications
 
-**Options**: `USER` `[FORMAT]` 
+**Options**: `USER` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-user-notifications admin
 ```
@@ -4095,11 +4339,12 @@ This function for getting the list notifications
 
 ## v-list-user-ns
 
-list user nameservers
+list user name servers
 
-**Options**: `USER` `[FORMAT]` 
+**Options**: `USER` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-user-ns admin
 ```
@@ -4110,7 +4355,7 @@ Function for obtaining the list of user's DNS servers.
 
 list user package
 
-**Options**: `PACKAGE` `[FORMAT]` 
+**Options**: `PACKAGE` `[FORMAT]`
 
 This function for getting the list of system ip parameters.
 
@@ -4118,7 +4363,7 @@ This function for getting the list of system ip parameters.
 
 list user packages
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function for obtaining the list of available hosting packages.
 
@@ -4126,7 +4371,7 @@ This function for obtaining the list of available hosting packages.
 
 add ssh key
 
-**Options**: `USER` `[FORMAT]` 
+**Options**: `USER` `[FORMAT]`
 
 Lists $user/.ssh/authorized_keys
 
@@ -4134,9 +4379,10 @@ Lists $user/.ssh/authorized_keys
 
 list user stats
 
-**Options**: `USER` `[FORMAT]` 
+**Options**: `USER` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-user-stats admin
 ```
@@ -4147,7 +4393,7 @@ This function for listing user statistics
 
 list users
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function to obtain the list of all system users.
 
@@ -4155,7 +4401,7 @@ This function to obtain the list of all system users.
 
 list overall user stats
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function for listing overall user statistics
 
@@ -4163,9 +4409,10 @@ This function for listing overall user statistics
 
 list web domain parameters
 
-**Options**: `USER` `DOMAIN` `[FORMAT]` 
+**Options**: `USER` `DOMAIN` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-web-domain admin example.com
 ```
@@ -4176,9 +4423,10 @@ This function to obtain web domain parameters.
 
 list web domain access log
 
-**Options**: `USER` `DOMAIN` `[LINES]` `[FORMAT]` 
+**Options**: `USER` `DOMAIN` `[LINES]` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-web-domain-accesslog admin example.com
 ```
@@ -4189,9 +4437,10 @@ This function of obtaining raw access web domain logs.
 
 list web domain error log
 
-**Options**: `USER` `DOMAIN` `[LINES]` `[FORMAT]` 
+**Options**: `USER` `DOMAIN` `[LINES]` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-web-domain-errorlog admin acme.com
 ```
@@ -4202,9 +4451,10 @@ This function of obtaining raw error web domain logs.
 
 list web domain ssl certificate
 
-**Options**: `USER` `DOMAIN` `[FORMAT]` 
+**Options**: `USER` `DOMAIN` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-web-domain-ssl admin wonderland.com
 ```
@@ -4215,9 +4465,10 @@ This function of obtaining domain ssl files.
 
 list web domains
 
-**Options**: `USER` `[FORMAT]` 
+**Options**: `USER` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-list-web-domains alice
 ```
@@ -4228,7 +4479,7 @@ This function to obtain the list of all user web domains.
 
 list web statistics
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function for obtaining the list of web statistics analyzer.
 
@@ -4236,7 +4487,7 @@ This function for obtaining the list of web statistics analyzer.
 
 list web templates
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function for obtaining the list of web templates available to a user.
 
@@ -4244,7 +4495,7 @@ This function for obtaining the list of web templates available to a user.
 
 listing backend templates
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function for obtaining the list of available backend templates.
 
@@ -4252,7 +4503,7 @@ This function for obtaining the list of available backend templates.
 
 listing proxy templates
 
-**Options**: `[FORMAT]` 
+**Options**: `[FORMAT]`
 
 This function for obtaining the list of proxy templates available to a user.
 
@@ -4260,7 +4511,7 @@ This function for obtaining the list of proxy templates available to a user.
 
 adds action event to user or system log
 
-**Options**: `LOG_TYPE` `USER` 
+**Options**: `LOG_TYPE` `USER`
 
 Event Levels:
 info, warning, error
@@ -4269,25 +4520,22 @@ info, warning, error
 
 add user login
 
-**Options**: `USER` `IP` `STATUS` `[FINGERPRINT]` 
-
-
+**Options**: `USER` `IP` `STATUS` `[FINGERPRINT]`
 
 ## v-log-user-logout
 
 Log User logout event
 
-**Options**: `USER` `FINGERPRINT` 
-
-
+**Options**: `USER` `FINGERPRINT`
 
 ## v-move-fs-directory
 
 move file
 
-**Options**: `USER` `SRC_DIRECTORY` `DST_DIRECTORY` 
+**Options**: `USER` `SRC_DIRECTORY` `DST_DIRECTORY`
 
 **Examples**:
+
 ```bash
     v-move-fs-directory admin /home/admin/web /home/user02/
 ```
@@ -4299,9 +4547,10 @@ can also be used to rename files just like normal mv command.
 
 move file
 
-**Options**: `USER` `SRC_FILE` `DST_FILE` 
+**Options**: `USER` `SRC_FILE` `DST_FILE`
 
 **Examples**:
+
 ```bash
     v-move-fs-file admin readme.txt new_readme.txt
 ```
@@ -4313,9 +4562,10 @@ can also be used to rename files just like normal mv command.
 
 open config
 
-**Options**: `CONFIG` 
+**Options**: `CONFIG`
 
 **Examples**:
+
 ```bash
     v-open-fs-config /etc/mysql/my.cnf
 ```
@@ -4326,9 +4576,10 @@ This function opens/reads config files on the file system
 
 open file
 
-**Options**: `USER` `FILE` 
+**Options**: `USER` `FILE`
 
 **Examples**:
+
 ```bash
     v-open-fs-file admin README.md
 ```
@@ -4339,9 +4590,10 @@ This function opens/reads files on the file system
 
 Purge nginx cache
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-purge-nginx-cache user domain.tld
 ```
@@ -4352,9 +4604,10 @@ This function purges nginx cache.
 
 rebuild all assets for a specified user
 
-**Options**: `USER` `[RESTART]` 
+**Options**: `USER` `[RESTART]`
 
 This function rebuilds all assets for a user account:
+
 - Web domains
 - DNS zones
 - Mail domains
@@ -4366,9 +4619,10 @@ This function rebuilds all assets for a user account:
 
 rebuild cron jobs
 
-**Options**: `USER` `[RESTART]` 
+**Options**: `USER` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-rebuild-cron-jobs admin yes
 ```
@@ -4379,9 +4633,10 @@ This function rebuilds system cron config file for specified user.
 
 rebuild databases
 
-**Options**: `USER` `DATABASE` 
+**Options**: `USER` `DATABASE`
 
 **Examples**:
+
 ```bash
     v-rebuild-database user user_wordpress
 ```
@@ -4392,9 +4647,10 @@ This function for rebuilding a single database for a user
 
 rebuild databases
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-rebuild-databases admin
 ```
@@ -4405,9 +4661,10 @@ This function for rebuilding of all databases of a single user.
 
 rebuild dns domain
 
-**Options**: `USER` `DOMAIN` `[RESTART]` `[UPDATE_SERIAL]` 
+**Options**: `USER` `DOMAIN` `[RESTART]` `[UPDATE_SERIAL]`
 
 **Examples**:
+
 ```bash
     v-rebuild-dns-domain alice wonderland.com
 ```
@@ -4418,9 +4675,10 @@ This function rebuilds DNS configuration files.
 
 rebuild dns domains
 
-**Options**: `USER` `[RESTART]` `[UPDATE_SERIAL]` 
+**Options**: `USER` `[RESTART]` `[UPDATE_SERIAL]`
 
 **Examples**:
+
 ```bash
     v-rebuild-dns-domains alice
 ```
@@ -4431,9 +4689,10 @@ This function rebuilds DNS configuration files.
 
 rebuild mail domain
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-rebuild-mail-domain user domain.tld
 ```
@@ -4444,9 +4703,10 @@ This function rebuilds configuration files for a single domain.
 
 rebuild mail domains
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-rebuild-mail-domains admin
 ```
@@ -4457,9 +4717,10 @@ This function rebuilds EXIM configuration files for all mail domains.
 
 rebuild system user
 
-**Options**: `USER` `[RESTART]` 
+**Options**: `USER` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-rebuild-user admin yes
 ```
@@ -4470,7 +4731,7 @@ This function rebuilds system user account.
 
 rebuild system users
 
-**Options**: `[RESTART]` 
+**Options**: `[RESTART]`
 
 This function rebuilds user configuration for all users.
 
@@ -4478,9 +4739,10 @@ This function rebuilds user configuration for all users.
 
 rebuild web domain
 
-**Options**: `USER` `DOMAIN` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-rebuild-web-domain user domain.tld
 ```
@@ -4491,7 +4753,7 @@ This function rebuilds web configuration files.
 
 rebuild web domains
 
-**Options**: `USER` `[RESTART]` 
+**Options**: `USER` `[RESTART]`
 
 This function rebuilds web configuration files.
 
@@ -4499,7 +4761,7 @@ This function rebuilds web configuration files.
 
 change active system theme
 
-**Options**: – 
+**Options**: –
 
 This function for changing the currently active system theme.
 
@@ -4507,9 +4769,10 @@ This function for changing the currently active system theme.
 
 change package name
 
-**Options**: `OLD_NAME` `NEW_NAME` `[MODE]` 
+**Options**: `OLD_NAME` `NEW_NAME` `[MODE]`
 
 **Examples**:
+
 ```bash
     v-rename-package package package2
 ```
@@ -4520,7 +4783,7 @@ This function changes the name of an existing package.
 
 Restore system configuration
 
-**Options**: `[SYSTEM]` 
+**Options**: `[SYSTEM]`
 
 This function repairs or restores the system configuration file.
 
@@ -4528,7 +4791,7 @@ This function repairs or restores the system configuration file.
 
 restart cron service
 
-**Options**: – 
+**Options**: –
 
 This function tells crond service to reread its configuration files.
 
@@ -4536,7 +4799,7 @@ This function tells crond service to reread its configuration files.
 
 restart dns service
 
-**Options**: – 
+**Options**: –
 
 This function tells BIND service to reload dns zone files.
 
@@ -4544,7 +4807,7 @@ This function tells BIND service to reload dns zone files.
 
 restart ftp service
 
-**Options**: – 
+**Options**: –
 
 This function tells ftp server to reread its configuration.
 
@@ -4552,7 +4815,7 @@ This function tells ftp server to reread its configuration.
 
 restart mail service
 
-**Options**: `[RESTART]` 
+**Options**: `[RESTART]`
 
 This function tells exim or dovecot services to reload configuration files.
 
@@ -4560,9 +4823,10 @@ This function tells exim or dovecot services to reload configuration files.
 
 restart proxy server
 
-**Options**: – 
+**Options**: –
 
 **Examples**:
+
 ```bash
     v-restart-proxy [RESTART]
 ```
@@ -4573,9 +4837,10 @@ This function reloads proxy server configuration.
 
 restart service
 
-**Options**: `SERVICE` `[RESTART]` 
+**Options**: `SERVICE` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-restart-service apache2
 ```
@@ -4586,9 +4851,10 @@ This function restarts system service.
 
 restart operating system
 
-**Options**: `RESTART` `[DELAY]` 
+**Options**: `RESTART` `[DELAY]`
 
 **Examples**:
+
 ```bash
     v-restart-system yes
 ```
@@ -4599,7 +4865,7 @@ This function restarts operating system.
 
 restart web server
 
-**Options**: `[RESTARRT]` 
+**Options**: `[RESTARRT]`
 
 This function reloads web server configuration.
 
@@ -4607,7 +4873,7 @@ This function reloads web server configuration.
 
 restart backend server
 
-**Options**: – 
+**Options**: –
 
 This function reloads backend server configuration.
 
@@ -4615,9 +4881,10 @@ This function reloads backend server configuration.
 
 restore single cron job
 
-**Options**: `USER` `BACKUP` `DOMAIN` `[NOTIFY]` 
+**Options**: `USER` `BACKUP` `DOMAIN` `[NOTIFY]`
 
 **Examples**:
+
 ```bash
     v-restore-cron-job USER BACKUP CRON [NOTIFY]
 ```
@@ -4629,9 +4896,10 @@ from a backup archive.
 
 restore single database
 
-**Options**: `USER` `BACKUP` `DATABASE` `[NOTIFY]` 
+**Options**: `USER` `BACKUP` `DATABASE` `[NOTIFY]`
 
 **Examples**:
+
 ```bash
     v-restore-database USER BACKUP DATABASE [NOTIFY]
 ```
@@ -4643,9 +4911,10 @@ from a backup archive.
 
 restore single dns domain
 
-**Options**: `USER` `BACKUP` `DOMAIN` `[NOTIFY]` 
+**Options**: `USER` `BACKUP` `DOMAIN` `[NOTIFY]`
 
 **Examples**:
+
 ```bash
     v-restore-dns-domain USER BACKUP DOMAIN [NOTIFY]
 ```
@@ -4657,9 +4926,10 @@ from a backup archive.
 
 restore single mail domain
 
-**Options**: `USER` `BACKUP` `DOMAIN` `[NOTIFY]` 
+**Options**: `USER` `BACKUP` `DOMAIN` `[NOTIFY]`
 
 **Examples**:
+
 ```bash
     v-restore-mail-domain USER BACKUP DOMAIN [NOTIFY]
 ```
@@ -4671,9 +4941,10 @@ from a backup archive.
 
 restore user
 
-**Options**: `USER` `BACKUP` `[WEB]` `[DNS]` `[MAIL]` `[DB]` `[CRON]` `[UDIR]` `[NOTIFY]` 
+**Options**: `USER` `BACKUP` `[WEB]` `[DNS]` `[MAIL]` `[DB]` `[CRON]` `[UDIR]` `[NOTIFY]`
 
 **Examples**:
+
 ```bash
     v-restore-user admin 2019-04-22_01-00-00.tar
 ```
@@ -4685,9 +4956,10 @@ the archive needs to be placed in /backup.
 
 restore single web domain
 
-**Options**: `USER` `BACKUP` `DOMAIN` `[NOTIFY]` 
+**Options**: `USER` `BACKUP` `DOMAIN` `[NOTIFY]`
 
 **Examples**:
+
 ```bash
     v-restore-web-domain USER BACKUP DOMAIN [NOTIFY]
 ```
@@ -4699,9 +4971,10 @@ from a backup archive.
 
 revokes api key
 
-**Options**: `[HASH]` 
+**Options**: `[HASH]`
 
 **Examples**:
+
 ```bash
     v-revoke-api-key mykey
 ```
@@ -4712,9 +4985,10 @@ This function removes a key from in $HESTIA/data/keys/
 
 run cli command
 
-**Options**: `USER` `CMD` `[ARG...]` 
+**Options**: `USER` `CMD` `[ARG...]`
 
 **Examples**:
+
 ```bash
     v-run-cli-cmd user composer require package
 ```
@@ -4725,9 +4999,10 @@ This function runs a limited list of cli commands with dropped privileges as the
 
 adding cronjob for letsencrypt cetificate installation
 
-**Options**: `USER` `DOMAIN` `[ALIASES]` 
+**Options**: `USER` `DOMAIN` `[ALIASES]`
 
 **Examples**:
+
 ```bash
     v-schedule-letsencrypt-domain admin example.com www.example.com
 ```
@@ -4738,9 +5013,10 @@ This function adds cronjob for letsencrypt ssl certificate installation
 
 schedule user backup creation
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-schedule-user-backup admin
 ```
@@ -4751,9 +5027,10 @@ This function for scheduling user backup creation.
 
 Schedule a backup
 
-**Options**: `USER` `BACKUP` 
+**Options**: `USER` `BACKUP`
 
 **Examples**:
+
 ```bash
     v-schedule-user-backup-download admin 2019-04-22_01-00-00.tar
 ```
@@ -4764,9 +5041,10 @@ This function for scheduling user backup creation.
 
 schedule user backup restoration
 
-**Options**: `USER` `BACKUP` `[WEB]` `[DNS]` `[MAIL]` `[DB]` `[CRON]` `[UDIR]` 
+**Options**: `USER` `BACKUP` `[WEB]` `[DNS]` `[MAIL]` `[DB]` `[CRON]` `[UDIR]`
 
 **Examples**:
+
 ```bash
     v-schedule-user-restore 2019-04-22_01-00-00.tar
 ```
@@ -4777,9 +5055,10 @@ This function for scheduling user backup restoration.
 
 search for available commands
 
-**Options**: `ARG1` `[ARG...]` 
+**Options**: `ARG1` `[ARG...]`
 
 **Examples**:
+
 ```bash
     v-search-command web
 ```
@@ -4793,9 +5072,10 @@ https://github.com/FastDigitalOceanDroplets/VestaCP/blob/master/files/v-search-c
 
 search domain owner
 
-**Options**: `DOMAIN` `[TYPE]` 
+**Options**: `DOMAIN` `[TYPE]`
 
 **Examples**:
+
 ```bash
     v-search-domain-owner acme.com
 ```
@@ -4806,9 +5086,10 @@ This function that allows to find user objects.
 
 search file or directory
 
-**Options**: `USER` `OBJECT` `[PATH]` 
+**Options**: `USER` `OBJECT` `[PATH]`
 
 **Examples**:
+
 ```bash
     v-search-fs-object admin hello.txt
 ```
@@ -4819,9 +5100,10 @@ This function search files and directories on the file system
 
 search objects
 
-**Options**: `OBJECT` `[FORMAT]` 
+**Options**: `OBJECT` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-search-object example.com json
 ```
@@ -4832,9 +5114,10 @@ This function that allows to find system objects.
 
 search objects
 
-**Options**: `USER` `OBJECT` `[FORMAT]` 
+**Options**: `USER` `OBJECT` `[FORMAT]`
 
 **Examples**:
+
 ```bash
     v-search-user-object admin example.com json
 ```
@@ -4845,9 +5128,10 @@ This function that allows to find user objects.
 
 start service
 
-**Options**: `SERVICE` 
+**Options**: `SERVICE`
 
 **Examples**:
+
 ```bash
     v-start-service mysql
 ```
@@ -4858,7 +5142,7 @@ This function starts system service.
 
 stop system firewall
 
-**Options**: – 
+**Options**: –
 
 This function stops iptables
 
@@ -4866,9 +5150,10 @@ This function stops iptables
 
 stop service
 
-**Options**: `SERVICE` 
+**Options**: `SERVICE`
 
 **Examples**:
+
 ```bash
     v-stop-service apache2
 ```
@@ -4879,9 +5164,10 @@ This function stops system service.
 
 suspend cron job
 
-**Options**: `USER` `JOB` `[RESTART]` 
+**Options**: `USER` `JOB` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-suspend-cron-job admin 5 yes
 ```
@@ -4892,9 +5178,10 @@ This function suspends a certain job of the cron scheduler.
 
 Suspending sys cron jobs
 
-**Options**: `USER` `[RESTART]` 
+**Options**: `USER` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-suspend-cron-jobs admin
 ```
@@ -4905,9 +5192,10 @@ This function suspends all user cron jobs.
 
 suspend database
 
-**Options**: `USER` `DATABASE` 
+**Options**: `USER` `DATABASE`
 
 **Examples**:
+
 ```bash
     v-suspend-database admin admin_wordpress_db
 ```
@@ -4918,9 +5206,10 @@ This function for suspending a certain user database.
 
 suspend database server
 
-**Options**: `TYPE` `HOST` 
+**Options**: `TYPE` `HOST`
 
 **Examples**:
+
 ```bash
     v-suspend-database-host mysql localhost
 ```
@@ -4931,9 +5220,10 @@ This function for suspending a database server.
 
 suspend databases
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-suspend-databases admin
 ```
@@ -4944,9 +5234,10 @@ This function for suspending of all databases of a single user.
 
 suspend dns domain
 
-**Options**: `USER` `DOMAIN` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-suspend-dns-domain alice acme.com
 ```
@@ -4957,9 +5248,10 @@ This function suspends a certain user's domain.
 
 suspend dns domains
 
-**Options**: `USER` `[RESTART]` 
+**Options**: `USER` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-suspend-dns-domains admin yes
 ```
@@ -4970,9 +5262,10 @@ This function suspends all user's DNS domains.
 
 suspend dns domain record
 
-**Options**: `USER` `DOMAIN` `ID` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `ID` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-suspend-dns-record alice wonderland.com 42 yes
 ```
@@ -4983,9 +5276,10 @@ This function suspends a certain domain record.
 
 suspend web/dns/mail domain
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-suspend-domain admin example.com
 ```
@@ -4996,9 +5290,10 @@ This function suspends web/dns/mail domain.
 
 suspend firewall rule
 
-**Options**: `RULE` 
+**Options**: `RULE`
 
 **Examples**:
+
 ```bash
     v-suspend-firewall-rule 7
 ```
@@ -5009,9 +5304,10 @@ This function suspends a certain firewall rule.
 
 suspend mail account
 
-**Options**: `USER` `DOMAIN` `ACCOUNT` 
+**Options**: `USER` `DOMAIN` `ACCOUNT`
 
 **Examples**:
+
 ```bash
     v-suspend-mail-account admin acme.com bob
 ```
@@ -5022,9 +5318,10 @@ This function suspends mail account.
 
 suspend all mail domain accounts
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-suspend-mail-accounts admin example.com
 ```
@@ -5035,9 +5332,10 @@ This function suspends all mail domain accounts.
 
 suspend mail domain
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-suspend-mail-domain admin domain.com
 ```
@@ -5048,9 +5346,10 @@ This function suspends mail domain.
 
 suspend mail domains
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-suspend-mail-domains admin
 ```
@@ -5061,9 +5360,10 @@ This function suspends all user's MAIL domains.
 
 suspend remote dns server
 
-**Options**: `HOST` 
+**Options**: `HOST`
 
 **Examples**:
+
 ```bash
     v-suspend-remote-dns-host hostname.tld
 ```
@@ -5074,9 +5374,10 @@ This function for suspending remote dns server.
 
 suspend user
 
-**Options**: `USER` `[RESTART]` 
+**Options**: `USER` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-suspend-user alice yes
 ```
@@ -5087,9 +5388,10 @@ This function suspends a certain user and all his objects.
 
 suspend web domain
 
-**Options**: `USER` `DOMAIN` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-suspend-web-domain admin example.com yes
 ```
@@ -5102,9 +5404,10 @@ By blocking the site the content of all its directories remains untouched.
 
 suspend web domains
 
-**Options**: `USER` `[RESTART]` 
+**Options**: `USER` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-suspend-web-domains bob
 ```
@@ -5115,7 +5418,7 @@ This function of suspending all user's sites.
 
 synchronize dns domains
 
-**Options**: `HOST` 
+**Options**: `HOST`
 
 This function synchronise all dns domains.
 
@@ -5123,9 +5426,10 @@ This function synchronise all dns domains.
 
 unsuspend cron job
 
-**Options**: `USER` `JOB` `[RESTART]` 
+**Options**: `USER` `JOB` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-unsuspend-cron-job admin 7 yes
 ```
@@ -5136,9 +5440,10 @@ This function unsuspend certain cron job.
 
 unsuspend sys cron
 
-**Options**: `USER` `[RESTART]` 
+**Options**: `USER` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-unsuspend-cron-jobs admin no
 ```
@@ -5149,9 +5454,10 @@ This function unsuspends all suspended cron jobs.
 
 unsuspend database
 
-**Options**: `USER` `DATABASE` 
+**Options**: `USER` `DATABASE`
 
 **Examples**:
+
 ```bash
     v-unsuspend-database admin mydb
 ```
@@ -5162,9 +5468,10 @@ This function for unsuspending database.
 
 unsuspend database server
 
-**Options**: `TYPE` `HOST` 
+**Options**: `TYPE` `HOST`
 
 **Examples**:
+
 ```bash
     v-unsuspend-database-host mysql localhost
 ```
@@ -5175,7 +5482,7 @@ This function for unsuspending a database server.
 
 unsuspend databases
 
-**Options**: `USER` 
+**Options**: `USER`
 
 This function for unsuspending all user's databases.
 
@@ -5183,9 +5490,10 @@ This function for unsuspending all user's databases.
 
 unsuspend dns domain
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-unsuspend-dns-domain alice wonderland.com
 ```
@@ -5196,9 +5504,10 @@ This function unsuspends a certain user's domain.
 
 unsuspend dns domains
 
-**Options**: `USER` `[RESTART]` 
+**Options**: `USER` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-unsuspend-dns-domains alice
 ```
@@ -5209,9 +5518,10 @@ This function unsuspends all user's DNS domains.
 
 unsuspend dns domain record
 
-**Options**: `USER` `DOMAIN` `ID` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `ID` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-unsuspend-dns-record admin example.com 33
 ```
@@ -5222,9 +5532,10 @@ This function unsuspends a certain domain record.
 
 unsuspend web/dns/mail domain
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-unsuspend-domain admin acme.com
 ```
@@ -5235,9 +5546,10 @@ This function unsuspends web/dns/mail domain.
 
 unsuspend firewall rule
 
-**Options**: `RULE` 
+**Options**: `RULE`
 
 **Examples**:
+
 ```bash
     v-unsuspend-firewall-rule 7
 ```
@@ -5248,9 +5560,10 @@ This function unsuspends a certain firewall rule.
 
 unsuspend mail account
 
-**Options**: `USER` `DOMAIN` `ACCOUNT` 
+**Options**: `USER` `DOMAIN` `ACCOUNT`
 
 **Examples**:
+
 ```bash
     v-unsuspend-mail-account admin acme.com tester
 ```
@@ -5261,9 +5574,10 @@ This function unsuspends mail account.
 
 unsuspend all mail domain accounts
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-unsuspend-mail-accounts admin acme.com
 ```
@@ -5274,9 +5588,10 @@ This function unsuspends all mail domain accounts.
 
 unsuspend mail domain
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-unsuspend-mail-domain user02 acme.com
 ```
@@ -5287,9 +5602,10 @@ This function unsuspends mail domain.
 
 unsuspend mail domains
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-unsuspend-mail-domains admin
 ```
@@ -5300,9 +5616,10 @@ This function unsuspends all user's MAIL domains.
 
 unsuspend remote dns server
 
-**Options**: `HOST` 
+**Options**: `HOST`
 
 **Examples**:
+
 ```bash
     v-unsuspend-remote-dns-host hosname.com
 ```
@@ -5313,9 +5630,10 @@ This function for unsuspending remote dns server.
 
 unsuspend user
 
-**Options**: `USER` `[RESTART]` 
+**Options**: `USER` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-unsuspend-user bob
 ```
@@ -5326,9 +5644,10 @@ This function unsuspends user and all his objects.
 
 unsuspend web domain
 
-**Options**: `USER` `DOMAIN` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-unsuspend-web-domain admin acme.com
 ```
@@ -5339,9 +5658,10 @@ This function of unsuspending the domain.
 
 unsuspend web domains
 
-**Options**: `USER` `[RESTART]` 
+**Options**: `USER` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-unsuspend-web-domains admin
 ```
@@ -5352,9 +5672,10 @@ This function of unsuspending all user's sites.
 
 update database disk usage
 
-**Options**: `USER` `DATABASE` 
+**Options**: `USER` `DATABASE`
 
 **Examples**:
+
 ```bash
     v-update-database-disk admin wp_db
 ```
@@ -5365,9 +5686,10 @@ This function recalculates disk usage for specific database.
 
 update databases disk usage
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-update-databases-disk admin
 ```
@@ -5378,7 +5700,7 @@ This function recalculates disk usage for all user databases.
 
 update dns templates
 
-**Options**: `[RESTART]` 
+**Options**: `[RESTART]`
 
 This function for obtaining updated dns templates from Hestia package.
 
@@ -5386,7 +5708,7 @@ This function for obtaining updated dns templates from Hestia package.
 
 update system firewall rules
 
-**Options**: – 
+**Options**: –
 
 This function updates iptables rules
 
@@ -5394,7 +5716,7 @@ This function updates iptables rules
 
 update firewall ipset
 
-**Options**: `[REFRESH]` 
+**Options**: `[REFRESH]`
 
 This function creates ipset lists and updates the lists if they are expired or ondemand
 
@@ -5402,9 +5724,10 @@ This function creates ipset lists and updates the lists if they are expired or o
 
 update host certificate for hestia
 
-**Options**: `USER` `HOSTNAME` 
+**Options**: `USER` `HOSTNAME`
 
 **Examples**:
+
 ```bash
     v-update-host-certificate admin example.com
 ```
@@ -5415,7 +5738,7 @@ This function updates the SSL certificate used for Hestia Control Panel.
 
 update letsencrypt ssl certificates
 
-**Options**: – 
+**Options**: –
 
 This function for renew letsencrypt expired ssl certificate for all users
 
@@ -5423,9 +5746,10 @@ This function for renew letsencrypt expired ssl certificate for all users
 
 update mail domain disk usage
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-update-mail-domain-disk admin example.com
 ```
@@ -5436,15 +5760,16 @@ This function updates domain disk usage.
 
 updating ssl certificate for domain
 
-**Options**: `USER` `DOMAIN` `SSL_DIR` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `SSL_DIR` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-update-mail-domain-ssl admin domain.com /home/admin/tmp
 ```
 
 This function updates the SSL certificate for a domain. Parameter ssl_dir is a path
-to directory where 2 or 3 ssl files can be found. Certificate file 
+to directory where 2 or 3 ssl files can be found. Certificate file
 domain.tld.crt and its key domain.tld.key are mandatory. Certificate
 authority domain.tld.ca file is optional.
 
@@ -5452,9 +5777,10 @@ authority domain.tld.ca file is optional.
 
 calculate disk usage for all mail domains
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-update-mail-domains-disk admin
 ```
@@ -5465,7 +5791,7 @@ This function calculates disk usage for all mail domains.
 
 update mail templates
 
-**Options**: `[RESTART]` `[SKIP]` 
+**Options**: `[RESTART]` `[SKIP]`
 
 This function for obtaining updated webmail templates from Hestia package.
 
@@ -5473,9 +5799,10 @@ This function for obtaining updated webmail templates from Hestia package.
 
 update default key database
 
-**Options**: `[SYSTEM]` 
+**Options**: `[SYSTEM]`
 
 **Examples**:
+
 ```bash
     v-update-sys-defaults
  example: v-update-sys-defaults user
@@ -5487,9 +5814,10 @@ This function updates the known key/value pair database
 
 update hestia package/configs
 
-**Options**: `PACKAGE` 
+**Options**: `PACKAGE`
 
 **Examples**:
+
 ```bash
     v-update-sys-hestia hestia-php
 ```
@@ -5501,7 +5829,7 @@ server and runs it. (hestia, hestia-nginx and hestia-php are valid options)
 
 update all hestia packages
 
-**Options**: – 
+**Options**: –
 
 This function of updating all hestia packages
 
@@ -5509,9 +5837,10 @@ This function of updating all hestia packages
 
 Install update from Git repository
 
-**Options**: `REPOSITORY` `BRANCH` `INSTALL` `[PACKAGES]` 
+**Options**: `REPOSITORY` `BRANCH` `INSTALL` `[PACKAGES]`
 
 **Examples**:
+
 ```bash
     v-update-sys-hestia-git hestiacp staging/beta install
  # Will download from the hestiacp repository
@@ -5526,9 +5855,10 @@ Downloads and compiles/installs packages from GitHub repositories
 
 update system ip
 
-**Options**: – 
+**Options**: –
 
 **Examples**:
+
 ```bash
     v-update-sys-ip
  # Intended for internal usage
@@ -5542,7 +5872,7 @@ set by hypervisor.
 
 update IP usage counters
 
-**Options**: `IP` 
+**Options**: `IP`
 
 Function updates usage U_WEB_ADOMAINS and U_SYS_USERS counters.
 
@@ -5550,7 +5880,7 @@ Function updates usage U_WEB_ADOMAINS and U_SYS_USERS counters.
 
 update system queue
 
-**Options**: `PIPE` 
+**Options**: `PIPE`
 
 This function is responsible queue processing. Restarts of services,
 scheduled backups, web log parsing and other heavy resource consuming
@@ -5562,16 +5892,16 @@ added or deleted.
 
 update system rrd charts
 
-**Options**: – 
+**Options**: –
 
-This function is wrapper for all rrd functions. It updates all 
-v-update-sys-rrd_* at once.
+This function is wrapper for all rrd functions. It updates all
+v-update-sys-rrd\_\* at once.
 
 ## v-update-sys-rrd-apache2
 
 update apache2 rrd
 
-**Options**: `PERIOD` 
+**Options**: `PERIOD`
 
 This function is for updating apache rrd database and graphic.
 
@@ -5579,7 +5909,7 @@ This function is for updating apache rrd database and graphic.
 
 update ftp rrd
 
-**Options**: `PERIOD` 
+**Options**: `PERIOD`
 
 This function is for updating ftpd rrd database and graphic.
 
@@ -5587,7 +5917,7 @@ This function is for updating ftpd rrd database and graphic.
 
 update httpd rrd
 
-**Options**: `PERIOD` 
+**Options**: `PERIOD`
 
 This function is for updating apache rrd database and graphic.
 
@@ -5595,7 +5925,7 @@ This function is for updating apache rrd database and graphic.
 
 update load average rrd
 
-**Options**: `PERIOD` 
+**Options**: `PERIOD`
 
 This function is for updating load average rrd database and graphic.
 
@@ -5603,7 +5933,7 @@ This function is for updating load average rrd database and graphic.
 
 update mail rrd
 
-**Options**: `PERIOD` 
+**Options**: `PERIOD`
 
 This function is for updating mail rrd database and graphic.
 
@@ -5611,7 +5941,7 @@ This function is for updating mail rrd database and graphic.
 
 update memory rrd
 
-**Options**: `PERIOD` 
+**Options**: `PERIOD`
 
 This function is for updating memory rrd database and graphic.
 
@@ -5619,7 +5949,7 @@ This function is for updating memory rrd database and graphic.
 
 update MySQL rrd
 
-**Options**: `PERIOD` 
+**Options**: `PERIOD`
 
 This function is for updating mysql rrd database and graphic.
 
@@ -5627,7 +5957,7 @@ This function is for updating mysql rrd database and graphic.
 
 update network rrd
 
-**Options**: `PERIOD` 
+**Options**: `PERIOD`
 
 This function is for updating network usage rrd database and graphic.
 
@@ -5635,7 +5965,7 @@ This function is for updating network usage rrd database and graphic.
 
 update nginx rrd
 
-**Options**: `PERIOD` 
+**Options**: `PERIOD`
 
 This function is for updating nginx rrd database and graphic.
 
@@ -5643,7 +5973,7 @@ This function is for updating nginx rrd database and graphic.
 
 update PostgreSQL rrd
 
-**Options**: `PERIOD` 
+**Options**: `PERIOD`
 
 This function is for updating postgresql rrd database and graphic.
 
@@ -5651,7 +5981,7 @@ This function is for updating postgresql rrd database and graphic.
 
 update ssh rrd
 
-**Options**: `PERIOD` 
+**Options**: `PERIOD`
 
 This function is for updating ssh rrd database and graphic.
 
@@ -5659,9 +5989,10 @@ This function is for updating ssh rrd database and graphic.
 
 update backup exclusion list
 
-**Options**: `USER` `FILE` 
+**Options**: `USER` `FILE`
 
 **Examples**:
+
 ```bash
     v-update-user-backup-exclusions admin /tmp/backup_exclusions
 ```
@@ -5672,9 +6003,10 @@ This function for updating backup exclusion list
 
 update user usage counters
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-update-user-counters admin
 ```
@@ -5685,9 +6017,10 @@ Function updates usage counters like U_WEB_DOMAINS, U_MAIL_ACCOUNTS, etc.
 
 update user disk usage
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-update-user-disk admin
 ```
@@ -5698,9 +6031,10 @@ The functions recalculates disk usage and updates database.
 
 update user package
 
-**Options**: `PACKAGE` 
+**Options**: `PACKAGE`
 
 **Examples**:
+
 ```bash
     v-update-user-package default
 ```
@@ -5711,9 +6045,10 @@ This function propagates package to connected users.
 
 update user disk quota
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-update-user-quota alice
 ```
@@ -5724,9 +6059,10 @@ The functions upates disk quota for specific user
 
 update user statistics
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-update-user-stats admin
 ```
@@ -5737,9 +6073,10 @@ Function logs user parameters into statistics database.
 
 update disk usage for domain
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-update-web-domain-disk alice wonderland.com
 ```
@@ -5750,15 +6087,16 @@ This function recalculates disk usage for specific webdomain.
 
 updating ssl certificate for domain
 
-**Options**: `USER` `DOMAIN` `SSL_DIR` `[RESTART]` 
+**Options**: `USER` `DOMAIN` `SSL_DIR` `[RESTART]`
 
 **Examples**:
+
 ```bash
     v-update-web-domain-ssl admin domain.com /home/admin/tmp
 ```
 
 This function updates the SSL certificate for a domain. Parameter ssl_dir is a path
-to directory where 2 or 3 ssl files can be found. Certificate file 
+to directory where 2 or 3 ssl files can be found. Certificate file
 domain.tld.crt and its key domain.tld.key are mandatory. Certificate
 authority domain.tld.ca file is optional.
 
@@ -5766,9 +6104,10 @@ authority domain.tld.ca file is optional.
 
 update domain statistics
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-update-web-domain-stat alice acme.com
 ```
@@ -5779,9 +6118,10 @@ This function runs log analyser for specific webdomain.
 
 update domain bandwidth usage
 
-**Options**: `USER` `DOMAIN` 
+**Options**: `USER` `DOMAIN`
 
 **Examples**:
+
 ```bash
     v-update-web-domain-traff admin example.com
 ```
@@ -5792,9 +6132,10 @@ This function recalculates bandwidth usage for specific domain.
 
 update domains disk usage
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-update-web-domains-disk alice
 ```
@@ -5805,9 +6146,10 @@ This function recalculates disk usage for all user webdomains.
 
 update domains statistics
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-update-web-domains-stat admin
 ```
@@ -5818,9 +6160,10 @@ This function runs log analyser usage for all user webdomains.
 
 update domains bandwidth usage
 
-**Options**: `USER` 
+**Options**: `USER`
 
 **Examples**:
+
 ```bash
     v-update-web-domains-traff bob
 ```
@@ -5831,7 +6174,6 @@ This function recalculates bandwidth usage for all user webdomains.
 
 update web templates
 
-**Options**: `[RESTART]` `[SKIP]` 
+**Options**: `[RESTART]` `[SKIP]`
 
 This function for obtaining updated web (Nginx/Apache2/PHP) templates from the Hestia package.
-

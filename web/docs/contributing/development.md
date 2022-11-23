@@ -3,7 +3,7 @@
 [View the current guidelines](https://github.com/hestiacp/hestiacp/blob/main/CONTRIBUTING.md).
 
 ::: warning
-Development builds are always unstable. If you encounter a bug please report them via [Github](https://github.com/hestiacp/hestiacp/issues/new/choose) or submit a [Pull request](https://github.com/hestiacp/hestiacp/pulls)
+Development builds are always unstable. If you encounter a bug please report them via [GitHub](https://github.com/hestiacp/hestiacp/issues/new/choose) or submit a [Pull request](https://github.com/hestiacp/hestiacp/pulls)
 :::
 
 ## Compiling
@@ -16,12 +16,12 @@ Go into the `src` folder and run one of these commands:
 
 ### Compile only
 
-```sh
+```bash
 # Only Hestia
 ./hst_autocompile.sh --hestia --noinstall --keepbuild '~localsrc'
 ```
 
-```sh
+```bash
 # Hestia + hestia-nginx and hestia-php
 ./hst_autocompile.sh --all --noinstall --keepbuild '~localsrc'
 ```
@@ -32,12 +32,12 @@ Go into the `src` folder and run one of these commands:
 Use it only if you have Hestia already installed
 :::
 
-```sh
+```bash
 # Only Hestia
 ./hst_autocompile.sh --hestia --install '~localsrc'
 ```
 
-```sh
+```bash
 # Hestia + hestia-nginx and hestia-php
 ./hst_autocompile.sh --all --install '~localsrc'
 ```

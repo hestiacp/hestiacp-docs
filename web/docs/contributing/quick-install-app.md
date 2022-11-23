@@ -1,79 +1,76 @@
 # Quick install app
 
-The most requested feature is to add support Softaculous. How ever due to the required use of Ioncube in hestia-php and against the use of closed software we voted against using it.
+One of Hestia's most requested feature is to add support for Softaculous. However, due to the required use of Ioncube in hestia-php and because we are against the use of proprietary software, we have instead developed our own "Quick install app" solution.
 
-As a replacement we have developed "Quick install app"
+More information can be found in the [hestia-quick-install repo](https://github.com/hestiacp/hestia-quick-install/blob/main/Example/ExampleSetup.php)
 
-## Creating new apps
+## Creating a new app
 
-- Make a new folder `Example` in `/usr/local/hestia/web/src/app/WebApp/Installers/`
-- Create a file named: `ExampleSetup.php`
+1. Make a new folder called `Example` in `/usr/local/hestia/web/src/app/WebApp/Installers/`
+2. Create a file named `ExampleSetup.php`.
+3. Copy the [example file's content](https://github.com/hestiacp/hestia-quick-install/blob/main/Example/ExampleSetup.php) into your new file.
 
-[An example can be found here](https://github.com/hestiacp/hestia-quick-install/blob/main/Example/ExampleSetup.php)
-
-This will include the "Example" app in HestiaCP when you open the Quick install app.
+This will add an app called "Example" when you open the Quick install app page.
 
 ## Info
 
-Following settings are required to display the info on the Quick install app list 
+The following settings are required to display the info on the Quick install app list:
 
-- Name: Name of the Application
-- Group: Currently not used but might add it in the future. Currently used: cms, ecommerce, framework
-- Enabled: Default set to yes
-- Version: x.x.x or latest
-- Thumbnail: Include in the same folder. Currently max size is used is 300px by 300px
+- Name: Display name of the application. Please be aware that the naming of your app should follow the following regex: `[a-zA-Z][a-zA-Z0,9]`. Otherwise, it will not register as a working app!
+- Group: Currently not used, but we might add features that use it in the future. Currently used: `cms`, `ecommerce`, `framework`.
+- Enabled: Whether or not to show the app in the "Quick install app" page. Default set to `true`.
+- Version: `x.x.x` or `latest`.
+- Thumbnail: The image file for the app icon, include it in the same folder. The max size is 300px by 300px.
 
 ## Settings
 
 ### Form fields
 
-Follow fields are available
+The following fields are available:
 
-- Checkboxes
-- Input field
-- Radio fields
-- Select boxes
+- Text input
+- Selection dropdown
+- Checkbox
+- Radio button
 
-Please check existing apps for examples
+Since this is quite a complex feature, please check our existing apps for usage examples.
 
 ### Database
 
-Flag to enable / disable databases. If enabled 4 fields are added to allow the user to specify a database user, database and password and a check box if a new database need to be created
+Flag to enable database auto-creation. If enabled, a checkbox is shown, allowing the user to automatically create a new database, as well as the 3 following fields:
 
-### Downloading an app 
+- Database Name
+- Database User
+- Database Password
 
-Currently the following methods are supported:
+### Downloading the app's source code
 
-- Download a archive from a website
-- Via [Composer](https://getcomposer.org)
-- Via [Wordpress CLI](https://wp-cli.org)
+Currently the following methods of download are supported:
 
-
+- Download a archive from a URL.
+- Via [Composer](https://getcomposer.org).
+- Via [WP-CLI](https://wp-cli.org).
 
 ### Server settings
 
-As certain apps have certain requirements. For example certain apps require a specific template in Nginx or do only run on PHP8.0 or higher. 
+Enables you to set app requirements and web server templates. For example, some apps require a specific Nginx template or will only run on PHP 8.0 or higher.
 
-- Nginx: Template used for Nginx + PHP-FPM setup
-- Apache2: Template used for Apache2 setup can be usally be omitted.
-- PHP version: Array of all supported php versions
+- Nginx: Template used for Nginx + PHP-FPM setup.
+- Apache2: Template used for Apache2 setup. Can be usually be omitted.
+- PHP version: Array of all supported PHP versions.
 
 ## Installing the web application
 
-There are multiple ways to download the web app after it is has been downloaded
+There are multiple ways to install and configure the web app after it is has been downloaded.
 
-- Manipulation of config files
-- Run commands for example drush to install [Drupal](https://github.com/hestiacp/hestiacp/blob/88598deb49cec6a39be4682beb8e9b8720d59c7b/web/src/app/WebApp/Installers/Drupal/DrupalSetup.php#L56-L65)
-- Curl 
+- Manipulation of config files.
+- Run commands. For example, use `drush` to install [Drupal](https://github.com/hestiacp/hestiacp/blob/88598deb49cec6a39be4682beb8e9b8720d59c7b/web/src/app/WebApp/Installers/Drupal/DrupalSetup.php#L56-L65).
+- Using curl to provide configure the app over HTTP.
 
-Also make sure to prevent any issues in the future that all commands are executed as the user. Instead the root user or admin user. All the commands that are supplied by HestiaCP do this by default.
-
-Please be aware that the naming of your WebApp should follow the following regex: `[a-zA-Z][a-zA-Z0,9]` otherwise it will not register as a working app!
+::: warning
+To prevent any issues, make that all commands are executed as the user, instead of `root` or `admin`. All the commands that are supplied by HestiaCP do this by default.
+:::
 
 ## Sharing
 
-If you are done you can submit [a Pull Request](https://github.com/hestiacp/hestiacp/pulls) to HestiaCP and we will review the code and if it meeds our standaards we will include in the the next release.
-
-## More information
-
-More information can be found in the [hestia-quick-install repo](https://github.com/hestiacp/hestia-quick-install/blob/main/Example/ExampleSetup.php)
+Once you are done, you can [submit a Pull Request](https://github.com/hestiacp/hestiacp/pulls) and we will review the code. If it meets our standards, we will include in the next release.

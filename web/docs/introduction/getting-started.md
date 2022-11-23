@@ -20,24 +20,24 @@ Hestia must be installed on top of a fresh operating system installation to ensu
 | **Operating System** | Debian 10, 11 <br> Ubuntu 18.04, 20.04, 22.04 LTS | Latest Debian <br> Latest Ubuntu LTS |
 
 ::: warning
-Hestia does only run on amd64 / x86_64 and arm64 / aarch64 processors.  It also requires a 64bit operating system!
-We currently do no support i386 or arm7 based processors. 
+Hestia only runs on AMD64 / x86_64 and ARM64 / AArch64 processors. It also requires a 64bit operating system!
+We currently do not support i386 or ARM7-based processors.
 :::
 
 ### Supported operating systems
 
 - Debian 10 or 11
-- Ubuntu 18.04, 20.04 or 22.04 
+- Ubuntu 18.04, 20.04 or 22.04
 
 ::: warning
-Hestia does not support NON LTS Operating systems. For example: Ubuntu 21.10, 22.10, 23.04 and 23.10 will not receive support from us... 
+Hestia does not support non-LTS Operating systems. If you install it on, for example, Ubuntu 21.10, you will not receive support from us.
 :::
 
 ## Regular installation
 
 Interactive installer that will install the default Hestia software configuration.
 
-```sh
+```bash
 $ wget -qO - https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh | bash
 ```
 
@@ -53,7 +53,7 @@ An easier way to choose your installation options is by using the [Install strin
 
 To choose what software gets installed, you can provide flags to the installation script. You can view the full list of options below.
 
-```sh
+```bash
 -a, --apache            Install Apache        [yes|no]  default: yes
 -w, --phpfpm            Install PHP-FPM       [yes|no]  default: yes
 -o, --multiphp          Install Multi-PHP     [yes|no]  default: no
@@ -84,7 +84,7 @@ To choose what software gets installed, you can provide flags to the installatio
 
 #### Example
 
-```sh
+```bash
 $ wget -qO - https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh | bash -s -- \
 --interactive no \
 --hostname host.example.com \

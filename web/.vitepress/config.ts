@@ -80,7 +80,6 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 			items: [
 				{ text: "Getting started", link: "/docs/introduction/getting-started.md" },
 				{ text: "Best practices", link: "/docs/introduction/best-practices.md" },
-				{ text: "Architecture", link: "/docs/introduction/architecture.md" },
 			],
 		},
 		{

@@ -1,25 +1,30 @@
 # Cron Jobs
 
-To manage your cron jobs, you will need to navigate to the **Cron <i class="fas fa-fw fa-clock"></i>** tab.
+To manage your cron jobs, navigate to the **Cron <i class="fas fa-fw fa-clock"></i>** tab.
 
 ## Toggling cron job notifications
 
-Disable notifications to click on ** <i class="fas fa-toggle-off"></i> Turn off notifications ** Button. To turn them on again click on the ** <i class="fas fa-toggle-off"></i> Turn on notifications ** Button.
+1. To turn them off click the **<i class="fas fa-fw fa-toggle-off"></i> Turn off notifications** button.
+2. To turn them back on click the **<i class="fas fa-fw fa-toggle-off"></i> Turn on notifications** button.
 
 ## Adding a cron job
 
-Click on the ** <i class="fas fa-fw fa-plus-circle"></i> Add job ** botton. 
-
-Then enter the Command you want to execute and on what time / day you want tot execute a command. Use `*` to execute them also. 
+1. Click the **<i class="fas fa-fw fa-plus-circle"></i> Add job** button.
+2. Enter the command you want to execute.
+3. Enter the schedule on which you want to execute the command. You can use the generator to help you, or a tool such as [Crontab.guru](https://crontab.guru/).
 
 ## Editing a cron job
 
-To edit a cronjob click on the **<i class="fas fa-pencil-alt"></i>** icon and make the required changes
+1. Hover over the job you want to edit.
+2. Click the <i class="fas fa-fw fa-pencil-alt"><span class="visually-hidden">edit</span></i> icon on the right of the job's command.
 
 ## Suspending a cron job
 
-Check on the **<i class="fas fa-pause"></i>** icon to suspend it. To unsuspend it click on the **<i class="fas fa-play"></i>** icon
+1. Hover over the job you want to suspend.
+2. Click the <i class="fas fa-fw fa-pause"><span class="visually-hidden">suspend</span></i> icon on the right of the job's command.
+3. To unsuspend it, click the <i class="fas fa-fw fa-play"><span class="visually-hidden">unsuspend</span></i> icon on the right of the job's command.
 
 ## Deleting a cron job
 
-To delete a cron job click on the **<i class="fas fa-trash"></i>** icon
+1. Hover over the job you want to delete.
+2. Click the <i class="fas fa-fw fa-trash"><span class="visually-hidden">delete</span></i> icon on the right of the job's command.

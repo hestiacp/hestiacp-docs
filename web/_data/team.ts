@@ -1,8 +1,6 @@
-<script setup lang="ts">
 import type { DefaultTheme } from "vitepress";
-import { VPTeamPage, VPTeamPageTitle, VPTeamPageSection, VPTeamMembers } from "vitepress/theme";
 
-const projectManagers: DefaultTheme.TeamMember[] = [
+export const projectManagers: DefaultTheme.TeamMember[] = [
 	{
 		avatar: "https://www.github.com/ScIT-Raphael.png",
 		name: "Raphael Schneeberger 🇨🇭",
@@ -24,7 +22,7 @@ const projectManagers: DefaultTheme.TeamMember[] = [
 	},
 ];
 
-const teamMembers: DefaultTheme.TeamMember[] = [
+export const teamMembers: DefaultTheme.TeamMember[] = [
 	{
 		avatar: "https://www.github.com/jakobbouchard.png",
 		name: "Jakob Bouchard 🇨🇦",
@@ -69,55 +67,9 @@ const teamMembers: DefaultTheme.TeamMember[] = [
 	},
 ];
 
-const featuredContributors: DefaultTheme.TeamMember[] = [
+export const emeriti: DefaultTheme.TeamMember[] = [
 	{
-		avatar: "/apple-touch-icon.png",
-		name: "John Doe",
-		links: [{ icon: "github", link: "https://github.com/hestiacp" }],
-	},
-	{
-		avatar: "/apple-touch-icon.png",
-		name: "John Doe",
-		links: [{ icon: "github", link: "https://github.com/hestiacp" }],
-	},
-	{
-		avatar: "/apple-touch-icon.png",
-		name: "John Doe",
-		links: [{ icon: "github", link: "https://github.com/hestiacp" }],
-	},
-	{
-		avatar: "/apple-touch-icon.png",
-		name: "John Doe",
-		links: [{ icon: "github", link: "https://github.com/hestiacp" }],
+		avatar: "https://cdn.discordapp.com/avatars/737720562482151485/bac8f56f0a909032efaf60c1aa4047e5.webp",
+		name: "Kristan Kenney 🇨🇦",
 	},
 ];
-</script>
-
-<template>
-	<VPTeamPage>
-		<VPTeamPageTitle>
-			<template #title>The Team</template>
-			<template #lead>
-				The development of Hestia is guided by an international team, some of whom have chosen to be featured below.
-			</template>
-		</VPTeamPageTitle>
-		<VPTeamPageSection>
-			<template #title>Project Managers</template>
-			<template #members>
-				<VPTeamMembers :members="projectManagers" />
-			</template>
-		</VPTeamPageSection>
-		<VPTeamPageSection>
-			<template #title>Team Members</template>
-			<template #members>
-				<VPTeamMembers :members="teamMembers" />
-			</template>
-		</VPTeamPageSection>
-		<!-- <VPTeamPageSection>
-			<template #title>Contributors ❤️</template>
-			<template #members>
-				<VPTeamMembers size="small" :members="featuredContributors" />
-			</template>
-		</VPTeamPageSection> -->
-	</VPTeamPage>
-</template>

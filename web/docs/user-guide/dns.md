@@ -13,25 +13,25 @@ To manage your DNS zones and records, navigate to the **DNS <i class="fas fa-fw 
 ## Editing a DNS zone
 
 1. Hover over the zone you want to edit.
-2. Click the <i class="fas fa-fw fa-pencil-alt"><span class="visually-hidden">edit</span></i> icon on the right of the zone's domain.
+2. Click the <i class="fas fa-fw fa-pencil-alt"><span class="visually-hidden">edit</span></i> icon on the right of the zone’s domain.
 3. Make the desired changes.
 4. Click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
 
 ## Viewing DNSSEC public keys
 
 1. Hover over the zone whose DNSSEC keys you want to see.
-2. Click the <i class="fas fa-fw fa-key"><span class="visually-hidden">DNSSEC</span></i> icon on the right of the zone's domain.
+2. Click the <i class="fas fa-fw fa-key"><span class="visually-hidden">DNSSEC</span></i> icon on the right of the zone’s domain.
 
 ## Suspending a DNS zone
 
 1. Hover over the zone you want to suspend.
-2. Click the <i class="fas fa-fw fa-pause"><span class="visually-hidden">suspend</span></i> icon on the right of the zone's domain.
-3. To unsuspend it, click the <i class="fas fa-fw fa-play"><span class="visually-hidden">unsuspend</span></i> icon on the right of the zone's domain.
+2. Click the <i class="fas fa-fw fa-pause"><span class="visually-hidden">suspend</span></i> icon on the right of the zone’s domain.
+3. To unsuspend it, click the <i class="fas fa-fw fa-play"><span class="visually-hidden">unsuspend</span></i> icon on the right of the zone’s domain.
 
 ## Deleting a DNS zone
 
 1. Hover over the zone you want to delete.
-2. Click the <i class="fas fa-fw fa-trash"><span class="visually-hidden">delete</span></i> icon on the right of the zone's domain.
+2. Click the <i class="fas fa-fw fa-trash"><span class="visually-hidden">delete</span></i> icon on the right of the zone’s domain.
 
 ## DNS zone configuration
 
@@ -79,13 +79,13 @@ Enable DNSSEC to improve security. However, this setting requires some changes t
 ## Suspending a DNS record
 
 1. Hover over the record you want to suspend.
-2. Click the <i class="fas fa-fw fa-pause"><span class="visually-hidden">suspend</span></i> icon on the right of the record's domain.
-3. To unsuspend it, click the <i class="fas fa-fw fa-play"><span class="visually-hidden">unsuspend</span></i> icon on the right of the record's domain.
+2. Click the <i class="fas fa-fw fa-pause"><span class="visually-hidden">suspend</span></i> icon on the right of the record’s domain.
+3. To unsuspend it, click the <i class="fas fa-fw fa-play"><span class="visually-hidden">unsuspend</span></i> icon on the right of the record’s domain.
 
 ## Deleting a DNS record
 
 1. Hover over the record you want to delete.
-2. Click the <i class="fas fa-fw fa-trash"><span class="visually-hidden">delete</span></i> icon on the right of the record's domain.
+2. Click the <i class="fas fa-fw fa-trash"><span class="visually-hidden">delete</span></i> icon on the right of the record’s domain.
 
 ## DNS record configuration
 

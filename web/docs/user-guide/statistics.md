@@ -2,7 +2,7 @@
 
 To access the statistics, click the **<i class="fas fa-fw fa-chart-line"></i> Statistics** button in the top left.
 
-This page will show the current user's statistics, grouped per month. Here are the available statistics:
+This page will show the current user’s statistics, grouped per month. Here are the available statistics:
 
 - Bandwidth usage
 - Assigned IP addresses

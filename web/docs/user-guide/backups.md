@@ -13,14 +13,14 @@ A popup will be shown with the following message:
 ## Downloading a backup
 
 1. Hover over the backup you want to download.
-2. Click the <i class="fas fa-fw fa-file-download"><span class="visually-hidden">Download</span></i> icon on the right of the backup's filename.
+2. Click the <i class="fas fa-fw fa-file-download"><span class="visually-hidden">Download</span></i> icon on the right of the backup’s filename.
 
 If the backup is stored on a remote server, the file is downloaded to the server and you will get notified by email when the download is available.
 
 ## Restoring a backup
 
 1. Hover over the backup you want to restore.
-2. Click the backup's filename or the <i class="fas fa-fw fa-undo"><span class="visually-hidden">Restore</span></i> icon on the right of the backup's filename.
+2. Click the backup’s filename or the <i class="fas fa-fw fa-undo"><span class="visually-hidden">Restore</span></i> icon on the right of the backup’s filename.
 3. Restore the backup in one of the following ways:
    1. You can restore the whole backup by clicking the **<i class="fas fa-fw fa-undo"></i> Restore backup** button on the top right.
    2. Restore multiple parts of the backup, by selecting them, then selecting **Restore** in the **Apply to selected** menu in the top right and clicking on the <i class="fas fa-fw fa-arrow-right"><span class="visually-hidden">Apply</span></i> button.
@@ -29,7 +29,7 @@ If the backup is stored on a remote server, the file is downloaded to the server
 ## Deleting a backup
 
 1. Hover over the backup you want to delete.
-2. Click the <i class="fas fa-fw fa-trash"><span class="visually-hidden">delete</span></i> icon on the right of the backup's filename.
+2. Click the <i class="fas fa-fw fa-trash"><span class="visually-hidden">delete</span></i> icon on the right of the backup’s filename.
 
 ## Excluding components from backups
 

@@ -34,7 +34,7 @@ apt update && apt upgrade
 
 Edit `/etc/apt/sources.list.d/hestia.list` and remove the `#` in front of `apt.hestiacp.com`, and add a `#` in front of `beta-apt.hestiacp.com`.
 
-Once that's done, run `apt update && apt upgrade` to rollback to the regular release.
+Once that’s done, run `apt update && apt upgrade` to rollback to the regular release.
 
 ## Reporting bugs
 

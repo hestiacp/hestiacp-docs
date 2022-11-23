@@ -65,13 +65,13 @@ If your domain is an [internationalized domain name (IDN)](https://en.wikipedia.
 ### Enabling SSL
 
 1. Check the **Enable SSL for this domain** box.
-2. Check the **Use Let's Encrypt to obtain SSL certificate** box to use Let's Encrypt.
+2. Check the **Use Let’s Encrypt to obtain SSL certificate** box to use Let’s Encrypt.
 3. Depending on your requirements, you can enable **Enable automatic HTTPS redirection** or **Enable HTTP Strict Transport Security (HSTS)**.
 4. Click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
 
 If you want to use your own SSL certificate you can enter the SSL certificate in the text area.
 
-If you are having issues with enabling Let's Encrypt, please refer to our [SSL certicates](../server-administration/ssl-certificates.md) documentation.
+If you are having issues with enabling Let’s Encrypt, please refer to our [SSL certicates](../server-administration/ssl-certificates.md) documentation.
 
 ### Changing PHP version
 

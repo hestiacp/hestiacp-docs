@@ -1,6 +1,6 @@
 # Quick install app
 
-One of Hestia's most requested feature is to add support for Softaculous. However, due to the required use of Ioncube in hestia-php and because we are against the use of proprietary software, we have instead developed our own "Quick install app" solution.
+One of Hestia’s most requested feature is to add support for Softaculous. However, due to the required use of Ioncube in hestia-php and because we are against the use of proprietary software, we have instead developed our own **Quick install app** solution.
 
 More information can be found in the [hestia-quick-install repo](https://github.com/hestiacp/hestia-quick-install/blob/main/Example/ExampleSetup.php)
 
@@ -8,17 +8,17 @@ More information can be found in the [hestia-quick-install repo](https://github.
 
 1. Make a new folder called `Example` in `/usr/local/hestia/web/src/app/WebApp/Installers/`
 2. Create a file named `ExampleSetup.php`.
-3. Copy the [example file's content](https://github.com/hestiacp/hestia-quick-install/blob/main/Example/ExampleSetup.php) into your new file.
+3. Copy the [example file’s content](https://github.com/hestiacp/hestia-quick-install/blob/main/Example/ExampleSetup.php) into your new file.
 
-This will add an app called "Example" when you open the Quick install app page.
+This will add an app called “Example” when you open the **Quick install app** page.
 
 ## Info
 
-The following settings are required to display the info on the Quick install app list:
+The following settings are required to display the info on the **Quick install app** list:
 
 - Name: Display name of the application. Please be aware that the naming of your app should follow the following regex: `[a-zA-Z][a-zA-Z0,9]`. Otherwise, it will not register as a working app!
 - Group: Currently not used, but we might add features that use it in the future. Currently used: `cms`, `ecommerce`, `framework`.
-- Enabled: Whether or not to show the app in the "Quick install app" page. Default set to `true`.
+- Enabled: Whether or not to show the app in the **Quick install app** page. Default set to `true`.
 - Version: `x.x.x` or `latest`.
 - Thumbnail: The image file for the app icon, include it in the same folder. The max size is 300px by 300px.
 
@@ -43,7 +43,7 @@ Flag to enable database auto-creation. If enabled, a checkbox is shown, allowing
 - Database User
 - Database Password
 
-### Downloading the app's source code
+### Downloading the app’s source code
 
 Currently the following methods of download are supported:
 

@@ -14,7 +14,7 @@ Under **Advanced Options**, you are able to select the host (`localhost` by defa
 ## Editing a database
 
 1. Hover over the database you want to edit.
-2. Click the <i class="fas fa-fw fa-pencil-alt"><span class="visually-hidden">edit</span></i> icon on the right of the database's name. If you don't want to change the password, keep the password field empty.
+2. Click the <i class="fas fa-fw fa-pencil-alt"><span class="visually-hidden">edit</span></i> icon on the right of the database’s name. If you don't want to change the password, keep the password field empty.
 
 ## Accessing a database
 
@@ -25,10 +25,10 @@ For MySQL databases, if **phpMyAdmin Single Sign On** is enabled, hovering a dat
 ## Suspending a database
 
 1. Hover over the database you want to suspend.
-2. Click the <i class="fas fa-fw fa-pause"><span class="visually-hidden">suspend</span></i> icon on the right of the database's name.
-3. To unsuspend it, click the <i class="fas fa-fw fa-play"><span class="visually-hidden">unsuspend</span></i> icon on the right of the database's name.
+2. Click the <i class="fas fa-fw fa-pause"><span class="visually-hidden">suspend</span></i> icon on the right of the database’s name.
+3. To unsuspend it, click the <i class="fas fa-fw fa-play"><span class="visually-hidden">unsuspend</span></i> icon on the right of the database’s name.
 
 ## Deleting a database
 
 1. Hover over the database you want to delete.
-2. Click the <i class="fas fa-fw fa-trash"><span class="visually-hidden">delete</span></i> icon on the right of the database's name. Both the database user and the database will get deleted.
+2. Click the <i class="fas fa-fw fa-trash"><span class="visually-hidden">delete</span></i> icon on the right of the database’s name. Both the database user and the database will get deleted.

@@ -3,7 +3,7 @@
 [View the current guidelines](https://github.com/hestiacp/hestiacp/blob/main/CONTRIBUTING.md).
 
 ::: warning
-Development builds are always unstable. If you encounter a bug please report them via [GitHub](https://github.com/hestiacp/hestiacp/issues/new/choose) or submit a [Pull request](https://github.com/hestiacp/hestiacp/pulls)
+Development builds are always unstable. If you encounter a bug please [report it via GitHub](https://github.com/hestiacp/hestiacp/issues/new/choose) or [submit a Pull request](https://github.com/hestiacp/hestiacp/pulls).
 :::
 
 ## Compiling
@@ -29,7 +29,7 @@ Go into the `src` folder and run one of these commands:
 ### Compile and install
 
 ::: info
-Use it only if you have Hestia already installed
+Use this only if you have Hestia already installed.
 :::
 
 ```bash
@@ -67,16 +67,14 @@ Any option can be appended to the installer command. [See the complete list](../
 ## Update Hestia from GitHub
 
 ::: info
-Following method only supports building the `hestia` package if you need to build `hestia-nginx` or `hestia-php` use one of the previous commands
+The following method only supports building the `hestia` package. If you need to build `hestia-nginx` or `hestia-php`, use one of the previous commands.
 :::
 
 ```bash
 v-update-sys-hestia-git [USERNAME] [BRANCH]
 ```
 
-Sometimes dependencies will get added or removed as the packages are installed with `dpkg` it is not possible to "preload" the dependencies.
-
-In that case you will see an error like:
+Sometimes dependencies will get added or removed when the packages are installed with `dpkg`. It is not possible to preload the dependencies. If this happens, you will see an error like:
 
 ```bash
 dpkg: error processing package hestia (–install):

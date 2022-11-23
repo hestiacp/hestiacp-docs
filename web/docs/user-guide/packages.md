@@ -49,7 +49,7 @@ Total available storage space including the websites, email accounts, databases 
 
 Allocated bandwidth. Only outgoing traffic over web is accounted for.
 
-There's currently no methods of auto-suspending available.
+There’s currently no methods of auto-suspending available.
 
 ### Backups
 

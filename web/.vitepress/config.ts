@@ -4,6 +4,10 @@ export default defineConfig({
 	lang: "en-US",
 	title: "Hestia Control Panel",
 	description: "Open-source web server control panel.",
+
+	lastUpdated: true,
+	cleanUrls: "with-subfolders",
+
 	head: [
 		["link", { rel: "stylesheet", href: "/styles/fontawesome.min.css" }],
 		["link", { rel: "icon", sizes: "any", href: "/favicon.ico" }],
@@ -13,16 +17,11 @@ export default defineConfig({
 		["meta", { name: "theme-color", content: "#b7236a" }],
 	],
 
-	lastUpdated: true,
-
 	themeConfig: {
 		logo: "/logo.svg",
-		// algolia: {
-		//   appId: "REPLACE_ME",
-		//   apiKey: "REPLACE_ME",
-		//   indexName: "REPLACE_ME",
-		// },
+
 		nav: nav(),
+
 		socialLinks: [
 			{ icon: "github", link: "https://github.com/hestiacp/hestiacp" },
 			{ icon: "discord", link: "https://discord.gg/nXRUZch" },
@@ -38,10 +37,17 @@ export default defineConfig({
 			pattern: "https://github.com/hestiacp/hestiacp-docs/edit/main/docs/:path",
 			text: "Edit this page on GitHub",
 		},
+
 		footer: {
 			message: "Released under the GPLv3 License.",
 			copyright: "Copyright © 2019-present Hestia Control Panel",
 		},
+
+		// algolia: {
+		//   appId: "REPLACE_ME",
+		//   apiKey: "REPLACE_ME",
+		//   indexName: "REPLACE_ME",
+		// },
 	},
 });
 
@@ -77,6 +83,7 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 	return [
 		{
 			text: "Introduction",
+      collapsible: true,
 			items: [
 				{ text: "Getting started", link: "/docs/introduction/getting-started.md" },
 				{ text: "Best practices", link: "/docs/introduction/best-practices.md" },
@@ -121,6 +128,7 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 		},
 		{
 			text: "Contributing",
+      collapsible: true,
 			items: [
 				{ text: "Development", link: "/docs/contributing/development.md" },
 				{ text: "Documentation", link: "/docs/contributing/documentation.md" },
@@ -131,6 +139,7 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 		},
 		{
 			text: "Community",
+      collapsible: true,
 			items: [
 				{ text: "Hestia Nginx Cache", link: "/docs/community/hestia-nginx-cache.md" },
 				{ text: "Install script generator", link: "/docs/community/install-script-generator.md" },
@@ -139,6 +148,7 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 		},
 		{
 			text: "Reference",
+      collapsible: true,
 			items: [
 				{ text: "API", link: "/docs/reference/api.md" },
 				{ text: "CLI", link: "/docs/reference/cli.md" },

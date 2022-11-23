@@ -12,7 +12,7 @@ The password requirements are as follows:
 - At least 1 number.
 - At least 1 capital letter and 1 lowercase letter.
 
-If you want to generate a secure password, you can use [1Password's generator](https://1password.com/password-generator/).
+If you want to generate a secure password, you can use [1Password’s generator](https://1password.com/password-generator/).
 
 ### Two-factor authentication (2FA)
 

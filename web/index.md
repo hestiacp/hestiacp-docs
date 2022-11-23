@@ -31,10 +31,16 @@ features:
   - icon: ❤️
     title: Made with love & pride
     details: Hestia is open-source software that is built by passionate people from around the world. This means that the code is reviewed by multiple people and that anybody can contribute to it!
+    link: /team
+    linkText: See the team
   - icon: 🛠️
     title: Extendable & powerful
     details: Hestia is extendable while being easy to learn. You can build your own themes, web templates, quick install applications and can interact with it using third party software via its API.
+    link: /docs/contributing/development
+    linkText: Help develop Hestia
   - icon: 🤝
     title: Supported by the community
     details: Hestia has a great support community, join the forum or the Discord server! To keep the project running, we rely on donations, which can be done via PayPal or cryptocurrency.
+    link: /donate
+    linkText: Donate
 ---

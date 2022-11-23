@@ -52,7 +52,7 @@ function nav(): DefaultTheme.NavItem[] {
 		{ text: "Team", link: "/team.md" },
 		{ text: "Demo", link: "https://demo.hestiacp.com:8083/" },
 		{ text: "Forum", link: "https://forum.hestiacp.com/" },
-		{ text: "Donate", link: "https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=ST87LQH2CHGLA" },
+		{ text: "Donate", link: "/donate.md" },
 		{
 			text: "v1.6.x",
 			items: [

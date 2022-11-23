@@ -1,11 +1,12 @@
 ---
-layout: page
 title: Features
+aside: false
+lastUpdated: false
 ---
 
 # Main Features
 
-TODO: Make this a [custom page](https://vitepress.vuejs.org/config/frontmatter-configs.html#layout).
+<!-- TODO: Make this a [custom page](https://vitepress.vuejs.org/config/frontmatter-configs.html#layout). -->
 
 ## Users
 

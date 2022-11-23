@@ -83,7 +83,7 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 	return [
 		{
 			text: "Introduction",
-      collapsible: true,
+			collapsible: true,
 			items: [
 				{ text: "Getting started", link: "/docs/introduction/getting-started.md" },
 				{ text: "Best practices", link: "/docs/introduction/best-practices.md" },
@@ -93,18 +93,18 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 			text: "User guide",
 			collapsible: true,
 			items: [
-				{ text: "Users", link: "/docs/user-guide/users.md" },
-				{ text: "Packages", link: "/docs/user-guide/packages.md" },
-				{ text: "Web domains", link: "/docs/user-guide/web-domains.md" },
-				{ text: "DNS", link: "/docs/user-guide/dns.md" },
-				{ text: "Mail domains", link: "/docs/user-guide/mail-domains.md" },
-				{ text: "Databases", link: "/docs/user-guide/databases.md" },
-				{ text: "Cron jobs", link: "/docs/user-guide/cron-jobs.md" },
-				{ text: "Backups", link: "/docs/user-guide/backups.md" },
-				{ text: "File manager", link: "/docs/user-guide/file-manager.md" },
-				{ text: "Statistics", link: "/docs/user-guide/statistics.md" },
-				{ text: "Notifications", link: "/docs/user-guide/notifications.md" },
 				{ text: "Account", link: "/docs/user-guide/account.md" },
+				{ text: "Backups", link: "/docs/user-guide/backups.md" },
+				{ text: "Cron jobs", link: "/docs/user-guide/cron-jobs.md" },
+				{ text: "Databases", link: "/docs/user-guide/databases.md" },
+				{ text: "DNS", link: "/docs/user-guide/dns.md" },
+				{ text: "File manager", link: "/docs/user-guide/file-manager.md" },
+				{ text: "Mail domains", link: "/docs/user-guide/mail-domains.md" },
+				{ text: "Notifications", link: "/docs/user-guide/notifications.md" },
+				{ text: "Packages", link: "/docs/user-guide/packages.md" },
+				{ text: "Statistics", link: "/docs/user-guide/statistics.md" },
+				{ text: "Users", link: "/docs/user-guide/users.md" },
+				{ text: "Web domains", link: "/docs/user-guide/web-domains.md" },
 			],
 		},
 		{
@@ -128,7 +128,7 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 		},
 		{
 			text: "Contributing",
-      collapsible: true,
+			collapsible: true,
 			items: [
 				{ text: "Development", link: "/docs/contributing/development.md" },
 				{ text: "Documentation", link: "/docs/contributing/documentation.md" },
@@ -139,16 +139,16 @@ function sidebarDocs(): DefaultTheme.SidebarGroup[] {
 		},
 		{
 			text: "Community",
-      collapsible: true,
+			collapsible: true,
 			items: [
 				{ text: "Hestia Nginx Cache", link: "/docs/community/hestia-nginx-cache.md" },
-				{ text: "Install script generator", link: "/docs/community/install-script-generator.md" },
 				{ text: "Ioncube installer for Hestia", link: "/docs/community/ioncube-hestia-installer.md" },
+				{ text: "Install script generator", link: "/docs/community/install-script-generator.md" },
 			],
 		},
 		{
 			text: "Reference",
-      collapsible: true,
+			collapsible: true,
 			items: [
 				{ text: "API", link: "/docs/reference/api.md" },
 				{ text: "CLI", link: "/docs/reference/cli.md" },

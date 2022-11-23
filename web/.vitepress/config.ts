@@ -25,7 +25,7 @@ export default defineConfig({
 		nav: nav(),
 		socialLinks: [
 			{ icon: "github", link: "https://github.com/hestiacp/hestiacp" },
-			{ icon: "discord", link: "https://discord.com/invite/yy75DKs" },
+			{ icon: "discord", link: "https://discord.gg/nXRUZch" },
 			{ icon: "twitter", link: "https://twitter.com/HestiaPanel" },
 			{ icon: "facebook", link: "https://www.facebook.com/hestiacp" },
 		],

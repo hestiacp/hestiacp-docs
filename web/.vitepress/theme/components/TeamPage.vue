@@ -113,11 +113,11 @@ const featuredContributors: DefaultTheme.TeamMember[] = [
 				<VPTeamMembers :members="teamMembers" />
 			</template>
 		</VPTeamPageSection>
-		<VPTeamPageSection>
+		<!-- <VPTeamPageSection>
 			<template #title>Contributors ❤️</template>
 			<template #members>
 				<VPTeamMembers size="small" :members="featuredContributors" />
 			</template>
-		</VPTeamPageSection>
+		</VPTeamPageSection> -->
 	</VPTeamPage>
 </template>

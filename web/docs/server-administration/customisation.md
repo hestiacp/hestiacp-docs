@@ -24,7 +24,7 @@ Changes to default themes are always overwritten during updates. However, via th
 
 If you want to edit the dark theme,
 
-```sh
+```bash
 $ cp $HESTIA/install/deb/themes/dark.css /root/my_dark.css
 ```
 
@@ -34,7 +34,7 @@ Apply your changes and follow the instructions above.
 
 The _Domain not found_ page is located in `/var/www/html/index.html`. You can edit it using the following command:
 
-```sh
+```bash
 $ nano /var/www/html/index.html
 ```
 

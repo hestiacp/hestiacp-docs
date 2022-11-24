@@ -1,38 +1,30 @@
 # File manager
 
-**TODO: Rewrite content**
+## How can I enable or disable the file manager
 
-## How can I enable / Disable the file manager
+In a new install, the file manager will be enabled by default.
 
-By an new install the filemanager will be enabled by default
-
-For updates please run the following command
+To enable or update the file manager, please run the following command:
 
 ```bash
 v-add-sys-filemanager
 ```
 
-To disable the file manager please run
+To disable the file manager, please run the following command:
 
 ```bash
 v-delete-sys-filemanager
 ```
 
-## File Manager gives "Unknown Error" message
+## File manager gives "Unknown Error" message
 
-File Manager gives an error message "Unknown Errror" (Hestia 1.2.0).
-Fresh Install except for modifications to /etc/ssh/sshd_config
+The file manager gives an error message sayinh "Unknown Error", using a fresh Install with modifications to `/etc/ssh/sshd_config`.
 
-This seems to occur specifically when the line Subsystem sftp
-/usr/lib/openssh/sftp-server is removed or changed in
-/etc/ssh/sshd_config in such a way that the install script cannot update
-it to Subsystem sftp internal-sftp
+This seems to occur specifically when the line `Subsystem sftp /usr/lib/openssh/sftp-server` is removed or changed in `/etc/ssh/sshd_config` in such a way that the install script cannot update it to `Subsystem sftp internal-sftp`.
 
-Short answer: add Subsystem sftp internal-sftp to /etc/ssh/sshd_config:
+Short answer: add `Subsystem sftp internal-sftp` to `/etc/ssh/sshd_config`.
 
-Long answer: Refer to the install script ./install/hst-install-debian.sh
-for all the changes made to /etc/ssh/sshd_config. For Debian, the
-changes can be summarised as follows:
+Long answer: Refer to the install script `./install/hst-install-{distro}.sh` for all the changes made to `/etc/ssh/sshd_config`. For Debian, the changes can be summarised as follows:
 
 ```bash
 # HestiaCP Changes to the default /etc/ssh/sshd_config in Debian 10 Buster
@@ -50,19 +42,14 @@ Subsystem sftp internal-sftp
 DebianBanner no
 ```
 
-Returning all of the other parameters to their defaults and also
-changing to PasswordAuthentication no did not reproduce the error, thus
-it would seem to be isolated to the Subsystem sftp internal-sftp
-parameter.
+Changing all of the other parameters to their defaults and also changing to `PasswordAuthentication no` did not reproduce the error, thus it would seem to be isolated to the `Subsystem sftp internal-sftp` parameter.
 
-For more information regarding debugging:
+For more information regarding debugging, inspect the Hestia Nginx log:
 
 ```bash
 tail -f -s0.1 /var/log/hestia/nginx-error.log
 ```
 
-## Changed SSH Port and now I can not use the file manager any more
+## I changed SSH port and I cannot use the file manager anymore
 
-SSH port is loaded in a PHP Session.
-
-Logout and Login will reset the Sessions
+The SSH port is loaded in a PHP session. Logging out and logging back in will reset the session, fixing the issue.

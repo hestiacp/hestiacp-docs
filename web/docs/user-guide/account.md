@@ -92,7 +92,7 @@ Click the **<i class="fas fa-fw fa-key"></i> Access Keys** button to view the ac
 1. Click the **<i class="fas fa-fw fa-plus-circle"></i> Add Access key** button.
 2. Select the permission sets you want to enable.
 3. Click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
-4. Copy **both** the access key and the secret key, as they cannot be viewed again once the page is closed.
+4. Copy the access key and the secret key. Make sure to save the secret key somewhere safe as it **cannot** be viewed once the page is closed.
 
 ### Deleting an access key
 

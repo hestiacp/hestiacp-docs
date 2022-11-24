@@ -6,7 +6,7 @@ Make sure the hostname of the server is pointed to the server’s IP address and
 
 Running the following commands will change the hostname and generate a Let’s Encrypt certificate for the control panel:
 
-```sh
+```bash
 v-change-sys-hostname host.domain.tld
 v-add-letsencrypt-host
 ```
@@ -40,7 +40,7 @@ In the future we hope to improve debugging, but currently the easiest way to deb
 
 Find **Step 5**, where you will see something similar to the following:
 
-```sh
+```bash
 ==[Step 5]==
 - status: 200
 - nonce: 0004EDQMty6_ZOb1BdRQSc-debiHXGXaXbZuyySFU2xoogk

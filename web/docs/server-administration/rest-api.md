@@ -16,7 +16,7 @@ With the release of Hestia v1.4.0, we have decided the security needed to be tig
 
 Yes, you can disable the API via the server settings. The file will be deleted from the server and all connections will get ignored. Please note that some functions may not work with the API disabled.
 
-## Password vs API key vs Access keys
+## Password vs API key vs access keys
 
 ### Password
 
@@ -37,7 +37,7 @@ Yes, you can disable the API via the server settings. The file will be deleted f
 - Ability to disable login via other methods but still allow the use of api keys
 - Can be restricted to admin user only or allowed for all users.
 
-## Setup Access/Secret key authentication
+## Setup access/secret key authentication
 
 To create an access key, follow [the guide in our documentation](../user-guide/account.md#api-access-keys).
 
@@ -46,7 +46,7 @@ If the software you are using already supports the hash format, use `ACCESS_KEY:
 ## Create an API key
 
 ::: warning
-This method has been replaced by the above Access/Secret key authentication. We **highly** recommend using this more secure method instead.
+This method has been replaced by the above access/secret key authentication. We **highly** recommend using this more secure method instead.
 :::
 
 Run the command `v-generate-api-key`.

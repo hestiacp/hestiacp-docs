@@ -8,7 +8,7 @@ This page is work in progress. A lot of information will be missing.
 
 Examples can be found in a separate [repo](https://github.com/hestiacp/hestiacp-api-examples).
 
-## Upgrading from username/password authentication
+## Upgrading from username/password authentication to access/secret keys
 
 Replace the following code:
 
@@ -23,7 +23,7 @@ $postvars = array(
 );
 ```
 
-With
+With the following:
 
 ```php
 // Prepare POST query

@@ -79,7 +79,7 @@ You can also use an app to manage them:
 
 :::
 
-## API Access keys
+## API access keys
 
 ::: info
 This option is disabled by default for standard users. An administrator needs to enable it in the server settings.

@@ -18,7 +18,7 @@ Under **Advanced Options**, you are able to select the host (`localhost` by defa
 
 ## Accessing a database
 
-By default, **phpMyAdmin** and **phpPgAdmin** are accessible at `https://hostname.domain.com/phpmyadmin` and `https://hostname.domain.com/phppgadmin` respectively. You can also click the **<i class="fas fa-fw fa-database"></i> phpMyAdmin** and **<i class="fas fa-fw fa-database"></i> phpPgAdmin** buttons in the **DB <i class="fas fa-fw fa-database"></i>** tab.
+By default, **phpMyAdmin** and **phpPgAdmin** are accessible at `https://hostname.domain.tld/phpmyadmin` and `https://hostname.domain.tld/phppgadmin` respectively. You can also click the **<i class="fas fa-fw fa-database"></i> phpMyAdmin** and **<i class="fas fa-fw fa-database"></i> phpPgAdmin** buttons in the **DB <i class="fas fa-fw fa-database"></i>** tab.
 
 For MySQL databases, if **phpMyAdmin Single Sign On** is enabled, hovering a database will show an <i class="fas fa-fw fa-sign-in-alt"><span class="visually-hidden">phpMyAdmin</span></i> icon. Click it to login to **phpMyAdmin** directly.
 

@@ -54,9 +54,9 @@ You can tweak the policy for a specific domain and user, for example for a domai
 
 ```bash
 # to enable
-v-add-web-domain-allow-users user domain.com
+v-add-web-domain-allow-users user domain.tld
 # to disable
-v-delete-web-domain-allow-users user domain.com
+v-delete-web-domain-allow-users user domain.tld
 ```
 
 ## Can I restrict access to the `admin` account?

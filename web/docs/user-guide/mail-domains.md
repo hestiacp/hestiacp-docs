@@ -89,13 +89,13 @@ If you don’t host your DNS in Hestia, but you still want to use its email serv
 
 ### Webmail
 
-By default, the webmail is accessible at `https://webmail.domain.com` or `https://mail.domain.com` when SSL is enabled. Otherwise use `http://` instead.
+By default, the webmail is accessible at `https://webmail.domain.tld` or `https://mail.domain.tld` when SSL is enabled. Otherwise use `http://` instead.
 
 ## Adding a mail account to a domain
 
 1. Click the mail domain.
 2. Click **<i class="fas fa-fw fa-plus-circle"></i> Add Mail account** button.
-3. Enter the account name (without the `@domain.com` part) and a password.
+3. Enter the account name (without the `@domain.tld` part) and a password.
 4. Optionally, supply an email address that will receive the login details.
 5. Click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
 

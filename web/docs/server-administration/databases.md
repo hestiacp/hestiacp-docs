@@ -77,7 +77,7 @@ Make sure the API is enabled and working properly. Hestia’s PhpMyAdmin Single 
 
 ### When clicking the phpMyAdmin Single Sign On button, I am forwarded to the login page of phpMyAdmin
 
-Automated can sometimes cause issues. Login via SSH and open `/var/log/{webserver}/domains/{hostname.domain.com.error.log` and look for one of the following error messages:
+Automated can sometimes cause issues. Login via SSH and open `/var/log/{webserver}/domains/{hostname.domain.tld.error.log` and look for one of the following error messages:
 
 - `Unable to connect over API, please check API connection`
   1. Check if the api has been enabled.

@@ -69,7 +69,7 @@ After modifying an existing template, you need to rebuild the user configuration
 
 With the switch to PHP-FPM there are currently 2 different ways:
 
-1. Using `.user.ini` in the home directory `/home/user/web/domain.com/public_html`.
+1. Using `.user.ini` in the home directory `/home/user/web/domain.tld/public_html`.
 2. Via the PHP-FPM pool config.
 
 Config templates for the PHP pool can be found in `/usr/local/hestia/data/templates/web/php-fpm/`.

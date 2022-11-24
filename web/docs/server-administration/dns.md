@@ -156,7 +156,7 @@ When trying to add a DNS server for a cluster I get the following error:
 
 ```bash
 /usr/local/hestia/func/remote.sh: line 43: return: Error:: numeric argument required
-Error: api connection to slave.domain.com failed
+Error: api connection to slave.domain.tld failed
 ```
 
 By default, API access has been disabled for non-local IP addresses. Please add your IP address to the **Allowed IP adresses for API** field in the server settings.

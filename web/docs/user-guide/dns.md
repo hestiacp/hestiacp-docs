@@ -91,7 +91,7 @@ Enable DNSSEC to improve security. However, this setting requires some changes t
 
 ### Record
 
-The record name. `record`.domain.com. Use `@` for root.
+The record name. `record`.domain.tld. Use `@` for root.
 
 ### Type
 

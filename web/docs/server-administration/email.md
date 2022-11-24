@@ -39,7 +39,7 @@ If not, you have 2 options:
 
 ## I am unable to receive email
 
-If you are unable to receive emails, make sure you have setup your DNS properly. If you are using Cloudflare, disable the use of the proxy for `mail.domain.com`.
+If you are unable to receive emails, make sure you have setup your DNS properly. If you are using Cloudflare, disable the use of the proxy for `mail.domain.tld`.
 
 When you are done you can check the configuration via [MXToolBox](https://mxtoolbox.com/MXLookup.aspx).
 
@@ -61,17 +61,17 @@ Password: D0ung4naLOptuaa
 Secret key: admin_f0e5a5aa
 ```
 
-You can access the admin by navigating to `https://webmail.domain.com/?admin_f0e5a5aa`, and login by using the data you found in the file. Once it’s not needed anymore, remove the file, for security reasons.
+You can access the admin by navigating to `https://webmail.domain.tld/?admin_f0e5a5aa`, and login by using the data you found in the file. Once it’s not needed anymore, remove the file, for security reasons.
 
 ## Can I use Cloudflare Proxy with email
 
-No, Cloudflare’s Proxy does not work with email. If you use email hosted on you server, make sure the proxy for the A record `mail.domain.com` is switched off. Otherwise, you will not be able receive emails. The following records are suggested if you want to use Hestia as your mail server:
+No, Cloudflare’s Proxy does not work with email. If you use email hosted on you server, make sure the proxy for the A record `mail.domain.tld` is switched off. Otherwise, you will not be able receive emails. The following records are suggested if you want to use Hestia as your mail server:
 
 ![DNS records](/images/mail/mail.png)
 
 - A record with name **mail** pointing to your server IP.
 - A record with name **webmail** pointing to your server IP.
-- MX record with name **@** with pointing to `mail.domain.com`.
+- MX record with name **@** with pointing to `mail.domain.tld`.
 - TXT record with name **@** containing `v=spf1 a mx ip4:your ip; \~all`
 - TXT record with name **\_domainkey** containing `t=y; o=~;`
 - TXT record with name **mail.\_domainkey** containing `t=y; o=~DKIM key;`

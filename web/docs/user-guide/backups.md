@@ -43,7 +43,7 @@ In the box labeled **Web Domains**, enter each domain you want to exclude, one p
 To exclude a specific folder from a domain use the following syntax:
 
 ```
-hestiacp.xyz:public_html/wp-content/uploads:public_html/cache
+domain.tld:public_html/wp-content/uploads:public_html/cache
 ```
 
 This will excude both `public_html/wp-content/uploads/` and `public_html/cache/` from that domain.
@@ -57,10 +57,10 @@ In the box labeled **Mail Domains**, enter each domain you want to exclude, one 
 To exclude only one or multiple mail account use the following syntax:
 
 ```
-hestiacp.xyz:info:support
+domain.tld:info:support
 ```
 
-This will excude both `info@hestiacp.xyz` and `support@hestiacp.xyz`.
+This will excude both `info@domain.tld` and `support@domain.tld`.
 
 To exclude all domains, use `*`.
 

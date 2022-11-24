@@ -51,7 +51,7 @@ Depending on the application you chose to install, this can take 30 seconds or l
 1. Chose **awstats** in the selection boxed labelled **Web Statistics**.
 2. If desired, enter a username and password.
 3. Click the **<i class="fas fa-fw fa-save"></i> Save** button in the top right.
-4. Navigate to `https://domain.com/vstats/` to view the stats.
+4. Navigate to `https://domain.tld/vstats/` to view the stats.
 
 ### Managing redirections
 
@@ -59,7 +59,7 @@ Depending on the application you chose to install, this can take 30 seconds or l
 2. Select the option you want. When selecting **Redirect visitors to a custom domain or web address** you have to option to select the HTTP status code (301 by default).
 
 ::: warning
-If your domain is an [internationalized domain name (IDN)](https://en.wikipedia.org/wiki/Internationalized_domain_name) containing special characters, even if you select `www.domain.com` or `domain.com`, it will convert the domain to [punycode](https://en.wikipedia.org/wiki/Punycode) and select **Redirect visitors to a custom domain or web address**.
+If your domain is an [internationalized domain name (IDN)](https://en.wikipedia.org/wiki/Internationalized_domain_name) containing special characters, even if you select `www.domain.tld` or `domain.tld`, it will convert the domain to [punycode](https://en.wikipedia.org/wiki/Punycode) and select **Redirect visitors to a custom domain or web address**.
 :::
 
 ### Enabling SSL
@@ -85,7 +85,7 @@ This option is not always available. It may be disabled in the server settings. 
 
 1. Check the **Custom document root** box.
 2. Select the domain name where you want this domain to point.
-3. Select the path. For example, `/public/` will link to `/home/user/web/domain.com/public_html/public/`.
+3. Select the path. For example, `/public/` will link to `/home/user/web/domain.tld/public_html/public/`.
 
 ### Additional FTP accounts
 

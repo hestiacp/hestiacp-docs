@@ -87,8 +87,8 @@ To choose what software gets installed, you can provide flags to the installatio
 ```bash
 wget -qO - https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh | bash -s -- \
 --interactive no \
---hostname host.example.com \
---email email@example.com \
+--hostname host.domain.tld \
+--email email@domain.tld \
 --password p4ssw0rd \
 --lang fr \
 --apache no \
@@ -111,4 +111,4 @@ This command will install Hestia in French with the following software:
 
 By now, you should have a Hestia installation on your server. You are be ready to add new users, so that you (or they) can add new websites on your server.
 
-To access your control panel, navigate to `https://host.example.com:8083` or `http://your.public.ip.address:8083`
+To access your control panel, navigate to `https://host.domain.tld:8083` or `http://your.public.ip.address:8083`

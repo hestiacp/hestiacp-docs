@@ -6,7 +6,7 @@ title: The Team
 
 <script setup lang="ts">
   import { VPTeamPage, VPTeamPageTitle, VPTeamPageSection, VPTeamMembers } from "vitepress/theme";
-  import { projectManagers, teamMembers, emeriti } from './_data/team';
+  import { projectManagers, teamMembers, emeriti } from "./_data/team";
 </script>
 
 <VPTeamPage>

@@ -1,11 +1,11 @@
 import Theme from "vitepress/theme";
 import "./styles/base.css";
 import "./styles/vars.css";
-import Feature from "./components/Feature.vue";
+import FeaturePage from "./components/FeaturePage.vue";
 
 export default {
 	...Theme,
 	enhanceApp({ app }) {
-		app.component("Feature", Feature);
+		app.component("FeaturePage", FeaturePage);
 	},
 };

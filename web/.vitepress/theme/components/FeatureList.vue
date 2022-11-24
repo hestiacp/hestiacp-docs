@@ -1,5 +1,5 @@
 <script lang="ts">
-import { FeatureListItem } from '../../../_data/features';
+import { FeatureListItem } from "../../../_data/features";
 
 export default {
 	props: {
@@ -29,12 +29,16 @@ export default {
 	margin: 0.55em 0;
 	padding-left: 1em;
 	list-style: disc;
-	line-height: 2;
+	line-height: 1.5;
 }
 
 .FeatureList ul {
 	padding-left: 1em;
 	list-style: disc;
+}
+
+.FeatureList li {
+	margin-top: 0.5em;
 }
 
 @media (min-width: 640px) {

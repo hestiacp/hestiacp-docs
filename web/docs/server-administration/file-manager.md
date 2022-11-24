@@ -16,9 +16,7 @@ To disable the file manager, please run the following command:
 v-delete-sys-filemanager
 ```
 
-## File manager gives "Unknown Error" message
-
-The file manager gives an error message sayinh "Unknown Error", using a fresh Install with modifications to `/etc/ssh/sshd_config`.
+## File manager gives “Unknown Error” message
 
 This seems to occur specifically when the line `Subsystem sftp /usr/lib/openssh/sftp-server` is removed or changed in `/etc/ssh/sshd_config` in such a way that the install script cannot update it to `Subsystem sftp internal-sftp`.
 

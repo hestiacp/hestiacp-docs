@@ -42,7 +42,7 @@ IP address that should be used for the root domain.
 ### Template
 
 - **default**: Standard DNS template. Suitable for most usecases.
-- **default-nomail**: Standard DNS template. Suitable for most usecases when you don't want to host mail on Hestia.
+- **default-nomail**: Standard DNS template. Suitable for most usecases when you don’t want to host mail on Hestia.
 - **gmail**: When your email provider is Google Workspace.
 - **office365**: When your email provider is Microsoft 365 (Exchange).
 - **zoho**: When your email provider is Zoho.

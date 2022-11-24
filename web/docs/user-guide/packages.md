@@ -16,7 +16,7 @@ To manage packages, log in as an **administrator** and navigate to the **Users <
 ## Editing a package
 
 ::: info
-The **system** package can't be edited or renamed.
+The **system** package can’t be edited or renamed.
 :::
 
 1. Hover over the package you want to edit.
@@ -25,7 +25,7 @@ The **system** package can't be edited or renamed.
 ## Deleting a package
 
 ::: info
-The **system** package can't be deleted.
+The **system** package can’t be deleted.
 :::
 
 1. Hover over the package you want to delete.

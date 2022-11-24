@@ -38,7 +38,7 @@ Hestia does not support non-LTS Operating systems. If you install it on, for exa
 Interactive installer that will install the default Hestia software configuration.
 
 ```bash
-$ wget -qO - https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh | bash
+wget -qO - https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh | bash
 ```
 
 ## Custom installation
@@ -85,7 +85,7 @@ To choose what software gets installed, you can provide flags to the installatio
 #### Example
 
 ```bash
-$ wget -qO - https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh | bash -s -- \
+wget -qO - https://raw.githubusercontent.com/hestiacp/hestiacp/release/install/hst-install.sh | bash -s -- \
 --interactive no \
 --hostname host.example.com \
 --email email@example.com \

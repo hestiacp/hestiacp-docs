@@ -35,7 +35,7 @@ We currently support Roundcube and Rainloop (optional install). You can also dis
 
 ### Catch all email
 
-This email address will receive all emails for this domain that are sent to users that don't exist.
+This email address will receive all emails for this domain that are sent to users that don’t exist.
 
 ### Rate limit
 
@@ -85,7 +85,7 @@ This option allows the user to use a different SMTP relay than server defined on
 
 ### Get DNS records
 
-If you don't host your DNS in Hestia, but you still want to use its email service, click the <i class="fas fa-atlas"><span class="visually-hidden">DNS</span></i> icon to view the DNS records you need to add to your DNS provider.
+If you don’t host your DNS in Hestia, but you still want to use its email service, click the <i class="fas fa-atlas"><span class="visually-hidden">DNS</span></i> icon to view the DNS records you need to add to your DNS provider.
 
 ### Webmail
 

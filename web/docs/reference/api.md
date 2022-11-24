@@ -28,7 +28,7 @@ With
 ```php
 // Prepare POST query
 $postvars = array(
-  'hash'       => "access_code:secret_code",
+  'hash'       => 'access_code:secret_code',
   'returncode' => $hst_returncode,
   'cmd'        => $hst_command,
   'arg1'       => $username

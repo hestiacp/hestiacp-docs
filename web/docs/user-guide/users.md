@@ -68,5 +68,5 @@ To change a user’s PHP CLI version, click the **Advanced Options** button, the
 To change a user’s default name servers, click the **Advanced Options** button, then edit the **Default Name Servers** fields.
 
 ::: warning
-At least 2 default name servers are necessary. This is to provide redundancy, in case one of them fails to answer. In fact, it is suggested that both name servers be on separate servers, for better resilience. If you are the system administrator and would like to set this up, refer to our [TODO] documentation.
+At least 2 default name servers are necessary. This is to provide redundancy, in case one of them fails to answer. In fact, it is suggested that both name servers be on separate servers, for better resilience. If you are the system administrator and would like to set this up, refer to our [DNS Cluster documentation](../server-administration/dns.md#dns-cluster-setup).
 :::

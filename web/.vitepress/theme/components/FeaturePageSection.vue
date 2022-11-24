@@ -35,16 +35,12 @@ export default {
 	padding: 48px 24px 0;
 }
 
-.FeaturePageSection:nth-child(2n + 1) .container {
-	flex-direction: row-reverse;
-}
-
 .FeaturePageSection:last-child {
 	padding: 0 24px 48px;
 }
 
 .FeaturePageSection + .FeaturePageSection {
-	margin: 4em 0 0.5em;
+	margin: 2em 0 0.5em;
 }
 
 .FeaturePageSection h2 {
@@ -72,6 +68,10 @@ export default {
 		padding: 0 48px 48px;
 	}
 
+	.FeaturePageSection + .FeaturePageSection {
+		margin: 4em 0 0.5em;
+	}
+
 	.FeaturePageSection h2 {
 		font-size: 1.85rem;
 	}
@@ -96,13 +96,23 @@ export default {
 }
 
 .FeaturePageSection .container {
-	flex-direction: row;
-	align-items: flex-start;
+	flex-direction: column;
 	gap: 2rem;
 }
 
-.FeaturePageSection .container > * {
-	width: 50%;
+@media (min-width: 640px) {
+	.FeaturePageSection .container {
+		flex-direction: row;
+		align-items: flex-start;
+	}
+
+	.FeaturePageSection:nth-child(2n + 1) .container {
+		flex-direction: row-reverse;
+	}
+
+	.FeaturePageSection .container > * {
+		width: 50%;
+	}
 }
 
 figure {

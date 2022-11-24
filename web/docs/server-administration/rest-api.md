@@ -10,8 +10,6 @@ With the release of Hestia v1.6.0, we have introduced a more advanced API system
 
 With the release of Hestia v1.4.0, we have decided the security needed to be tightened. If you want to connect to the API from a remote server, you will first need to whitelist its IP address. To add multiple addresses, separate them with a new line.
 
-![Api settings](/images/api/api-1.png)
-
 ## Can I disable the API?
 
 Yes, you can disable the API via the server settings. The file will be deleted from the server and all connections will get ignored. Please note that some functions may not work with the API disabled.

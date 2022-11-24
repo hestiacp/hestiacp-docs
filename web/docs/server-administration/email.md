@@ -67,8 +67,6 @@ You can access the admin by navigating to `https://webmail.domain.tld/?admin_f0e
 
 No, Cloudflare’s Proxy does not work with email. If you use email hosted on you server, make sure the proxy for the A record `mail.domain.tld` is switched off. Otherwise, you will not be able receive emails. The following records are suggested if you want to use Hestia as your mail server:
 
-![DNS records](/images/mail/mail.png)
-
 - A record with name **mail** pointing to your server IP.
 - A record with name **webmail** pointing to your server IP.
 - MX record with name **@** with pointing to `mail.domain.tld`.

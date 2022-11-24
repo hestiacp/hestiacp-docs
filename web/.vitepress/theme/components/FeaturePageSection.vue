@@ -108,10 +108,6 @@ export default {
 figure {
 	padding: 2rem;
 	border-radius: 8px;
-	background-color: #f8f8f8;
-}
-
-html.dark figure {
-	background-color: #1b1b1b;
+	background-color: var(--vp-c-bg-alt);
 }
 </style>

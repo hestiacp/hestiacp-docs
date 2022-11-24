@@ -14,7 +14,7 @@
 <style scoped>
 .FeaturePageTitle {
 	padding: 0 24px;
-	background-color: var(--vp-c-bg-soft);
+	background-color: var(--vp-c-bg-alt);
 }
 
 .FeaturePageTitle h1 {

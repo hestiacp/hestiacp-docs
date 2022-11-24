@@ -14,37 +14,37 @@ title: Features
   <FeaturePageTitle>
     <template #title>Features</template>
   </FeaturePageTitle>
-  <FeaturePageSection>
+  <FeaturePageSection image="/images/undraw_two_factor_authentication_namy.svg">
     <template #title>Users</template>
-    <template #lead>Ullamco eu voluptate ex laborum consequat anim adipisicing proident voluptate duis amet occaecat pariatur.</template>
+    <template #lead>Share access to your server with other users and restrict their resources.</template>
     <template #list>
       <FeatureList :items="users"></FeatureList>
     </template>
   </FeaturePageSection>
-  <FeaturePageSection>
+  <FeaturePageSection image="/images/undraw_web_developer_re_h7ie.svg">
     <template #title>Web domains</template>
-    <template #lead>Ullamco eu voluptate ex laborum consequat anim adipisicing proident voluptate duis amet occaecat pariatur.</template>
+    <template #lead>Add multiple domains and quickly install apps on them.</template>
     <template #list>
       <FeatureList :items="webDomains"></FeatureList>
     </template>
   </FeaturePageSection>
-  <FeaturePageSection>
+  <FeaturePageSection image="/images/undraw_personal_email_re_4lx7.svg">
     <template #title>Mail</template>
-    <template #lead>Ullamco eu voluptate ex laborum consequat anim adipisicing proident voluptate duis amet occaecat pariatur.</template>
+    <template #lead>Host your own emails, no need to pay a business mail provider!</template>
     <template #list>
       <FeatureList :items="mail"></FeatureList>
     </template>
   </FeaturePageSection>
-  <FeaturePageSection>
+  <FeaturePageSection image="/images/undraw_maintenance_re_59vn.svg">
     <template #title>Databases</template>
-    <template #lead>Ullamco eu voluptate ex laborum consequat anim adipisicing proident voluptate duis amet occaecat pariatur.</template>
+    <template #lead>From e-commerce to blogs, databases are always useful and you can choose between MySQL and PostgreSQL.</template>
     <template #list>
       <FeatureList :items="databases"></FeatureList>
     </template>
   </FeaturePageSection>
-  <FeaturePageSection>
+  <FeaturePageSection image="/images/undraw_server_status_re_n8ln.svg">
     <template #title>Server admin</template>
-    <template #lead>Ullamco eu voluptate ex laborum consequat anim adipisicing proident voluptate duis amet occaecat pariatur.</template>
+    <template #lead>Ultra-configurable and user-friendly, Hestia is as powerful as you could want.</template>
     <template #list>
       <FeatureList :items="serverAdmin"></FeatureList>
     </template>

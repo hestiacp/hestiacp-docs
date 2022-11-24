@@ -1,5 +1,14 @@
-<script>
-export default { props: ["items"] };
+<script lang="ts">
+import { FeatureListItem } from '../../../_data/features';
+
+export default {
+	props: {
+		items: {
+			type: Array<FeatureListItem>,
+			required: true,
+		},
+	},
+};
 </script>
 
 <template>

@@ -1,9 +1,15 @@
-export const users = [
+export interface FeatureListItem {
+	text: String;
+	items?: { text: String }[];
+}
+
+export const users: FeatureListItem[] = [
 	{ text: "Support for SFTP chroot jails" },
 	{ text: "Two-Factor Authentication support for the Admin Panel" },
 	{ text: "SSH keys for login via SFTP and SSH" },
 ];
-export const webDomains = [
+
+export const webDomains: FeatureListItem[] = [
 	{ text: "Nginx FastCGI cache support for Nginx + PHP-FPM" },
 	{ text: "Nginx Proxy cache support for Nginx + Apache2" },
 	{ text: "Per-domain TLS certificates for web domains" },
@@ -37,7 +43,8 @@ export const webDomains = [
 		],
 	},
 ];
-export const mail = [
+
+export const mail: FeatureListItem[] = [
 	{ text: "Per-domain TLS certificates for inbound and outbound mail services (Exim 4, Dovecot, Webmail)" },
 	{ text: "SMTP relay setup for Exim in case port 25 is blocked by the provider" },
 	{ text: "Rate limit adjustable per user or email account" },
@@ -45,9 +52,11 @@ export const mail = [
 	{ text: "Latest version of Roundcube" },
 	{ text: "Optional Rainloop installation" },
 ];
-export const databases = [
+
+export const databases: FeatureListItem[] = [
 	{ text: "Support for MariaDB 10.2 -> 10.8 with 10.6 as default" },
 	{ text: "Support for PostgreSQL" },
-	{ text: "Lastest version of PHPmyAdmin" },
+	{ text: "Latest version of phpMyAdmin" },
 ];
-export const serverAdmin = [{ text: "Automated backups to SFTP, FTP or Backblaze B2" }];
+
+export const serverAdmin: FeatureListItem[] = [{ text: "Automated backups to SFTP, FTP or Backblaze B2" }];

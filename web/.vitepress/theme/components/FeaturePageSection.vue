@@ -1,13 +1,24 @@
+<script lang="ts">
+export default {
+	props: {
+		image: String,
+	},
+};
+</script>
+
 <template>
 	<div class="FeaturePageSection">
 		<div class="container">
-			<h2>
-				<slot name="title" />
-			</h2>
-			<p v-if="$slots.lead" class="lead">
-				<slot name="lead" />
-			</p>
-			<div v-if="$slots.list" class="list">
+			<figure v-if="image">
+				<img :src="image" alt="" />
+			</figure>
+			<div>
+				<h2>
+					<slot name="title" />
+				</h2>
+				<p v-if="$slots.lead" class="lead">
+					<slot name="lead" />
+				</p>
 				<slot name="list" />
 			</div>
 		</div>
@@ -24,12 +35,16 @@
 	padding: 48px 24px 0;
 }
 
+.FeaturePageSection:nth-child(2n + 1) .container {
+	flex-direction: row-reverse;
+}
+
 .FeaturePageSection:last-child {
 	padding: 0 24px 48px;
 }
 
 .FeaturePageSection + .FeaturePageSection {
-	margin: 2em 0 0.5em;
+	margin: 4em 0 0.5em;
 }
 
 .FeaturePageSection h2 {
@@ -78,5 +93,25 @@
 	.FeaturePageSection:last-child {
 		padding: 0 64px 64px;
 	}
+}
+
+.FeaturePageSection .container {
+	flex-direction: row;
+	align-items: flex-start;
+	gap: 2rem;
+}
+
+.FeaturePageSection .container > * {
+	width: 50%;
+}
+
+figure {
+	padding: 2rem;
+	border-radius: 8px;
+	background-color: #f8f8f8;
+}
+
+html.dark figure {
+	background-color: #1b1b1b;
 }
 </style>

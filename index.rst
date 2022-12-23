@@ -11,6 +11,7 @@ Welcome to Hestia Control Panel's documentation!
   
 .. note::
   With the release of 1.7.0 move to our main website. For now it is still availble on https://development.hestiacp.com. 
+  Please submit any changes to hestiacp/hestiacp repo
 
 
 .. toctree::

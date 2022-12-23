@@ -10,7 +10,7 @@ Welcome to Hestia Control Panel's documentation!
   Current documentation is subject of change. Hestia is under active development now.
   
 .. note::
-  This documentation has been community-written.
+  With the release of 1.7.0 move to our main website. For now it is still availble on https://development.hestiacp.com. 
 
 
 .. toctree::

@@ -27,6 +27,7 @@ Then Hestiacp is available on https://hostname.com:8083 and https://public.ip:80
 Requirements
 ***************************************
 
+
 +------------------------+----------------------------------+-----------------------------------+
 |                        | Minimum                          | Recogmended                       |
 |                        |                                  |                                   |

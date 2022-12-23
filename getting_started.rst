@@ -33,12 +33,12 @@ Requirements
 +========================+==================================+===================================+
 | CPU                    | 1-Core 64bit                     | 4-Cores                           |
 +------------------------+----------------------------------+-----------------------------------+
-| RAM                    | 1GB (No spamassassin or ClamAV   | 4GB                               |
+| RAM                    | 1GB (No SpamAssassin or ClamAV   | 4GB                               |
 +------------------------+----------------------------------+-----------------------------------+
 | Disk                   | 10GB HDD                         | 40GB SSD                          |
 +------------------------+----------------------------------+-----------------------------------+
-| Operating System       | Debian 10, 11                    | Latest, Debain                    |
-|                        | Ubuntu 18.04 LTS, 22.04 LTS      | Ubuntu                            |
+| Operating System       | Debian 10, 11                    | Latest Debain                     |
+|                        | Ubuntu 18.04 LTS, 22.04 LTS      | Latest Ubuntu                     |
 +------------------------+----------------------------------+-----------------------------------+
 
 - CPU Architecture: Hestia only runs on AMD64 / x86_64 and ARM64 / AArch64 processors. It also requires a 64bit operating system! We currently do not support i386 or ARM7-based processors.

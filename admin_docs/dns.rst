@@ -2,6 +2,18 @@
 DNS Management / DNS server
 ###############################
 
+
+************************************************
+How to host you're own DNS (NameServer's)
+************************************************
+
+If you are wanting to host your own DNS instead of using your domain registrar.
+
+Create a DNS Zone with the child-ns template, then login to your domain registrar’s panel and change the name servers of the domain. Depending your registrar panel, you could be able to create glue records. 
+
+You may need to wait for up to 24 hours before the name servers become active.
+
+
 ************************************************
 How to setup a DNS Cluster
 ************************************************
@@ -45,6 +57,7 @@ If you navigate to *Configure Server* -> *DNS Server*, you should be able to see
 
 When adding the DNS Zone to a server to propogate, select the *child-ns* bind template. It is also best practice to update your packages and set the namservers to the other hosts in the dns cluster to ensure the DNS redundancy is being utilized. 
 
+
 ************************************************
 Can I separate DNS accounts by users 
 ************************************************
@@ -68,6 +81,7 @@ With the new API system you can also replace api_key with access_key:secret_key
     v-add-remote-dns-host slave.yourhost.com 8083 access_key:secret_key '' api useraccount
 
 Please note that currently only the user **dns-user** is exempted from syncing to other servers. If you have a DNS cluster with multiple master slaves you might run in issues.
+    
     
 ************************************************
 I am not able to add a server as DNS host 

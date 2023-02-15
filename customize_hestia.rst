@@ -2,13 +2,13 @@ Customising Hestia
 ==================
 
 ******************************
-Can I customise HestiaCP
+Can I customise HestiaCP?
 ******************************
-Currently we only support changing the layout via CSS. Changes to the HTML file are currently no supported as they break during update procedures. 
+Currently we only support changing the layout via CSS. Changes to the HTML file are currently not supported as they break during update procedures. 
 
-*************************
-How can I add a new theme
-*************************
+**************************
+How can I add a new theme?
+**************************
 
 Create a new theme in /usr/local/hestia/web/css/theme/custom/my_theme.css
 
@@ -23,10 +23,10 @@ Create a new theme in /usr/local/hestia/web/css/theme/custom/my_theme.css
         
     
 *************************************
-How can I customise a default theme
+How can I customise a default theme?
 *************************************
 
-Changes to the default supplied themes are always over written during updates. How ever via the v-add-sys-theme you can create a new theme.
+Changes to the default supplied themes are always over written during updates. However via the v-add-sys-theme you can create a new theme.
 
 When we want to change the dark theme
 
@@ -36,14 +36,14 @@ When we want to change the dark theme
     
 Apply your changes and follow the instructions above 
 
-******************************
-Can I change any html template
-******************************
+*******************************
+Can I change any html template?
+*******************************
 
-Changes to any html will be reverted during upgrades this also applies for installing 3rd party software that changes the html pages.
+Changes to any html will be reverted during upgrades. This also applies for installing 3rd party software that changes the html pages.
 
 ****************************************
-How can I change domain not found page
+How can I change domain not found page?
 ****************************************
 
 The domain not fond page can be found in /var/www/html/index.html to edit it use: 
@@ -54,24 +54,24 @@ The domain not fond page can be found in /var/www/html/index.html to edit it use
 
 
 *****************************************************
-How can I change the default page 
+How can I change the default page? 
 *****************************************************
 
 The default index.html when a page has been created is location in /usr/local/hestia/data/templates/web/skel/public_html
 
-Currently after each update the templates are overwritten by the Hestia update. To prevent this issue we have introduced the information to create post/pre install hooks
+Currently after each update the templates are overwritten by the Hestia update routine. To prevent this issue we have introduced a process to create post/pre install hooks
 
 *****************************************************
 Can I run certain command before and after update?
 ***************************************************** 
 
-With the release of Hestia 1.4.6  we have added to use pre / post install hooks. Examples for the usage are for example: 
+With the release of Hestia 1.4.6,  we have added the pre / post install hooks. Examples for the usage are as as follows: 
 - Disable and enable demo mode before and after an update. 
 - Restore default skeleton 
 
-To enable this feature create a file in /etc/hestiacp/hooks/pre_install.sh and or /etc/hestiacp/hooks/post_install.sh
+To enable this feature, create a file in /etc/hestiacp/hooks/pre_install.sh and or /etc/hestiacp/hooks/post_install.sh
 
-For example to disable demo mode on pre install of a update: 
+For example, to disable demo mode on pre install of a update: 
 
 .. code-block:: bash
 
